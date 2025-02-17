@@ -1,8 +1,13 @@
 import React from 'react'
+import FirstBanner from '../Layouts/Body/FirstBanner'
+import FirstSection from '../Layouts/Body/FirstSection'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <FirstBanner/>
+      <FirstSection/>
+    </div>
   )
 }
 
