@@ -34,9 +34,7 @@ const FirstSection = () => {
         or seamless software integration, we will take your business to the next 
         level of success with IT consulting services & software development solutions.
       </p>
-
-      {/* Client Logos */}
-      <Row className="justify-content-center align-items-center mt-4 g-4 section1-logo-img">
+      <Row className="justify-content-center align-items-center mt-2 g-4 section1-logo-img">
         {clients.map((client, index) => (
           <Col xs={6} sm={4} md={2} key={index} className="text-center">
             <Image 
@@ -48,6 +46,19 @@ const FirstSection = () => {
           </Col>
         ))}
       </Row>
+      <div className="mt-5">
+      <label className="section1-client-label">Our Services</label>
+      <h2 className="mt-2 fw-bold first-section-heading">
+        Accelerate Technology Innovation With Software Development Services
+      </h2>
+
+      <p className="text-muted mx-auto mt-3 section1-content">
+        Whether you require a complex enterprise software development solution
+        or seamless software integration, we will take your business to the next
+        level of success with IT consulting services & software development
+        solutions.
+      </p>
+      </div>
     </Container>
   );
 };

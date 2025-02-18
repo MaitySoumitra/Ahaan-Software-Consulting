@@ -1,0 +1,115 @@
+.expanding-slider {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+  overflow: hidden;
+  position: relative; /* Ensures positioning context for inner elements */
+}
+
+.mySwiper {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center; /* Ensures the swiper content stays centered */
+}
+
+.slide-card {
+  height: 520px;
+  width: 100%;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 500ms ease;
+  position: relative;
+}
+
+.swiper-slide {
+  width: 160px !important;
+  transition: all 0.5s ease; /* Smooth transition for width change */
+  display: flex; /* Ensures the slide does not move left or right */
+  justify-content: center; /* Centers the content */
+}
+
+.swiper-slide-active {
+  width: 500px !important;
+}
+
+.slide-content {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 100%;
+  opacity: 0; /* Initially hidden until hovered or active */
+  transition: opacity 0.3s ease;
+}
+
+.slide-content h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.slide-content p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.slide-logos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.partner-logo {
+  width: 40px;
+  height: auto;
+}
+
+.learn-more {
+  background: #7e61bf;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.learn-more:hover {
+  background: #6449a3;
+}
+
+.slide-card.active {
+  width: 500px !important;
+}
+
+.swiper-slide:hover {
+  width: 500px !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-slide:hover .slide-content {
+  opacity: 1; /* Shows content on hover */
+  transition: opacity 0.5s ease;
+}
+
+.swiper-slide:not(:hover) {
+  width: 160px !important;
+  transition: all 0.5s ease;
+}
+
+.swiper-slide:not(:hover) .slide-content {
+  opacity: 0; /* Hides content when not hovered */
+}
+
+/* Optional: You can ensure slides are centered in the container */
+.mySwiper .swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
