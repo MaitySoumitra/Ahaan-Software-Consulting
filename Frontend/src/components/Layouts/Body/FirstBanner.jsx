@@ -51,6 +51,7 @@ const FirstBanner = () => {
             </div>
           </div>
         </Col>
+        <Col md={6}></Col>
       </Row>
     </Container>
   </div>
