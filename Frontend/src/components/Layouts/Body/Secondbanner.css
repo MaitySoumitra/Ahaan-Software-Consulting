@@ -1,0 +1,25 @@
+.banner2-call{
+    
+}
+.call-for-more{
+    font-size: 20px;
+    font-weight: 700;
+    
+    margin:0px;
+}
+.call-number{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 25px;
+}
+.req-call-center{
+    font-size: 35px;
+    font-weight: 700;
+}
+.banner2-contact-us{
+    padding: 15px 32px;
+    border-radius: 22px;
+    background-color: #7E61BF;
+    border: 1px solid #939393;
+   color: #ffff;
+}

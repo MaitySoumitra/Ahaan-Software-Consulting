@@ -1,0 +1,74 @@
+/* General styling for the tech icons */
+.tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start; /* Space between items */
+   
+    margin-top: 20px;
+  }
+  
+  .tech-icon {
+    text-align: center;
+    min-width: 120px;
+  }
+  
+  .tech-name {
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.3s ease;
+  }
+  
+  .tech-name:hover {
+    text-decoration: underline;
+    color: #7E61BF !important;
+    cursor: pointer;
+  }
+
+  .nav-item-tab{
+    background-color: #EFF4FF;
+    margin-bottom: 6px;
+    
+    border-radius: 10px;
+  }
+  .nav-link-tab{
+    color: #433978 !important;
+    font-weight: 500 !important;
+  }
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: white !important;
+    background-color: #433978 !important;
+}
+  
+  /* Make the layout responsive */
+  @media (max-width: 1024px) {
+    .tech-icon {
+      flex: 1 0 10%; /* 3 items per row on medium screens (e.g., tablets) */
+    }
+  
+    .tech-icons {
+      gap: 30px; /* Decrease gap to 30px on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .tech-icon {
+      flex: 1 0 45%; /* 2 items per row on smaller screens (e.g., tablets in portrait mode) */
+    }
+  
+    .tech-icons {
+      gap: 20px; /* Decrease gap to 20px on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .tech-icon {
+      flex: 1 0 100%; /* 1 item per row on small screens (e.g., mobile) */
+    }
+  
+    .tech-icons {
+      gap: 10px; /* Decrease gap to 10px on mobile */
+    }
+  }
+  
