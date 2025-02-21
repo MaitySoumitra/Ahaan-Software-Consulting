@@ -37,24 +37,14 @@ const slides = [
     content: "Digital Marketing content goes here.",
     logos: ["/assets/ekyaa.png"],
   },
+  
   {
     title: "Branding Design",
     image: Slide5,
     content: "Branding Design content goes here.",
     logos: ["/assets/bp.png"],
   },
-  {
-    title: "Branding Design",
-    image: Slide5,
-    content: "Branding Design content goes here.",
-    logos: ["/assets/bp.png"],
-  },
-  {
-    title: "Branding Design",
-    image: Slide5,
-    content: "Branding Design content goes here.",
-    logos: ["/assets/bp.png"],
-  }
+  
 ];
 
 const SecondSection = () => {
