@@ -1,45 +1,65 @@
 import React, { useState } from "react";
-import { Container, Button } from "react-bootstrap";
+import { motion } from "framer-motion";
+import "./OurIndustry.css";
 
-import Imageaccordian from "./Imageaccordian"
+const tabs = [
+  { title: "Retail & E-commerce" },
+  { title: "Healthcare" },
+  { title: "Travel & Hospitality" },
+  { title: "Banking & Insurance" },
+  { title: "Fitness & Wellness" },
+  { title: "Education" },
+];
 
+const TabBar = () => {
+  const [activeTab, setActiveTab] = useState(tabs[0].title);
 
-const accordionData = [
-    { title: "Retail & E-commerce", content: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.", background: "/your-image-url.jpg" },
-    { title: "Healthcare", content: "Lorem Ipsum content for Healthcare." },
-    { title: "Travel & Hospitality", content: "Lorem Ipsum content for Travel & Hospitality." },
-    { title: "Banking & Insurance", content: "Lorem Ipsum content for Banking & Insurance." },
-    { title: "Fitness & Wellness", content: "Lorem Ipsum content for Fitness & Wellness." },
-    { title: "Education", content: "Lorem Ipsum content for Education." },
-  ];
-
-const OurIndustry = () => {
-    const [openIndex, setOpenIndex] = useState(0); // First accordion is open by default
-
-    const toggleAccordion = (index) => {
-      setOpenIndex(openIndex === index ? null : index);
-    };
-
- 
   return (
-    <Container>
-      <div className="mt-5">
-        <label className="section1-client-label">Our Industry</label>
-        <h2 className="mt-2 fw-bold first-section-heading">
-          Enterprise Software Development Services for Every Industry
-        </h2>
+    <div className="tab-container">
+      {/* Tab Bar */}
+      <motion.div className="tab-bar" layout>
+        {tabs.map((tab) => (
+         <motion.div
+         key={tab.title}
+         className={`tab-item ${activeTab === tab.title ? "active" : ""}`}
+         onClick={() => setActiveTab(tab.title)}
+         whileTap={{ x: -80  }} 
+         initial={{ originX:0}} 
+         animate={{ x: 0 }} 
+         transition={{ type: "spring", stiffness:120, mass:0.5, damping:40 }}
+         
+       >
+         {tab.title}
+       </motion.div>
+       
+       
+       
+        ))}
+      </motion.div>
 
-        <p className="text-muted mx-auto mt-3 section1-content">
-          Whether you require a complex enterprise software development solution
-          or seamless software integration, we will take your business to the
-          next level of success with IT consulting services & software
-          development solutions.
-        </p>
-      </div>
+      {/* Active Indicator (Button Effect) */}
+      <motion.div
+        layoutId="underline"
+        className="active-indicator"
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        animate={{
+          x: tabs.findIndex((tab) => tab.title === activeTab) * 130, // Adjust based on button width
+        }}
+      />
 
-    <Imageaccordian />
-    </Container>
+      {/* Tab Content */}
+      <motion.div
+        className="tab-content"
+        key={activeTab}
+        initial={{ opacity: 0, x: "100vh", y: 10 }}
+        animate={{ opacity: 1, x: 0, y: 0 }}
+        exit={{ opacity: 0, y: -10 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+      >
+        <div className="content-panel">{activeTab} Content Goes Here</div>
+      </motion.div>
+    </div>
   );
 };
 
-export default OurIndustry;
+export default TabBar;

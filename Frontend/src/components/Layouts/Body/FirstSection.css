@@ -18,16 +18,40 @@
     font-weight: 500;
    
 }
-.section1-logo-img {
-    row-gap: 20px; /* Adjust as needed */
-    height: 70px; /* Set fixed height for the row */
-    display: flex;
-    align-items: center; /* Ensure logos align vertically */
-  }
+.first-client-col {
+  border: 0.5px solid #ccc; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  margin: 5px;
+  padding: 10px; 
+  border-radius: 8px; 
+  border-radius: 30%;
+  background-color: #fff; 
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+ 
+}
+
+.first-client-col:hover {
+  transform: translateY(-5px) translateX(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Darker shadow on hover for more emphasis */
+}
+
+.first-client-image {
+ height: 50px;
+  object-fit: contain;
+  max-width: 100px;
   
-  .client-logo {
-    max-height: 50px; /* Ensures logos fit inside row */
-    object-fit: contain; /* Prevents stretching */
+}
+@media screen and (max-width: 1000px) {
+  .first-client-image {
+    height: 40px;
+    object-fit: contain;
+    max-width: 70px;
   }
+}
+
+
+  
+  
+  
   
 

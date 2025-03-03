@@ -1,60 +1,52 @@
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react";
+import { Card, Row, Col, Container } from "react-bootstrap";
 import CountUp from "react-countup";
-import Count from "../../../assets/images/whychoose/count.png";
+import { FaUsers, FaUserTie, FaCheckCircle, FaSmile } from "react-icons/fa";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const StatsSection = () => {
+const stats = [
+  { value: 1200, label: "Business Coaches", icon: <FaUserTie />, color: "#1e3a8a" }, // Blue
+  { value: 850, label: "Consultants", icon: <FaUsers />, color: "#f59e0b" }, // Orange
+  { value: 4300, label: "Completed Projects", icon: <FaCheckCircle />, color: "#10b981" }, // Green
+  { value: 9600, label: "Happy Customers", icon: <FaSmile />, color: "#ef4444" }, // Red
+];
+
+const CounterCard = ({ value, label, icon, color }) => {
   return (
-    <div
-      className="stats-section text-white text-center py-5"
+    <Card
+      className="shadow-lg border-0 p-3 text-center"
       style={{
-        backgroundImage: `url(${Count})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        position: "relative",
+        width: "250px",
+        height: "100px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: "12px",
+        boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.4)", // Dark shadow
       }}
     >
-      {/* Overlay */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          backgroundColor: "rgba(60, 20, 200, 0.7)", // Adjust overlay color and opacity
-        }}
-      ></div>
-
-      <Container style={{ position: "relative", zIndex: 1 }}>
-        <Row>
-          <Col md={3}>
-            <h2 className="fw-bold" style={{fontSize:"45px"}}>
-              <CountUp start={1} end={25} duration={5} />+
-            </h2>
-            <p>Business Coaches</p>
-          </Col>
-          <Col md={3}>
-            <h2 className="fw-bold" style={{fontSize:"45px"}}>
-              <CountUp start={1} end={40} duration={5} />+
-            </h2>
-            <p>Consultants</p>
-          </Col>
-          <Col md={3}>
-            <h2 className="fw-bold" style={{fontSize:"45px"}}>
-              <CountUp start={1} end={200} duration={8} />+
-            </h2>
-            <p>Completed Projects</p>
-          </Col>
-          <Col md={3}>
-            <h2 className="fw-bold" style={{fontSize:"45px"}}>
-              <CountUp start={1} end={190} duration={5} />+
-            </h2>
-            <p>Happy Customers</p>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+      <h4 style={{ color }}>
+        <CountUp start={0} end={value} duration={5} separator="," />
+        <span style={{ marginLeft: "8px", fontSize: "1.5rem" }}>{icon}</span>
+      </h4>
+      <strong className="text-dark">{label}</strong>
+    </Card>
   );
 };
 
-export default StatsSection;
+const DashboardStats = () => {
+  return (
+    <Container className="mt-4">
+      <Row className="g-2 justify-content-center" xs={2} md={4}>
+        {stats.map((stat, index) => (
+          <Col key={index} className="d-flex justify-content-center">
+            <CounterCard {...stat} />
+          </Col>
+        ))}
+      </Row>
+    </Container>
+  );
+};
+
+export default DashboardStats;
