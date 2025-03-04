@@ -3,7 +3,7 @@ import { Card, Row, Col, Container } from "react-bootstrap";
 import CountUp from "react-countup";
 import { FaUsers, FaUserTie, FaCheckCircle, FaSmile } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "./TotalProject.css"
 const stats = [
   { value: 1200, label: "Business Coaches", icon: <FaUserTie />, color: "#1e3a8a" }, // Blue
   { value: 850, label: "Consultants", icon: <FaUsers />, color: "#f59e0b" }, // Orange
@@ -37,7 +37,7 @@ const CounterCard = ({ value, label, icon, color }) => {
 
 const DashboardStats = () => {
   return (
-    <Container className="mt-4">
+    <Container className="total-project">
       <Row className="g-2 justify-content-center" xs={2} md={4}>
         {stats.map((stat, index) => (
           <Col key={index} className="d-flex justify-content-center">
