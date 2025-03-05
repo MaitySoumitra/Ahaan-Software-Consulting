@@ -1,0 +1,93 @@
+.contact-section {
+    background-color: #fff;
+    color: white;
+    padding: 50px 0;
+  }
+  
+  .contact-box {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-box .icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .contact-box h5 {
+    font-weight: bold;
+  }
+  
+  .contact-box p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .contact-box a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .contact-form {
+    margin-top: 30px;
+  }
+  
+  .contact-form h3 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .contact-form .text-muted {
+    font-size: 14px;
+  }
+  
+  .description {
+    font-size: 14px;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #f8b400;
+  }
+  
+  .contact-form label {
+    font-weight: bold;
+  }
+  
+  .contact-form .form-control {
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .contact-form .btn {
+    background-color: #f8b400;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    transition: background 0.3s;
+  }
+  
+  .contact-form .btn:hover {
+    background-color: #d89a00;
+  }
+  
+  .error {
+    color: #ff4d4d;
+    font-size: 12px;
+  }
+  .col-md-3.contact-box{
+    background-color: #0047ab;
+
+  }

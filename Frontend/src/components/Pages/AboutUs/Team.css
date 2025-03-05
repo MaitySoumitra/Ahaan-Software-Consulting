@@ -1,0 +1,53 @@
+.container {
+  border-radius: 10px;
+  padding: 20px;
+}
+.text-primary-team{
+  color: #43387b !important;
+  font-family: outfit;
+  font-size: 35px !important;
+  line-height: 50px;
+  text-align: center;
+}
+.fw-bold{
+  font-size: 18px;
+}
+.text-muted{
+  font-family: outfit;
+  font-size: 18px;
+  line-height: 35px;
+  text-align: center;
+}
+.text-muted-position{
+  text-align: left;
+}
+.fw-bold{
+  font-family: outfit;
+}
+
+.team-member {
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.linkedin-icon {
+  color: #0077b5;
+  font-size: 30px;
+  cursor: pointer;
+  
+}

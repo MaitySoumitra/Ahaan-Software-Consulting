@@ -1,0 +1,26 @@
+.custom-border{
+    border-top:5px solid #002DA2;
+    border-bottom:1px solid #dee2e6 ;
+    border-left:1px solid #dee2e6 ;
+    border-right:1px solid #dee2e6 ;
+}
+
+.gap{
+    gap:30px;
+}
+.text{
+    text-align: justify;
+    width:90%;
+}
+.custom-col {
+    width: 29% !important; /* Approx. 3.5/12 */
+  }
+  .col{
+    width: 45.8% !important; /* Approx. 5.5/12 */
+  }
+  .img{
+    width:90%;
+  }
+  .img-sec{
+    width:80%;
+  }
