@@ -5,6 +5,7 @@ import hp from '../../../assets/hp.png';
 import strat from '../../../assets/strat.png';
 import digi from '../../../assets/digi.png';
 import sales from '../../../assets/sales.png';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Market.css";
 
