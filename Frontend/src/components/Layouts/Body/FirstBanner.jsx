@@ -52,7 +52,7 @@ const FirstBanner = () => {
             </div>
           </div>
         </Col>
-        <Col md={6}></Col> {/* Empty column, but it will still take up space */}
+        <Col md={6}></Col> 
       </Row>
     </Container>
   </div>

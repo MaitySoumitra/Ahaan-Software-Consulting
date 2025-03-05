@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import "./FirstSection.css";
 import Ekyaa from "../../../assets/images/logo/ekyaa-logo.jpg";
 import Logix from "../../../assets/images/logo/logix-logo.jpg";
-import Helli from "../../../assets/images/logo/helli-logo.jpg";
+import Helli from "../../../assets/images/logo/heli-logo.png";
 import Jn from "../../../assets/images/logo/jn-logo.jpg";
 import NextDoor from "../../../assets/images/logo/next-door-logo.jpg";
 import Fs from "../../../assets/images/logo/fs-logo.jpg";
@@ -11,7 +11,8 @@ import Fs from "../../../assets/images/logo/fs-logo.jpg";
 const clients = [
   { src: Ekyaa, alt: "EKYAA" },
   { src: Logix, alt: "LOGIX" },
-
+  { src: Fs, alt: "Fs" },
+  { src: Helli, alt: "Helli" },
   { src: Jn, alt: "Jazzyln Nolen" },
   { src: NextDoor, alt: "NextDoor Urgent Care" },
 ];

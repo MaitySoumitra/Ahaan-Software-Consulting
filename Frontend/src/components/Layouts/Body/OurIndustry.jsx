@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./OurIndustry.css";
+import { Container } from "react-bootstrap";
 
 const tabs = [
   { title: "Retail & E-commerce" },
@@ -15,6 +16,7 @@ const TabBar = () => {
   const [activeTab, setActiveTab] = useState(tabs[0].title);
 
   return (
+    <Container>
     <div className="tab-container">
       {/* Tab Bar */}
       <motion.div className="tab-bar" layout>
@@ -59,6 +61,7 @@ const TabBar = () => {
         <div className="content-panel">{activeTab} Content Goes Here</div>
       </motion.div>
     </div>
+    </Container>
   );
 };
 
