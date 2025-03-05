@@ -1,0 +1,55 @@
+.industry-banner {
+    background-image: url('../../../assets/industryBanner.png');
+    background-size: cover;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: "Open Sans", sans-serif;
+
+  }
+  
+  .banner-heading {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: transparent;
+    color: #ffffff;
+    font-family: outfit;
+  }
+
+  .industry-section {
+    max-width: 1300px;
+    margin: 50px auto;
+  }
+  
+  .industry-heading {
+    font-size: 35px;
+    font-weight: 700;
+    color: #392e6e;
+    line-height: 55px;
+    font-family: outfit;
+  }
+  
+  .industry-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000 !important;
+    font-family: outfit !important;
+
+  }
+  
+  @media (max-width: 768px) {
+    .banner-heading {
+      font-size: 2rem;
+    }
+  
+    .banner-subheading {
+      font-size: 1.2rem;
+    }
+  }
+  .text{
+    text-align: justify;
+    width:90%;
+}

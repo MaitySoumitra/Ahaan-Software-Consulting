@@ -1,0 +1,31 @@
+.banner {
+    background-image: url('../../../../assets/Service-Banner.jpg');
+    background-size: cover;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  .banner-heading {
+    font-size: 6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: transparent;
+    color:#fff;
+  }
+  .banner-heading span{
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+  }
+  @media (max-width: 768px) {
+    .banner-heading {
+      font-size: 2rem;
+    }
+  
+    .banner-subheading {
+      font-size: 1.2rem;
+    }
+  }
+  

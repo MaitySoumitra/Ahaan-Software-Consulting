@@ -1,0 +1,52 @@
+
+
+.list-group-item {
+    background-color: #EFF4FF;
+    color:#433978;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 14px;
+    cursor: pointer;
+}
+
+.active-tab {
+    background-color: #433978 !important;
+    color: white !important;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .form{
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    padding: 20px;
+  }
+  button[type="submit"] {
+    background-color: #EFF4FF;
+    color:#433978;
+    border: none;
+  }
+  h5{
+    color:#00194C;
+  }
+  .form-control {
+    padding: 5px;
+    font-size: 1rem;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    background-color: transparent; 
+  }
+  
+  textarea.form-control {
+    resize: none;
+  }
+  input.form-control::placeholder,
+textarea.form-control::placeholder {
+  color: #727171; /* Change to any color */
+  opacity: 1; /* Ensure full visibility */
+}
+.form-control:focus::placeholder {
+  opacity: 0; /* Hide placeholder on focus */
+}

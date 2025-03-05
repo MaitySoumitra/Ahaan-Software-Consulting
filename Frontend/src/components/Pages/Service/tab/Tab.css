@@ -1,0 +1,40 @@
+.tab {
+  background-image: url("../../assets/pattern.png");
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+.custom-btn {
+  background-color: #f9f5ff;
+  color: #7d48e0;
+  border: 1px solid #bea0f7;
+  border-radius: 20px;
+  padding: 5px 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+  background-color: #7d48e0;
+  color: white;
+}
+
+.tab-heading h2 {
+  text-align: left;
+  color: #43387b;
+}
+.tab-heading p {
+  text-align: left;
+  font-size: 14px;
+  width: 70%;
+}
+.nav-pills {
+  --bs-nav-pills-link-active-bg: #7e61bf;
+}
+.tab-items {
+  background-color: #eff4ff;
+  --bs-nav-link-color: #7e61bf;
+  --bs-nav-link-hover-color: #7e61bf;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 80%;
+}
