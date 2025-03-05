@@ -14,7 +14,7 @@ const stats = [
 const CounterCard = ({ value, label, icon, color }) => {
   return (
     <Card
-      className="shadow-lg border-0 p-3 text-center"
+      className=" p-3 text-center total-project-card"
       style={{
         width: "250px",
         height: "100px",
@@ -23,7 +23,7 @@ const CounterCard = ({ value, label, icon, color }) => {
         alignItems: "center",
         justifyContent: "center",
         borderRadius: "12px",
-        boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.4)", // Dark shadow
+        
       }}
     >
       <h4 style={{ color }}>
@@ -40,7 +40,7 @@ const DashboardStats = () => {
     <Container className="total-project">
       <Row className="g-2 justify-content-center" xs={2} md={4}>
         {stats.map((stat, index) => (
-          <Col key={index} className="d-flex justify-content-center">
+          <Col key={index} className="d-flex justify-content-center ">
             <CounterCard {...stat} />
           </Col>
         ))}

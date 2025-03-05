@@ -22,6 +22,10 @@
 }
 .certified-img IMG {
     border: 0.5px solid #939393;
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0.1em 0.2em 0 #433978;
+    }
   }
 
   /* Mobile-first layout (default) */
