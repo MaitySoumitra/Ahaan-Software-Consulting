@@ -1,14 +1,17 @@
 .top-header {
     background-color: #43387B; 
+    height:50px;
+    display: flex;
+    align-items: center;
+    font-family: outfit;
 }
 
 .phone-number, .email {
     margin-right: 20px;
     font-size: 16px;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    font-family: outfit;
+    color: #fff !important;
+   
+   
 }
 
 .icon-spacing {
@@ -32,3 +35,11 @@
 .social-icon:hover {
     color: #ffffff; 
 }
+
+.phone-number a,
+.email a {
+    text-decoration: none;
+    color: #fff;
+}
+
+

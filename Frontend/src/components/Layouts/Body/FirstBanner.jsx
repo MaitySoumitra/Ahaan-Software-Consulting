@@ -15,14 +15,14 @@ const FirstBanner = () => {
       backgroundImage: `url(${BannerImage})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
-      height: "600px",
+      height: "530px",
       display: "flex",
       alignItems: "center",
      
     }}
   > 
     <Container>
-      <Row className="w-100 banner1"> {/* Ensure row spans full width */}
+      <Row className="w-100 banner1"> 
         <Col md={6}>
           <Badge bg="light" className="px-3 py-2 mb-3" style={{color:"#7E61BF", borderRadius:"22px", border:"1px solid #F9F5FF"}}>
             Technology & Design Studio

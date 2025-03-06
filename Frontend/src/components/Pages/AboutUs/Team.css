@@ -1,7 +1,4 @@
-.container {
-  border-radius: 10px;
-  padding: 20px;
-}
+
 .text-primary-team{
   color: #43387b !important;
   font-family: outfit;
@@ -12,12 +9,7 @@
 .fw-bold{
   font-size: 18px;
 }
-.text-muted{
-  font-family: outfit;
-  font-size: 18px;
-  line-height: 35px;
-  text-align: center;
-}
+
 .text-muted-position{
   text-align: left;
 }
