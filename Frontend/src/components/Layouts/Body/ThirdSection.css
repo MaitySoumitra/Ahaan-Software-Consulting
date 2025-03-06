@@ -1,4 +1,8 @@
 /* General styling for the tech icons */
+.our-tech-tab{
+  margin-top: 2.5rem;
+}
+
 .tech-icons {
     display: flex;
     flex-wrap: wrap;

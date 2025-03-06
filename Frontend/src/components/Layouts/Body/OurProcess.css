@@ -1,4 +1,5 @@
 .sdlc-container {
+  margin-top:40px;
   display: flex;
   flex-wrap: wrap; /* Allow steps to move to next line on small screens */
   justify-content: center;

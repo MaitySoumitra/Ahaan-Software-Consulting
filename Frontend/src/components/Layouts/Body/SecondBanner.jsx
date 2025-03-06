@@ -1,63 +1,128 @@
-import { Container, Row, Col, Button } from "react-bootstrap";
-import { BsTelephoneFill } from "react-icons/bs";
-import Banner2 from "../../../assets/images/banner2/banner2.png";
-import { TbPhoneRinging } from "react-icons/tb";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FiPhoneCall } from 'react-icons/fi';
+import { Container } from 'react-bootstrap';
 
-const SecondBanner = () => {
+const CallToAction = () => {
   return (
-    <div
-      className="call-to-action text-white "
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      whileHover={{
+        background: [
+          'radial-gradient(circle at center, #000428, #433978,#8065BB)',
+          'radial-gradient(circle at center,#8065BB, #433978, #000428)'
+        ],
+        transition: { duration: 1.5, repeat: Infinity, repeatType: 'reverse' }
+      }}
       style={{
-        backgroundColor: "#4b3c8e", // Adjust to match your background color
-        backgroundImage: `url(${Banner2})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        alignItems: "center",
-        display: "flex",
-        justifyContent: "center",
-        position: "relative",
-        height: "150px",
-        width: "100%",
+        position: 'relative',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        background: 'radial-gradient(circle at center,rgb(219, 219, 224), #433978,#8065BB)',
+        borderRadius: '8px',
+        height: '200px',
+        margin: '20px auto',
+        width: '100%',
+        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+        color: '#fff',
+        padding: '20px',
+        overflow: 'hidden'
       }}
     >
-      {/* Overlay for darker background */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          backgroundColor: "rgba(14, 35, 105, 0.7)",
-        }}
-      ></div>
-
-      {/* Content Area */}
-      <Container style={{ position: "relative", zIndex: 1 }}>
-        <Row
-          className="align-items-center justify-content-center"
-          style={{ height: "100%" }}
+      <Container
+      style={{
+        display: 'flex',
+        flexDirection: 'row', 
+        alignItems: 'center', 
+        justifyContent: 'space-between', 
+        gap: '20px', 
+      }}
+    >
+     
+      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', justifyContent: 'center' }}>
+        <motion.div
+          animate={{ x: [-2, 2, -2] }}
+          transition={{ duration: 0.1, repeat: Infinity }}
         >
-          <Col md={4} className="d-flex justify-content-center ">
-            <TbPhoneRinging size={40} className="me-3 align-items-center" />
-            <div>
-              <p className="call-for-more">Call For More Info</p>
-              <h5 className="call-number mt-2">+13214210740</h5>
-            </div>
-          </Col>
+          <FiPhoneCall size={34} color="white" />
+        </motion.div>
+        <div
+  style={{
+    display: 'flex',
+    flexDirection: 'column',  // Align the content vertically
+    justifyContent: 'center', // Center the content vertically
+    alignItems: 'center',     // Center the content horizontally
+    textAlign: 'center',      // Ensure the text is centered
+    height: '100%',           // Ensure the div takes full height of its parent
+  }}
+>
+  <h3 style={{ margin: '5px 0', fontSize: '22px' }}>Call For More Info</h3>
+  <p
+    style={{
+      fontSize: '16px',
+      fontWeight: '400',
+      cursor: 'pointer',
+    }}
+    onClick={() => (window.location.href = 'tel:+13214210740')}
+  >
+    +13214210740 
+  </p>
+</div>
 
-          <Col md={5} className="">
-            <h5 className="mb-0 req-call-center">
-              Let’s Request A Schedule For Free Consultation
-            </h5>
-          </Col>
-          <Col md={3} className="text-center">
-            <button className="banner2-contact-us">Contact Us</button>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+      </div>
+
+     
+      <motion.p
+        style={{
+          fontSize: '32px',
+          margin: '10px 0',
+          letterSpacing: '2px',
+        }}
+      >
+        {"Let’s Request A Schedule For Free Consultation".split('').map(
+          (char, index) => (
+            <motion.span
+              key={index}
+              whileHover={{ color: ['#33ffc1', '#ffff', '#000428'] }}
+              transition={{
+                duration: 0.3,
+                repeat: Infinity,
+                repeatType: 'reverse',
+              }}
+            >
+              {char}
+            </motion.span>
+          )
+        )}
+      </motion.p>
+
+     
+      <motion.button
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        whileHover={{ backgroundColor: '#ff0022', scale: 1.1 }}
+        whileTap={{ scale: 0.8 }}
+        style={{
+          padding: '10px 20px',
+          backgroundColor: '#fff',
+          color: '#6200ea',
+          border: 'none',
+          borderRadius: '5px',
+          fontSize: '16px',
+          cursor: 'pointer',
+          transition: 'background-color 0.3s ease',
+        }}
+      >
+        Contact Us
+      </motion.button>
+    </Container>
+    </motion.div>
   );
 };
 
-export default SecondBanner;
+export default CallToAction;
