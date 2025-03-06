@@ -6,7 +6,7 @@ import "./OurProcess.css";
 
 const sdlcSteps = [
   { id: 1, title: "Planning", color: "#6D28D9" },
-  { id: 2, title: "Requirement Analysis", color: "#F59E0B" },
+  { id: 2, title: "Requirements", color: "#F59E0B" },
   { id: 3, title: "Design", color: "#9333EA" },
   { id: 4, title: "Development", color: "#22C55E" },
   { id: 5, title: "Testing", color: "#EF4444" },

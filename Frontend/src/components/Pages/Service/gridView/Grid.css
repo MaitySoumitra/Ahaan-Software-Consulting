@@ -1,60 +1,48 @@
-.card{
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+.service-grid-card {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px !important;
 }
 .card img {
-    object-fit: cover;
-    height: 200px;
-    border-radius: .5rem;
-  }
-  
-  .card-body {
-    text-align: center;
-  }
-  
-  .card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    
-  }
-  
-  .card-text {
-    font-size: 15px;
-    color: #555;
-    line-height: 25px;
-  }
-  .service{
-    margin-top: 1rem;
-  }
-  .grid-heading h2{
-    text-align: center;
-    color: #43387B;
-    font-family: outfit;
-    line-height: 60px;
-    font-weight: 700;
-  }
-  .grid-heading p{
-    text-align: center;
-    font-size: 16px;
-  
-    font-family: outfit;
-  }
-  .text-title{
-    color:#7E61BF;
-  }
-  .icon{
-    color:#7450c0;
-  }
-  .arrow{
-    width:50%;
-  }
-  .d-flex.align-items-center.text-dark.col {
-    font-size: 13px;
-    font-family: outfit;
-    line-height: 25px;
+  object-fit: cover;
+  height: 200px;
+  border-radius: 0.5rem;
 }
-.grid-icon-list{
-  text-align: left;
+
+.service-grid-card-body {
+  text-align: center;
 }
-svg.me-2.fw-bold.icon{
-  width: 15%;
+
+.service-grid-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.service-grid-card-text {
+  font-size: 15px;
+  color: #555;
+  line-height: 25px;
+}
+.service {
+  margin-top: 1rem;
+}
+.grid-heading h2 {
+  text-align: center;
+  color: #43387b;
+  font-family: outfit;
+  line-height: 60px;
+  font-weight: 700;
+}
+.grid-heading p {
+  text-align: center;
+  font-size: 16px;
+
+  font-family: outfit;
+}
+.text-title {
+  color: #7e61bf;
+}
+.icon {
+  color: #7450c0;
+}
+.arrow {
+  width: 50%;
 }
