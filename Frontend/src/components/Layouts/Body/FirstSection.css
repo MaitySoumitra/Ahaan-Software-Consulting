@@ -33,7 +33,7 @@
 }
 
 .first-client-col:hover {
-  transform: translateY(-5px) translateX(-5px); /* Slight lift effect on hover */
+  transform: translateY(-5px) translateX(-5px);
   box-shadow: 1px 0px 0px #433978, 0px 1px 0px #433978, 2px 1px 0px #433978,
     1px 2px 0px #433978, 3px 2px 0px #433978, 2px 3px 0px #433978,
     4px 3px 0px #433978, 3px 4px 0px #433978, 5px 4px 0px #433978,
