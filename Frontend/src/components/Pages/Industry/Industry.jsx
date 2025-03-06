@@ -3,14 +3,15 @@ import IndustryBanner from './IndustryBanner'
 import IndustryTab from './IndustryTab'
 import Market from './Market'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'react-bootstrap';
 
 const Industry = () => {
   return (
-    <div>
+    <Container>
         <IndustryBanner/>
         <IndustryTab/>
         <Market/>
-    </div>
+    </Container>
   )
 }
 

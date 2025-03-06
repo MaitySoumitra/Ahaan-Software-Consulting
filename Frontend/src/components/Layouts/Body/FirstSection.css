@@ -1,3 +1,8 @@
+.selected-clients{
+  margin-top: 40px;
+}
+
+
 .section1-client-label {
   border: 1px solid #e9d7fe;
   background: #f9f5ff;
@@ -13,7 +18,7 @@
   color: #433978;
 }
 .section1-content {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 500;
 }
 .first-client-col {
@@ -48,4 +53,11 @@
     object-fit: contain;
     max-width: 70px;
   }
+}
+
+.section1-content-p{
+  width:80%;
+  font-family: outfit;
+  line-height: 30px;
+  text-align: center;
 }

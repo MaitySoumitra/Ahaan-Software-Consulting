@@ -65,12 +65,11 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="footer-bottom">
-          <p>© 2024 Ahaan Software, All rights reserved.</p>
+          <p>© 2025 Ahaan Software, All rights reserved.</p>
           <div className="social-icons">
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaXTwitter /></a>
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaLinkedinIn /></a>
+            <a href="https://www.facebook.com/ahaansoftwareconsulting"><FaFacebookF /></a>
+            <a href="https://www.instagram.com/ahaansoftware/"><FaInstagram /></a>
+            <a href="https://www.linkedin.com/company/ahaansoftware"><FaLinkedinIn /></a>
           </div>
         </div>
       </div>
