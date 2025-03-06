@@ -48,20 +48,9 @@ const TabBar = () => {
     <Container>
       <div className="mt-5">
         <label className="section1-client-label">Our Technology Use</label>
-        <h2 className="mt-2 fw-bold first-section-heading">
-          Empowering Growth at Every Stage of Your AI-driven Custom Software
-          Development Journey
-        </h2>
-
-        <p className="text-muted mx-auto mt-3 section1-content">
-          Whether you require a complex enterprise software development solution
-          or seamless software integration, we will take your business to the
-          next level of success with IT consulting services & software
-          development solutions.
-        </p>
       </div>
-      <Tab.Container activeKey={activeKey} onSelect={(k) => setActiveKey(k)}>
-        <Row>
+      <Tab.Container activeKey={activeKey} onSelect={(k) => setActiveKey(k)} >
+        <Row className="our-tech-tab">
           {/* Sidebar Navigation */}
           <Col sm={2} className="tabs-col">
             <Nav variant="pills" className="flex-column">
@@ -333,6 +322,12 @@ const TabBar = () => {
           </Col>
         </Row>
       </Tab.Container>
+      <p className="text-muted mx-auto mt-3 section1-content section1-content-p">
+          Whether you require a complex enterprise software development solution
+          or seamless software integration, we will take your business to the
+          next level of success with IT consulting services & software
+          development solutions.
+        </p>
     </Container>
   );
 };

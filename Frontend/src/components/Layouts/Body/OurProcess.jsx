@@ -27,6 +27,9 @@ const OurProcess = () => {
 
   return (
     <Container>
+      <div className="container mt-5">
+        <label className="section1-client-label">Our Process</label>
+      </div>
     <div className="sdlc-container">
     {sdlcSteps.map((step, index) => (
       <div key={step.id} className="sdlc-step-wrapper">
@@ -48,6 +51,10 @@ const OurProcess = () => {
       </div>
     ))}
   </div>
+  <p className="text-muted mx-auto mt-3 section1-content section1-content-p">
+          Whether you require a complex enterprise software development solution or seamless software integration, 
+          we will take your business to the next level of success with IT consulting services & software development solutions.
+        </p>
   
   </Container>
   );
