@@ -89,14 +89,14 @@ const Grid = () => {
       <Row className="gy-5  service">
         {cardData.map((card, index) => (
           <Col key={index} md={4}>
-            <Card className="rounded-4 overflow-hidden border border-light">
+            <Card className="rounded-4 overflow-hidden border border-light service-grid-card">
               <Card.Img variant="top" src={card.image} alt={card.title} className="img-fluid" />
-              <Card.Body className="p-4">
-                <Card.Title className="text-title gap-5 fw-bold d-flex align-items-center">
+              <Card.Body className="p-4 service-grid-card-body">
+                <Card.Title className="text-title gap-5 fw-bold d-flex align-items-center service-grid-card-title">
                   {card.title}
           
                 </Card.Title>
-                <Card.Text className="text-muted text-start mt-2">{card.description}</Card.Text>
+                <Card.Text className="text-muted text-start mt-2 service-grid-card-text">{card.description}</Card.Text>
                 <div className="mt-3 row row-cols-2 grid-icon-list">
                   {card.features.map((feature, i) => (
                     <div key={i} className="d-flex align-items-center text-dark col">
