@@ -1,0 +1,56 @@
+.tabs-list {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #d2d2d2;
+  padding: 15px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  text-align: left;
+  margin-top: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Active state */
+.tab-btn.active {
+  transform: translateX(10px);
+  background: #392E6E;
+  color: white;
+}
+
+/* Hover Effect: Smooth Slide to the right */
+.tab-btn:hover {
+  transform: translateX(10px);
+  border-color: #392E6E;
+  background-color: #392E6E;
+  color: #fff;
+}
+
+/* Tab content styling */
+.tab-content {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.col-md-3 {
+  padding: 0px;
+}

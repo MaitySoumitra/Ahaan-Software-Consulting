@@ -1,17 +1,15 @@
 import React from 'react'
 import IndustryBanner from './IndustryBanner'
-import IndustryTab from './IndustryTab'
-import Market from './Market'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'react-bootstrap';
+import TabSection from './IndustryTab/TabSection';
 
 const Industry = () => {
   return (
-    <Container>
+    <div>
         <IndustryBanner/>
-        <IndustryTab/>
-        <Market/>
-    </Container>
+        <TabSection/>
+
+    </div>
   )
 }
 

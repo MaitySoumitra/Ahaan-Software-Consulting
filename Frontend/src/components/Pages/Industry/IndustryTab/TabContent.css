@@ -1,0 +1,85 @@
+.ecommerce-section h2 {
+    color: #392E6E;
+    font-size: 35px;
+  }
+  
+  .ecommerce-section p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  .content-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+
+
+  .ecommerce-features {
+    text-align: center;
+  }
+  
+  .feature-card {
+    border-color: #392E6E;
+    border-bottom: 5px solid #392E6E;
+    border-radius: 8px;
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+    text-align: left;
+  }
+  
+  .feature-card:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  .feature-card .feature-icon {
+    font-size: 40px;
+    color: #392E6E;
+  }
+  
+  .horizontal {
+    text-align: left;
+    padding: 15px;
+  }
+  
+  .horizontal .feature-icon {
+    font-size: 36px;
+    margin-right: 10px;
+  }
+  h2.fw-bold.text-left.Revitalize{
+    line-height: 100px;
+  }
+
+  .mb-4 {
+    margin-bottom: 2.5rem !important;
+  }
+  
+  .text-center {
+    text-align: center !important;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .order-md-1 {
+    order: 1;
+  }
+  
+  .order-md-2 {
+    order: 2;
+  }
+  .grids-heading{
+    font-weight: 600;
+    font-family: outfit !important;
+    font-size: 30px !important;
+  }
+  .grids-content{
+    font-family: outfit !important;
+    font-size: 16px;
+  }
