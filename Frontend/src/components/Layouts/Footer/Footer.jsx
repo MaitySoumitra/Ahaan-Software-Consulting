@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="row">
-          {/* Logo & Newsletter */}
+          
           <div className="col-md-4">
             <img src="http://woocommerce.ahaanmedia.com/wp-content/uploads/2025/02/Ahaan-Software-New-Logo-1-6-1.png" alt="Ahaan Logo" className="footer-logo" />
             <p className="newsletter-text">
@@ -20,35 +20,16 @@ const Footer = () => {
               <button className="btn btn-primary">Submit</button>
             </div>
           </div>
-
-          {/* Quick Links */}
-          <div className="col-md-2">
-            <h5 className="footer-heading">QUICK LINKS</h5>
+          <div className="col-md-4 d-flex flex-column align-items-center ">
+            
             <ul className="footer-links">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Industry</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><h5 className="footer-heading">QUICK LINKS</h5></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Shipping Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
             </ul>
           </div>
-
-          {/* Our Services */}
-          <div className="col-md-3">
-            <h5 className="footer-heading">OUR SERVICES</h5>
-            <ul className="footer-links">
-              <li><a href="#">UI/UX Design</a></li>
-              <li><a href="#">App Development</a></li>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Digital Marketing</a></li>
-              <li><a href="#">Branding Design</a></li>
-              <li><a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          {/* Contact Us */}
-          <div className="col-md-3">
+          <div className="col-md-4">
             <h5 className="footer-heading">CONTACT US</h5>
             <p className="contact-info">
               <FaLocationDot className="icon" /> Bengal Eco Intelligent Park, EM Block,
@@ -62,11 +43,9 @@ const Footer = () => {
             </p>
           </div>
         </div>
-
-        {/* Footer Bottom */}
         <div className="footer-bottom">
           <p>© 2025 Ahaan Software, All rights reserved.</p>
-          <div className="social-icons">
+          <div className="footer-social-icons">
             <a href="https://www.facebook.com/ahaansoftwareconsulting"><FaFacebookF /></a>
             <a href="https://www.instagram.com/ahaansoftware/"><FaInstagram /></a>
             <a href="https://www.linkedin.com/company/ahaansoftware"><FaLinkedinIn /></a>
