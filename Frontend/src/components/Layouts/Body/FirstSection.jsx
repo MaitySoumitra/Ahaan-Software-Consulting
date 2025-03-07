@@ -21,7 +21,7 @@ const FirstSection = () => {
   return (
     <Container className="selected-clients">
       <label className="section1-client-label">Our Clients</label>
-      <Row className="mt-2">
+      <Row className="mt-4">
         {clients.map((client, index) => (
           <Col xs={4} sm={4} md={2} key={index} className="text-center">
             <div className="first-client-col">
@@ -34,7 +34,7 @@ const FirstSection = () => {
           </Col>
         ))}
       </Row>
-      <p className="text-muted mx-auto section1-content section1-content-p">
+      <p className="text-muted mx-auto mt-3 section1-content section1-content-p">
         Whether you require a complex enterprise software development solution
         or seamless software integration, we will take your business to the next
         level of success with IT consulting services & software development
