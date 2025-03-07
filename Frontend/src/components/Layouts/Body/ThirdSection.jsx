@@ -58,7 +58,7 @@ const TabBar = () => {
 
   useEffect(() => {
     const handaleResize = () => {
-      setIsMobile(window.innerWidth <= 770);
+      setIsMobile(window.innerWidth <= 700);
       setIsTablet(window.innerWidth<=1000)
     };
     handaleResize();

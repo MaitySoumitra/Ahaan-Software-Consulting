@@ -1,48 +1,88 @@
-/* General Styling */
-.navbar {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
 
-/* Logo */
-.logo {
+.asc-logo {
   height: 35px;
  
 }
-
-.brand-name {
-  font-size: 22px;
-  font-weight: bold;
-  color: #6c48a1;
+.asc-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
-
-/* Navbar Links */
-.navbar-nav .nav-link {
+.desktop-nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
   font-size: 16px;
   color: #333;
   font-weight: 500;
-  padding: 8px 15px;
+  gap: 3rem;
 }
 
-.navbar-nav .nav-link:hover {
-  color: #6c48a1;
-}
-
-/* Dropdown Arrow */
-.navbar-nav .dropdown-toggle::after {
-  font-size: 12px;
-}
-
-/* Get a Quote Button */
 .get-quote-btn {
   background-color: #43387B;
   color: white;
   font-size: 16px;
   font-weight: 500;
-  padding: 10px 35px;
+  padding: 10px 30px;
   border-radius: 30px;
   text-decoration: none;
+}
+.header-left-side{
+  display:flex;
+  gap:5px;
+  align-items: center;
 }
 
 .get-quote-btn:hover {
   background-color: #6c48a1;
 }
+.get-quote-container-1{
+  display: none;
+  
+}
+.asc-header-toggle{
+  display:none;
+}
+
+@media (max-width: 992px ){
+  .desktop-nav-menu{
+    gap: 1.5rem;
+    font-size: 14px;
+  }
+  
+}
+@media (max-width: 769px){
+
+  .get-quote-container-1{
+    display: block;
+    
+  }
+  .get-quote-container-1 a{
+    font-size: 12px;
+    font-weight: 500;
+    padding: 10px 25px;
+  }
+  .asc-header-toggle{
+    display:block;
+    padding: 0;
+    border: none;
+    background: transparent;
+  }
+  .get-quote-container-2{
+    display: none;
+  }
+  .desktop-nav-menu{
+    display: none !important;
+  }
+  
+}
+@media (max-width: 450px){
+  .phone-get-qt{
+    padding:6px;
+    background-color: #7E61BE;
+    border-radius: 50%;
+    color:white;
+  }
+}
+
