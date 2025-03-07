@@ -58,7 +58,7 @@
   margin-bottom: 8px;
 }
 
-.footer-links a {
+.footer-links a, .contact-info a {
   color: #444;
   text-decoration: none;
   font-size: 16px;
@@ -71,12 +71,15 @@
 }
 
 .contact-info {
-  font-size: 14px;
+  
   margin-bottom: 8px;
   display: flex;
   align-items: center;
   font-size: 16px;
   font-family: outfit;
+}
+.contact-info a{
+
 }
 
 .contact-info .icon {

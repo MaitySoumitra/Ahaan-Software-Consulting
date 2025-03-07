@@ -1,82 +1,93 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import { HiMenuAlt3 } from "react-icons/hi";
+import { TbMessage } from "react-icons/tb";
+
 
 const Header = () => {
+   const [isMobile, setIsMobile] = useState(false);
+  const handleQuoteButtonClick = () => {
+    // Add your logic for the "Get a Quote" button click here
+    console.log("Get a Quote clicked");
+  };
+
+  useEffect(() => {
+      const handaleResize = () => {
+        setIsMobile(window.innerWidth <= 450);
+        
+      };
+      handaleResize();
+  
+      window.addEventListener("resize", handaleResize);
+      return () => window.removeEventListener("resize", handaleResize);
+    }, []);
+
   return (
-    <nav className="navbar navbar-expand-lg bg-white py-2">
-      <div className="container">
-        {/* Logo */}
-        <a className="navbar-brand d-flex align-items-center" href="/">
+    <nav className="container py-3">
+      <div className=" asc-header">
+        <a className="d-flex align-items-center" href="/">
           <img
             src="http://woocommerce.ahaanmedia.com/wp-content/uploads/2025/02/Ahaan-Software-New-Logo-1-6-1.png"
             alt="logo"
-            className="logo"
+            className="asc-logo"
           />
         </a>
 
-        {/* Toggle Button for Mobile */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        {/* Navbar Links */}
-        <div
-          className="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul className="navbar-nav d-flex gap-5">
-            <li className="nav-item">
+        <div className="header-left-side d-flex align-items-center">
+          <ul className="d-flex  desktop-nav-menu">
+            <li>
               <Link className="nav-link" to="/">
                 Home
               </Link>
             </li>
-            <li className="nav-item">
+            <li>
               <Link className="nav-link" to="/about">
-                About Us
+                About us
               </Link>
             </li>
-            <li className="nav-item ">
-              <Link className="nav-link " to="/service">
+            <li>
+              <Link className="nav-link" to="/service">
                 Services
               </Link>
             </li>
-            <li className="nav-item ">
-              <Link className="nav-link " to="/industry">
+            <li>
+              <Link className="nav-link" to="/industry">
                 Industry
               </Link>
             </li>
-            <li className="nav-item ">
-              <Link className="nav-link " to="/portfolio">
+            <li>
+              <Link className="nav-link" to="/portfolio">
                 Portfolio
               </Link>
             </li>
-
-            {/* <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" to="/career">
-                Career
-              </Link>
-            </li> */}
-            {/* <li className="nav-item">
-              <Link className="nav-link" to="/blog">
-                Blog
-              </Link>
-            </li> */}
           </ul>
         </div>
-
-        {/* Get a Quote Button */}
-        <div>
-          <a href="/contact" className="btn get-quote-btn">
+        <div className="header-left-side">
+          <div className="get-quote-container-1">{isMobile ? <TbMessage size={35} className="phone-get-qt"/> : <a href="/contact" className=" get-quote-btn">
+              Get a Quote
+            </a>}
+            
+          </div>
+          <button
+            className="asc-header-toggle"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <HiMenuAlt3 size={40} color="#43387B" />
+          </button>
+        </div>
+        <div className="get-quote-container-2">
+          <a
+            href="/contact"
+            className="get-quote-btn"
+            onClick={handleQuoteButtonClick}
+          >
             Get a Quote
           </a>
         </div>
