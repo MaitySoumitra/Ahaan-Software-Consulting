@@ -1,4 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+import {
+  FaBeer,
+  FaLaptopCode,
+  FaDatabase,
+  FaShoppingCart,
+  FaDev,
+  FaVials,
+} from "react-icons/fa";
+
 import {
   FaFigma,
   FaHtml5,
@@ -43,55 +53,73 @@ import "./ThirdSection.css";
 
 const TabBar = () => {
   const [activeKey, setActiveKey] = useState("frontend");
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet]= useState(false)
+
+  useEffect(() => {
+    const handaleResize = () => {
+      setIsMobile(window.innerWidth <= 770);
+      setIsTablet(window.innerWidth<=1000)
+    };
+    handaleResize();
+
+    window.addEventListener("resize", handaleResize);
+    return () => window.removeEventListener("resize", handaleResize);
+  }, []);
 
   return (
     <Container>
       <div className="mt-5">
         <label className="section1-client-label">Our Technology Use</label>
       </div>
-      <Tab.Container activeKey={activeKey} onSelect={(k) => setActiveKey(k)} >
+      <Tab.Container activeKey={activeKey} onSelect={(k) => setActiveKey(k)}>
         <Row className="our-tech-tab">
-          {/* Sidebar Navigation */}
-          <Col sm={2} className="tabs-col">
-            <Nav variant="pills" className="flex-column">
+          <Col sm={2} xs={2} className="tabs-col-tech">
+            <Nav variant="pills" className="flex-column tech-col-navbar">
               <Nav.Item className="nav-item-tab">
                 <Nav.Link eventKey="uiux" className="nav-link-tab">
-                  UI/UX Design
+                  {isMobile ? <FaBeer className="nav-icon" /> :(isTablet ? "UI/UX" :  "UI/UX Design")}
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item className="nav-item-tab">
                 <Nav.Link eventKey="frontend" className="nav-link-tab">
-                  FrontEnd
+                  {isMobile ? (
+                    <FaLaptopCode className="nav-icon" />
+                  ) : (
+                    "FrontEnd"
+                  )}
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item className="nav-item-tab">
                 <Nav.Link eventKey="backend" className="nav-link-tab">
-                  BackEnd
+                  {isMobile ? <FaDatabase className="nav-icon" /> : "BackEnd"}
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item className="nav-item-tab">
                 <Nav.Link eventKey="cms" className="nav-link-tab">
-                  CMS / E-Commerce
+                  {isMobile ? (
+                    <FaShoppingCart className="nav-icon" />
+                  ) : ( isTablet ? "CMS" :
+                    "CMS / E-Com"
+                  )}
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item className="nav-item-tab">
                 <Nav.Link eventKey="devops" className="nav-link-tab">
-                  DevOps
+                  {isMobile ? <FaDev className="nav-icon" /> : "DevOps"}
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item className="nav-item-tab">
                 <Nav.Link eventKey="testing" className="nav-link-tab">
-                  Testing
+                  {isMobile ? <FaVials className="nav-icon" /> : "Testing"}
                 </Nav.Link>
               </Nav.Item>
             </Nav>
           </Col>
-
-          {/* Content Area */}
-          <Col sm={10}>
-            <Tab.Content>
+          <Col sm={10} xs={10} className="tabs-col-tech">
+            <Tab.Content className="tech-tab-content">
               <Tab.Pane eventKey="frontend">
-                <div className="tech-icons">
+                <div className="our-tab-tech-icons">
                   <div className="tech-icon">
                     <FaHtml5 size={60} color="#E34F26" />
                     <p className="tech-name" style={{ color: "#E34F26" }}>
@@ -107,7 +135,7 @@ const TabBar = () => {
                   <div className="tech-icon">
                     <FaReact size={60} color="#61DAFB" />
                     <p className="tech-name" style={{ color: "#61DAFB" }}>
-                      ReactJS
+                      React
                     </p>
                   </div>
                   <div className="tech-icon">
@@ -125,7 +153,7 @@ const TabBar = () => {
                   <div className="tech-icon">
                     <SiNextdotjs size={60} color="#000000" />
                     <p className="tech-name" style={{ color: "#000000" }}>
-                      Next.js
+                      Next
                     </p>
                   </div>
                   <div className="tech-icon">
@@ -137,7 +165,7 @@ const TabBar = () => {
                   <div className="tech-icon">
                     <SiTailwindcss size={60} color="#38B2AC" />
                     <p className="tech-name" style={{ color: "#38B2AC" }}>
-                      Tailwind CSS
+                      Tailwind
                     </p>
                   </div>
                   <div className="tech-icon">
@@ -149,13 +177,13 @@ const TabBar = () => {
                   <div className="tech-icon">
                     <SiNuxtdotjs size={60} color="#00DC82" />
                     <p className="tech-name" style={{ color: "#00DC82" }}>
-                      Nuxt.js
+                      Nuxt
                     </p>
                   </div>
                 </div>
               </Tab.Pane>
               <Tab.Pane eventKey="uiux">
-                <div className="tech-icons">
+                <div className="our-tab-tech-icons">
                   <div className="tech-icon">
                     <FaFigma size={60} color="#F24E1E" />
                     <p className="tech-name" style={{ color: "#F24E1E" }}>
@@ -177,7 +205,7 @@ const TabBar = () => {
                   <div className="tech-icon">
                     <TbBrandAdobeXd size={60} color="#F123AC" />
                     <p className="tech-name" style={{ color: "#F123AC" }}>
-                      Adobe XD
+                      Adobe
                     </p>
                   </div>
                   <div className="tech-icon">
@@ -189,23 +217,23 @@ const TabBar = () => {
                   <div className="tech-icon">
                     <SiWix size={60} color="#1F2E3A" />
                     <p className="tech-name" style={{ color: "#1F2E3A" }}>
-                      Wix Studio
+                      Wix
                     </p>
                   </div>
                 </div>
               </Tab.Pane>
               <Tab.Pane eventKey="backend">
-                <div className="tech-icons">
+                <div className="our-tab-tech-icons">
                   <div className="tech-icon">
                     <FaNodeJs size={60} color="#609941" />
                     <p className="tech-name" style={{ color: "#609941" }}>
-                      Node.js
+                      Node
                     </p>
                   </div>
                   <div className="tech-icon">
                     <SiExpress size={60} color="black" />
                     <p className="tech-name" style={{ color: "black" }}>
-                      Express.js
+                      Express
                     </p>
                   </div>
                   <div className="tech-icon">
@@ -229,7 +257,7 @@ const TabBar = () => {
                 </div>
               </Tab.Pane>
               <Tab.Pane eventKey="cms">
-                <div className="tech-icons">
+                <div className="our-tab-tech-icons">
                   <div className="tech-icon">
                     <FaWordpress size={60} color="#207196" />
                     <p className="tech-name" style={{ color: "#207196" }}>
@@ -245,7 +273,7 @@ const TabBar = () => {
                   <div className="tech-icon">
                     <SiWoocommerce size={60} color="#97598B" />
                     <p className="tech-name" style={{ color: "#97598B" }}>
-                      WooCommerce
+                      Woo
                     </p>
                   </div>
                   <div className="tech-icon">
@@ -257,7 +285,7 @@ const TabBar = () => {
                 </div>
               </Tab.Pane>
               <Tab.Pane eventKey="devops">
-                <div className="tech-icons">
+                <div className="our-tab-tech-icons">
                   <div className="tech-icon">
                     <SiDocker size={60} color="#0997E5" />
                     <p className="tech-name" style={{ color: "#0997E5" }}>
@@ -291,7 +319,7 @@ const TabBar = () => {
                 </div>
               </Tab.Pane>
               <Tab.Pane eventKey="testing">
-                <div className="tech-icons">
+                <div className="our-tab-tech-icons">
                   <div className="tech-icon">
                     <SiJest size={60} color="#944058" />
                     <p className="tech-name" style={{ color: "#944058" }}>
@@ -323,11 +351,11 @@ const TabBar = () => {
         </Row>
       </Tab.Container>
       <p className="text-muted mx-auto mt-3 section1-content section1-content-p">
-          Whether you require a complex enterprise software development solution
-          or seamless software integration, we will take your business to the
-          next level of success with IT consulting services & software
-          development solutions.
-        </p>
+        Whether you require a complex enterprise software development solution
+        or seamless software integration, we will take your business to the next
+        level of success with IT consulting services & software development
+        solutions.
+      </p>
     </Container>
   );
 };
