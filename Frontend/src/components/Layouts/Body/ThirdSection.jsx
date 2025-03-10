@@ -54,12 +54,12 @@ import "./ThirdSection.css";
 const TabBar = () => {
   const [activeKey, setActiveKey] = useState("frontend");
   const [isMobile, setIsMobile] = useState(false);
-  const [isTablet, setIsTablet]= useState(false)
+  const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
     const handaleResize = () => {
       setIsMobile(window.innerWidth <= 700);
-      setIsTablet(window.innerWidth<=1000)
+      setIsTablet(window.innerWidth <= 1000);
     };
     handaleResize();
 
@@ -78,7 +78,13 @@ const TabBar = () => {
             <Nav variant="pills" className="flex-column tech-col-navbar">
               <Nav.Item className="nav-item-tab">
                 <Nav.Link eventKey="uiux" className="nav-link-tab">
-                  {isMobile ? <FaBeer className="nav-icon" /> :(isTablet ? "UI/UX" :  "UI/UX Design")}
+                  {isMobile ? (
+                    <FaBeer className="nav-icon" />
+                  ) : isTablet ? (
+                    "UI/UX"
+                  ) : (
+                    "UI/UX Design"
+                  )}
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item className="nav-item-tab">
@@ -99,7 +105,9 @@ const TabBar = () => {
                 <Nav.Link eventKey="cms" className="nav-link-tab">
                   {isMobile ? (
                     <FaShoppingCart className="nav-icon" />
-                  ) : ( isTablet ? "CMS" :
+                  ) : isTablet ? (
+                    "CMS"
+                  ) : (
                     "CMS / E-Com"
                   )}
                 </Nav.Link>
@@ -351,10 +359,11 @@ const TabBar = () => {
         </Row>
       </Tab.Container>
       <p className="text-muted mx-auto mt-3 section1-content section1-content-p">
-        Whether you require a complex enterprise software development solution
-        or seamless software integration, we will take your business to the next
-        level of success with IT consulting services & software development
-        solutions.
+        Here’s How We Transform Business Operations Through The Power Of Human
+        And Tech Collaboration. The success of our services depends on a
+        perfectly laid-out process from the beginning to the end. And, we put
+        YOU at the centre of everything we do, turning our promises into
+        reality!
       </p>
     </Container>
   );
