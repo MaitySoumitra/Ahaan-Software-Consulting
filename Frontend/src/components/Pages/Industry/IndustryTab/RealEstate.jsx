@@ -74,7 +74,7 @@ const RealEstate = () => {
       </p>
       <img src={Constructions} alt="E-Commerce" className="content-image" />
 
-      <h2 className="fw-bold text-left Revitalize">
+      <h2 className="fw-bold text-left Revitalize mt-3">
       Innovate. Elevate. Collaborate. Bring Your Real Estate Vision To Life!
       </h2>
       <p className="text-left text-muted">

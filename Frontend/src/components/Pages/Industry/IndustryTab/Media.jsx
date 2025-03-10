@@ -92,7 +92,7 @@ const Media = () => {
       </p>
       <img src={Constructions} alt="E-Commerce" className="content-image" />
 
-      <h2 className="fw-bold text-left Revitalize">
+      <h2 className="fw-bold text-left Revitalize mt-3">
         Curating The Best Digital Experiences
       </h2>
       <p className="text-left text-muted">

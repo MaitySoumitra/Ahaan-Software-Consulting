@@ -74,7 +74,7 @@ const Education = () => {
       </p>
       <img src={Constructions} alt="E-Commerce" className="content-image" />
 
-      <h2 className="fw-bold text-left Revitalize">
+      <h2 className="fw-bold text-left Revitalize mt-3">
       Take Education To A New Height Of Excellence!
       </h2>
       <p className="text-left text-muted">

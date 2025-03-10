@@ -74,7 +74,7 @@ const Construction = () => {
       </p>
       <img src={EcommerceImage} alt="E-Commerce" className="content-image" />
 
-      <h2 className="fw-bold text-left Revitalize">
+      <h2 className="fw-bold text-left Revitalize mt-3">
       Embrace The Tech-Powered Future Of Construction
       </h2>
       <p className="text-left text-muted">

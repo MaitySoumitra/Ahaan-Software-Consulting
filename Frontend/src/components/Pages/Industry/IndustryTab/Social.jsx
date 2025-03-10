@@ -74,7 +74,7 @@ const Social = () => {
       </p>
       <img src={Constructions} alt="E-Commerce" className="content-image" />
 
-      <h2 className="fw-bold text-left Revitalize">
+      <h2 className="fw-bold text-left Revitalize mt-3">
       Connect, Curate, And Communicate!   
       </h2>
       <p className="text-left text-muted">
@@ -109,7 +109,7 @@ const Social = () => {
         ))}
       </Row> */}
 
-      <h2 className="fw-bold text-left Revitalize">
+      <h2 className="fw-bold text-left Revitalize mt-3">
       Create More Value With Our Solutions 
       </h2>
       {gridcontent.map((feature, index) => (
