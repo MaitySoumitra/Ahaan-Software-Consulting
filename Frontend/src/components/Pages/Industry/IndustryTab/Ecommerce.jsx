@@ -74,7 +74,7 @@ const Ecommerce = () => {
       </p>
       <img src={EcommerceImage} alt="E-Commerce" className="content-image" />
 
-      <h2 className="fw-bold text-left Revitalize">
+      <h2 className="fw-bold text-left Revitalize mt-3">
       Unlock Your Retail Business’ Full Potential 
       </h2>
       <p className="text-left text-muted">

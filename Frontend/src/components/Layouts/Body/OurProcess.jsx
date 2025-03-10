@@ -54,8 +54,8 @@ const OurProcess = () => {
         ))}
       </div>
       <p className="text-muted mx-auto mt-3 section1-content section1-content-p">
-        Create A Future-Forward Tech Foundation That Can Power Business
-        Operations, Workflows And Experiences! Our tech-driven services could be
+        Create a future-forward tech foundation that can power your business
+        operations, workflows and experiences! Our tech-driven services could be
         a digital breakthrough to those who are seeking success in today’s
         competitive landscape. Boost your business benchmarks by redefining
         processes, modernizing technologies, and transforming experiences.

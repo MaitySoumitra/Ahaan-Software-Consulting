@@ -35,10 +35,10 @@ const FirstSection = () => {
         ))}
       </Row>
       <p className="text-muted mx-auto mt-3 section1-content section1-content-p">
-        Whether you require a complex enterprise software development solution
-        or seamless software integration, we will take your business to the next
-        level of success with IT consulting services & software development
-        solutions.
+        We understand, collaborate, and empower! From complex Software
+        Development Service to Seamless Integration, experience how our next-gen
+        IT consulting and software solutions can transform and accelerate your
+        business.
       </p>
     </Container>
   );

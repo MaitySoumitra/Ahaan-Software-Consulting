@@ -109,7 +109,7 @@ const Logistics = () => {
         ))}
       </Row> */}
 
-      <h2 className="fw-bold text-left Revitalize">
+      <h2 className="fw-bold text-left Revitalize mt-3">
       Compete Against Industry Giants With Our Solutions 
       </h2>
       {gridcontent.map((feature, index) => (

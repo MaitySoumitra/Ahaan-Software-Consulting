@@ -1,28 +1,33 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { TbMessage } from "react-icons/tb";
 
-
 const Header = () => {
-   const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  // Toggle sidebar visibility
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
   const handleQuoteButtonClick = () => {
     // Add your logic for the "Get a Quote" button click here
     console.log("Get a Quote clicked");
   };
 
   useEffect(() => {
-      const handaleResize = () => {
-        setIsMobile(window.innerWidth <= 450);
-        
-      };
-      handaleResize();
-  
-      window.addEventListener("resize", handaleResize);
-      return () => window.removeEventListener("resize", handaleResize);
-    }, []);
+    const handaleResize = () => {
+      setIsMobile(window.innerWidth <= 450);
+    };
+    handaleResize();
+
+    window.addEventListener("resize", handaleResize);
+    return () => window.removeEventListener("resize", handaleResize);
+  }, []);
 
   return (
     <nav className="container py-3">
@@ -65,22 +70,37 @@ const Header = () => {
           </ul>
         </div>
         <div className="header-left-side">
-          <div className="get-quote-container-1">{isMobile ? <TbMessage size={35} className="phone-get-qt"/> : <a href="/contact" className=" get-quote-btn">
-              Get a Quote
-            </a>}
-            
+          <div className="get-quote-container-1">
+            {isMobile ? (
+              <TbMessage size={35} className="phone-get-qt" />
+            ) : (
+              <a href="/contact" className=" get-quote-btn">
+                Get a Quote
+              </a>
+            )}
           </div>
-          <button
-            className="asc-header-toggle"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <HiMenuAlt3 size={40} color="#43387B" />
-          </button>
+          <button className="asc-header-toggle" type="button" onClick={toggleSidebar}>
+        <HiMenuAlt3 size={40} color="#43387B" />
+      </button>
+
+      {/* Mobile Sidebar */}
+      <div className={`mobile-sidebar ${sidebarOpen ? "open" : ""}`}>
+        <div className="sidebar-content">
+          <div className="nav-links">
+            <Link to="/">Home</Link>
+            <Link to="/about">About us</Link>
+            <Link to="/service">Services</Link>
+            <Link to="/industry">Industry</Link>
+            <Link to="/portfolio">Portfolio</Link>
+          </div>
+          <hr />
+          <div className="social-links">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
         </div>
         <div className="get-quote-container-2">
           <a

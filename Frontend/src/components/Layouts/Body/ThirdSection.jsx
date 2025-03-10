@@ -359,11 +359,10 @@ const TabBar = () => {
         </Row>
       </Tab.Container>
       <p className="text-muted mx-auto mt-3 section1-content section1-content-p">
-        Here’s How We Transform Business Operations Through The Power Of Human
-        And Tech Collaboration. The success of our services depends on a
-        perfectly laid-out process from the beginning to the end. And, we put
-        YOU at the centre of everything we do, turning our promises into
-        reality!
+        The success of our services depends on a perfectly laid-out process from
+        the beginning to the end. And, we put YOU at the centre of everything we
+        do, turning our promises into reality! We specialize in transforming
+        business operations through the power of human and tech collaboration.
       </p>
     </Container>
   );
