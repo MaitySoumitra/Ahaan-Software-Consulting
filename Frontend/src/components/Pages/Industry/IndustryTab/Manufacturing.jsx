@@ -40,55 +40,48 @@ const features = [
   const gridcontent = [
     {
       imgSrc: Ecom1,
-      title: 'Simple Integration',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Industrial Manufacturing Solutions ',
+      description: 'To stay infallible against digital disruption, shifting customer demands, and evolving markets, manufacturing leaders must embrace smarter, more connected products and transition from selling physical goods to service-driven models. Ahaan Software Consulting empowers you to leverage cutting-edge technologies like machine learning, analytics, IoT, and blockchain for a future-ready manufacturing ecosystem.'
     },
     {
       imgSrc: Ecom2,
-      title: 'Strong Security',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Process Manufacturing Solutions ',
+      description: 'At Ahaan Software Consulting, we help process manufacturers transition from isolated automation systems to fully connected, intelligent operations. Our solutions streamline production, reduce costs, optimize plant efficiency, and minimize environmental impact for a smarter, more sustainable future.'
     },
-    {
-      imgSrc: Ecom3,
-      title: 'Quick Tracking',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
-    },
-    {
-      imgSrc: Ecom4,
-      title: 'Adaptable Scalability',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
-    },
-    {
-      imgSrc: Ecom5,
-      title: 'Efficient Administration',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
-    }
+    // {
+    //   imgSrc: Ecom3,
+    //   title: 'Quick Tracking',
+    //   description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    // },
+    // {
+    //   imgSrc: Ecom4,
+    //   title: 'Adaptable Scalability',
+    //   description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    // },
+    // {
+    //   imgSrc: Ecom5,
+    //   title: 'Efficient Administration',
+    //   description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    // }
   ];
 
 const Manufacturing = () => {
   return (
     <div className="ecommerce-section">
-      <h2 className="fw-bold">Manufacturing</h2>
+      <h2 className="fw-bold">Make The Digital Transition To Manufacturing</h2>
       <p className="text-muted">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
+      Automation, analytics, AI, integrated systems, and smart factories—our advanced digital manufacturing solutions empower modern manufacturers to make data-driven decisions in real time. Partner with us to build a more human-centric, sustainable, and resilient manufacturing enterprise!
       </p>
       <img src={EcommerceImage} alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize">
-        Revitalize Shopping With Smart E-Commerce Features
+      Creating A Transformative, Sustainable Ecosystem
       </h2>
       <p className="text-left text-muted">
-        Our cutting-edge e-commerce solutions can revolutionize your in-store experience.
-        Our clever solutions make online retail simple and entertaining, improving every
-        stage of the buying experience, from smooth checkouts to real-time tracking.
-        Watch your sales skyrocket as you enter a world where innovation and convenience collide!
+      Ahaan Software Consulting partners with global manufacturers to adapt and thrive with future-forward solutions. Harnessing robust technologies like quantum computing, GenAI, etc., we strive to foster sustainable resilience, growth, and innovation, shaping a purpose-led manufacturing ecosystem. 
       </p>
 
-      <Row className="mt-4">
+      {/* <Row className="mt-4">
         {features.slice(0, 3).map((feature, index) => (
           <Col md={4} key={index}>
             <Card className="feature-card">
@@ -100,9 +93,9 @@ const Manufacturing = () => {
             </Card>
           </Col>
         ))}
-      </Row>
+      </Row> */}
 
-      <Row className="mt-3">
+      {/* <Row className="mt-3">
         {features.slice(3).map((feature, index) => (
           <Col md={6} key={index}>
             <Card className="feature-card horizontal">
@@ -114,10 +107,10 @@ const Manufacturing = () => {
             </Card>
           </Col>
         ))}
-      </Row>
+      </Row> */}
 
       <h2 className="fw-bold text-left Revitalize">
-      Your Business Needs To Stay Dynamic In A Ecosystem
+      Your Challenges, Our Solutions!
       </h2>
       {gridcontent.map((feature, index) => (
         <Row className="mb-4" key={index}>
@@ -127,7 +120,7 @@ const Manufacturing = () => {
           <Col md={6} className={index % 2 === 1 ? 'order-md-1' : ''}>
             <h2 className="grids-heading">{feature.title}</h2>
             <p className="grids-content">{feature.description}</p>
-            <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            {/* <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p> */}
           </Col>
         </Row>
       ))}
