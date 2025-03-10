@@ -120,7 +120,7 @@ const Construction = () => {
           <Col md={6} className={index % 2 === 1 ? 'order-md-1' : ''}>
             <h2 className="grids-heading">{feature.title}</h2>
             <p className="grids-content">{feature.description}</p>
-            <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            {/* <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p> */}
           </Col>
         </Row>
       ))}
