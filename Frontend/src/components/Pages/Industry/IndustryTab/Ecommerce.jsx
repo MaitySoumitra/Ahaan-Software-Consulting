@@ -40,55 +40,48 @@ const features = [
   const gridcontent = [
     {
       imgSrc: Ecom1,
-      title: 'Simple Integration',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Boost Your Growth ',
+      description: 'Boost your retail stores digital presence and meet evolving market demands with our innovative, user-centric e-commerce development services—designed to scale your business.'
     },
     {
       imgSrc: Ecom2,
-      title: 'Strong Security',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Gain More Online Visibility ',
+      description: 'We create lucrative, visually compelling e-storefronts that enhance your retail store’s digital presence, attract millennial shoppers, and redefine their shopping experience.'
     },
     {
       imgSrc: Ecom3,
-      title: 'Quick Tracking',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Streamline Complex Inventory Operations ',
+      description: 'Get a customized e-store and inventory management solution to monitor, manage, and procure store items in real-time. Stay ahead of the competition by streamlining retail processes and enhancing operational efficiency.'
     },
     {
       imgSrc: Ecom4,
-      title: 'Adaptable Scalability',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Flexible Payment Options ',
+      description: 'Empower your customers with flexible payment options through seamless payment gateway integration, boosting sales closure rates with our e-commerce app and software development services.'
     },
     {
       imgSrc: Ecom5,
-      title: 'Efficient Administration',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Redefine Buying Experience ',
+      description: 'Leverage AI-powered product search to display personalized buying options based on user activity, improving their overall shopping experience with custom-tailored recommendations.'
     }
   ];
 
 const Ecommerce = () => {
   return (
     <div className="ecommerce-section">
-      <h2 className="fw-bold">E-Commerce & Marketplace</h2>
+      <h2 className="fw-bold">Your Trusted Growth Partner for E-commerce Development Solutions</h2>
       <p className="text-muted">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
+      As the experience economy evolves, we envision a future where online shopping transcends mere transactions—transforming into interactive, immersive experiences that captivate, engage, and inspire. In this next-generation E-store, each visit is more than just a purchase; it’s a personalized experience that redefines digital retail. 
       </p>
       <img src={EcommerceImage} alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize">
-        Revitalize Shopping With Smart E-Commerce Features
+      Unlock Your Retail Business’ Full Potential 
       </h2>
       <p className="text-left text-muted">
-        Our cutting-edge e-commerce solutions can revolutionize your in-store experience.
-        Our clever solutions make online retail simple and entertaining, improving every
-        stage of the buying experience, from smooth checkouts to real-time tracking.
-        Watch your sales skyrocket as you enter a world where innovation and convenience collide!
+      Whether you need an e-commerce app to enhance B2C engagement, a B2B portal to connect manufacturers and wholesalers, or a powerful retail ERP to streamline operations, we’ve got you covered! Partner with us to expand your e-business reach and grow your market share with scalable, flexible e-commerce solutions!
       </p>
 
-      <Row className="mt-4">
+      {/* <Row className="mt-4">
         {features.slice(0, 3).map((feature, index) => (
           <Col md={4} key={index}>
             <Card className="feature-card">
@@ -114,10 +107,10 @@ const Ecommerce = () => {
             </Card>
           </Col>
         ))}
-      </Row>
+      </Row> */}
 
       <h2 className="fw-bold text-left Revitalize">
-      Your Business Needs To Stay Dynamic In A Ecosystem
+      Conquer Retail Challenges With Custom E-Commerce Solutions
       </h2>
       {gridcontent.map((feature, index) => (
         <Row className="mb-4" key={index}>
@@ -127,7 +120,7 @@ const Ecommerce = () => {
           <Col md={6} className={index % 2 === 1 ? 'order-md-1' : ''}>
             <h2 className="grids-heading">{feature.title}</h2>
             <p className="grids-content">{feature.description}</p>
-            <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            {/* <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p> */}
           </Col>
         </Row>
       ))}

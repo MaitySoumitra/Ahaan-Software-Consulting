@@ -40,55 +40,48 @@ const features = [
   const gridcontent = [
     {
       imgSrc: Ecom1,
-      title: 'Simple Integration',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Corporate Learning Solutions',
+      description: 'Convert corporate learning with our unique and innovative EduTech solutions. Enhance your employee skills and drive organizational growth with tailored training programs and achieve all round success. '
     },
     {
       imgSrc: Ecom2,
-      title: 'Strong Security',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Education-to-Career (E2C) Solutions',
+      description: 'Transform the E2C (Education-To-Career) pathways of learners by developing a large-scale e-learning and education software development solutions, precisely tailored to our clients’ needs. '
     },
     {
       imgSrc: Ecom3,
-      title: 'Quick Tracking',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Professional Upskilling Programs',
+      description: 'We equip students, job seekers, and working professionals with skill-bases professional e-learning training solutions designed to enhance career growth and unlock their full potential.'
     },
-    {
-      imgSrc: Ecom4,
-      title: 'Adaptable Scalability',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
-    },
-    {
-      imgSrc: Ecom5,
-      title: 'Efficient Administration',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
-    }
+    // {
+    //   imgSrc: Ecom4,
+    //   title: 'Adaptable Scalability',
+    //   description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    // },
+    // {
+    //   imgSrc: Ecom5,
+    //   title: 'Efficient Administration',
+    //   description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    // }
   ];
 
 const Education = () => {
   return (
     <div className="ecommerce-section">
-      <h2 className="fw-bold">Education</h2>
+      <h2 className="fw-bold">Reimagine Education For The Future Of Learning</h2>
       <p className="text-muted">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
+      As your trusted partner in e-learning transformation, we deliver robust, user-centric, and interactive educational solutions. Whether you aim to enhance student engagement or empower trainers with anytime, anywhere access to learning content, our custom e-learning app development solutions can make it happen!
       </p>
       <img src={Constructions} alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize">
-        Revitalize Shopping With Smart E-Commerce Features
+      Take Education To A New Height Of Excellence!
       </h2>
       <p className="text-left text-muted">
-        Our cutting-edge e-commerce solutions can revolutionize your in-store experience.
-        Our clever solutions make online retail simple and entertaining, improving every
-        stage of the buying experience, from smooth checkouts to real-time tracking.
-        Watch your sales skyrocket as you enter a world where innovation and convenience collide!
+      At Ahaan Software Consulting, we go beyond being just an e-learning solution partner—we redefine the learning experience for educators, trainers, and students with our innovative, user-friendly EdTech solutions.
       </p>
 
-      <Row className="mt-4">
+      {/* <Row className="mt-4">
         {features.slice(0, 3).map((feature, index) => (
           <Col md={4} key={index}>
             <Card className="feature-card">
@@ -114,10 +107,10 @@ const Education = () => {
             </Card>
           </Col>
         ))}
-      </Row>
+      </Row> */}
 
       <h2 className="fw-bold text-left Revitalize">
-      Your Business Needs To Stay Dynamic In A Ecosystem
+      Revolutionize Education Across Sectors with Our Custom Solutions!
       </h2>
       {gridcontent.map((feature, index) => (
         <Row className="mb-4" key={index}>
@@ -127,7 +120,7 @@ const Education = () => {
           <Col md={6} className={index % 2 === 1 ? 'order-md-1' : ''}>
             <h2 className="grids-heading">{feature.title}</h2>
             <p className="grids-content">{feature.description}</p>
-            <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            {/* <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p> */}
           </Col>
         </Row>
       ))}

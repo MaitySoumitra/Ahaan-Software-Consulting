@@ -40,55 +40,48 @@ const features = [
   const gridcontent = [
     {
       imgSrc: Ecom1,
-      title: 'Simple Integration',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'EHR Development  ',
+      description: 'Empower healthcare experts with seamless access to patient medical history, past treatments and diagnosis reports through our cutting-edge EHR or Electronic Health Records Development Services. As a leading software provider, we streamline healthcare operations with automated workflows, real-time patient insights, and more! '
     },
     {
       imgSrc: Ecom2,
-      title: 'Strong Security',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Online Consultation  ',
+      description: 'Revolutionize patient care with our software solutions for online consultation and telemedicine! Enable patients to connect with healthcare experts, receive remote care, and order medicines online – anytime, anywhere.'
     },
     {
       imgSrc: Ecom3,
-      title: 'Quick Tracking',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Medical Billing Software',
+      description: 'Streamline your billing process with our medical billing software solution, ensuring secure payments and error-free transactions. Empower patients to track expenses and plan treatments effortlessly. '
     },
     {
       imgSrc: Ecom4,
-      title: 'Adaptable Scalability',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Hospital Management Software',
+      description: 'Redefine patient experience and reimagine hospital operations with our hospital management software. From hassle-free digital appointment booking to secure billing, real-time inventory management, and smooth patient-doctor communication, we’ve got everything covered!'
     },
-    {
-      imgSrc: Ecom5,
-      title: 'Efficient Administration',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
-    }
+    // {
+    //   imgSrc: Ecom5,
+    //   title: 'Efficient Administration',
+    //   description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    // }
   ];
 
 const Healthcare = () => {
   return (
     <div className="ecommerce-section">
-      <h2 className="fw-bold">Healthcare</h2>
+      <h2 className="fw-bold">Improving Healthcare With Value-Centric Solutions! </h2>
       <p className="text-muted">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
+      We are revolutionizing modern healthcare operations with innovative digital solutions, making them more agile and effective. Focused on driving digital transformation in healthcare, we enhance care coordination while empowering staff. Collaborate with us to elevate the quality of healthcare for both providers and patients.
       </p>
       <img src={EcommerceImage} alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize">
-        Revitalize Shopping With Smart E-Commerce Features
+      Our Healthcare Development Solutions 
       </h2>
       <p className="text-left text-muted">
-        Our cutting-edge e-commerce solutions can revolutionize your in-store experience.
-        Our clever solutions make online retail simple and entertaining, improving every
-        stage of the buying experience, from smooth checkouts to real-time tracking.
-        Watch your sales skyrocket as you enter a world where innovation and convenience collide!
+      Enhance patient outcomes and optimize healthcare efficiency with our comprehensive healthcare software development services. By digitizing your healthcare operations, we streamline clinical administration, ensuring your venture stays ahead of industry changes and challenges.
       </p>
 
-      <Row className="mt-4">
+      {/* <Row className="mt-4">
         {features.slice(0, 3).map((feature, index) => (
           <Col md={4} key={index}>
             <Card className="feature-card">
@@ -114,7 +107,7 @@ const Healthcare = () => {
             </Card>
           </Col>
         ))}
-      </Row>
+      </Row> */}
 
       <h2 className="fw-bold text-left Revitalize">
       Your Business Needs To Stay Dynamic In A Ecosystem
@@ -127,7 +120,7 @@ const Healthcare = () => {
           <Col md={6} className={index % 2 === 1 ? 'order-md-1' : ''}>
             <h2 className="grids-heading">{feature.title}</h2>
             <p className="grids-content">{feature.description}</p>
-            <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            {/* <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p> */}
           </Col>
         </Row>
       ))}
