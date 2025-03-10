@@ -40,55 +40,48 @@ const features = [
   const gridcontent = [
     {
       imgSrc: Ecom1,
-      title: 'Simple Integration',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Project Management Solutions',
+      description: 'Enhance efficiency with advanced project management software, ensuring seamless scheduling, planning, and real-time collaboration for improved productivity and on-time delivery.'
     },
     {
       imgSrc: Ecom2,
-      title: 'Strong Security',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Construction Site Automation',
+      description: 'Leverage automation and IoT-driven solutions to streamline site operations, monitor equipment, and enhance workforce productivity with real-time insights and predictive maintenance.'
     },
     {
       imgSrc: Ecom3,
-      title: 'Quick Tracking',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Building Information Modelling (BIM) Solutions',
+      description: 'Optimize design, planning, and execution with cutting-edge BIM solutions, allowing for cost estimation, better visualization, and coordination across construction teams.'
     },
     {
       imgSrc: Ecom4,
-      title: 'Adaptable Scalability',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Safety & Compliance Management',
+      description: 'Ensure workplace safety and regulatory compliance with AI-powered risk assessment tools, real-time safety monitoring, and automated reporting systems to minimize hazards.'
     },
-    {
-      imgSrc: Ecom5,
-      title: 'Efficient Administration',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
-    }
+    // {
+    //   imgSrc: Ecom5,
+    //   title: 'Efficient Administration',
+    //   description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    // }
   ];
 
 const Construction = () => {
   return (
     <div className="ecommerce-section">
-      <h2 className="fw-bold">E-Commerce & Marketplace</h2>
+      <h2 className="fw-bold">Streamline Construction Operations With Smart Digital Solutions!</h2>
       <p className="text-muted">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
+      Achieve new level of agility with our tech-powered solutions, precisely tailored to the construction industry. Whether you're streamlining project management, optimizing resource allocation, or enhancing site safety, our custom solutions help you build smarter, faster, and safer! 
       </p>
       <img src={EcommerceImage} alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize">
-        Revitalize Shopping With Smart E-Commerce Features
+      Embrace The Tech-Powered Future Of Construction
       </h2>
       <p className="text-left text-muted">
-        Our cutting-edge e-commerce solutions can revolutionize your in-store experience.
-        Our clever solutions make online retail simple and entertaining, improving every
-        stage of the buying experience, from smooth checkouts to real-time tracking.
-        Watch your sales skyrocket as you enter a world where innovation and convenience collide!
+      Scaling tech transformation for construction companies is no longer optional – it’s necessary! At Ahaan Software Consulting, we go beyond just providing construction technology solutions—we empower contractors, engineers and developers with advanced digital tools to optimize workflows, reduce costs, and drive project success.
       </p>
 
-      <Row className="mt-4">
+      {/* <Row className="mt-4">
         {features.slice(0, 3).map((feature, index) => (
           <Col md={4} key={index}>
             <Card className="feature-card">
@@ -114,10 +107,10 @@ const Construction = () => {
             </Card>
           </Col>
         ))}
-      </Row>
+      </Row> */}
 
       <h2 className="fw-bold text-left Revitalize">
-      Your Business Needs To Stay Dynamic In A Ecosystem
+      Unlock Big Uplifts In Construction With Our Solutions 
       </h2>
       {gridcontent.map((feature, index) => (
         <Row className="mb-4" key={index}>

@@ -47,9 +47,9 @@ const FirstBanner = () => {
                 vision into victory and idea into a game-changing development
                 moment!
               </p>
-              <button className="mt-3 learn-more-banner1-btn">
+              <a href="/about" className="mt-3 learn-more-banner1-btn">
                 Learn More
-              </button>
+              </a >
               <div className="mt-4">
                 <p className="fw-bold">Certified by</p>
                 <div className="d-flex justify-content-start gap-3 certified-img">
