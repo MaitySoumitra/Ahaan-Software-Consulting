@@ -34,7 +34,7 @@
   font-family: outfit;
 }
 
-.newsletter .btn {
+.newsletter button {
   background: #6b50d9;
   border: none;
   color: white;
@@ -107,4 +107,63 @@
   font-size: 18px;
   text-decoration: none;
 }
+.quicklink-responsive{
+  display: flex;
+ 
+  justify-content: center;
+}
+
+@media (max-width: 769px) {
+  .accordion-button-quick-link {
+    font-size: 16px;
+  }
+
+  .footer-links,
+  .accordion-content {
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+  .quick-link-for-desktop, .contact-us-heading-for-desktop{
+    display: none;
+  }
+  .accordion-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .accordion-icon.open {
+    transform: rotate(180deg); 
+  }
+  
+  .footer-links,
+  .accordion-content {
+    display: none; 
+  }
+  
+  .footer-links.open,
+  .accordion-content.open {
+    display: block; 
+    
+  }
+  
+  .accordion-button-quick-link:focus {
+    outline: none;
+  }
+  .quicklink-responsive{
+   margin-top: 30px;
+    flex-direction: column;
+    
+  }
+  .newsletter{
+    flex-direction: column;
+    align-items: center;
+  }
+  .newsletter button {
+    width: auto; 
+     
+  }
+  .footer-bottom p{
+    font-size: 12px;
+  }
+}
+
 

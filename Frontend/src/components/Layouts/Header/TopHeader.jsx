@@ -15,7 +15,7 @@ const TopHeader = () => {
     <header className="top-header">
       <div className="container">
       <div className="d-flex justify-content-between align-items-center">
-  {/* Phone number and email section */}
+  
   <div className="d-flex align-items-center">
     <span className="phone-number">
       <FaPhone className="icon-spacing" />
