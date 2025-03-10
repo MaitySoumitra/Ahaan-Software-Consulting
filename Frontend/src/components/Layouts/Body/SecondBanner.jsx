@@ -76,9 +76,9 @@ const CallToAction = () => {
                 fontWeight: "400",
                 cursor: "pointer",
               }}
-              onClick={() => (window.location.href = "tel:+13214210740")}
+              onClick={() => (window.location.href = "tel:+919830371143")}
             >
-              +13214210740
+              +919830371143
             </p>
           </div>
         </div>

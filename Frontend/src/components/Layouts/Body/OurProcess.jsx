@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { BsForward } from "react-icons/bs";
 import { Container } from "react-bootstrap";
-import "./OurProcess.css"; 
+import "./OurProcess.css";
 
 const sdlcSteps = [
-  { id: 1, title: "Planning", color: "#6D28D9" },
-  { id: 2, title: "Requirements", color: "#F59E0B" },
+  { id: 1, title: "Requirements", color: "#6D28D9" },
+  { id: 2, title: "Planning", color: "#F59E0B" },
   { id: 3, title: "Design", color: "#9333EA" },
   { id: 4, title: "Development", color: "#22C55E" },
   { id: 5, title: "Testing", color: "#EF4444" },
@@ -30,33 +30,37 @@ const OurProcess = () => {
       <div className="container mt-5">
         <label className="section1-client-label">Our Process</label>
       </div>
-    <div className="sdlc-container">
-    {sdlcSteps.map((step, index) => (
-      <div key={step.id} className="sdlc-step-wrapper">
-        <motion.div
-          className={`sdlc-step ${index === activeIndex ? "animate" : ""}`}
-          style={{ borderColor: step.color }}
-        >
-          <div className="step-number">{index + 1}</div>
-          <span>{step.title}</span>
-        </motion.div>
-  
-       
-        {index < sdlcSteps.length - 1 && (
-          <svg class="arrow-svg">
-          
-          <polygon class="arrow" points="15,8 20,15 15,22 30,22 35,15 30,8" fill="#433978"/>
-      </svg>
-        )}
+      <div className="sdlc-container">
+        {sdlcSteps.map((step, index) => (
+          <div key={step.id} className="sdlc-step-wrapper">
+            <motion.div
+              className={`sdlc-step ${index === activeIndex ? "animate" : ""}`}
+              style={{ borderColor: step.color }}
+            >
+              <div className="step-number">{index + 1}</div>
+              <span>{step.title}</span>
+            </motion.div>
+
+            {index < sdlcSteps.length - 1 && (
+              <svg class="arrow-svg">
+                <polygon
+                  class="arrow"
+                  points="15,8 20,15 15,22 30,22 35,15 30,8"
+                  fill="#433978"
+                />
+              </svg>
+            )}
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-  <p className="text-muted mx-auto mt-3 section1-content section1-content-p">
-          Whether you require a complex enterprise software development solution or seamless software integration, 
-          we will take your business to the next level of success with IT consulting services & software development solutions.
-        </p>
-  
-  </Container>
+      <p className="text-muted mx-auto mt-3 section1-content section1-content-p">
+        Create A Future-Forward Tech Foundation That Can Power Business
+        Operations, Workflows And Experiences! Our tech-driven services could be
+        a digital breakthrough to those who are seeking success in today’s
+        competitive landscape. Boost your business benchmarks by redefining
+        processes, modernizing technologies, and transforming experiences.
+      </p>
+    </Container>
   );
 };
 
