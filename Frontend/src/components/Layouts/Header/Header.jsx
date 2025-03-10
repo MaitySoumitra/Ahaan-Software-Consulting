@@ -1,22 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { TbMessage } from "react-icons/tb";
+import { HiX } from "react-icons/hi";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const sidebarRef = useRef(null);
 
-  // Toggle sidebar visibility
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
-  const handleQuoteButtonClick = () => {
-    // Add your logic for the "Get a Quote" button click here
-    console.log("Get a Quote clicked");
+
+  // Close sidebar when clicking outside
+  const handleClickOutside = (e) => {
+    if (sidebarRef.current && !sidebarRef.current.contains(e.target) && sidebarOpen) {
+      setSidebarOpen(false);
+    }
   };
 
   useEffect(() => {
@@ -28,6 +33,15 @@ const Header = () => {
     window.addEventListener("resize", handaleResize);
     return () => window.removeEventListener("resize", handaleResize);
   }, []);
+  useEffect(() => {
+    // Add event listener to detect outside clicks
+    document.addEventListener("mousedown", handleClickOutside);
+    
+    return () => {
+      // Cleanup event listener
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [sidebarOpen]);
 
   return (
     <nav className="container py-3">
@@ -84,7 +98,10 @@ const Header = () => {
       </button>
 
       {/* Mobile Sidebar */}
-      <div className={`mobile-sidebar ${sidebarOpen ? "open" : ""}`}>
+      <div className={`mobile-sidebar ${sidebarOpen ? "open" : ""}`} ref={sidebarRef}>
+        <button className="close-btn" onClick={() => setSidebarOpen(false)}>
+          <HiX size={30} color="#43387B" />
+        </button>
         <div className="sidebar-content">
           <div className="nav-links">
             <Link to="/">Home</Link>
@@ -95,9 +112,16 @@ const Header = () => {
           </div>
           <hr />
           <div className="social-links">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            {/* Social media icons with links */}
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <FaFacebookF size={24} color="#43387B" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <FaInstagram size={24} color="#43387B" />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <FaLinkedinIn size={24} color="#43387B" />
+            </a>
           </div>
         </div>
       </div>
@@ -106,7 +130,7 @@ const Header = () => {
           <a
             href="/contact"
             className="get-quote-btn"
-            onClick={handleQuoteButtonClick}
+            
           >
             Get a Quote
           </a>
