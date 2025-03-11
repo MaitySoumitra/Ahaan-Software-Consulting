@@ -1,9 +1,24 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { motion } from "framer-motion";
 import { FiPhoneCall } from "react-icons/fi";
 import { Container } from "react-bootstrap";
-
+import './SecondBanner.css';
 const CallToAction = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet]= useState(false);
+  const [isOnlyMObile, setIsOnlyMobile]=useState(false)
+
+  useEffect(() => {
+    const handaleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+      setIsTablet(window.innerWidth<=1000)
+      setIsOnlyMobile(window.innerWidth<=450)
+    };
+    handaleResize();
+
+    window.addEventListener("resize", handaleResize);
+    return () => window.removeEventListener("resize", handaleResize);
+  }, []);
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -16,23 +31,8 @@ const CallToAction = () => {
         ],
         transition: { duration: 1.5, repeat: Infinity, repeatType: "reverse" },
       }}
-      style={{
-        position: "relative",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        background:
-          "radial-gradient(circle at center,rgb(219, 219, 224), #433978,#8065BB)",
-        borderRadius: "8px",
-        height: "200px",
-        margin: "20px auto",
-        width: "100%",
-        boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-        color: "#fff",
-        padding: "20px",
-        overflow: "hidden",
-      }}
+      className="second-banner-req-call"
+      
     >
       <Container
         style={{
@@ -43,39 +43,26 @@ const CallToAction = () => {
           gap: "20px",
         }}
       >
-        <div
+        <div className="second-banner-call"
           style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
-            justifyContent: "center",
+            
           }}
         >
           <motion.div
             animate={{ x: [-2, 2, -2] }}
             transition={{ duration: 0.1, repeat: Infinity }}
           >
-            <FiPhoneCall size={34} color="white" />
+            <FiPhoneCall className="second-banner-calling-icon" />
           </motion.div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column", // Align the content vertically
-              justifyContent: "center", // Center the content vertically
-              alignItems: "center", // Center the content horizontally
-              textAlign: "center", // Ensure the text is centered
-              height: "100%", // Ensure the div takes full height of its parent
-            }}
-          >
-            <h3 style={{ margin: "5px 0", fontSize: "22px" }}>
-              Call For More Info
+          <div className="second-banner-call-details">
+            <h3>
+              { isMobile ?  "": "Call For More Info"}
             </h3>
             <p
-              style={{
-                fontSize: "16px",
-                fontWeight: "400",
-                cursor: "pointer",
-              }}
+              onClick={() => (window.location.href = "tel:+13214210740")}
+            >
+              { isMobile ? "": "+13214210740  /" }
+            </p><p
               onClick={() => (window.location.href = "tel:+919830371143")}
             >
               +919830371143
@@ -84,13 +71,14 @@ const CallToAction = () => {
         </div>
 
         <motion.p
+        className="second-banner-label"
           style={{
             fontSize: "32px",
             margin: "10px 0",
             letterSpacing: "2px",
           }}
         >
-          {"Let’s Request A Schedule For Free Consultation"
+          { (isOnlyMObile ? "Let’s Request" : ( isMobile ? "Schedule Free Consultation" : "Let’s Request A Schedule For Free Consultation"))
             .split("")
             .map((char, index) => (
               <motion.span
@@ -132,7 +120,7 @@ const CallToAction = () => {
             transition: "background-color 0.1s ease",
           }}
         >
-          Contact Us
+          Contact
         </motion.button>
       </Container>
     </motion.div>
