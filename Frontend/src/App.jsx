@@ -1,9 +1,10 @@
 
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Layouts/Header/Header";
 import TopHeader from "./components/Layouts/Header/TopHeader";
 import Footer from "./components/Layouts/Footer/Footer";
-import ContactUs from "./components/Pages/Contact/ContactUs";
+const ContactUs = React.lazy(() => import('./components/Pages/Contact/ContactUs'));
 import Service from "./components/Pages/Service/Service";
 import About from "./components/Pages/AboutUs/About";
 import Industry from "./components/Pages/Industry/Industry";
