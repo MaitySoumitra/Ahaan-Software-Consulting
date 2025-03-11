@@ -2,10 +2,9 @@ import { Container } from "react-bootstrap";
 
 import "./SecondSection.css";
 import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
+
+
+
 import Slide1 from "../../../assets/images/slider/slide1.png";
 import Slide2 from "../../../assets/images/slider/slide2.png";
 import Slide3 from "../../../assets/images/slider/slide3.png";
