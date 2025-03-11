@@ -1,85 +1,155 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { FaHome, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { toast, ToastContainer } from "react-toastify";
+import emailjs from "@emailjs/browser";
+import "react-toastify/dist/ReactToastify.css";
 import "./ContactUs.css";
-import { FaMapMarkerAlt, FaPhoneAlt, FaFax, FaEnvelope, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import ContactBanner from "./ContactBanner";
+import WorldMap from "./WorldMap";
 
 const ContactUs = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    const serviceID = "service_ywiiqsl"; // Replace with your EmailJS Service ID
+    const templateID = "template_97me94o"; // Replace with your EmailJS Template ID
+    const publicKey = "Si_Qy3488LBnjUFTA"; // Replace with your EmailJS Public Key
+
+    emailjs
+      .send(serviceID, templateID, data, publicKey)
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        toast.success("Message sent successfully!");
+        reset(); // Reset form after successful submission
+      })
+      .catch((error) => {
+        console.log("FAILED...", error);
+        toast.error("Failed to send message. Try again!");
+      });
   };
 
   return (
-    <div className="contact-section">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-3 contact-box">
-            <FaMapMarkerAlt className="icon" />
-            <h5>OUR MAIN OFFICE</h5>
-            <p>SoHo 94 Broadway St, New York, NY 1001</p>
-          </div>
-          <div className="col-md-3 contact-box">
-            <FaPhoneAlt className="icon" />
-            <h5>PHONE NUMBER</h5>
-            <p>234-9876-5400<br />888-0123-4567 (Toll Free)</p>
-          </div>
-          <div className="col-md-3 contact-box">
-            <FaFax className="icon" />
-            <h5>FAX</h5>
-            <p>1-234-567-8900</p>
-          </div>
-          <div className="col-md-3 contact-box">
-            <FaEnvelope className="icon" />
-            <h5>EMAIL</h5>
-            <p><a href="mailto:hello@theme.com">hello@theme.com</a></p>
-          </div>
-        </div>
+    <>
+      <ContactBanner />
+      <Container className="contact-section">
+        <Row className="justify-content-center">
+          <Col md={10} lg={11}>
+            <Row className="contact-box">
+              {/* Left Side */}
+              <Col md={4} className="contact-information">
+                <h5 className="contact-text">LET'S TALK</h5>
+                <h2>Speak With Expert Engineers.</h2>
 
-        <div className="row contact-form">
-          <div className="col-md-6">
-            <h3>GET IN TOUCH</h3>
-            <p className="text-muted">
-              <em>We can ensure reliability, low cost fares and most important, with safety and comfort in mind.</em>
-            </p>
-            <p className="description">
-              Etiam sit amet convallis erat – class aptent taciti sociosqu ad litora torquent per conubia Maecenas gravida lacus.
-            </p>
-            <div className="social-icons">
-              <FaFacebookF className="social-icon" />
-              <FaTwitter className="social-icon" />
-              <FaInstagram className="social-icon" />
-              <FaLinkedinIn className="social-icon" />
-            </div>
-          </div>
-          <div className="col-md-6">
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <div className="mb-3">
-                <label>Email</label>
-                <input type="email" className="form-control" {...register("email", { required: true })} />
-                {errors.email && <span className="error">Enter a valid email address</span>}
-              </div>
-              <div className="mb-3">
-                <label>Name</label>
-                <input type="text" className="form-control" {...register("name", { required: true })} />
-                {errors.name && <span className="error">Enter your name</span>}
-              </div>
-              <div className="mb-3">
-                <label>Message</label>
-                <textarea className="form-control" {...register("message", { required: true })}></textarea>
-                {errors.message && <span className="error">Enter your message</span>}
-              </div>
-              <button type="submit" className="btn btn-primary w-100">SUBMIT</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+                <div className="contact-item">
+                  <FaHome className="contact-icon" />
+                  <div>
+                    <strong>Email:</strong>
+                    <p>sales@ahaansoftware.com</p>
+                  </div>
+                </div>
+
+                <div className="contact-item">
+                  <FaPhone className="contact-icon" />
+                  <div>
+                    <strong>Phone:</strong>
+                    <p>+13214210740</p>
+                    <p>+919830371143</p>
+                  </div>
+                </div>
+
+                <div className="contact-item">
+                  <FaMapMarkerAlt className="contact-icon" />
+                  <div>
+                    <strong>Address:</strong>
+                    <p>Bengal Eco Intelligent Park, EM Block, Sector V, Kolkata-91</p>
+                  </div>
+                </div>
+              </Col>
+
+              {/* Right Side - Form */}
+              <Col md={8} className="contact-form">
+                <h6>GET IN TOUCH</h6>
+                <h2>Fill The Form Below</h2>
+
+                <Form onSubmit={handleSubmit(onSubmit)}>
+                  <Row>
+                    <Col md={6}>
+                      <Form.Group className="mb-3">
+                        <Form.Control
+                          type="text"
+                          placeholder="Name"
+                          {...register("name", { required: "Name is required" })}
+                        />
+                        {errors.name && <p className="error-text">{errors.name.message}</p>}
+                      </Form.Group>
+                    </Col>
+
+                    <Col md={6}>
+                      <Form.Group className="mb-3">
+                        <Form.Control
+                          type="email"
+                          placeholder="E-Mail"
+                          {...register("email", { required: "Email is required" })}
+                        />
+                        {errors.email && <p className="error-text">{errors.email.message}</p>}
+                      </Form.Group>
+                    </Col>
+                  </Row>
+
+                  <Row>
+                    <Col md={6}>
+                      <Form.Group className="mb-3">
+                        <Form.Control
+                          type="text"
+                          placeholder="Phone Number"
+                          {...register("phone", { required: "Phone number is required" })}
+                        />
+                        {errors.phone && <p className="error-text">{errors.phone.message}</p>}
+                      </Form.Group>
+                    </Col>
+
+                    <Col md={6}>
+                      <Form.Group className="mb-3">
+                        <Form.Control
+                          type="text"
+                          placeholder="Your Website"
+                          {...register("website")}
+                        />
+                      </Form.Group>
+                    </Col>
+                  </Row>
+
+                  <Form.Group className="mb-3">
+                    <Form.Control
+                      as="textarea"
+                      rows={3}
+                      placeholder="Your message Here"
+                      {...register("message", { required: "Message is required" })}
+                    />
+                    {errors.message && <p className="error-text">{errors.message.message}</p>}
+                  </Form.Group>
+
+                  <Button type="submit" className="submit-btn">
+                    Submit Now
+                  </Button>
+                </Form>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
+      <WorldMap />
+
+      {/* Toast Notification Container */}
+      <ToastContainer position="top-right" autoClose={3000} />
+    </>
   );
 };
 

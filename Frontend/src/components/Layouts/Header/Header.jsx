@@ -5,7 +5,7 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-white py-2">
+    <nav className="navbar navbar-expand-lg bg-white py-4">
       <div className="container">
         {/* Logo */}
         <a className="navbar-brand d-flex align-items-center" href="/">
@@ -56,7 +56,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item ">
-              <Link className="nav-link " to="/portfolio">
+              <Link className="nav-link " to="https://portfolio.ahaansoftware.com/">
                 Portfolio
               </Link>
             </li>
