@@ -5,7 +5,6 @@
 }
 .asc-header{
   display: flex;
-  justify-content: space-between;
   align-items: center;
   
 }
@@ -16,7 +15,7 @@
   font-size: 16px;
   color: #333;
   font-weight: 500;
-  gap: 3rem;
+  gap: 5rem;
 }
 
 .get-quote-btn {
@@ -164,4 +163,7 @@ hr {
     color:white;
   }
 }
+
+
+
 

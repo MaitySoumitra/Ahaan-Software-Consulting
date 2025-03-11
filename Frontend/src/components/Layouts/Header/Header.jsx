@@ -44,8 +44,8 @@ const Header = () => {
   }, [sidebarOpen]);
 
   return (
-    <nav className="navbar navbar-expand-lg bg-white py-2">
-      <div className="container">
+    <nav className="navbar navbar-expand-lg bg-white py-4">
+      <div className="container ">
         {/* Logo */}
         <a className="navbar-brand d-flex align-items-center" href="/">
           <img
@@ -109,7 +109,7 @@ const Header = () => {
             <Link to="/about">About us</Link>
             <Link to="/service">Services</Link>
             <Link to="/industry">Industry</Link>
-            <Link to="/portfolio">Portfolio</Link>
+            <Link to="https://portfolio.ahaansoftware.com/">Portfolio</Link>
           </div>
           <hr />
           <div className="social-links">

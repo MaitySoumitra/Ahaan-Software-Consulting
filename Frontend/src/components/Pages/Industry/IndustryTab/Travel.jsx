@@ -1,13 +1,11 @@
 import React from "react";
-import EcommerceImage from "../../../../assets/images/banner/banner1.jpg";
+import TravelImage from "../../../../assets/images/banner2/Travel.png"
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { FaHeadset, FaChartLine, FaShippingFast, FaShoppingCart } from "react-icons/fa";
 import "./TabContent.css";
-import Ecom1 from "../../../../assets/grids-image1.png";
-import Ecom2 from "../../../../assets/grids-image2.png";
-import Ecom3 from "../../../../assets/grids-image3.png";
-import Ecom4 from "../../../../assets/grids-image4.png";
-import Ecom5 from "../../../../assets/grids-image5.png";
+import Ecom1 from "../../../../../public/Industry/Aviation.jpg";
+import Ecom2 from "../../../../../public/Industry/Restaurant Services.jpeg";
+import Ecom3 from "../../../../../public/Industry/Real Estate.jpg";
 
 const features = [
     {
@@ -72,7 +70,7 @@ const Travel = () => {
       <p className="text-muted">
       As the travel and hospitality sectors evolve, digital innovation is the key to ultimate success. From self-learning booking platforms to AI-powered chatbots, businesses can boost customer experiences while reducing costs. As India’s leading software development and consultancy company, we can help you navigate new opportunities and reinvent customer experience.
       </p>
-      <img src={EcommerceImage} alt="E-Commerce" className="content-image" />
+      <img src={TravelImage} alt="E-Commerce" className="content-image" />
 
       {/* <h2 className="fw-bold text-left Revitalize">
       Comprehensive Solutions for Travel & Hospitality
@@ -112,7 +110,7 @@ const Travel = () => {
         ))}
       </Row> */}
 
-      <h2 className="fw-bold text-left Revitalize">
+      <h2 className="fw-bold text-left Revitalize mt-3">
       Your Business Needs To Stay Dynamic In A Ecosystem
       </h2>
       {gridcontent.map((feature, index) => (

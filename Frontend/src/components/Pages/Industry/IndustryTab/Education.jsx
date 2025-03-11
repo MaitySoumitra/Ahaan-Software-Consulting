@@ -1,13 +1,12 @@
 import React from "react";
-import Constructions from "../../../../assets/images/banner2/banner2.png";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { FaHeadset, FaChartLine, FaShippingFast, FaShoppingCart } from "react-icons/fa";
 import "./TabContent.css";
-import Ecom1 from "../../../../assets/grids-image1.png";
-import Ecom2 from "../../../../assets/grids-image2.png";
-import Ecom3 from "../../../../assets/grids-image3.png";
-import Ecom4 from "../../../../assets/grids-image4.png";
-import Ecom5 from "../../../../assets/grids-image5.png";
+import Ecom1 from "../../../../../public/Industry/Corporate Learning Solutions.webp";
+import Ecom2 from "../../../../../public/Industry/Education-to-Career Solutions.jpg";
+import Ecom3 from "../../../../../public/Industry/Professional Upskilling Programs.png";
+import EducationImage from "../../../../assets/images/banner2/Education.jpg"
+
 
 const features = [
     {
@@ -72,7 +71,7 @@ const Education = () => {
       <p className="text-muted">
       As your trusted partner in e-learning transformation, we deliver robust, user-centric, and interactive educational solutions. Whether you aim to enhance student engagement or empower trainers with anytime, anywhere access to learning content, our custom e-learning app development solutions can make it happen!
       </p>
-      <img src={Constructions} alt="E-Commerce" className="content-image" />
+      <img src={EducationImage} alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize mt-3">
       Take Education To A New Height Of Excellence!

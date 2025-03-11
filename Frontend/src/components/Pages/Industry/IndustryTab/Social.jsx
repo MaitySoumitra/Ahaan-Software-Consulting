@@ -1,13 +1,13 @@
 import React from "react";
-import Constructions from "../../../../assets/images/banner2/banner2.png";
+import SocialImage from "../../../../assets/images/banner2/Social Networking.png"
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { FaHeadset, FaChartLine, FaShippingFast, FaShoppingCart } from "react-icons/fa";
 import "./TabContent.css";
-import Ecom1 from "../../../../assets/grids-image1.png";
-import Ecom2 from "../../../../assets/grids-image2.png";
-import Ecom3 from "../../../../assets/grids-image3.png";
-import Ecom4 from "../../../../assets/grids-image4.png";
-import Ecom5 from "../../../../assets/grids-image5.png";
+import Ecom1 from "../../../../../public/Industry/Social Media Platform Development.png";
+import Ecom2 from "../../../../../public/Industry/Content Moderation & Compliance.webp";
+import Ecom3 from "../../../../../public/Industry/User-Engagement.webp";
+import Ecom4 from "../../../../../public/Industry/Data Security & Privacy Protection.jpg";
+
 
 const features = [
     {
@@ -72,7 +72,7 @@ const Social = () => {
       <p className="text-muted">
       Social networking is the Internet, and businesses should adapt to stay ahead. From AI-powered engagement tools to immersive virtual experiences, our social media strategies and solutions empower platforms to create dynamic, personalized, and scalable digital communities. Let’s shape the future of social networking together!
       </p>
-      <img src={Constructions} alt="E-Commerce" className="content-image" />
+      <img src={SocialImage} alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize mt-3">
       Connect, Curate, And Communicate!   

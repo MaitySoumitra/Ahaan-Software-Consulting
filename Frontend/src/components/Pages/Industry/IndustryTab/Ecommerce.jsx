@@ -1,13 +1,13 @@
 import React from "react";
-import EcommerceImage from "../../../../assets/images/banner/banner1.jpg";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { FaHeadset, FaChartLine, FaShippingFast, FaShoppingCart } from "react-icons/fa";
 import "./TabContent.css";
-import Ecom1 from "../../../../assets/grids-image1.png";
-import Ecom2 from "../../../../assets/grids-image2.png";
-import Ecom3 from "../../../../assets/grids-image3.png";
-import Ecom4 from "../../../../assets/grids-image4.png";
-import Ecom5 from "../../../../assets/grids-image5.png";
+import Ecom1 from "../../../../../public/Industry/Boost Your Growth.webp";
+import Ecom2 from "../../../../../public/Industry/Gain More Online Visibility.webp";
+import Ecom3 from "../../../../../public/Industry/Streamline Complex Inventory Operations.png";
+import Ecom4 from "../../../../../public/Industry/Flexible Payment Options.jpg";
+import Ecom5 from "../../../../../public/Industry/Redefine Buying Experience.webp";
+import EcommerceImage from "../../../../assets/images/banner2/Ecomm.png"
 
 const features = [
     {

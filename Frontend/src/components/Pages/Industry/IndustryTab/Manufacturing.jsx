@@ -1,5 +1,5 @@
 import React from "react";
-import EcommerceImage from "../../../../assets/images/banner/banner1.jpg";
+import ManufacturingImage from "../../../../assets/images/banner2/Manufacturing.png"
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { FaHeadset, FaChartLine, FaShippingFast, FaShoppingCart } from "react-icons/fa";
 import "./TabContent.css";
@@ -72,7 +72,7 @@ const Manufacturing = () => {
       <p className="text-muted">
       Automation, analytics, AI, integrated systems, and smart factories—our advanced digital manufacturing solutions empower modern manufacturers to make data-driven decisions in real time. Partner with us to build a more human-centric, sustainable, and resilient manufacturing enterprise!
       </p>
-      <img src={EcommerceImage} alt="E-Commerce" className="content-image" />
+      <img src={ManufacturingImage} alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize mt-3">
       Creating A Transformative, Sustainable Ecosystem

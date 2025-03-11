@@ -1,5 +1,5 @@
 import React from "react";
-import EcommerceImage from "../../../../assets/images/banner/banner1.jpg";
+import HealthImage from "../../../../assets/images/banner2/Healthcare.png"
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { FaHeadset, FaChartLine, FaShippingFast, FaShoppingCart } from "react-icons/fa";
 import "./TabContent.css";
@@ -72,7 +72,7 @@ const Healthcare = () => {
       <p className="text-muted">
       We are revolutionizing modern healthcare operations with innovative digital solutions, making them more agile and effective. Focused on driving digital transformation in healthcare, we enhance care coordination while empowering staff. Collaborate with us to elevate the quality of healthcare for both providers and patients.
       </p>
-      <img src={EcommerceImage} alt="E-Commerce" className="content-image" />
+      <img src={HealthImage} alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize mt-3">
       Our Healthcare Development Solutions 

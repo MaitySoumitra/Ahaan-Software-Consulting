@@ -1,5 +1,5 @@
 import React from "react";
-import Constructions from "../../../../assets/images/banner2/banner2.png";
+import MediaImage from "../../../../assets/images/banner2/Media.png"
 import { Container, Row, Col, Card } from "react-bootstrap";
 import {
   FaHeadset,
@@ -90,7 +90,7 @@ const Media = () => {
         a digital content creator, our end-to-end solutions are designed to meet
         your unique business needs and drive global success.
       </p>
-      <img src={Constructions} alt="E-Commerce" className="content-image" />
+      <img src={MediaImage} alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize mt-3">
         Curating The Best Digital Experiences
