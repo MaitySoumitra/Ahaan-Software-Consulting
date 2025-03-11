@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { motion } from "framer-motion";
 import { FiPhoneCall } from "react-icons/fi";
 import { Container } from "react-bootstrap";
-import './SecondBanner.css';
+import './Secondbanner.css';
 const CallToAction = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet]= useState(false);
