@@ -31,7 +31,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="row">
-          <div className="col-md-4 text-center">
+          <div className="col-md-4 ">
+          <div className="footer-logo-input">
             <img
               src="http://woocommerce.ahaanmedia.com/wp-content/uploads/2025/02/Ahaan-Software-New-Logo-1-6-1.png"
               alt="Ahaan Logo"
@@ -41,7 +42,7 @@ const Footer = () => {
               Subscribe to our newsletter to find out about all our latest
               offers.
             </p>
-
+            </div>
             <div className="newsletter">
               <input
                 type="email"

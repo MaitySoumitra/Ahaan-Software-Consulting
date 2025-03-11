@@ -52,7 +52,7 @@ const FirstBanner = () => {
               </a >
               <div className="mt-4">
                 <p className="fw-bold">Certified by</p>
-                <div className="d-flex justify-content-start gap-3 certified-img">
+                <div className="d-flex justify-content-start certified-img">
                   <Image
                     src={Group1}
                     alt="Certification 1"
