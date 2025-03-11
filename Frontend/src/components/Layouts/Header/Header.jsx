@@ -44,9 +44,10 @@ const Header = () => {
   }, [sidebarOpen]);
 
   return (
-    <nav className="container py-3">
-      <div className=" asc-header">
-        <a className="d-flex align-items-center" href="/">
+    <nav className="navbar navbar-expand-lg bg-white py-2">
+      <div className="container">
+        {/* Logo */}
+        <a className="navbar-brand d-flex align-items-center" href="/">
           <img
             src="http://woocommerce.ahaanmedia.com/wp-content/uploads/2025/02/Ahaan-Software-New-Logo-1-6-1.png"
             alt="logo"
@@ -76,8 +77,8 @@ const Header = () => {
                 Industry
               </Link>
             </li>
-            <li>
-              <Link className="nav-link" to="/portfolio">
+            <li className="nav-item ">
+              <Link className="nav-link " to="/portfolio">
                 Portfolio
               </Link>
             </li>
