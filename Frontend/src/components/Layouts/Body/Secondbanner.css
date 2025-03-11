@@ -6,7 +6,7 @@
     align-items: center;
     background: radial-gradient(circle at center, rgb(219, 219, 224), #433978, #8065BB);
     border-radius: 8px;
-    height: 200px;
+    max-height: 200px;
     margin: 20px auto;
     width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -23,12 +23,12 @@
   }
   
   .second-banner-call-details{
-      display: "flex";
-      flex-direction: "column"; 
-      justify-content: "center"; 
-      align-items: "center"; 
-      text-align: "center"; 
-      height: "100%";
+      display: flex;
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
+      text-align: center; 
+      height: 100%;
   }
   .second-banner-call-details h3{
       font-size: 18px;
@@ -51,6 +51,19 @@
     margin: 10px 0;
     letter-spacing: 2px;
   }
+.second-banner-contact-button{
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #6200ea;
+    font-weight:600;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+
   @media (max-width:768px) {
       .second-banner-call{
           flex-direction: column;
@@ -59,13 +72,25 @@
           font-size: 25px;
       }  
       .second-banner-label{
-        font-size: 26px;
-       
-      }
-  }
-  @media (max-width:768px){
-    .second-banner-label{
         font-size: 18px;
        
       }
+      .second-banner-call{
+        
+        transform: translate(-20%, 23%);
+          }
+      
+  }
+  @media (max-width:500px){
+    .second-banner-label{
+        font-size: 16px;
+       
+      }
+      .second-banner-contact-button{
+        padding: 5px 12px;
+        font-size: 12px;
+
+      }
+      
+      
   }

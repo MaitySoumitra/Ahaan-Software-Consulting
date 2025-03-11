@@ -1,18 +1,18 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiPhoneCall } from "react-icons/fi";
 import { Container } from "react-bootstrap";
-import './Secondbanner.css';
+import "./Secondbanner.css";
 const CallToAction = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [isTablet, setIsTablet]= useState(false);
-  const [isOnlyMObile, setIsOnlyMobile]=useState(false)
+  const [isTablet, setIsTablet] = useState(false);
+  const [isOnlyMObile, setIsOnlyMobile] = useState(false);
 
   useEffect(() => {
     const handaleResize = () => {
       setIsMobile(window.innerWidth <= 768);
-      setIsTablet(window.innerWidth<=1000)
-      setIsOnlyMobile(window.innerWidth<=450)
+      setIsTablet(window.innerWidth <= 1000);
+      setIsOnlyMobile(window.innerWidth <= 450);
     };
     handaleResize();
 
@@ -32,7 +32,6 @@ const CallToAction = () => {
         transition: { duration: 1.5, repeat: Infinity, repeatType: "reverse" },
       }}
       className="second-banner-req-call"
-      
     >
       <Container
         style={{
@@ -43,40 +42,34 @@ const CallToAction = () => {
           gap: "20px",
         }}
       >
-        <div className="second-banner-call"
-          style={{
-            
-          }}
-        >
+        <div className="second-banner-call">
           <motion.div
             animate={{ x: [-2, 2, -2] }}
             transition={{ duration: 0.1, repeat: Infinity }}
           >
-            <FiPhoneCall className="second-banner-calling-icon" />
+            <FiPhoneCall
+              className="second-banner-calling-icon"
+              onClick={() => (window.location.href = "tel:+919830371143")}
+            />
           </motion.div>
           <div className="second-banner-call-details">
-            <h3>
-              { isMobile ?  "": "Call For More Info"}
-            </h3>
-            <p
-              onClick={() => (window.location.href = "tel:+13214210740")}
-            >
-              { isMobile ? "": "+13214210740  /" }
-            </p><p
-              onClick={() => (window.location.href = "tel:+919830371143")}
-            >
-              +919830371143
+            <h3>{isMobile ? "" : "Call For More Info"}</h3>
+            <p onClick={() => (window.location.href = "tel:+13214210740")}>
+              {isMobile ? "" : "+13214210740  /"}
+            </p>
+            <p onClick={() => (window.location.href = "tel:+919830371143")}>
+              {isMobile ? "" : +919830371143}
             </p>
           </div>
         </div>
 
-        <motion.p
-        className="second-banner-label"
-          style={{
-           
-          }}
-        >
-          { (isOnlyMObile ? "Let’s Request" : ( isMobile ? "Schedule Free Consultation" : "Let’s Request A Schedule For Free Consultation"))
+        <motion.p className="second-banner-label" style={{}}>
+          {(isOnlyMObile
+            ? "Let’s Request"
+            : isMobile
+            ? "Schedule Free Consultation"
+            : "Let’s Request A Schedule For Free Consultation"
+          )
             .split("")
             .map((char, index) => (
               <motion.span
@@ -102,21 +95,11 @@ const CallToAction = () => {
             scale: 1.1,
             color: "#ffff",
             border: "2px solid #ffff",
-            borderRadius:"20px",
-            fontWeight:"600"
+            borderRadius: "20px",
+            fontWeight: "600",
           }}
           whileTap={{ scale: 0.8 }}
-          style={{
-            padding: "10px 20px",
-            backgroundColor: "#fff",
-            color: "#6200ea",
-            fontWeight:"600",
-            border: "none",
-            borderRadius: "5px",
-            fontSize: "16px",
-            cursor: "pointer",
-            transition: "background-color 0.1s ease",
-          }}
+          className="second-banner-contact-button"
         >
           Contact
         </motion.button>
