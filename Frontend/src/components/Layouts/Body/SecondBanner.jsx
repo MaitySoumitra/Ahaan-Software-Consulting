@@ -73,9 +73,7 @@ const CallToAction = () => {
         <motion.p
         className="second-banner-label"
           style={{
-            fontSize: "32px",
-            margin: "10px 0",
-            letterSpacing: "2px",
+           
           }}
         >
           { (isOnlyMObile ? "Let’s Request" : ( isMobile ? "Schedule Free Consultation" : "Let’s Request A Schedule For Free Consultation"))

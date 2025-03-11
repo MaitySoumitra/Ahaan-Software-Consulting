@@ -45,6 +45,12 @@
       font-size: 35px;
       color: #fff;
   }
+
+  .second-banner-label{
+    font-size: 32px;
+    margin: 10px 0;
+    letter-spacing: 2px;
+  }
   @media (max-width:768px) {
       .second-banner-call{
           flex-direction: column;
@@ -52,4 +58,14 @@
       .second-banner-calling-icon{
           font-size: 25px;
       }  
+      .second-banner-label{
+        font-size: 26px;
+       
+      }
+  }
+  @media (max-width:768px){
+    .second-banner-label{
+        font-size: 18px;
+       
+      }
   }
