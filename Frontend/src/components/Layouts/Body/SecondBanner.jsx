@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiPhoneCall } from "react-icons/fi";
 import { Container } from "react-bootstrap";
+import { useNavigate, useLocation } from 'react-router-dom';
 import "./Secondbanner.css";
 const CallToAction = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isOnlyMObile, setIsOnlyMobile] = useState(false);
-
+  const navigate = useNavigate();
+  const location = useLocation();
   useEffect(() => {
     const handaleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -19,6 +21,10 @@ const CallToAction = () => {
     window.addEventListener("resize", handaleResize);
     return () => window.removeEventListener("resize", handaleResize);
   }, []);
+  const handleGoToContact = () => {
+    navigate('/contact'); // Navigate to the contact page
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -86,7 +92,7 @@ const CallToAction = () => {
             ))}
         </motion.p>
 
-        <motion.button
+        <motion.a
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
@@ -100,9 +106,10 @@ const CallToAction = () => {
           }}
           whileTap={{ scale: 0.8 }}
           className="second-banner-contact-button"
+          href="/contact"
         >
           Contact
-        </motion.button>
+        </motion.a>
       </Container>
     </motion.div>
   );
