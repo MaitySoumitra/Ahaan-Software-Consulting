@@ -145,7 +145,7 @@ const ContactUs = () => {
           </Col>
         </Row>
       </Container>
-      <WorldMap />
+      {/* <WorldMap /> */}
 
       {/* Toast Notification Container */}
       <ToastContainer position="top-right" autoClose={3000} />
