@@ -11,6 +11,11 @@
   color: #433978;
   font-weight: bold;
   font-size: 21px;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: fit-content;
+  margin-top: 40px;
 }
 .first-section-heading {
   font-size: 33px;
@@ -60,4 +65,19 @@
   font-family: outfit;
   line-height: 30px;
   text-align: center;
+}
+@media (max-width:768px) {
+  .section1-content-p{
+    width:90%;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width:450px) {
+  .section1-content-p{
+    width:90%;
+    font-size: 10px;
+    line-height: 20px;
+  }
 }

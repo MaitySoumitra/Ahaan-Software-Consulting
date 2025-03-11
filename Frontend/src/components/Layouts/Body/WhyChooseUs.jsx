@@ -7,11 +7,12 @@ import Whychoose from "../../../assets/images/whychoose/whychoose.jpg";
 const WhyChooseUs = () => {
   return (
     <Container className="mt-4">
+      <label className="section1-client-label">Why Choose Us</label>
       <Row className="align-items-center">
-        {/* Left Side - Text Content */}
+      
         <Col lg={6}>
           <div className="mt-5">
-            <label className="section1-client-label">Why Choose Us</label>
+           
             <h2 className="mt-2 fw-bold first-section-heading">
               What Makes Us Worth Your Time & Trust
             </h2>
