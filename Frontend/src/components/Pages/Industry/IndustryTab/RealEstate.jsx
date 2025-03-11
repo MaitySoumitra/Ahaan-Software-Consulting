@@ -1,5 +1,5 @@
 import React from "react";
-import Constructions from "../../../../assets/images/banner2/banner2.png";
+import RealEstateImage from "../../../../assets/images/banner2/Real Estate.png"
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { FaHeadset, FaChartLine, FaShippingFast, FaShoppingCart } from "react-icons/fa";
 import "./TabContent.css";
@@ -72,7 +72,7 @@ const RealEstate = () => {
       <p className="text-muted">
       The real estate and property management industry revolves around property transactions, asset management, and driving rental business growth worldwide. Ahaan Software Consulting specializes in crafting bespoke tech, IT, and custom software solutions designed to empower property managers, real estate agencies, and developers.
       </p>
-      <img src={Constructions} alt="E-Commerce" className="content-image" />
+      <img src={RealEstateImage} alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize mt-3">
       Innovate. Elevate. Collaborate. Bring Your Real Estate Vision To Life!

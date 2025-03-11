@@ -1,5 +1,5 @@
 import React from "react";
-import EcommerceImage from "../../../../assets/images/banner/banner1.jpg";
+import ConstructionImage from "../../../../assets/images/banner2/Construction.png"
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { FaHeadset, FaChartLine, FaShippingFast, FaShoppingCart } from "react-icons/fa";
 import "./TabContent.css";
@@ -72,7 +72,7 @@ const Construction = () => {
       <p className="text-muted">
       Achieve new level of agility with our tech-powered solutions, precisely tailored to the construction industry. Whether you're streamlining project management, optimizing resource allocation, or enhancing site safety, our custom solutions help you build smarter, faster, and safer! 
       </p>
-      <img src={EcommerceImage} alt="E-Commerce" className="content-image" />
+      <img src={ConstructionImage} alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize mt-3">
       Embrace The Tech-Powered Future Of Construction
