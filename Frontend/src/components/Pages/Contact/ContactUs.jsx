@@ -42,11 +42,10 @@ const ContactUs = () => {
         <Row className="justify-content-center">
           <Col md={10} lg={11}>
             <Row className="contact-box">
-              {/* Left Side */}
+             
               <Col md={4} className="contact-information">
                 <h5 className="contact-text">LET'S TALK</h5>
                 <h2>Speak With Expert Engineers.</h2>
-
                 <div className="contact-item">
                   <FaHome className="contact-icon" />
                   <div>
@@ -73,7 +72,6 @@ const ContactUs = () => {
                 </div>
               </Col>
 
-              {/* Right Side - Form */}
               <Col md={8} className="contact-form">
                 <h6>GET IN TOUCH</h6>
                 <h2>Fill The Form Below</h2>
@@ -146,8 +144,6 @@ const ContactUs = () => {
         </Row>
       </Container>
       <WorldMap />
-
-      {/* Toast Notification Container */}
       <ToastContainer position="top-right" autoClose={3000} />
     </>
   );
