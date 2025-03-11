@@ -40,55 +40,48 @@ const features = [
   const gridcontent = [
     {
       imgSrc: Ecom1,
-      title: 'Simple Integration',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Social Media Platform Development',
+      description: 'Empower your network with feature-fit, scalable platforms. From real-time messaging and AI-driven content recommendations to seamless multimedia sharing, we build social networking solutions tailored for growth, engagement, and success.'
     },
     {
       imgSrc: Ecom2,
-      title: 'Strong Security',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Content Moderation & Compliance ',
+      description: 'Safeguard your users and maintain a safe digital space with AI-driven moderation, automated policy enforcement, and real-time threat detection—ensuring compliance with global regulations and platform integrity.'
     },
     {
       imgSrc: Ecom3,
-      title: 'Quick Tracking',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'User Engagement & Monetization',
+      description: 'Improve user retention and revenue with intelligent engagement tools. Our solutions include AI-powered ad targeting, gamification, and subscription-based models to boost user interaction and monetization potential.'
     },
     {
       imgSrc: Ecom4,
-      title: 'Adaptable Scalability',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Data Security & Privacy Protection',
+      description: 'Establish user trust with enterprise-grade security solutions. We implement end-to-end encryption, blockchain-based identity management, and GDPR-compliant data handling to protect user information.'
     },
-    {
-      imgSrc: Ecom5,
-      title: 'Efficient Administration',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
-    }
+    // {
+    //   imgSrc: Ecom5,
+    //   title: 'Efficient Administration',
+    //   description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    // }
   ];
 
 const Social = () => {
   return (
     <div className="ecommerce-section">
-      <h2 className="fw-bold">Social Networking</h2>
+      <h2 className="fw-bold">Redefining Social Connectivity In Today’s Digital Age!</h2>
       <p className="text-muted">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
+      Social networking is the Internet, and businesses should adapt to stay ahead. From AI-powered engagement tools to immersive virtual experiences, our social media strategies and solutions empower platforms to create dynamic, personalized, and scalable digital communities. Let’s shape the future of social networking together!
       </p>
       <img src={Constructions} alt="E-Commerce" className="content-image" />
 
-      <h2 className="fw-bold text-left Revitalize">
-        Revitalize Shopping With Smart E-Commerce Features
+      <h2 className="fw-bold text-left Revitalize mt-3">
+      Connect, Curate, And Communicate!   
       </h2>
       <p className="text-left text-muted">
-        Our cutting-edge e-commerce solutions can revolutionize your in-store experience.
-        Our clever solutions make online retail simple and entertaining, improving every
-        stage of the buying experience, from smooth checkouts to real-time tracking.
-        Watch your sales skyrocket as you enter a world where innovation and convenience collide!
+      We help you tap beyond the social media boundaries. Leveraging next-gen technologies including, AI, Blockchain, and the metaverse, we maximize user engagement, streamline content moderation, and guarantee data privacy—creating a thriving and safe digital ecosystem. 
       </p>
 
-      <Row className="mt-4">
+      {/* <Row className="mt-4">
         {features.slice(0, 3).map((feature, index) => (
           <Col md={4} key={index}>
             <Card className="feature-card">
@@ -114,10 +107,10 @@ const Social = () => {
             </Card>
           </Col>
         ))}
-      </Row>
+      </Row> */}
 
-      <h2 className="fw-bold text-left Revitalize">
-      Your Business Needs To Stay Dynamic In A Ecosystem
+      <h2 className="fw-bold text-left Revitalize mt-3">
+      Create More Value With Our Solutions 
       </h2>
       {gridcontent.map((feature, index) => (
         <Row className="mb-4" key={index}>
@@ -127,7 +120,7 @@ const Social = () => {
           <Col md={6} className={index % 2 === 1 ? 'order-md-1' : ''}>
             <h2 className="grids-heading">{feature.title}</h2>
             <p className="grids-content">{feature.description}</p>
-            <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            {/* <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p> */}
           </Col>
         </Row>
       ))}

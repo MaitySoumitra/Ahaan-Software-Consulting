@@ -1,82 +1,138 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import { HiMenuAlt3 } from "react-icons/hi";
+import { TbMessage } from "react-icons/tb";
+import { HiX } from "react-icons/hi";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Header = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const sidebarRef = useRef(null);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
+  // Close sidebar when clicking outside
+  const handleClickOutside = (e) => {
+    if (sidebarRef.current && !sidebarRef.current.contains(e.target) && sidebarOpen) {
+      setSidebarOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    const handaleResize = () => {
+      setIsMobile(window.innerWidth <= 450);
+    };
+    handaleResize();
+
+    window.addEventListener("resize", handaleResize);
+    return () => window.removeEventListener("resize", handaleResize);
+  }, []);
+  useEffect(() => {
+    // Add event listener to detect outside clicks
+    document.addEventListener("mousedown", handleClickOutside);
+    
+    return () => {
+      // Cleanup event listener
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [sidebarOpen]);
+
   return (
-    <nav className="navbar navbar-expand-lg bg-white py-4">
+    <nav className="navbar navbar-expand-lg bg-white py-2">
       <div className="container">
         {/* Logo */}
         <a className="navbar-brand d-flex align-items-center" href="/">
           <img
             src="http://woocommerce.ahaanmedia.com/wp-content/uploads/2025/02/Ahaan-Software-New-Logo-1-6-1.png"
             alt="logo"
-            className="logo"
+            className="asc-logo"
           />
         </a>
 
-        {/* Toggle Button for Mobile */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        {/* Navbar Links */}
-        <div
-          className="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul className="navbar-nav d-flex gap-5">
-            <li className="nav-item">
+        <div className="header-left-side d-flex align-items-center">
+          <ul className="d-flex  desktop-nav-menu">
+            <li>
               <Link className="nav-link" to="/">
                 Home
               </Link>
             </li>
-            <li className="nav-item">
+            <li>
               <Link className="nav-link" to="/about">
-                About Us
+                About us
               </Link>
             </li>
-            <li className="nav-item ">
-              <Link className="nav-link " to="/service">
+            <li>
+              <Link className="nav-link" to="/service">
                 Services
               </Link>
             </li>
-            <li className="nav-item ">
-              <Link className="nav-link " to="/industry">
+            <li>
+              <Link className="nav-link" to="/industry">
                 Industry
               </Link>
             </li>
             <li className="nav-item ">
-              <Link className="nav-link " to="https://portfolio.ahaansoftware.com/">
+              <Link className="nav-link " to="/portfolio">
                 Portfolio
               </Link>
             </li>
-
-            {/* <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" to="/career">
-                Career
-              </Link>
-            </li> */}
-            {/* <li className="nav-item">
-              <Link className="nav-link" to="/blog">
-                Blog
-              </Link>
-            </li> */}
           </ul>
         </div>
+        <div className="header-left-side">
+          <div className="get-quote-container-1">
+            {isMobile ? (
+              <TbMessage size={35} className="phone-get-qt" />
+            ) : (
+              <a href="/contact" className=" get-quote-btn">
+                Get a Quote
+              </a>
+            )}
+          </div>
+          <button className="asc-header-toggle" type="button" onClick={toggleSidebar}>
+        <HiMenuAlt3 size={40} color="#43387B" />
+      </button>
 
-        {/* Get a Quote Button */}
-        <div>
-          <a href="/contact" className="btn get-quote-btn">
+      {/* Mobile Sidebar */}
+      <div className={`mobile-sidebar ${sidebarOpen ? "open" : ""}`} ref={sidebarRef}>
+        <button className="close-btn" onClick={() => setSidebarOpen(false)}>
+          <HiX size={30} color="#43387B" />
+        </button>
+        <div className="sidebar-content">
+          <div className="nav-links">
+            <Link to="/">Home</Link>
+            <Link to="/about">About us</Link>
+            <Link to="/service">Services</Link>
+            <Link to="/industry">Industry</Link>
+            <Link to="/portfolio">Portfolio</Link>
+          </div>
+          <hr />
+          <div className="social-links">
+            {/* Social media icons with links */}
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <FaFacebookF size={24} color="#43387B" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <FaInstagram size={24} color="#43387B" />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <FaLinkedinIn size={24} color="#43387B" />
+            </a>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div className="get-quote-container-2">
+          <a
+            href="/contact"
+            className="get-quote-btn"
+            
+          >
             Get a Quote
           </a>
         </div>

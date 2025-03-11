@@ -40,55 +40,48 @@ const features = [
   const gridcontent = [
     {
       imgSrc: Ecom1,
-      title: 'Simple Integration',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Supply Chain Management Solutions',
+      description: 'Enhance efficiency, visibility, and coordination across your supply chain with real-time tracking, demand forecasting, and AI-powered analytics.'
     },
     {
       imgSrc: Ecom2,
-      title: 'Strong Security',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Fleet & Transportation Management',
+      description: 'Optimize route planning, reduce fuel costs, and boost fleet performance with GPS tracking, automated dispatching, predictive maintenance solutions, and more! '
     },
     {
       imgSrc: Ecom3,
-      title: 'Quick Tracking',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Warehouse & Inventory Management',
+      description: 'Improve inventory accuracy, reduce storage costs, and streamline warehouse operations with IoT-enabled tracking, automated stock management, and cloud-based solutions.'
     },
     {
       imgSrc: Ecom4,
-      title: 'Adaptable Scalability',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Last-Mile Delivery Optimization',
+      description: 'Ensure faster, more efficient deliveries with AI-driven route optimization, real-time tracking, and automated proof-of-delivery solutions.'
     },
-    {
-      imgSrc: Ecom5,
-      title: 'Efficient Administration',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
-    }
+    // {
+    //   imgSrc: Ecom5,
+    //   title: 'Efficient Administration',
+    //   description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    // }
   ];
 
 const Logistics = () => {
   return (
     <div className="ecommerce-section">
-      <h2 className="fw-bold">Logistics</h2>
+      <h2 className="fw-bold">On The Road To Transformation With Future-Ready Logistics </h2>
       <p className="text-muted">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
+      By harnessing the power of logistics, transportation, and digital innovation, industry leaders are gaining real-time visibility into their supply chains, accessing critical data instantly, and accelerating order fulfillment worldwide. We help you leap ahead by leveraging the latest technologies like machine learning, IoT, blockchain, and predictive analytics for smarter, more efficient logistics operations.
       </p>
       <img src={Constructions} alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize">
-        Revitalize Shopping With Smart E-Commerce Features
+      Leap Ahead In The Modern Logistics Ecosystem 
       </h2>
       <p className="text-left text-muted">
-        Our cutting-edge e-commerce solutions can revolutionize your in-store experience.
-        Our clever solutions make online retail simple and entertaining, improving every
-        stage of the buying experience, from smooth checkouts to real-time tracking.
-        Watch your sales skyrocket as you enter a world where innovation and convenience collide!
+      Driven by quality and results, we modernize even the most complex logistical systems with advanced, data-driven solutions! Our targeted digital transportation technology solutions empower providers for unparalleled growth and limitless success.
       </p>
 
-      <Row className="mt-4">
+      {/* <Row className="mt-4">
         {features.slice(0, 3).map((feature, index) => (
           <Col md={4} key={index}>
             <Card className="feature-card">
@@ -114,10 +107,10 @@ const Logistics = () => {
             </Card>
           </Col>
         ))}
-      </Row>
+      </Row> */}
 
-      <h2 className="fw-bold text-left Revitalize">
-      Your Business Needs To Stay Dynamic In A Ecosystem
+      <h2 className="fw-bold text-left Revitalize mt-3">
+      Compete Against Industry Giants With Our Solutions 
       </h2>
       {gridcontent.map((feature, index) => (
         <Row className="mb-4" key={index}>
@@ -127,7 +120,7 @@ const Logistics = () => {
           <Col md={6} className={index % 2 === 1 ? 'order-md-1' : ''}>
             <h2 className="grids-heading">{feature.title}</h2>
             <p className="grids-content">{feature.description}</p>
-            <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            {/* <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p> */}
           </Col>
         </Row>
       ))}

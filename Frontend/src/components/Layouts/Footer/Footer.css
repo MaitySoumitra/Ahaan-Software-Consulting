@@ -1,7 +1,7 @@
 .footer {
   background-image: url("../../../assets/Footer-Banner.png");
   background-size: cover;
-  padding: 40px 0;
+  padding: 40px 0 20px 0px;
   color: #444;
 }
 
@@ -34,7 +34,7 @@
   font-family: outfit;
 }
 
-.newsletter .btn {
+.newsletter button {
   background: #6b50d9;
   border: none;
   color: white;
@@ -58,7 +58,7 @@
   margin-bottom: 8px;
 }
 
-.footer-links a {
+.footer-links a, .contact-info a {
   color: #444;
   text-decoration: none;
   font-size: 16px;
@@ -71,12 +71,15 @@
 }
 
 .contact-info {
-  font-size: 14px;
+  
   margin-bottom: 8px;
   display: flex;
   align-items: center;
   font-size: 16px;
   font-family: outfit;
+}
+.contact-info a{
+
 }
 
 .contact-info .icon {
@@ -90,21 +93,158 @@
   padding-top: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  
+}
+.footer-bottom p{
+  margin:0;
 }
 
-.social-icons a {
+
+
+.footer-social-icons a {
   margin-right: 10px;
   color: #6b50d9;
   font-size: 18px;
   text-decoration: none;
 }
-.col-md-4 {
+.quicklink-responsive{
+  display: flex;
+ 
+  justify-content: center;
+}
+.quick-link-for-desktop, .contact-us-heading-for-desktop{
+  display: block;
+}
+
+/* Basic sidebar styles */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Sidebar starts off-screen */
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
   padding: 20px;
 }
-.col-md-2 {
-  padding: 20px;
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-.col-md-3 {
-  padding: 20px;
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0.5px solid #ccc;
+}
+
+/* Button styling */
+.asc-header-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+/* Sidebar is visible when .open class is added */
+.mobile-sidebar.open {
+  right: 0; /* Sidebar slides in */
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .nav-links a, .social-links a {
+    font-size: 18px;
+  }
+}
+
+
+@media (min-width:768px){
+  .quick-link-for-desktop, .contact-us-heading-for-desktop{
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .accordion-button-quick-link {
+    font-size: 16px;
+  }
+
+  .footer-links,
+  .accordion-content {
+    padding-left: 20px;
+    padding-top: 10px;
+  }
+  .quick-link-for-desktop, .contact-us-heading-for-desktop{
+    display: none;
+  }
+  .accordion-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .accordion-icon.open {
+    transform: rotate(180deg); 
+  }
+  
+  .footer-links,
+  .accordion-content {
+    display: none; 
+  }
+  
+  .footer-links.open,
+  .accordion-content.open {
+    display: block; 
+    
+  }
+  
+  .accordion-button-quick-link:focus {
+    outline: none;
+  }
+  .quicklink-responsive{
+   margin-top: 30px;
+    flex-direction: column;
+    
+  }
+  .newsletter{
+    flex-direction: column;
+    align-items: center;
+  }
+  .newsletter button {
+    width: auto; 
+     
+  }
+  .footer-bottom p{
+    font-size: 12px;
+  }
+}
+
+

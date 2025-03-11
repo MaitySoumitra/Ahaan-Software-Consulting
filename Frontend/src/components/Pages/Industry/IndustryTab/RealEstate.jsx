@@ -40,55 +40,48 @@ const features = [
   const gridcontent = [
     {
       imgSrc: Ecom1,
-      title: 'Simple Integration',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Integrated Property Management Systems',
+      description: 'Streamline operations with our comprehensive solutions, including property management, CRM, marketing automation, asset/portfolio management, and more! '
     },
     {
       imgSrc: Ecom2,
-      title: 'Strong Security',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Analytics & Reporting',
+      description: 'We leverage advanced dashboards for performance tracking, market analysis, lease metrics, and financial insights, empowering data-driven decision-making.'
     },
     {
       imgSrc: Ecom3,
-      title: 'Quick Tracking',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+      title: 'Security & Compliance',
+      description: 'We provide robust security measures, data encryption, and compliance support with industry standards like GDPR and the Fair Housing Act, ensuring tenant privacy and regulatory adherence.'
     },
-    {
-      imgSrc: Ecom4,
-      title: 'Adaptable Scalability',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
-    },
-    {
-      imgSrc: Ecom5,
-      title: 'Efficient Administration',
-      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
-    }
+    // {
+    //   imgSrc: Ecom4,
+    //   title: 'Adaptable Scalability',
+    //   description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    // },
+    // {
+    //   imgSrc: Ecom5,
+    //   title: 'Efficient Administration',
+    //   description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    // }
   ];
 
 const RealEstate = () => {
   return (
     <div className="ecommerce-section">
-      <h2 className="fw-bold">Real Estate</h2>
+      <h2 className="fw-bold">Transform Real Estate With Cutting-Edge Digital Solutions</h2>
       <p className="text-muted">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
+      The real estate and property management industry revolves around property transactions, asset management, and driving rental business growth worldwide. Ahaan Software Consulting specializes in crafting bespoke tech, IT, and custom software solutions designed to empower property managers, real estate agencies, and developers.
       </p>
       <img src={Constructions} alt="E-Commerce" className="content-image" />
 
-      <h2 className="fw-bold text-left Revitalize">
-        Revitalize Shopping With Smart E-Commerce Features
+      <h2 className="fw-bold text-left Revitalize mt-3">
+      Innovate. Elevate. Collaborate. Bring Your Real Estate Vision To Life!
       </h2>
       <p className="text-left text-muted">
-        Our cutting-edge e-commerce solutions can revolutionize your in-store experience.
-        Our clever solutions make online retail simple and entertaining, improving every
-        stage of the buying experience, from smooth checkouts to real-time tracking.
-        Watch your sales skyrocket as you enter a world where innovation and convenience collide!
+      Partner with us to enhance real estate operations with real-time monitoring, predictive maintenance, and smart building solutions. Leveraging IoT, mobile apps, and digital innovations, we forge customer satisfaction with elevated efficiency and excellence. Strengthen security with robust cybersecurity, access control, and cloud solutions to protect data, assets, and tenant privacy.
       </p>
 
-      <Row className="mt-4">
+      {/* <Row className="mt-4">
         {features.slice(0, 3).map((feature, index) => (
           <Col md={4} key={index}>
             <Card className="feature-card">
@@ -114,10 +107,10 @@ const RealEstate = () => {
             </Card>
           </Col>
         ))}
-      </Row>
+      </Row> */}
 
       <h2 className="fw-bold text-left Revitalize">
-      Your Business Needs To Stay Dynamic In A Ecosystem
+      Some Of The Key Features Of Our Offerings!
       </h2>
       {gridcontent.map((feature, index) => (
         <Row className="mb-4" key={index}>
@@ -127,7 +120,7 @@ const RealEstate = () => {
           <Col md={6} className={index % 2 === 1 ? 'order-md-1' : ''}>
             <h2 className="grids-heading">{feature.title}</h2>
             <p className="grids-content">{feature.description}</p>
-            <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+            {/* <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p> */}
           </Col>
         </Row>
       ))}

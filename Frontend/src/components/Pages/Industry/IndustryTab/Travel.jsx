@@ -43,41 +43,55 @@ const features = [
 
 ];
 
-const gridcontent = [
-  {
-    imgSrc: Ecom1,
-    title: "Why Choose Us",
-    description:
-      "With the expertise and capacity to deliver smart solutions, we help transform your travel and hospitality business for the digital age. By leveraging the right technologies, we accelerate growth and elevate customer experiences like no other!",
-  },
-
-];
+  const gridcontent = [
+    {
+      imgSrc: Ecom1,
+      title: 'Simple Integration',
+      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    },
+    {
+      imgSrc: Ecom2,
+      title: 'Strong Security',
+      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    },
+    {
+      imgSrc: Ecom3,
+      title: 'Quick Tracking',
+      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    },
+    {
+      imgSrc: Ecom4,
+      title: 'Adaptable Scalability',
+      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    },
+    {
+      imgSrc: Ecom5,
+      title: 'Efficient Administration',
+      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    }
+  ];
 
 const Travel = () => {
   return (
     <div className="ecommerce-section">
-      <h2 className="fw-bold">
-        Redefine Your Customer Experience in Travel & Hospitality
-      </h2>
+      <h2 className="fw-bold">Travel & Hospitality</h2>
       <p className="text-muted">
-        As the travel and hospitality sectors evolve, digital innovation is the
-        key to ultimate success. From self-learning booking platforms to
-        AI-powered chatbots, businesses can boost customer experiences while
-        reducing costs. As India’s leading software development and consultancy
-        company, we can help you navigate new opportunities and reinvent
-        customer experience.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur.
       </p>
       <img src={Travels} alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize">
-      Our Expertise in Travel & Hospitality Segments
+        Revitalize Shopping With Smart E-Commerce Features
       </h2>
       <p className="text-left text-muted">
-        Our cutting-edge e-commerce solutions can revolutionize your in-store
-        experience. Our clever solutions make online retail simple and
-        entertaining, improving every stage of the buying experience, from
-        smooth checkouts to real-time tracking. Watch your sales skyrocket as
-        you enter a world where innovation and convenience collide!
+        Our cutting-edge e-commerce solutions can revolutionize your in-store experience.
+        Our clever solutions make online retail simple and entertaining, improving every
+        stage of the buying experience, from smooth checkouts to real-time tracking.
+        Watch your sales skyrocket as you enter a world where innovation and convenience collide!
       </p>
 
       {/* <Row className="mt-4">
@@ -106,7 +120,7 @@ const Travel = () => {
             </Card>
           </Col>
         ))}
-      </Row>
+      </Row> 
 
       <br />
       {gridcontent.map((feature, index) => (
@@ -121,12 +135,7 @@ const Travel = () => {
           <Col md={6} className={index % 2 === 1 ? "order-md-1" : ""}>
             <h2 className="grids-heading">{feature.title}</h2>
             <p className="grids-content">{feature.description}</p>
-            <p className="grids-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip.
-            </p>
+            <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
           </Col>
         </Row>
       ))}

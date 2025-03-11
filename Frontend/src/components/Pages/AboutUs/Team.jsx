@@ -11,7 +11,7 @@ const teamMembers = [
   },
   {
     name: "Sukanta Das",
-    position: "Manager",
+    position: "Sales Manager",
     image: "/Images/Sukanta.png",
   },
   {

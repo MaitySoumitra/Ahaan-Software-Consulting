@@ -48,39 +48,57 @@ const features = [
   
 ];
 
-const gridcontent = [
-  {
-    imgSrc: Ecom1,
-    title: "Why Choose Us",
-    description:
-      "We are solving the healthcare industry’s toughest challenges—and we're ready to help you with yours! Using a wide range of cutting-edge technologies, we develop innovative healthcare software solutions that transform healthcare, patient care, and medical services.",
-  },
-  
-];
+  const gridcontent = [
+    {
+      imgSrc: Ecom1,
+      title: 'Simple Integration',
+      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    },
+    {
+      imgSrc: Ecom2,
+      title: 'Strong Security',
+      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    },
+    {
+      imgSrc: Ecom3,
+      title: 'Quick Tracking',
+      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    },
+    {
+      imgSrc: Ecom4,
+      title: 'Adaptable Scalability',
+      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    },
+    {
+      imgSrc: Ecom5,
+      title: 'Efficient Administration',
+      description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
+    }
+  ];
 
 const Healthcare = () => {
   return (
     <div className="ecommerce-section">
-      <h2 className="fw-bold">Explore New Frontiers In Healthcare!</h2>
+      <h2 className="fw-bold">Healthcare</h2>
       <p className="text-muted">
-        We are revolutionizing modern healthcare operations with innovative
-        digital solutions, making them more agile and effective. Focused on
-        driving digital transformation in healthcare, we enhance care
-        coordination while empowering staff. Collaborate with us to elevate the
-        quality of healthcare for both providers and patients.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur.
       </p>
       <img src={Health} alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize">
-        Our Healthcare Development Solutions
+        Revitalize Shopping With Smart E-Commerce Features
       </h2>
       <p className="text-left text-muted">
-        Enhance patient outcomes and optimize healthcare efficiency with our
-        comprehensive healthcare software development services. By digitizing
-        your healthcare operations, we streamline clinical administration,
-        ensuring your venture stays ahead of industry changes and challenges.
+        Our cutting-edge e-commerce solutions can revolutionize your in-store experience.
+        Our clever solutions make online retail simple and entertaining, improving every
+        stage of the buying experience, from smooth checkouts to real-time tracking.
+        Watch your sales skyrocket as you enter a world where innovation and convenience collide!
       </p>
-{/* 
+
       <Row className="mt-4">
         {features.slice(0, 3).map((feature, index) => (
           <Col md={4} key={index}>
@@ -93,7 +111,7 @@ const Healthcare = () => {
             </Card>
           </Col>
         ))}
-      </Row> */}
+      </Row> 
 
       <Row className="mt-3">
         {features.slice(0,4).map((feature, index) => (
@@ -107,7 +125,7 @@ const Healthcare = () => {
             </Card>
           </Col>
         ))}
-      </Row>
+      </Row> 
 
   <br />
       {gridcontent.map((feature, index) => (
@@ -122,12 +140,7 @@ const Healthcare = () => {
           <Col md={6} className={index % 2 === 1 ? "order-md-1" : ""}>
             <h2 className="grids-heading">{feature.title}</h2>
             <p className="grids-content">{feature.description}</p>
-            <p className="grids-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip.
-            </p>
+            <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
           </Col>
         </Row>
       ))}
