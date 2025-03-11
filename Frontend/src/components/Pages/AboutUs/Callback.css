@@ -1,5 +1,5 @@
 
-.callback-section {
+/* .callback-section {
     background-color:#433978;
       background-size: cover;
       background-position: center;
@@ -10,7 +10,7 @@
       font-family: "Open Sans", sans-serif;
     }
     
-    /* Flexbox layout for content */
+
     .callback-content {
       display: flex;
       justify-content: space-between;
@@ -22,13 +22,13 @@
       width:500px;
       border-radius: 30px;
     }
-    /* Right-side form container */
+ 
     .form-container {
         background: transparent; 
         padding: 30px;
       }
       
-      /* Form Heading */
+  
       .form-heading {
         font-size: 1.5rem;
         margin-bottom: 20px;
@@ -36,7 +36,7 @@
         color: #fff;
       }
       
-      /* Inline sections for name and email */
+      
       .form-row {
         display: flex;
         gap: 20px;
@@ -59,21 +59,21 @@
       }
       input.form-control::placeholder,
     textarea.form-control::placeholder {
-      color: #ffffff; /* Change to any color */
-      opacity: 1; /* Ensure full visibility */
+      color: #ffffff; 
+      opacity: 1; 
     }
     .form-control:focus::placeholder {
-      opacity: 0; /* Hide placeholder on focus */
+      opacity: 0; 
     }
     .form-control:focus {
       background: transparent !important;
       color:#fff;
       border: none !important;
-      border-bottom: 2px solid #ffffff !important; /* Change color on focus */
+      border-bottom: 2px solid #ffffff !important;
       outline: none !important;
       box-shadow: none !important;
     }
-      /* Submit button styling */
+   
       button[type="submit"] {
         background-color: #8C7DDD;
         border:none;
@@ -90,19 +90,19 @@
         color:#ffffff;
       }
   
-    /* animation */ 
+
     @keyframes fadeInRight {
       from {
         opacity: 0;
-        transform: translateX(50px); /* Start slightly to the right */
+        transform: translateX(50px);
       }
       to {
         opacity: 1;
-        transform: translateX(0); /* End at the original position */
+        transform: translateX(0); 
       }
     }
     
-    /* Fade-in-right animation class */
+   
     .fade-in-right {
       animation: fadeInRight 1s ease-in-out;
     }
@@ -133,4 +133,4 @@
       .callback-image{
         width:335px;
       }
-    }
+    } */

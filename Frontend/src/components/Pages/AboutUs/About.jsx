@@ -10,7 +10,7 @@ function About() {
       <Banner />
       <We/>
       <Team />
-      <Callback />
+
     </div>
   );
 }

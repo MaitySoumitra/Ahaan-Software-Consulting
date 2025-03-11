@@ -1,0 +1,30 @@
+.Contact-Banner {
+    background-image: url('../../../assets/images/banner2/contactus-Banner.png');
+    background-size: cover;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: "Open Sans", sans-serif;
+
+  }
+  
+  .banner-heading {
+    font-size: 6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: transparent;
+    color: #ffffff;
+  }
+  
+  @media (max-width: 768px) {
+    .banner-heading {
+      font-size: 2rem;
+    }
+  
+    .banner-subheading {
+      font-size: 1.2rem;
+    }
+  }
+  
