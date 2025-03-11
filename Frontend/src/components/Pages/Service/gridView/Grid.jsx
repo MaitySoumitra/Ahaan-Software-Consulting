@@ -2,104 +2,176 @@ import React from "react";
 import { Card, Container, Row, Col } from "react-bootstrap";
 import { CiCircleCheck } from "react-icons/ci";
 import "bootstrap/dist/css/bootstrap.min.css";
-import './Grid.css';
-import card1 from '../../../../assets/card1.png';
-import card2 from '../../../../assets/card2.png';
-import card3 from '../../../../assets/card3.png';
-import card4 from '../../../../assets/card4.png';
-import card5 from '../../../../assets/card5.png';
-import card6 from '../../../../assets/card6.png';
-import card7 from '../../../../assets/card7.png';
-import card8 from '../../../../assets/card8.png';
-import card9 from '../../../../assets/card9.png';
+import "./Grid.css";
+import card1 from "../../../../assets/card1.png";
+import card2 from "../../../../assets/card2.png";
+import card3 from "../../../../assets/card3.png";
+import card4 from "../../../../assets/card4.png";
+import card5 from "../../../../assets/card5.png";
+import card6 from "../../../../assets/card6.png";
+import card7 from "../../../../assets/card7.png";
+import card8 from "../../../../assets/card8.png";
+import card9 from "../../../../assets/card9.png";
 import { FaArrowCircleRight } from "react-icons/fa";
 const cardData = [
   {
     image: card1,
     title: "UI/UX Design",
     description:
-      "Get our state-of-the-art UI/UX design services for creating a captivating user experience! To make your digital goods aesthetically pleasing and helpful.",
-    features: ["Wireframing", "Prototyping", "User Research", "Usability Testing", "Usability Testing"],
+      "UI/UX demands a deep understanding of online customer behaviour and continuous testing. With real market insights from diverse projects, we craft dynamic websites and mobile apps that deliver seamless, engaging brand interactions.",
+    features: [
+      "Graphic",
+      "Wireframing",
+      "Web app",
+      "Architecture",
+      "Mobile App ",
+    ],
   },
   {
     image: card2,
-    title: "Web Development",
+    title: "Web Design & Development",
     description:
-      "Get our state-of-the-art UI/UX design services for creating a captivating user experience! To make your digital goods aesthetically pleasing and helpful.",
-    features: ["Frontend Design", "User Testing", "Site Architecture", "SEO Optimization", "Backend"],
+      "Content is king, but your website is the castle! Build a dynamic “digital empire” for your brand with a visually captivating, SEO-friendly, feature-loaded, and mobile-responsive website – crafted by our expert team.",
+    features: [
+      "Frontend ",
+      "Backend ",
+      "API & Integration ",
+      "WordPress ",
+      "Shopify ",
+      "WooCommerce"
+    ],
   },
   {
     image: card3,
     title: "App Development",
     description:
-      "Get our state-of-the-art UI/UX design services for creating a captivating user experience! To make your digital goods aesthetically pleasing and helpful.",
-    features: ["Code Crafting", "Code Crafting", "Quality Assurance", "Support & Updates", "Usability Testing"],
+      "Grow and promote your business on the go with a robust, custom-tailored mobile app. Leveraging cutting-edge technology, we build iOS, Android, and hybrid solutions designed for more engagement, better scalability, and greater performance.",
+    features: [
+      "Hybrid App",
+      "Native App ",
+      "React Native",
+      "Kotlin",
+      "Flutter",
+    ],
   },
   {
     image: card4,
     title: "E-commerce Development",
     description:
-      "Get our state-of-the-art UI/UX design services for creating a captivating user experience! To make your digital goods aesthetically pleasing and helpful.",
-      features: ["Wireframing", "Prototyping", "User Research", "Usability Testing", "Usability Testing"],
+      "Boost sales and elevate customer satisfaction with our expert e-commerce web development solutions. We craft secure, high-performing stores with robust strategies to expand your customer base and drive measurable results.",
+    features: [
+      "Shopify",
+      "Magento",
+      "WooCommerce",
+      "BigCommerce",
+      
+    ],
   },
   {
     image: card5,
-    title: "LinkedIn Marketing",
+    title: "Social Media Management",
     description:
-      "Get our state-of-the-art UI/UX design services for creating a captivating user experience! To make your digital goods aesthetically pleasing and helpful.",
-    features: ["SEO Strategy", "PPC Campaigns", "Analytics Reporting", "Content Creation","Social Media "],
+      "We go beyond likes, comments, and shares to craft well-researched, insight-driven, and sustainable content strategies that truly resonate with your audience. Trust us to spark meaningful conversations, foster a genuine community, and make real impact! ",
+    features: [
+      "Organic & Paid Social ",
+      "Instagram Marketing",
+      "LinkedIn Marketing",
+      "YouTube Marketing",
+      "Social Media Reputation Management",
+      "Social Media Analytics and Reporting "
+    ],
   },
-  {
-    image: card6,
-    title: "Meta Platform Marketing",
-    description:
-      "Get our state-of-the-art UI/UX design services for creating a captivating user experience! To make your digital goods aesthetically pleasing and helpful.",
-      features: ["SEO Strategy", "PPC Campaigns", "Analytics Reporting", "Content Creation","Social Media "],
-  },
+  // {
+  //   image: card6,
+  //   title: "Meta Platform Marketing",
+  //   description:
+  //     "Get our state-of-the-art UI/UX design services for creating a captivating user experience! To make your digital goods aesthetically pleasing and helpful.",
+  //   features: [
+  //     "SEO Strategy",
+  //     "PPC Campaigns",
+  //     "Analytics Reporting",
+  //     "Content Creation",
+  //     "Social Media ",
+  //   ],
+  // },
   {
     image: card7,
     title: "Google Marketing",
     description:
-      "Get our state-of-the-art UI/UX design services for creating a captivating user experience! To make your digital goods aesthetically pleasing and helpful.",
-      features: ["SEO Strategy", "PPC Campaigns", "Analytics Reporting", "Content Creation","Social Media"],
+      "Guesswork wastes money—your business deserves better! Our Google Ads experts have mastered the art of high-performing campaigns. With data-driven precision, we optimize keywords, streamline chaotic account structures, and craft compelling copy and creatives. The result? Ad campaigns that don’t just run—they dominate!",
+    features: [
+      "Competitor Analysis ",
+      "Campaign & Ad Copy Creation",
+      "Detailed Reporting",
+      "Google Ads ",
+      "Google Shopping",
+      "Google Video Ads",
+      "Google Analytics"
+    ],
   },
-  {
-    image: card8,
-    title: "Branding",
-    description:
-      "Get our state-of-the-art UI/UX design services for creating a captivating user experience! To make your digital goods aesthetically pleasing and helpful.",
-      features: ["Wireframing", "Prototyping", "User Research", "Usability Testing", "Usability Testing"],
-  },
-  {
-    image: card9,
-    title: "SaaS Designs",
-    description:
-      "Get our state-of-the-art UI/UX design services for creating a captivating user experience! To make your digital goods aesthetically pleasing and helpful.",
-      features: ["Wireframing", "Prototyping", "User Research", "Usability Testing", "Usability Testing"],
-  },
+  // {
+  //   image: card8,
+  //   title: "Branding",
+  //   description:
+  //     "Get our state-of-the-art UI/UX design services for creating a captivating user experience! To make your digital goods aesthetically pleasing and helpful.",
+  //   features: [
+  //     "Wireframing",
+  //     "Prototyping",
+  //     "User Research",
+  //     "Usability Testing",
+  //     "Usability Testing",
+  //   ],
+  // },
+  // {
+  //   image: card9,
+  //   title: "SaaS Designs",
+  //   description:
+  //     "Get our state-of-the-art UI/UX design services for creating a captivating user experience! To make your digital goods aesthetically pleasing and helpful.",
+  //   features: [
+  //     "Wireframing",
+  //     "Prototyping",
+  //     "User Research",
+  //     "Usability Testing",
+  //     "Usability Testing",
+  //   ],
+  // },
 ];
 
 const Grid = () => {
   return (
     <Container className="my-5">
-        <div className="grid-heading">
-            <h2>Accelerate Technology Innovation With Software Development Services</h2>
-            <p>Whether you require a complex enterprise software development solution or seamless software integration, we will take your business to the next level of success with IT consulting services & software development solutions.</p>
-        </div>
+      <div className="grid-heading">
+        <h2>Embark On Digital Transformation Journey With Our Services</h2>
+        <p>
+          We understand, collaborate, and empower! From complex Software
+          Development Service to Seamless Integration, experience how our
+          next-gen IT consulting and software solutions can transform and
+          accelerate your business.
+        </p>
+      </div>
       <Row className="gy-5  service">
         {cardData.map((card, index) => (
           <Col key={index} md={4}>
             <Card className="rounded-4 overflow-hidden border border-light service-grid-card">
-              <Card.Img variant="top" src={card.image} alt={card.title} className="img-fluid" />
+              <Card.Img
+                variant="top"
+                src={card.image}
+                alt={card.title}
+                className="img-fluid"
+              />
               <Card.Body className="p-4 service-grid-card-body">
                 <Card.Title className="text-title gap-5 fw-bold d-flex align-items-center service-grid-card-title">
                   {card.title}
-          
                 </Card.Title>
-                <Card.Text className="text-muted text-start mt-2 service-grid-card-text">{card.description}</Card.Text>
+                <Card.Text className="text-muted text-start mt-2 service-grid-card-text">
+                  {card.description}
+                </Card.Text>
                 <div className="mt-3 row row-cols-2 grid-icon-list">
                   {card.features.map((feature, i) => (
-                    <div key={i} className="d-flex align-items-center text-dark col">
+                    <div
+                      key={i}
+                      className="d-flex align-items-center text-dark col"
+                    >
                       <CiCircleCheck className="me-2 fw-bold icon" />
                       {feature}
                     </div>
@@ -112,5 +184,5 @@ const Grid = () => {
       </Row>
     </Container>
   );
-}
+};
 export default Grid;
