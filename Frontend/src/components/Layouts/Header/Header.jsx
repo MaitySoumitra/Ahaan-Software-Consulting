@@ -78,7 +78,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item ">
-              <Link className="nav-link " to="/portfolio">
+              <Link className="nav-link " to="https://portfolio.ahaansoftware.com/">
                 Portfolio
               </Link>
             </li>
