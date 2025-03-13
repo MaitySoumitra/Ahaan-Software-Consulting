@@ -32,8 +32,8 @@ const CallToAction = () => {
       transition={{ duration: 1 }}
       whileHover={{
         background: [
-          "radial-gradient(circle at center, #000428, #433978,#8065BB)",
-          "radial-gradient(circle at center,#8065BB, #433978, #000428)",
+          "radial-gradient(circle at center, #000,rgb(14, 14, 15),#CD912A)",
+          "radial-gradient(circle at center,#CD912A,rgb(0, 0, 0), #000)",
         ],
         transition: { duration: 1.5, repeat: Infinity, repeatType: "reverse" },
       }}
@@ -97,7 +97,7 @@ const CallToAction = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
           whileHover={{
-            backgroundColor: "#433978",
+            backgroundColor: "#000",
             scale: 1.1,
             color: "#ffff",
             border: "2px solid #ffff",

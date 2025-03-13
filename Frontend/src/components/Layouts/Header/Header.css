@@ -1,6 +1,6 @@
 
 .asc-logo {
-  height: 35px;
+  height: 45px;
  
 }
 .asc-header{
@@ -12,20 +12,26 @@
   list-style: none;
   margin: 0;
   padding: 10px;
-  font-size: 16px;
+  font-size: 18px;
   color: #333;
   font-weight: 500;
+
+  gap: 6rem;
+  font-family: outfit;
+
   gap: 5rem;
+
 }
 
 .get-quote-btn {
-  background-color: #43387B;
-  color: white;
+  background-color: #000;
+  color: #C78A2B;
   font-size: 16px;
   font-weight: 500;
-  padding: 10px 30px;
+  padding: 15px 30px;
   border-radius: 30px;
   text-decoration: none;
+  font-family: outfit;
 }
 .header-left-side{
   display:flex;
@@ -34,7 +40,8 @@
 }
 
 .get-quote-btn:hover {
-  background-color: #6c48a1;
+  background-color: #CC9231;
+  color: #000;
 }
 .get-quote-container-1{
   display: none;

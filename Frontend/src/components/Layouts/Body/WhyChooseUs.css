@@ -1,0 +1,49 @@
+.section1-client-label {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .first-section-heading {
+    font-size: 32px;
+    color: #CD912A;
+    font-family: outfit;
+  }
+  
+  .why-choose-us-content {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: outfit !important;
+  }
+  
+  .mt-4 {
+    margin-top: 1.5rem;
+  }
+  
+  .mt-5 {
+    margin-top: 3rem;
+  }
+  
+  .text-muted {
+    color: #000 !important;
+    font-family: outfit !important;
+    font-size: 16px;
+  }
+  .why-choose-us-subtitle{
+    color: #CD912A ;
+    font-family: outfit;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .rounded {
+    border-radius: 0.25rem !important;
+  }
+  
+  .border-0 {
+    border: none !important;
+  }
+  

@@ -1,5 +1,5 @@
 .service-grid-card {
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px !important;
+  box-shadow: rgba(0, 0, 0, 0.079) 0px 10px 20px, rgba(0, 0, 0, 0.123) 0px 6px 6px !important;
 }
 .card img {
   object-fit: cover;
@@ -20,29 +20,36 @@
   font-size: 15px;
   color: #555;
   line-height: 25px;
+  font-family: outfit;
 }
 .service {
   margin-top: 1rem;
 }
 .grid-heading h2 {
   text-align: center;
-  color: #43387b;
+  color: #D1993B;
   font-family: outfit;
   line-height: 60px;
   font-weight: 700;
 }
 .grid-heading p {
- 
   font-size: 16px;
-
   font-family: outfit;
+  text-align: center;
 }
 .text-title {
-  color: #7e61bf;
+  color: #D1993B;
+  font-family: outfit;
 }
 .icon {
-  color: #7450c0;
+  color: #D1993B;
 }
 .arrow {
   width: 50%;
+}
+.grid-icon-list{
+  font-family: outfit;
+  font-size: 13px;
+  line-height: 25px;
+  font-weight: 600;
 }

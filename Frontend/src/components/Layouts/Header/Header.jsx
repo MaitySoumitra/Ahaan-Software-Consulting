@@ -7,6 +7,7 @@ import { TbMessage } from "react-icons/tb";
 import { HiX } from "react-icons/hi";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
+
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -49,7 +50,7 @@ const Header = () => {
         {/* Logo */}
         <a className="navbar-brand d-flex align-items-center" href="/">
           <img
-            src="http://woocommerce.ahaanmedia.com/wp-content/uploads/2025/02/Ahaan-Software-New-Logo-1-6-1.png"
+            src="https://ahaansoftware.com/images/ahaan.png"
             alt="logo"
             className="asc-logo"
           />

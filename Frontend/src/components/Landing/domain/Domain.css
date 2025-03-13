@@ -1,0 +1,75 @@
+.domain-section {
+  background-color: #fff;
+}
+
+.domain-heading {
+  font-weight: bold;
+  color: #C5872B;
+  margin-bottom: 50px !important;
+  font-family: outfit;
+}
+.domain-text{
+  font-family: outfit;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+.marquee-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-container {
+  display: flex;
+  gap: 100px;
+  animation: marquee 10s linear infinite;
+  width: fit-content;
+}
+
+.marquee-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.marquee-image-domain {
+  width: 100px; /* Adjust image size */
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.marquee-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+  font-family: outfit;
+}
+
+@keyframes marquee {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-container {
+      gap: 20px;
+  }
+  .marquee-image {
+      width: 80px;
+      height: 80px;
+  }
+  .marquee-text {
+      font-size: 12px;
+  }
+}
