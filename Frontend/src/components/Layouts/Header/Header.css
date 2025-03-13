@@ -15,8 +15,12 @@
   font-size: 18px;
   color: #333;
   font-weight: 500;
+
   gap: 6rem;
   font-family: outfit;
+
+  gap: 5rem;
+
 }
 
 .get-quote-btn {
