@@ -3,20 +3,20 @@ import { FaChartLine } from "react-icons/fa";
 import { LuChartNoAxesCombined } from "react-icons/lu";
 import { BsBoxSeam, BsMegaphone } from "react-icons/bs";
 import { Si1001Tracklists } from "react-icons/si";
-import Whychoose from "../../../assets/images/whychoose/whychoose.jpg";
+import Whychoose from "../../../assets/images/logo/Why-choose-us.png";
+import "./WhyChooseUs.css";
 const WhyChooseUs = () => {
   return (
     <Container className="mt-4">
-      <Row className="align-items-center">
-        {/* Left Side - Text Content */}
-        <Col lg={6}>
+      <label className="section1-client-label">Why Choose Us</label>
+      <Row className="d-flex align-items-center">
+        <Col lg={7} className="d-flex flex-column">
           <div className="mt-5">
-            <label className="section1-client-label">Why Choose Us</label>
             <h2 className="mt-2 fw-bold first-section-heading">
               What Makes Us Worth Your Time & Trust
             </h2>
 
-            <p className="text-muted mx-auto mt-3 section1-content">
+            <p className="text-muted mx-auto mt-3 why-choose-us-content">
               We’re not just a high-performing team – we’re “tech-driven
               marketing enthusiasts” with innovation in our DNA! Let’s collab to
               transform your vision – from ideation to action – into powerful
@@ -30,12 +30,18 @@ const WhyChooseUs = () => {
                 <Card.Body>
                   <Row className="align-items-center">
                     <Col xs="auto">
-                      <LuChartNoAxesCombined size={50} color="#433978" />{" "}
+                      <LuChartNoAxesCombined
+                        size={50}
+                        color="#CD912A"
+                        style={{
+                          backgroundColor: "#000",
+                          padding: "10px",
+                          borderRadius: "10px",
+                        }}
+                      />{" "}
                     </Col>
                     <Col>
-                      <h5 className="" style={{ color: "#433978" }}>
-                      Our Values
-                      </h5>
+                      <h5 className="why-choose-us-subtitle">Our Values</h5>
                       <p className="text-muted">
                         We deliver services with integrity, accuracy, and
                         objectivity, upholding ethical standards,
@@ -53,12 +59,16 @@ const WhyChooseUs = () => {
                 <Card.Body>
                   <Row className="align-items-center">
                     <Col xs="auto">
-                      <Si1001Tracklists size={50} color="#433978" />{" "}
+                      <Si1001Tracklists size={50}
+                        color="#CD912A"
+                        style={{
+                          backgroundColor: "#000",
+                          padding: "10px",
+                          borderRadius: "10px",
+                        }} />{" "}
                     </Col>
                     <Col>
-                      <h5 className="" style={{ color: "#433978" }}>
-                      	Authenticity
-                      </h5>
+                      <h5 className="why-choose-us-subtitle">Authenticity</h5>
                       <p className="text-muted">
                         We ally with businesses we believe in, ensuring passion
                         drives success. With authenticity at our core, we foster
@@ -76,12 +86,16 @@ const WhyChooseUs = () => {
                 <Card.Body>
                   <Row className="align-items-center">
                     <Col xs="auto">
-                      <BsMegaphone size={50} color="#433978" />
+                      <BsMegaphone size={50}
+                        color="#CD912A"
+                        style={{
+                          backgroundColor: "#000",
+                          padding: "10px",
+                          borderRadius: "10px",
+                        }} />
                     </Col>
                     <Col>
-                      <h5 className="" style={{ color: "#433978" }}>
-                      Top Talent
-                      </h5>
+                      <h5 className="why-choose-us-subtitle">Top Talent</h5>
                       <p className="text-muted">
                         Our experts cultivate partnerships with a win-win
                         mindset, seeing client success as our own. Committed to
@@ -99,12 +113,18 @@ const WhyChooseUs = () => {
                 <Card.Body>
                   <Row className="align-items-center">
                     <Col xs="auto">
-                      <BsBoxSeam size={50} color="#433978" />
+                      <BsBoxSeam size={50}
+                        color="#CD912A"
+                        style={{
+                          backgroundColor: "#000",
+                          padding: "10px",
+                          borderRadius: "10px",
+                        }} />
                     </Col>
                     <Col>
-                      <h5 className="" style={{ color: "#433978" }}>
-                        <i className="bi bi-laptop text-primary"></i> 
-                        Quality 
+                      <h5 className="why-choose-us-subtitle">
+                        <i className="bi bi-laptop text-primary"></i>
+                        Quality
                       </h5>
                       <p className="text-muted">
                         We leverage edgy technologies, tools, and platforms to
@@ -119,12 +139,13 @@ const WhyChooseUs = () => {
             </Col>
           </Row>
         </Col>
-        <Col lg={6} className="d-flex justify-content-center">
+        <Col lg={5} className="d-flex justify-content-center">
           <img
             src={Whychoose}
             alt="Business Team"
             className="img-fluid rounded"
-            style={{ maxWidth: "100%", borderRadius: "15px" }}
+            style={{ maxWidth: "90%", borderRadius: "15px" , boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
+            }}
           />
         </Col>
       </Row>

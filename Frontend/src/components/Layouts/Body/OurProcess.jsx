@@ -46,7 +46,7 @@ const OurProcess = () => {
                 <polygon
                   class="arrow"
                   points="15,8 20,15 15,22 30,22 35,15 30,8"
-                  fill="#433978"
+                  fill="#000"
                 />
               </svg>
             )}

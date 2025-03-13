@@ -1,0 +1,51 @@
+.brands-section {
+  background-color: #000;
+}
+
+.brands-heading {
+  font-weight: bold;
+  color: #C5872B;
+  font-family: outfit;
+}
+
+.marquee-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-container {
+  display: flex;
+  gap: 100px;
+  width: fit-content;
+  animation: marquee-scroll 20s linear infinite;
+}
+
+.marquee-item {
+  flex-shrink: 0;
+}
+
+.marquee-image {
+  width: 100px; /* Adjust image size */
+  height: auto;
+  object-fit: contain;
+}
+
+@keyframes marquee-scroll {
+  from {
+      transform: translateX(0%);
+  }
+  to {
+      transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-container {
+      gap: 20px;
+      animation-duration: 15s;
+  }
+  .marquee-image {
+      width: 80px;
+  }
+}

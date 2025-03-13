@@ -1,0 +1,102 @@
+/* Footer Styles */
+.footer {
+  background: url('../../../assets/landing-footer-background.png') no-repeat center center/cover; /* Replace with your actual image */
+  position: relative;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: "Outfit", serif;
+}
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap; 
+  }
+  
+  .footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px; 
+  }
+ .two {
+  margin-top: 20px;
+} 
+.two > p{
+  width: 80%;
+  margin-bottom: 20px;
+}
+  .footer-logo {
+    width: 200px !important; 
+    margin-bottom: 10px;
+    
+  }
+  
+  .footer-subtitle {
+    font-size: 14px;
+    width: 80%;
+    margin: 10px 0px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    gap: 15px;
+    font-size: 28px;
+    
+  }
+  
+  .social-icons a {
+    color:#fff;
+    text-decoration: none;
+  }
+  
+  
+  .footer-form{
+    background-color: rgba(255, 255, 255, 0.048);
+    padding: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .footer-content input.form-control::placeholder,
+  .footer-content  textarea.form-control::placeholder {
+    color: #1f1f1f; 
+    opacity: 1; 
+}
+.form-control{
+  color: #fff;
+  background-color:transparent ;
+}
+.form-control:focus::placeholder {
+  opacity: 0; /* Hide placeholder on focus */
+}
+.form-control:focus {
+  border: 1px solid #ddd;
+  background-color: transparent;
+  color:#ffffff;
+}
+.footer-content form button[type="submit"] {
+  background-color: #000;
+  border-radius: 30px;
+  padding: 10px;
+  color: #ffffff;
+  width: 100%;
+  cursor: pointer;
+}
+  @media((min-width:360px) and (max-width: 767px)) {
+    .footer-content {
+      flex-direction: column;
+      text-align: left;
+    }
+    
+  
+    .footer-section {
+      margin-bottom: 20px;
+      min-width: unset; 
+    }
+  }
+  

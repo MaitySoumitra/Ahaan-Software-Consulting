@@ -1,10 +1,15 @@
 
 .text-primary-team{
-  color: #43387b !important;
+  color: #C7892B !important;
   font-family: outfit;
   font-size: 35px !important;
   line-height: 50px;
   text-align: center;
+}
+.team-text{
+  font-family: outfit;
+  text-align: center;
+  color: black;
 }
 .fw-bold{
   font-size: 18px;

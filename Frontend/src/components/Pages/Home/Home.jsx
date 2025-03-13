@@ -14,10 +14,9 @@ const Home = () => {
       <FirstBanner />
       <OurProcess />
       <FirstSection />
-      <ThirdSection />
+      {/* <ThirdSection /> */}
       <TotalProject />
       <WhyChooseUs />
-     
       <SecondBanner />
      
     </div>

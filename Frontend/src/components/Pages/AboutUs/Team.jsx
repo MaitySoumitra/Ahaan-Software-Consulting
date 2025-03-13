@@ -72,7 +72,7 @@ const MeetOurTeam = () => {
       <h2 className="text-primary-team fw-bold">
         Meet The Talented Minds Behind The Magic!
       </h2>
-      <p className="text-muted">
+      <p className="text-muted team-text">
         Let’s collaborate to turn your creative, marketing, and development
         visions into immersive experiences and lasting partnerships. With a
         win-win mindset, we treat every client as an equal ally, working

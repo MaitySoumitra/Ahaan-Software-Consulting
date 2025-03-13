@@ -1,5 +1,5 @@
 import { Container, Row, Col, Button, Image, Badge } from "react-bootstrap";
-import BannerImage from "../../../assets/images/banner/banner1.jpg";
+import BannerImage from "../../../assets/HomeBanner.png";
 import Group1 from "../../../assets/images/banner/Group1.jpg";
 import Group2 from "../../../assets/images/banner/Group2.jpg";
 import Group3 from "../../../assets/images/banner/Group3.jpg";
@@ -15,19 +15,19 @@ const FirstBanner = () => {
           backgroundImage: `url(${BannerImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "530px",
+          height: "650px",
           display: "flex",
           alignItems: "center",
         }}
       >
         <Container>
           <Row className="w-100 banner1">
-            <Col md={6}>
+            <Col md={10}>
               <Badge
                 bg="light"
                 className="px-3 py-2 mb-3"
                 style={{
-                  color: "#7E61BF",
+                  color: "#C7892B",
                   borderRadius: "22px",
                   border: "1px solid #F9F5FF",
                 }}
@@ -35,15 +35,15 @@ const FirstBanner = () => {
                 Technology & Design Studio
               </Badge>
               <h1 className="fw-bold banner1-heading-offshore">
-                Reimagine Success, Redefine Possibilities
+                Reimagine Success, Redefine Possibilities Pioneering Innovative Development
               </h1>
-              <h1 className="fw-bold banner1-heading-development">
+              {/* <h1 className="fw-bold banner1-heading-development">
                 Pioneering Innovative Development
-              </h1>
+              </h1> */}
               <p className="mt-3 banner1-content">
                 Fuelled by innovation and cutting-edge technology, our
                 developers craft web and mobile experiences that captivate
-                customers and take your business forward. Let’s transform your
+                customers <br /> and take your business forward. Let’s transform your
                 vision into victory and idea into a game-changing development
                 moment!
               </p>
@@ -52,7 +52,7 @@ const FirstBanner = () => {
               </a >
               <div className="mt-4">
                 <p className="fw-bold">Certified by</p>
-                <div className="d-flex justify-content-start gap-3 certified-img">
+                <div className="d-flex justify-content-start certified-img">
                   <Image
                     src={Group1}
                     alt="Certification 1"

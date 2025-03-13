@@ -1,4 +1,4 @@
-.footer {
+.footer-main {
   background-image: url("../../../assets/Footer-Banner.png");
   background-size: cover;
   padding: 40px 0 20px 0px;
@@ -6,7 +6,7 @@
 }
 
 .footer-logo {
-  width: 150px;
+  width: 150px !important;
   margin-bottom: 10px;
 }
 
@@ -29,13 +29,13 @@
 }
 
 .newsletter input::placeholder {
-  color: #444;
+  color: #444 !important;
   padding-left: 10px;
   font-family: outfit;
 }
 
 .newsletter button {
-  background: #6b50d9;
+  background: #000;
   border: none;
   color: white;
   border-radius: 30px;
@@ -46,7 +46,7 @@
   font-weight: bold;
   margin-bottom: 15px;
   font-family: outfit;
-  color: #453c78;
+  color: #CC9331;
 }
 
 .footer-links {
@@ -67,7 +67,7 @@
 }
 
 .footer-links a:hover {
-  color: #6b50d9;
+  color: #000;
 }
 
 .contact-info {
@@ -84,7 +84,7 @@
 
 .contact-info .icon {
   margin-right: 8px;
-  color: #6b50d9;
+  color: #CC9331;
 }
 
 .footer-bottom {
@@ -103,7 +103,7 @@
 
 .footer-social-icons a {
   margin-right: 10px;
-  color: #6b50d9;
+  color: #000;
   font-size: 18px;
   text-decoration: none;
 }
@@ -192,6 +192,14 @@ hr {
   .quick-link-for-desktop, .contact-us-heading-for-desktop{
     display: block;
   }
+  .newsletter{
+    flex-direction: column;
+    align-items: start;
+  }
+  .newsletter button {
+    width: auto; 
+     
+  }
 }
 
 @media (max-width: 767px) {
@@ -234,7 +242,7 @@ hr {
     flex-direction: column;
     
   }
-  .newsletter{
+  .newsletter {
     flex-direction: column;
     align-items: center;
   }
@@ -244,6 +252,11 @@ hr {
   }
   .footer-bottom p{
     font-size: 12px;
+  }
+  .footer-logo-input{
+   
+   text-align: center;
+   
   }
 }
 

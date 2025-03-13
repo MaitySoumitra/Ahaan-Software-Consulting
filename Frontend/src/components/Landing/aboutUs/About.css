@@ -1,0 +1,153 @@
+
+.about-section {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+  }
+  
+  /* Flexbox layout for content */
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .gap{
+    gap:70px;
+  }
+  
+  .about-heading {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #C5872B;
+    font-family: outfit;
+  }
+  
+  .about-subheading {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #212122;
+    font-family: outfit;
+  }
+  
+  .btn-about {
+    background-color: #000;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    color: #C5872B;
+    cursor: pointer;
+    font-family: outfit;
+  }
+  .about-image{
+    width:500px;
+      border-radius: 30px;
+  }
+  
+  
+  /* Right-side form container */
+  
+  
+
+  /* animation */
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px); /* Start slightly to the right */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at the original position */
+    }
+  }
+  
+  /* Fade-in-right animation class */
+  .fade-in-right {
+    animation: fadeInRight 1s ease-in-out;
+  }
+  
+  /* Fade-in left animation */
+  .fade-in-left {
+    animation: fadeInLeft 1s ease-in-out;
+  }
+  
+  /* Fade-in up animation */
+  .fade-in-up {
+    animation: fadeInUp 1s ease-in-out;
+  }
+  .left-side {
+    flex: 1;
+    margin-right: 20px;
+  }
+  .right-side {
+    flex: 1;
+  }
+
+  @media (max-width: 767px) {
+    .about-section{
+      height: 860px;
+    }
+    .about-content {
+      flex-direction: column;
+     
+    }
+  
+    .left-side {
+      width: 100%;
+      margin: 20px 20px;
+    }
+  
+    .about-heading {
+      font-size: 28px;
+    }
+  
+    .about-subheading {
+      font-size: 14px;
+    }
+  
+    .right-side {
+      width: 100%;
+    }
+    .about-image{
+      width:335px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .about-heading {
+      font-size: 24px;
+    }
+  
+    .btn-about {
+     
+      font-size: 16px;
+    }
+  }
