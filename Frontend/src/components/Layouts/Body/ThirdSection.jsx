@@ -358,7 +358,7 @@ const TabBar = () => {
           </Col>
         </Row>
       </Tab.Container>
-      <p className="text-muted mx-auto mt-3 section1-content section1-content-p">
+      <p className="text-muted mx-auto mt-3 section1-content section1-content-p-tab">
         The success of our services depends on a perfectly laid-out process from
         the beginning to the end. And, we put YOU at the centre of everything we
         do, turning our promises into reality! We specialize in transforming
