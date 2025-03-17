@@ -98,7 +98,10 @@
 .footer-bottom p{
   margin:0;
 }
-
+.footer-bottom-text{
+  font-family: outfit;
+  color: #000;
+}
 
 
 .footer-social-icons a {

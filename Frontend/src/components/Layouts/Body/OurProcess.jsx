@@ -38,7 +38,7 @@ const OurProcess = () => {
               style={{ borderColor: step.color }}
             >
               <div className="step-number">{index + 1}</div>
-              <span>{step.title}</span>
+              <span className="step-titles">{step.title}</span>
             </motion.div>
 
             {index < sdlcSteps.length - 1 && (

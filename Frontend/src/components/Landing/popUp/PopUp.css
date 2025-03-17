@@ -1,29 +1,78 @@
-.modal-content  input.form-control,
-.modal-content  textarea.form-control{
-  background-color: rgba(255, 255, 255, 0.2);
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent backdrop */
+  z-index: 1040;
+}
+
+.modal-dialog {
+  max-width: 700px; /* Adjust size */
+  margin: auto;
+}
+
+.modal-content {
+  border-radius: 30px;
+  padding: 20px;
+  border: none;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center align logo and heading */
+  border-bottom: none; /* Optional: remove header border */
+  position: relative;
+}
+
+.company-logo {
+  width: 60px; /* Adjust logo size */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.modal-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  font-family: outfit;
+  text-transform: uppercase;
+}
+
+.modal-lg {
+  width: 80%; /* Bigger popup but not full-screen */
+}
+
+.form-control-modal{
+   width: 100%;
+   border: none;
+   border: 1px solid #c88d34;
+   border-radius: 50px;
+   height: 47px;
+   padding-left: 10px;
+}
+.form-control-modal::placeholder{
+  font-family: outfit;
   color: #000;
-  opacity: 1; 
 }
-.modal-content  input.form-control::placeholder,
-.modal-content  textarea.form-control::placeholder {
-  color: #1f1f1f; 
-  opacity: 1; 
+.form-control-modal-text{
+  width: 100%;
+   border: none;
+   border: 1px solid #c88d34;
+   border-radius: 20px;
+   padding-left: 10px;
 }
-.modal-content  input.form-control:focus::placeholder, .modal-content  textarea.form-control:focus::placeholder {
-  opacity: 0;
+.form-control-modal-text::placeholder{
+  font-family: outfit;
+  color: #000;
 }
-
-.modal-content  input.form-control:focus, .modal-content  textarea.form-control:focus{
-  border: 1px solid #ddd;
-  background-color: rgba(255, 255, 255, 0.2);
-  color:#000000;
+.modal-btn{
+  font-family: outfit;
 }
-
-.modal-content form button[type="submit"] {
-    background-color: #000;
-    border-radius: 30px;
-    padding: 10px;
-    color: #ffffff;
-    width: 100%;
-    cursor: pointer;
-  }
+.modal-btn:hover{
+  background-color: #000 !important;
+  color: #c88d34 !important;
+}

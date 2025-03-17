@@ -80,7 +80,7 @@ const CallToAction = () => {
             .map((char, index) => (
               <motion.span
                 key={index}
-                whileHover={{ color: ["#33ffc1", "#ffff", "#000428"] }}
+                whileHover={{ color: ["#EB5B00", "#ffff", "#000428"] }}
                 transition={{
                   duration: 0.3,
                   repeat: Infinity,
@@ -108,7 +108,7 @@ const CallToAction = () => {
           className="second-banner-contact-button"
           href="/contact"
         >
-          Contact
+          Contact Now
         </motion.a>
       </Container>
     </motion.div>

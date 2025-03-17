@@ -28,11 +28,10 @@
     gap: 1rem;
 }
 .certified-img IMG {
-    border: 0.5px solid #939393;
     
     &:hover{
         cursor: pointer;
-        box-shadow: 0.1em 0.2em 0 #433978;
+        box-shadow: 0.1em 0.2em 0 #b8b8b8;
     }
   }
   .banner1-content {
@@ -68,4 +67,13 @@
         padding: 10px 25px;  
     }
 }
+  
+.banner-container {
+    height: 650px;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out; /* Smooth transition */
+  }
   

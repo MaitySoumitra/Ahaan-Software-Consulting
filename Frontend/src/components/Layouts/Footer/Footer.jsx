@@ -144,7 +144,7 @@ const Footer = () => {
       </div>
         </div>
         <div className="footer-bottom">
-          <p>{ isMobile ? "© 2025 Ahaan Software Consulting" : "© 2025 Ahaan Software, All rights reserved." }</p>
+          <p className="footer-bottom-text">{ isMobile ? "© 2025 Ahaan Software Consulting" : "© 2025 Ahaan Software, All rights reserved." }</p>
           <div className="footer-social-icons">
             <a href="https://www.facebook.com/ahaansoftwareconsulting">
               <FaFacebookF />
