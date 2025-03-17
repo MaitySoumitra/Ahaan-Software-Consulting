@@ -28,6 +28,7 @@
       align-items: center; 
       text-align: center; 
       height: 100%;
+      font-family: outfit;
   }
   .second-banner-call-details h3{
       font-size: 18px;
@@ -49,6 +50,7 @@
     font-size: 32px;
     margin: 10px 0;
     letter-spacing: 2px;
+    font-family: outfit;
   }
 .second-banner-contact-button{
     padding: 10px 20px;
@@ -61,6 +63,7 @@
     cursor: pointer;
     transition: background-color 0.1s ease;
     text-decoration: none;
+    font-family: outfit;
 }
 
 

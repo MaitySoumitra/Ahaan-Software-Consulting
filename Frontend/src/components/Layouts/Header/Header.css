@@ -165,9 +165,10 @@ hr {
 @media (max-width: 450px){
   .phone-get-qt{
     padding:6px;
-    background-color: #7E61BE;
+    background-color: #000;
+    color: #C78A2B;
     border-radius: 50%;
-    color:white;
+  
   }
 }
 

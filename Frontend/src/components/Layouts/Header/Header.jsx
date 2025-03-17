@@ -96,13 +96,13 @@ const Header = () => {
             )}
           </div>
           <button className="asc-header-toggle" type="button" onClick={toggleSidebar}>
-        <HiMenuAlt3 size={40} color="#43387B" />
+        <HiMenuAlt3 size={40} color="#000" />
       </button>
 
       {/* Mobile Sidebar */}
       <div className={`mobile-sidebar ${sidebarOpen ? "open" : ""}`} ref={sidebarRef}>
         <button className="close-btn" onClick={() => setSidebarOpen(false)}>
-          <HiX size={30} color="#43387B" />
+          <HiX size={30} color="#000" />
         </button>
         <div className="sidebar-content">
           <div className="nav-links">

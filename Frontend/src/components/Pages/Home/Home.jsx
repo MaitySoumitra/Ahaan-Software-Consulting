@@ -8,6 +8,7 @@ import TotalProject from "../../Layouts/Body/TotalProject";
 import OurProcess from "../../Layouts/Body/OurProcess";
 import SecondBanner from "../../Layouts/Body/SecondBanner";
 import OurIndustry from "../../Layouts/Body/OurIndustry";
+import ImageCarousel from "../../Layouts/Body/ImageCarousel";
 const Home = () => {
   return (
     <div>
@@ -17,6 +18,7 @@ const Home = () => {
       <ThirdSection /> 
       <TotalProject />
       <WhyChooseUs />
+      <ImageCarousel/>
       <SecondBanner />
      
     </div>
