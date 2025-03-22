@@ -28,10 +28,14 @@
   flex-shrink: 0;
 }
 
-.marquee-image {
-  width: 80px;  /* Adjust image size */
-  height: 80px;
+.marquee-image-tech {
+  width: 120px;  /* Adjust image size */
+  height: 120px;
   object-fit: contain;
+}
+.marquee-text-tech{
+  font-family: outfit;
+  font-weight: 600;
 }
 
 @keyframes marquee {

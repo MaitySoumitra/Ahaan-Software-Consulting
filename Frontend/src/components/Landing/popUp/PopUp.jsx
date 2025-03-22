@@ -1,8 +1,37 @@
-import React from "react";
+import React, {useRef} from "react";
 import './PopUp.css';
+import { useForm } from "react-hook-form";
+import { toast, ToastContainer } from "react-toastify";
+import emailjs from "@emailjs/browser";
+import "react-toastify/dist/ReactToastify.css";
 import modallogo from "../../../assets/favicon/fav.png"
 
 const PopUp = ({ onClose }) => {
+  const form = useRef();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    const serviceID = "service_d4lc4tg";
+    const templateID = "template_f6yg4p4";
+    const publicKey = "P1psK0y5kXFayHDDA";
+
+    emailjs
+      .send(serviceID, templateID, data, publicKey)
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        toast.success("Message sent successfully!");
+        reset();
+      })
+      .catch((error) => {
+        console.log("FAILED...", error);
+        toast.error("Failed to send message. Try again!");
+      });
+  };
   return (
     <>
       <div className="modal-backdrop fade show" onClick={onClose}></div>
@@ -19,68 +48,73 @@ const PopUp = ({ onClose }) => {
               <button type="button" className="btn-close position-absolute top-0 end-0" onClick={onClose}></button>
             </div>
             <div className="modal-body">
-              <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="e521102f-db58-4a15-b462-bf2957d73f93" />
-                {/* Form Rows */}
-                <div className="form-row mb-3">
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      name="name"
-                      className="form-control-modal"
-                      placeholder="Name"
-                      required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="tel"
-                      name="phoneNumber"
-                      pattern="[0-9]{10}"
-                      className="form-control-modal"
-                      placeholder="Phone number"
-                      title="It should be a phone number and must be exactly 10 digits"
-                      inputMode="numeric"
-                      required
-                    />
-                  </div>
-                </div>
-                <div className="form-row mb-3">
-                  <div className="form-group">
-                    <input
-                      type="email"
-                      name="email"
-                      className="form-control-modal"
-                      placeholder="Email"
-                      required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      name="companyName"
-                      className="form-control-modal"
-                      placeholder="Company Name"
-                      required
-                    />
-                  </div>
-                </div>
-                {/* Textarea */}
-                <div className="form-group mb-3">
-                  <textarea
-                    name="message"
-                    className="form-control-modal-text"
-                    rows="4"
-                    placeholder="What are your requirements?"
-                    required
-                  ></textarea>
-                </div>
-                {/* Submit Button */}
-                <button type="submit" className="btn btn-primary w-100 modal-btn">
-                  Get a Free Quote
-                </button>
-              </form>
-            </div>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        {/* Form Rows */}
+        <div className="form-row mb-3">
+          <div className="form-group">
+            <input
+              type="text"
+              {...register("name", { required: "Name is required" })}
+              className="form-control-modal"
+              placeholder="Name"
+            />
+            {errors.name && <p className="text-danger">{errors.name.message}</p>}
+          </div>
+          <div className="form-group">
+            <input
+              type="tel"
+              {...register("phoneNumber", {
+                required: "Phone number is required",
+                pattern: { value: /^[0-9]{10}$/, message: "Must be exactly 10 digits" },
+              })}
+              className="form-control-modal"
+              placeholder="Phone number"
+              inputMode="numeric"
+            />
+            {errors.phoneNumber && <p className="text-danger">{errors.phoneNumber.message}</p>}
+          </div>
+        </div>
+
+        <div className="form-row mb-3">
+          <div className="form-group">
+            <input
+              type="email"
+              {...register("email", { required: "Email is required" })}
+              className="form-control-modal"
+              placeholder="Email"
+            />
+            {errors.email && <p className="text-danger">{errors.email.message}</p>}
+          </div>
+          <div className="form-group">
+            <input
+              type="text"
+              {...register("companyName", { required: "Company Name is required" })}
+              className="form-control-modal"
+              placeholder="Company Name"
+            />
+            {errors.companyName && <p className="text-danger">{errors.companyName.message}</p>}
+          </div>
+        </div>
+
+        {/* Textarea */}
+        <div className="form-group mb-3">
+          <textarea
+            {...register("message", { required: "Message is required" })}
+            className="form-control-modal-text"
+            rows="4"
+            placeholder="What are your requirements?"
+          ></textarea>
+          {errors.message && <p className="text-danger">{errors.message.message}</p>}
+        </div>
+
+        {/* Submit Button */}
+        <button type="submit" className="btn btn-primary w-100 modal-btn">
+          Get a Free Quote
+        </button>
+      </form>
+
+      <ToastContainer position="top-right" autoClose={3000} />
+    </div>
           </div>
         </div>
       </div>

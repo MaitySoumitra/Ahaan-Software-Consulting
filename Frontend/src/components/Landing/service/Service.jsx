@@ -12,32 +12,32 @@ const services = [
   {
     icon:<TbDeviceDesktopCode />,
     title: 'Web Development',
-    description: 'We build responsive and engaging websites tailored to your needs.',
+    description: 'We craft agile, scalable & budget-friendly websites tailored for success!',
   },
   {
     icon: <ImMobile/>,
     title: 'Mobile App Development',
-    description: 'Create seamless mobile applications for iOS and Android platforms.',
+    description: 'Go mobile with our custom app solutions for anywhere-anytime access!',
   },
   {
     icon: <TiShoppingCart />,
     title: 'E-commerce Development',
-    description: 'Designing intuitive and visually appealing user experiences.',
+    description: 'Supercharge your e-business with optimal channels, product optimizations & marketing models. ',
   },
   {
     icon: <FaQuidditch />,
     title: 'UI/UX Design',
-    description: 'Designing intuitive and visually appealing user experiences.',
+    description: 'UI/UX defines success—our designs are user-centric, practical & intuitive.',
   },
   {
     icon: <IoShareSocialSharp />,
     title: 'Social Media Marketing',
-    description: 'Reliable cloud solutions for data storage and scalability.',
+    description: 'Build community & spark conversation through insight-driven & sustainable strategies. ',
   },
   {
     icon: <TiSocialGooglePlus />,
     title: 'Google Marketing',
-    description: 'Reliable cloud solutions for data storage and scalability.',
+    description: 'Boost visibility our expert Google marketing strategies for maximum growth.',
   },
 ];
 
