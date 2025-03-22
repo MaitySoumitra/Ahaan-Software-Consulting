@@ -1,44 +1,61 @@
 .testimonial-section {
-    background-color: #f9f9f9;
-    padding: 50px 20px;
-    font-family: "Outfit", serif;
-  }
-  
-  .carousel {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .testimonial-card {
-    background-color: #ffffff;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  }
-  
-  .carousel-navigation {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-80%);
-  }
-  
-  .prev-button,
-  .next-button {
-    background-color: #000;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 50%;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .prev-button:hover,
-  .next-button:hover {
-    background-color: #000;
-  }
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  font-family: "Outfit", serif;
+  height: 500px; /* Fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  position: relative;
+  max-width: 100%; /* Bootstrap container width */
+  width: 1000px; /* Adjust based on Bootstrap's max-width */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.carousel-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.prev-button,
+.next-button {
+  background-color: #000;
+  color: #C7892B;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: #333;
+}
+p.text-secondary.fst-italic{
+  font-style: normal !important;
+  color: #000 !important;
+}
+.testi-text{
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

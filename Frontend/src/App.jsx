@@ -9,6 +9,7 @@ import About from "./components/Pages/AboutUs/About";
 import Industry from "./components/Pages/Industry/Industry";
 import Home from "./components/Pages/Home/Home";
 import Landing from "./components/Landing/Landing";
+import WhatsAppChat from "./components/Whatsapp/WhatsAppChat";
 
 const AppContent = () => {
   const location = useLocation();
@@ -42,6 +43,7 @@ function App() {
   return (
     <Router>
       <AppContent />
+      <WhatsAppChat/>
     </Router>
   );
 }

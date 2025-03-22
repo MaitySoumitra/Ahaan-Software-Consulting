@@ -80,7 +80,8 @@ const TestimonialCarousel = () => {
             </div>
             <h5 className="mb-1" style={{ fontWeight: "bold" }}>{testimonials[currentIndex].name}</h5>
             <p className="text-muted">{testimonials[currentIndex].designation}</p>
-            <p className="text-secondary fst-italic">"{testimonials[currentIndex].quote}"</p>
+            <div className="testi-text"><p className="text-secondary fst-italic ">"{testimonials[currentIndex].quote}"</p></div>
+            
           </div>
           <div className="carousel-navigation">
             <button onClick={prevTestimonial} className="prev-button"><FaAngleLeft /></button>

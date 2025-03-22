@@ -20,9 +20,9 @@ const ContactUs = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    const serviceID = "service_ywiiqsl";
-    const templateID = "template_rrr4bv7";
-    const publicKey = "Si_Qy3488LBnjUFTA";
+    const serviceID = "service_d4lc4tg";
+    const templateID = "template_k2044k9";
+    const publicKey = "P1psK0y5kXFayHDDA";
 
     emailjs
       .sendForm(serviceID, templateID, form.current, publicKey)
