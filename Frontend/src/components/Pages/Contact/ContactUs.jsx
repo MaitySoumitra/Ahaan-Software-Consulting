@@ -5,7 +5,7 @@ import { FaHome, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import "react-toastify/dist/ReactToastify.css";
-import "./Contactus.css";
+import "./ContactUs.css";
 import ContactBanner from "./ContactBanner";
 import WorldMap from "./WorldMap";
 
