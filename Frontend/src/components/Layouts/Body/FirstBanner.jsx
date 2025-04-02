@@ -1,17 +1,34 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./FirstBanner.css";
 import { Container, Row } from "react-bootstrap";
-
+import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaDatabase, FaShopify, FaWordpress, FaFigma } from "react-icons/fa"; // Import necessary icons
+import "./FirstBanner.css";
+import { SiCanva, SiMongodb } from "react-icons/si";
 const generateBalls = (count, containerWidth, containerHeight) => {
-  return Array.from({ length: count }).map(() => ({
-    color: `linear-gradient(45deg, #C7892B, #000000)`,
-    size: Math.random() * 30 + 30,
-    startX: Math.random() * (containerWidth - 60),
-    startY: Math.random() * (containerHeight - 60), 
-    velocityX: (Math.random() - 0.5) * 10,
-    velocityY: (Math.random() - 0.5) * 10,
-    imageUrl: `https://ahaansoftware.com/uploadedimage/fav.png`,
-  }));
+  const icons = [
+    { name: 'React', color: 'linear-gradient(45deg, #61DAFB, #000000)', icon: <FaReact size={30} color="#fff" /> },
+    { name: 'MongDB', color: 'linear-gradient(45deg, #47A248, #000000)', icon: <SiMongodb  size={30} color="#fff" /> },
+    { name: 'Node.js', color: 'linear-gradient(45deg,rgb(82, 117, 44), #000000)', icon: <FaNodeJs size={30} color="#fff" /> },
+    { name: 'HTML', color: 'linear-gradient(45deg, #E34F26, #000000)', icon: <FaHtml5 size={30} color="#fff" /> },
+    { name: 'CSS', color: 'linear-gradient(45deg, #2965F1, #000000)', icon: <FaCss3Alt size={30} color="#fff" /> },
+    { name: 'SQL', color: 'linear-gradient(45deg, #47A248, #000000)', icon: <FaDatabase size={30} color="#fff" /> },
+    { name: 'Shopify', color: 'linear-gradient(45deg, #96BF48, #000000)', icon: <FaShopify size={30} color="#fff" /> },
+    { name: 'WordPress', color: 'linear-gradient(45deg, #21759B, #000000)', icon: <FaWordpress size={30} color="#fff" /> },
+    { name: 'Figma', color: 'linear-gradient(45deg, #F24E1E, #000000)', icon: <FaFigma size={30} color="#fff" /> },
+    { name: 'Canva', color: 'linear-gradient(45deg, #00C6A4, #000000)', icon: <SiCanva size={30} color="#fff" /> }
+  ];
+
+  return Array.from({ length: count }).map((_, index) => {
+    const icon = icons[index % icons.length];
+    return {
+      color: icon.color,
+      size: Math.random() * 30 + 30,
+      startX: Math.random() * (containerWidth - 60),
+      startY: Math.random() * (containerHeight - 60),
+      velocityX: (Math.random() - 0.5) * 10,
+      velocityY: (Math.random() - 0.5) * 10,
+      icon: icon.icon
+    };
+  });
 };
 
 const FloatingBalls = () => {
@@ -24,7 +41,7 @@ const FloatingBalls = () => {
       if (containerRef.current) {
         setContainerSize({
           width: containerRef.current.offsetWidth,
-          height: containerRef.current.offsetHeight,
+          height: containerRef.current.offsetHeight
         });
       }
     };
@@ -85,7 +102,7 @@ const FloatingBalls = () => {
           return {
             ...ball,
             velocityX: newVelocityX,
-            velocityY: newVelocityY,
+            velocityY: newVelocityY
           };
         }
         return ball;
@@ -96,7 +113,7 @@ const FloatingBalls = () => {
   return (
     <div
       className="d-flex justify-content-center align-items-center position-relative overflow-hidden bg-dark"
-      style={{ height: "500px" }} 
+      style={{ height: "500px" }}
       ref={containerRef}
     >
       <div className="background"></div>
@@ -116,33 +133,34 @@ const FloatingBalls = () => {
           key={index}
           className="ball"
           style={{
-            background: `linear-gradient(45deg, #C7892B, #000000)`,
+            background: ball.color,
             width: ball.size,
             height: ball.size,
             left: `${ball.startX}px`,
             top: `${ball.startY}px`,
             animation: `ballMove 0.05s linear forwards`,
             zIndex: 1,
-            position: "absolute",
-            "--x": `${ball.velocityX}px`,
-            "--y": `${ball.velocityY}px`,
+            position: "absolute"
           }}
-          onClick={() => handleBallClick(index)} 
+          onClick={() => handleBallClick(index)}
         >
-          <div
-            className="ball-image"
-            style={{
-              backgroundImage: `url(${ball.imageUrl})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              width: "50%",
-              height: "50%",
-              opacity: 0.4, 
-              position: "absolute",
-              top: "25%",
-              left: "25%",
-            }}
-          ></div>
+         <div
+  className="ball-icon"
+  style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '50%',      // Set width to 50% of the ball
+    height: '50%',     // Set height to 50% of the ball
+    opacity: 0.7,
+    position: 'absolute',  // Ensure it's positioned absolutely within the ball
+    top: '25%',            // Center the icon vertically (50% - 25%)
+    left: '25%',           // Center the icon horizontally (50% - 25%)
+  }}
+>
+  {ball.icon} {/* Render the icon */}
+</div>
+
         </div>
       ))}
     </div>
