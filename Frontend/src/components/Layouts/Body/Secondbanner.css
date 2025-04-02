@@ -4,8 +4,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: radial-gradient(circle at center, rgb(219, 219, 224), #433978, #8065BB);
-    border-radius: 8px;
+    background: radial-gradient(circle at center, #CD912A, #000000, #000000);
     max-height: 200px;
     margin: 20px auto;
     width: 100%;
@@ -29,6 +28,7 @@
       align-items: center; 
       text-align: center; 
       height: 100%;
+      font-family: outfit;
   }
   .second-banner-call-details h3{
       font-size: 18px;
@@ -50,11 +50,12 @@
     font-size: 32px;
     margin: 10px 0;
     letter-spacing: 2px;
+    font-family: outfit;
   }
 .second-banner-contact-button{
     padding: 10px 20px;
     background-color: #fff;
-    color: #6200ea;
+    color: #CD912A;
     font-weight:600;
     border: none;
     border-radius: 5px;
@@ -62,6 +63,7 @@
     cursor: pointer;
     transition: background-color 0.1s ease;
     text-decoration: none;
+    font-family: outfit;
 }
 
 

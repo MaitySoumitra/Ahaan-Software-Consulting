@@ -6,10 +6,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./TotalProject.css"
 import { FaAward } from "react-icons/fa6";
 const stats = [
-  { value: 12, label: "International Awards", icon: <FaAward />, color: "#1e3a8a" }, // Blue
-  { value: 110, label: "Our Teams", icon: <FaUsers />, color: "#f59e0b" }, // Orange
-  { value: 922, label: "Completed Projects", icon: <FaCheckCircle />, color: "#10b981" }, // Green
-  { value: 535, label: "Happy Clients", icon: <FaSmile />, color: "#ef4444" }, // Red
+  { value: 5, label: "International Awards", icon: <FaAward />, color: "#1e3a8a" }, // Blue
+  { value: 30, label: "Our Teams", icon: <FaUsers />, color: "#f59e0b" }, // Orange
+  { value: 100 , label: "Completed Projects", icon: <FaCheckCircle />, color: "#10b981" }, // Green
+  { value: 125, label: "Happy Clients", icon: <FaSmile />, color: "#ef4444" }, // Red
 ];
 
 const CounterCard = ({ value, label, icon, color }) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import Constructions from "../../../../assets/images/banner2/banner2.png";
+import LogisticImage from "../../../../assets/images/banner2/Logistics.png"
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { FaHeadset, FaChartLine, FaShippingFast, FaShoppingCart } from "react-icons/fa";
 import "./TabContent.css";
@@ -72,9 +72,9 @@ const Logistics = () => {
       <p className="text-muted">
       By harnessing the power of logistics, transportation, and digital innovation, industry leaders are gaining real-time visibility into their supply chains, accessing critical data instantly, and accelerating order fulfillment worldwide. We help you leap ahead by leveraging the latest technologies like machine learning, IoT, blockchain, and predictive analytics for smarter, more efficient logistics operations.
       </p>
-      <img src={Constructions} alt="E-Commerce" className="content-image" />
+      <img src={LogisticImage} alt="E-Commerce" className="content-image" />
 
-      <h2 className="fw-bold text-left Revitalize">
+      <h2 className="fw-bold text-left Revitalize mt-3">
       Leap Ahead In The Modern Logistics Ecosystem 
       </h2>
       <p className="text-left text-muted">

@@ -1,0 +1,52 @@
+.custom-navbar {
+    background-color: #fff;
+    border-bottom: 4px solid #000;
+    height: 90px; /* Adjust navbar height */
+    font-family: "Outfit", serif;
+    overflow-x: hidden;
+  }
+  .custom-button {
+    border-radius: 30px;
+    background-color: #000;
+    border-color: #000;
+    padding: 0.7rem 1.9rem;
+    color: #C98C2B; /* Adjust button height */
+  }
+  .nav-responsive {
+    display: flex;
+    flex-direction: row; /* Default: Inline items in desktop view */
+    gap: 20px;
+  }
+  
+  .flag-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+  }
+ 
+  @media (max-width: 767px) {
+    .custom-navbar {
+      transition: all 0.3s ease-in-out;
+    }
+  
+    .custom-navbar.expanded-navbar {
+      height: auto;
+      padding-bottom: 15px; /* Adds spacing when expanded */
+    }
+    .nav-responsive {
+      flex-direction: column; /* Stack items */
+      align-items: center;
+      gap: 15px;
+    }
+    .custom-navbar .navbar-toggler {
+      border-color: transparent;
+    }
+  
+    .custom-navbar .navbar-toggler-icon {
+      background-color: transparent;
+    }
+  
+    .text-muted {
+      font-size: 12px; /* Adjust the phone number text size for mobile */
+    }
+  }

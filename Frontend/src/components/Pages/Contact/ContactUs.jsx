@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { FaHome, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
@@ -10,6 +10,8 @@ import ContactBanner from "./ContactBanner";
 import WorldMap from "./WorldMap";
 
 const ContactUs = () => {
+  const form = useRef();
+
   const {
     register,
     handleSubmit,
@@ -18,16 +20,16 @@ const ContactUs = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    const serviceID = "service_ywiiqsl"; // Replace with your EmailJS Service ID
-    const templateID = "template_97me94o"; // Replace with your EmailJS Template ID
-    const publicKey = "Si_Qy3488LBnjUFTA"; // Replace with your EmailJS Public Key
+    const serviceID = "service_d4lc4tg";
+    const templateID = "template_k2044k9";
+    const publicKey = "P1psK0y5kXFayHDDA";
 
     emailjs
-      .send(serviceID, templateID, data, publicKey)
+      .sendForm(serviceID, templateID, form.current, publicKey)
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
         toast.success("Message sent successfully!");
-        reset(); // Reset form after successful submission
+        reset();
       })
       .catch((error) => {
         console.log("FAILED...", error);
@@ -78,7 +80,7 @@ const ContactUs = () => {
                 <h6>GET IN TOUCH</h6>
                 <h2>Fill The Form Below</h2>
 
-                <Form onSubmit={handleSubmit(onSubmit)}>
+                <Form ref={form} onSubmit={handleSubmit(onSubmit)}>
                   <Row>
                     <Col md={6}>
                       <Form.Group className="mb-3">

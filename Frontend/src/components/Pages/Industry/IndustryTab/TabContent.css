@@ -1,6 +1,10 @@
 .ecommerce-section h2 {
-    color: #392E6E;
-    font-size: 35px;
+
+    color: #000;
+
+    font-size: 30px;
+    margin-bottom: 10px;
+    line-height: 50px;
   }
   
   .ecommerce-section p {
@@ -8,6 +12,7 @@
     font-size: 16px;
     line-height: 1.6;
     text-align: left;
+    font-family: outfit;
   }
   
   .content-image {
@@ -38,7 +43,7 @@
   
   .feature-card .feature-icon {
     font-size: 40px;
-    color: #392E6E;
+    color: #CC9231;
   }
   
   .horizontal {

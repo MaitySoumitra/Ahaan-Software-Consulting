@@ -1,12 +1,17 @@
 
 .text-primary-team{
-  color: #43387b !important;
+  color: #C7892B !important;
   font-family: outfit;
   font-size: 35px !important;
   line-height: 50px;
   text-align: center;
 }
-.fw-bold{
+.team-text{
+  font-family: outfit;
+  text-align: center;
+  color: black;
+}
+.member-name{
   font-size: 18px;
 }
 
@@ -24,6 +29,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
+  margin: 5px;
 }
 
 .team-member:hover {

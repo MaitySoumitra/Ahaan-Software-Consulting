@@ -1,5 +1,5 @@
 .industry-banner {
-    background-image: url('../../../assets/industryBanner.png');
+    background-image: url('../../../assets/images/banner2/industry-banner.png');
     background-size: cover;
     height: 450px;
     display: flex;
@@ -27,7 +27,7 @@
   .industry-heading {
     font-size: 35px;
     font-weight: 700;
-    color: #392e6e;
+    color: #CC9231;
     line-height: 55px;
     font-family: outfit;
   }

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from "react";
 import { Container, Row } from "react-bootstrap";
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaDatabase, FaShopify, FaWordpress, FaFigma } from "react-icons/fa"; // Import necessary icons
@@ -164,6 +165,8 @@ const FloatingBalls = () => {
         </div>
       ))}
     </div>
+
+
   );
 };
 

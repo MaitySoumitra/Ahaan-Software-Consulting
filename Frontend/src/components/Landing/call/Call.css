@@ -1,0 +1,67 @@
+/* Sticky background for the CTA section */
+.cta-container {
+    position: relative;
+    background-size: cover;
+    background-image: url('../../../assets/cta.png');
+    backdrop-filter: blur(3px);
+    min-height: 250px;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+    font-family: "Outfit", serif;
+  }
+  
+  .cta-content {
+    color: white;
+    text-align: center;
+  }
+    
+  
+  .cta-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 100px;
+  }
+  
+  .cta-description {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .cta-button {
+    background-color: transparent;
+    border-radius: 30px;
+    padding: 15px 30px;
+    color: #C5872B;
+    border: 1px solid #C5872B;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background-color: #fff;
+    border:none;
+    color:#000;
+  }
+  
+  /* Sticky effect */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .cta-container.sticky {
+    position: sticky;
+    top: 0;
+  }
+  @media((min-width:360px) and (max-width: 767px)) {
+    .cta-title{
+      font-size: 1.5rem;
+    }
+    .cta-button {
+      padding: 8px 10px;
+  }
+  }

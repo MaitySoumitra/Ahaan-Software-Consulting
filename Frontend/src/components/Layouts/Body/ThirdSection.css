@@ -1,4 +1,3 @@
-/* General styling for the tech icons */
 .our-tech-tab{
   margin-top: 2.5rem;
   
@@ -9,6 +8,7 @@
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
   gap: 20px;
   justify-items: center;
+  
   }
   
 
@@ -21,9 +21,10 @@
     flex: 0 1 auto;
   }
 .tech-tab-content{
-  flex: 1 1 auto; 
-  overflow-y: auto;
-  padding: 10px;
+  flex: 2 2 auto; 
+  padding: 20px;
+  min-height: 350px; 
+  height: auto;
 }
   
   
@@ -41,6 +42,7 @@
     font-weight: bold;
     color: #333;
     transition: all 0.3s ease;
+    
   }
   
   .tech-name:hover {
@@ -50,18 +52,24 @@
   }
 
   .nav-item-tab{
-    background-color: #EFF4FF;
-    margin-bottom: 6px;
-    
-    border-radius: 10px;
+    background-color: #eeeeee;
+    margin-bottom: 10px;
+    height: 50px;
+    border-radius: 5px;
+    line-height: 30px;
+    letter-spacing: 3px;
   }
   .nav-link-tab{
-    color: #433978 !important;
+    color: #000 !important;
     font-weight: 500 !important;
+    font-family: outfit !important;
   }
   .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: white !important;
-    background-color: #433978 !important;
+    background-color: #000 !important;
+    height: 50px;
+    line-height: 30px;
+    letter-spacing: 3px;
 }
   
   /* Make the layout responsive */
@@ -109,4 +117,9 @@
     .tech-name{
       font-size: 10px;
     }
+  }
+
+  p.text-muted.mx-auto.mt-3.section1-content.section1-content-p-tab{
+    margin-top: 100px !important;
+    text-align: center;
   }

@@ -1,4 +1,4 @@
-/* Custom ball move animation */
+
 @keyframes ballMove {
     0% {
       transform: translate(0, 0);
@@ -61,6 +61,42 @@
     100% {
       transform: scale(1.1);
       opacity: 1;
+    }
+  }
+.banner1{
+    color: #ffff;
+}
+.banner1-heading-offshore{
+    font-size:3.2rem;
+}
+.banner1-content{
+    font-size: 16px !important;
+    font-weight: 400;
+    line-height: 27px;
+    font-family: outfit;
+    margin-bottom: 40px;
+    
+}
+.learn-more-banner1-btn{
+    padding: 15px 40px;
+    text-decoration: none;
+    background:#C7892B;
+    color: #000;
+    border-radius:50px;  
+    font-family: outfit;
+    &:hover{
+        border: none;
+      
+    }
+}
+.certified-img{
+    gap: 1rem;
+}
+.certified-img IMG {
+    
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0.1em 0.2em 0 #b8b8b8;
     }
   }
   

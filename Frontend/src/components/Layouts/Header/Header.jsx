@@ -7,6 +7,7 @@ import { TbMessage } from "react-icons/tb";
 import { HiX } from "react-icons/hi";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
+
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -44,12 +45,12 @@ const Header = () => {
   }, [sidebarOpen]);
 
   return (
-    <nav className="navbar navbar-expand-lg bg-white py-2">
-      <div className="container">
+    <nav className="navbar navbar-expand-lg bg-white py-4">
+      <div className="container ">
         {/* Logo */}
         <a className="navbar-brand d-flex align-items-center" href="/">
           <img
-            src="http://woocommerce.ahaanmedia.com/wp-content/uploads/2025/02/Ahaan-Software-New-Logo-1-6-1.png"
+            src="https://ahaansoftware.com/images/ahaan.png"
             alt="logo"
             className="asc-logo"
           />
@@ -95,13 +96,13 @@ const Header = () => {
             )}
           </div>
           <button className="asc-header-toggle" type="button" onClick={toggleSidebar}>
-        <HiMenuAlt3 size={40} color="#43387B" />
+        <HiMenuAlt3 size={40} color="#000" />
       </button>
 
       {/* Mobile Sidebar */}
       <div className={`mobile-sidebar ${sidebarOpen ? "open" : ""}`} ref={sidebarRef}>
         <button className="close-btn" onClick={() => setSidebarOpen(false)}>
-          <HiX size={30} color="#43387B" />
+          <HiX size={30} color="#000" />
         </button>
         <div className="sidebar-content">
           <div className="nav-links">
@@ -109,7 +110,7 @@ const Header = () => {
             <Link to="/about">About us</Link>
             <Link to="/service">Services</Link>
             <Link to="/industry">Industry</Link>
-            <Link to="/portfolio">Portfolio</Link>
+            <Link to="https://portfolio.ahaansoftware.com/">Portfolio</Link>
           </div>
           <hr />
           <div className="social-links">

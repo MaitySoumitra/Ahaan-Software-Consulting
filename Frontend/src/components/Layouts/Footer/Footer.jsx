@@ -28,13 +28,13 @@ const Footer = () => {
     }, []);
 
   return (
-    <footer className="footer">
+    <footer className="footer-main">
       <div className="container">
         <div className="row">
           <div className="col-md-4 ">
           <div className="footer-logo-input">
             <img
-              src="http://woocommerce.ahaanmedia.com/wp-content/uploads/2025/02/Ahaan-Software-New-Logo-1-6-1.png"
+              src="https://ahaansoftware.com/images/ahaan.png"
               alt="Ahaan Logo"
               className="footer-logo"
             />
@@ -144,7 +144,7 @@ const Footer = () => {
       </div>
         </div>
         <div className="footer-bottom">
-          <p>{ isMobile ? "© 2025 Ahaan Software Consulting" : "© 2025 Ahaan Software, All rights reserved." }</p>
+          <p className="footer-bottom-text">{ isMobile ? "© 2025 Ahaan Software Consulting" : "© 2025 Ahaan Software, All rights reserved." }</p>
           <div className="footer-social-icons">
             <a href="https://www.facebook.com/ahaansoftwareconsulting">
               <FaFacebookF />

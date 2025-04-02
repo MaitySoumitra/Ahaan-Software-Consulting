@@ -4,18 +4,19 @@
 
 
 .section1-client-label {
-  border: 1px solid #e9d7fe;
+  /* border: 1px solid #e9d7fe;
   background: #f9f5ff;
-  border-radius: 25px;
+  border-radius: 25px; */
   padding:10px 48px;
-  color: #433978;
+  color: #C7892B;
   font-weight: bold;
-  font-size: 21px;
+  font-size: 35px !important;
   display: block;
   text-align: center;
   margin: 0 auto;
   width: fit-content;
   margin-top: 40px;
+  font-family: outfit;
 }
 .first-section-heading {
   font-size: 33px;
@@ -39,12 +40,12 @@
 
 .first-client-col:hover {
   transform: translateY(-5px) translateX(-5px);
-  box-shadow: 1px 0px 0px #433978, 0px 1px 0px #433978, 2px 1px 0px #433978,
-    1px 2px 0px #433978, 3px 2px 0px #433978, 2px 3px 0px #433978,
-    4px 3px 0px #433978, 3px 4px 0px #433978, 5px 4px 0px #433978,
-    4px 5px 0px #433978, 6px 5px 0px #433978, 5px 6px 0px #433978,
-    7px 6px 0px #433978, 6px 7px 0px #433978, 8px 7px 0px #433978,
-    7px 8px 0px #433978, 9px 8px 0px #433978, 8px 9px 0px #433978;
+  box-shadow: 1px 0px 0px #000, 0px 1px 0px #000, 2px 1px 0px #000,
+    1px 2px 0px #000, 3px 2px 0px #000, 2px 3px 0px #000,
+    4px 3px 0px #000, 3px 4px 0px #000, 5px 4px 0px #000,
+    4px 5px 0px #000, 6px 5px 0px #000, 5px 6px 0px #000,
+    7px 6px 0px #000, 6px 7px 0px #000, 8px 7px 0px #000,
+    7px 8px 0px #000, 9px 8px 0px #000, 8px 9px 0px #000;
 }
 
 .first-client-image {

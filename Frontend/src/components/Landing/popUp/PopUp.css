@@ -1,0 +1,78 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent backdrop */
+  z-index: 1040;
+}
+
+.modal-dialog {
+  max-width: 700px; /* Adjust size */
+  margin: auto;
+}
+
+.modal-content {
+  border-radius: 30px;
+  padding: 20px;
+  border: none;
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center align logo and heading */
+  border-bottom: none; /* Optional: remove header border */
+  position: relative;
+}
+
+.company-logo {
+  width: 60px; /* Adjust logo size */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.modal-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  font-family: outfit;
+  text-transform: uppercase;
+}
+
+.modal-lg {
+  width: 80%; /* Bigger popup but not full-screen */
+}
+
+.form-control-modal{
+   width: 100%;
+   border: none;
+   border: 1px solid #c88d34;
+   border-radius: 50px;
+   height: 47px;
+   padding-left: 10px;
+}
+.form-control-modal::placeholder{
+  font-family: outfit;
+  color: #000;
+}
+.form-control-modal-text{
+  width: 100%;
+   border: none;
+   border: 1px solid #c88d34;
+   border-radius: 20px;
+   padding-left: 10px;
+}
+.form-control-modal-text::placeholder{
+  font-family: outfit;
+  color: #000;
+}
+.modal-btn{
+  font-family: outfit;
+}
+.modal-btn:hover{
+  background-color: #000 !important;
+  color: #c88d34 !important;
+}

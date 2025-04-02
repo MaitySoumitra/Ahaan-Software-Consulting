@@ -9,11 +9,11 @@ const teamMembers = [
     position: "CEO & Founder",
     image: "/Images/Vishal.png",
   },
-  {
-    name: "Sukanta Das",
-    position: "Sales Manager",
-    image: "/Images/Sukanta.png",
-  },
+  // {
+  //   name: "Sukanta Das",
+  //   position: "Sales Manager",
+  //   image: "/Images/Sukanta.png",
+  // },
   {
     name: "Soumya Bhattach...",
     position: "Project Manager",
@@ -72,7 +72,7 @@ const MeetOurTeam = () => {
       <h2 className="text-primary-team fw-bold">
         Meet The Talented Minds Behind The Magic!
       </h2>
-      <p className="text-muted">
+      <p className="text-muted team-text">
         Let’s collaborate to turn your creative, marketing, and development
         visions into immersive experiences and lasting partnerships. With a
         win-win mindset, we treat every client as an equal ally, working
@@ -88,7 +88,7 @@ const MeetOurTeam = () => {
                 className="team-image"
               />
               <div className="d-flex justify-content-left align-items-left gap-5 mt-4">
-                <h5 className="fw-bold mb-0">{member.name}</h5>
+                <h5 className="fw-bold mb-0 member-name">{member.name}</h5>
                 <FaLinkedin className="linkedin-icon" />
               </div>
               <p className="text-muted-position">{member.position}</p>
