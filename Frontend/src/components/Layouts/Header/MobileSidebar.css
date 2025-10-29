@@ -1,0 +1,53 @@
+.sidebar-content {
+  padding: 80px 20px 20px 20px;
+  
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #000000 !important;
+  font-family: outfit;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  line-height: 60px;
+  border-bottom: 1px solid #ffd089;
+}
+.nav-links a.active::after, .desktop-nav-menu a.active::after
+/* Hover color */
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Active link styling */
+.nav-links a.active {
+  font-weight: 700;
+  /* padding: 8px 0px 8px 2px; */
+  border: none !important;
+  
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px !important;
+}
+
+.social-links a {
+  color: #C7892B !important;
+  transition: color 0.3s ease;
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 12px !important ;
+}
+
+.social-links a:hover {
+  color: #ffffff !important;
+}

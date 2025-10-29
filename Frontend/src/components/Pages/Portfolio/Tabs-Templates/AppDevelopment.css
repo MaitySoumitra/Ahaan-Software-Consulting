@@ -1,0 +1,13 @@
+
+.appdev-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  padding: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appdev-image:hover {
+  transform: scale(1.03);
+  
+}

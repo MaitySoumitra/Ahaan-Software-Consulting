@@ -1,31 +1,28 @@
-
 .asc-logo {
   height: 45px;
- 
 }
-.asc-header{
+.asc-header {
   display: flex;
   align-items: center;
-  
+}
+nav.navbar.navbar-expand-lg.bg-white.py-4 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .desktop-nav-menu {
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 10px;
   font-size: 18px;
   color: #333;
   font-weight: 500;
-
-  gap: 6rem;
+  gap: 3rem;
   font-family: outfit;
-
-  gap: 5rem;
-
 }
 
 .get-quote-btn {
   background-color: #000;
-  color: #C78A2B;
+  color: #c78a2b;
   font-size: 16px;
   font-weight: 500;
   padding: 15px 30px;
@@ -33,24 +30,22 @@
   text-decoration: none;
   font-family: outfit;
 }
-.header-left-side{
-  display:flex;
-  gap:5px;
+.header-left-side {
+  display: flex;
+  gap: 5px;
   align-items: center;
 }
 
 .get-quote-btn:hover {
-  background-color: #CC9231;
+  background-color: #cc9231;
   color: #000;
 }
-.get-quote-container-1{
+.get-quote-container-1 {
   display: none;
-  
 }
-.asc-header-toggle{
-  display:none;
+.asc-header-toggle {
+  display: none;
 }
-
 
 /* Basic styling for the mobile sidebar */
 .mobile-sidebar {
@@ -118,60 +113,70 @@ hr {
 
 /* Media Query for Mobile */
 @media (max-width: 768px) {
-  .nav-links a, .social-links a {
+  .nav-links a,
+  .social-links a {
     font-size: 18px;
   }
+  .asc-logo {
+    height: 35px;
+  }
 }
 
-
-
-
-
-
-
-
-@media (max-width: 992px ){
-  .desktop-nav-menu{
-    gap: 1.5rem;
+@media (max-width: 992px) {
+  .desktop-nav-menu {
+    gap: 1.2rem;
     font-size: 14px;
   }
-  
 }
-@media (max-width: 769px){
-
-  .get-quote-container-1{
+@media (max-width: 769px) {
+  .get-quote-container-1 {
     display: block;
-    
   }
-  .get-quote-container-1 a{
+  .get-quote-container-1 a {
     font-size: 12px;
     font-weight: 500;
     padding: 10px 25px;
   }
-  .asc-header-toggle{
-    display:block;
+  .asc-header-toggle {
+    display: block;
     padding: 0;
     border: none;
     background: transparent;
   }
-  .get-quote-container-2{
+  .get-quote-container-2 {
     display: none;
   }
-  .desktop-nav-menu{
+  .desktop-nav-menu {
     display: none !important;
   }
-  
 }
-@media (max-width: 450px){
-  .phone-get-qt{
-    padding:6px;
+@media (max-width: 450px) {
+  .phone-get-qt {
+    padding: 6px;
     background-color: #000;
-    color: #C78A2B;
+    color: #c78a2b;
     border-radius: 50%;
-  
   }
 }
 
+.nav-links a:hover,
+.desktop-nav-menu a:hover {
+  color: #c78a2b;
+}
 
+.nav-links a.active,
+.desktop-nav-menu a.active {
+  color: #c78a2b;
+  position: relative;
+}
 
-
+.nav-links a.active::after,
+.desktop-nav-menu a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #c78a2b;
+}

@@ -5,8 +5,10 @@ import "./WorldMap.css";
 
 const locations = [
   { name: "India", lat: 22.5744, lng: 88.3629 },
-  { name: "Singapore", lat: 1.3521, lng: 103.8198 },
-  { name: "Japan", lat: 35.682839, lng: 139.759455 },];
+  { name: "Singapore", lat: 1.3521, lng: 103.8198 },      
+  { name: "USA", lat: 39.8283, lng: -98.5795 }         
+];
+
 
 const WorldMap = () => {
   const mapRef = useRef(null);
@@ -23,7 +25,7 @@ const WorldMap = () => {
       if (!mapInstance.current) {
         mapInstance.current = new window.google.maps.Map(mapRef.current, {
           center: locations[0], // Default center: India
-          zoom: 3,
+          zoom: 2.2,
         });
 
         locations.forEach((location) => {
@@ -33,7 +35,7 @@ const WorldMap = () => {
             title: location.name,
             icon: {
               path: window.google.maps.SymbolPath.CIRCLE,
-              scale: 10,
+              scale: 5,
               fillColor: "red",
               fillOpacity: 1,
               strokeWeight: 0,

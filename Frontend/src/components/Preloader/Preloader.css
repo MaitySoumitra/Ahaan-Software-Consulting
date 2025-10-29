@@ -1,0 +1,74 @@
+/* Fullscreen centered container with white transparent blur */
+.preloader-container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  background-color: rgba(255, 255, 255, 0.5); /* semi-transparent white */
+  backdrop-filter: blur(10px); /* frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+/* Loader box with animation perspective */
+.loader {
+  perspective: 700px;
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+
+/* Letters styling */
+.loader > span {
+  font-size: 70px;
+  font-weight: 700;
+  display: inline-block;
+  transform-origin: 0 70%;
+  transform-style: preserve-3d;
+  animation: flip 2.6s infinite linear;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 6px;
+  background: linear-gradient(45deg, #f0b34a, #cb902e, #815202);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* For even letters – alternate gradient */
+.loader > span:nth-child(even) {
+  background: linear-gradient(45deg, #3a3a3a, #1f1f1f, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Flip animation */
+@keyframes flip {
+  35% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+/* Staggered animation delays */
+.loader > span:nth-child(1) {
+  animation-delay: 0s;
+}
+.loader > span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.loader > span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.loader > span:nth-child(4) {
+  animation-delay: 0.9s;
+}
+.loader > span:nth-child(5) {
+  animation-delay: 1.2s;
+}

@@ -2,13 +2,19 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import "./IndustryBanner.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+
 const IndustryBanner = () => {
+  const bannerStyle = {
+    backgroundImage: `url(https://ahaanmedia.com/asc/Banner/industry-Banner.png)`,
+  
+  };
+
   return (
     <>
-      <div className="industry-banner">
-        <Container className="text-center text-white">
+      <div className="industry-banner" style={bannerStyle}>
+        <Container className="text-white text-center">
           <h1 className="banner-heading">
-            Our <span> Industry</span>
+            Our <span>Industry</span>
           </h1>
         </Container>
       </div>

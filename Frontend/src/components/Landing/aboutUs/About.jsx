@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import about from '../../../assets/about.jpg';
 import './About.css';
 import PopUp from '../popUp/PopUp';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const About = () => {
-  const [showForm, setShowForm] = useState(false); // State for form visibility
-  const toggleForm = () => setShowForm(!showForm); // Toggle form modal
+  const [showForm, setShowForm] = useState(false); 
+  const toggleForm = () => setShowForm(!showForm); 
 
   return (
     <section className="about-section">
@@ -30,7 +29,7 @@ const About = () => {
 
           {/* Right Side: Image */}
           <Col md={6} className="text-center">
-            <img src={about} alt="About Us" className="about-image img-fluid" />
+            <img src="https://ahaanmedia.com/asc/Landing/about.jpg" alt="About Us" className="about-image img-fluid" />
           </Col>
         </Row>
       </Container>

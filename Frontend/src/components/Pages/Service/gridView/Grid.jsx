@@ -3,51 +3,45 @@ import { Card, Container, Row, Col } from "react-bootstrap";
 import { CiCircleCheck } from "react-icons/ci";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Grid.css";
-import card1 from "../../../../assets/card1.png";
-import card2 from "../../../../assets/card2.png";
-import card3 from "../../../../assets/card3.png";
-import card4 from "../../../../assets/card4.png";
-import card5 from "../../../../assets/card5.png";
-import card7 from "../../../../assets/card7.png";
 
 const cardData = [
   {
-    image: card1,
+    image: "https://ahaanmedia.com/asc/Service/card1.png",
     title: "UI/UX Design",
     description:
       "UI/UX demands a deep understanding of online customer behaviour and continuous testing. With real market insights from diverse projects, we craft dynamic websites and mobile apps that deliver seamless, engaging brand interactions.",
     features: ["Graphic", "Wireframing", "Web app", "Architecture", "Mobile App"],
   },
   {
-    image: card2,
+    image: "https://ahaanmedia.com/asc/Service/card2.png",
     title: "Web Design & Development",
     description:
       "Content is king, but your website is the castle! Build a dynamic “digital empire” for your brand with a visually captivating, SEO-friendly, feature-loaded, and mobile-responsive website – crafted by our expert team.",
     features: ["Frontend", "Backend", "API & Integration", "WordPress", "Shopify", "WooCommerce"],
   },
   {
-    image: card3,
+    image: "https://ahaanmedia.com/asc/Service/card3.png",
     title: "App Development",
     description:
       "Grow and promote your business on the go with a robust, custom-tailored mobile app. Leveraging cutting-edge technology, we build iOS, Android, and hybrid solutions designed for more engagement, better scalability, and greater performance.",
     features: ["Hybrid App", "Native App", "React Native", "Kotlin", "Flutter"],
   },
   {
-    image: card4,
+    image: "https://ahaanmedia.com/asc/Service/card4.png",
     title: "E-commerce Development",
     description:
       "Boost sales and elevate customer satisfaction with our expert e-commerce web development solutions. We craft secure, high-performing stores with robust strategies to expand your customer base and drive measurable results.",
     features: ["Shopify", "Magento", "WooCommerce", "BigCommerce"],
   },
   {
-    image: card5,
+    image: "https://ahaanmedia.com/asc/Service/card5.png",
     title: "Social Media Management",
     description:
       "We go beyond likes, comments, and shares to craft well-researched, insight-driven, and sustainable content strategies that truly resonate with your audience. Trust us to spark meaningful conversations, foster a genuine community, and make real impact!",
     features: ["Organic & Paid Social", "Instagram Marketing", "LinkedIn Marketing", "YouTube Marketing", "Social Media Reputation", "Social Media Analytics"],
   },
   {
-    image: card7,
+    image: "https://ahaanmedia.com/asc/Service/card7.png",
     title: "Google Marketing",
     description:
       "Guesswork wastes money—your business deserves better! Our Google Ads experts have mastered the art of high-performing campaigns. With data-driven precision, we optimize keywords, streamline chaotic account structures, and craft compelling copy and creatives. The result? Ad campaigns that don’t just run—they dominate!",
@@ -80,7 +74,7 @@ const Grid = () => {
                 <div className="mt-3 row row-cols-2 grid-icon-list">
                   {card.features.map((feature, i) => (
                     <div key={i} className="d-flex align-items-center text-dark col">
-                      <CiCircleCheck className="me-2 fw-bold icon" />
+                      <CiCircleCheck className="featured-icon" />
                       {feature}
                     </div>
                   ))}

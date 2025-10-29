@@ -1,20 +1,19 @@
 import React, { useState } from "react";
-import "./ImageCarousel.css"; // Custom CSS
+import "./ImageCarousel.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const ImageCarousel = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const images = [
-    "https://portfolio.ahaansoftware.com/wp-content/uploads/2025/03/9.png",
-    "https://portfolio.ahaansoftware.com/wp-content/uploads/2025/03/7.png",
-    "https://portfolio.ahaansoftware.com/wp-content/uploads/2025/03/6.png",
-    "https://portfolio.ahaansoftware.com/wp-content/uploads/2025/03/5.png",
-    "https://portfolio.ahaansoftware.com/wp-content/uploads/2025/03/4.png",
-    "https://portfolio.ahaansoftware.com/wp-content/uploads/2025/03/3.png",
-    "https://portfolio.ahaansoftware.com/wp-content/uploads/2025/03/2.png",
-    "https://portfolio.ahaansoftware.com/wp-content/uploads/2025/03/1.png",
+    "https://ahaanmedia.com/asc/gallery/gallery1.jpg",
+    "https://ahaanmedia.com/asc/gallery/gallery2.jpg",
+    "https://ahaanmedia.com/asc/gallery/gallery3.jpg",
+    "https://ahaanmedia.com/asc/gallery/gallery4.jpg",
+    "https://ahaanmedia.com/asc/gallery/gallery5.jpg",
+    "https://ahaanmedia.com/asc/gallery/gallery6.jpg",
+    "https://ahaanmedia.com/asc/gallery/gallery7.jpg",
+    "https://ahaanmedia.com/asc/gallery/gallery8.jpg",
   ];
 
   const openModal = (image) => {
@@ -28,7 +27,7 @@ const ImageCarousel = () => {
   return (
     <div className="container py-5">
       <h2 className="text-center mb-4 gallery-heading">
-      The Asia Business Show Singapore 2024
+        The Asia Business Show Singapore 2024
       </h2>
 
       <p className="text-muted mx-auto mt-3 section1-content section1-content-p">
@@ -37,6 +36,7 @@ const ImageCarousel = () => {
         participated in The Asia Business Show 2024 in Singapore—the powerhouse
         of innovation and enterprise!
       </p>
+
       <div className="row g-4">
         {images.map((image, index) => (
           <div key={index} className="col-6 col-md-4 col-lg-3">
@@ -51,32 +51,17 @@ const ImageCarousel = () => {
         ))}
       </div>
 
-      {/* Modal */}
       {selectedImage && (
-        <div
-          className="modal fade show d-block modal-pop"
-          tabIndex="-1"
-          role="dialog"
-        >
+        <div className="modal-backdrop" onClick={closeModal}>
           <div
-            className="modal-dialog modal-dialog-centered modal-pop"
-            role="document"
+            className="modal-pop"
+            onClick={(e) => e.stopPropagation()} // Prevent backdrop click
           >
-            <div className="modal-content">
-              <div className="modal-header">
-                <button
-                  type="button"
-                  className="btn-close"
-                  aria-label="Close"
-                  onClick={closeModal}
-                ></button>
-              </div>
-              <div className="modal-body text-center">
-                <img src={selectedImage} alt="Selected" className="img-fluid" />
-              </div>
-            </div>
+            <button className="modal-close" onClick={closeModal}>
+              &times;
+            </button>
+            <img src={selectedImage} alt="Selected" />
           </div>
-          <div className="modal-backdrop fade show" onClick={closeModal}></div>
         </div>
       )}
     </div>

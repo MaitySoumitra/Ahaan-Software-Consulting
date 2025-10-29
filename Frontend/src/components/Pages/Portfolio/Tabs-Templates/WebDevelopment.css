@@ -1,0 +1,13 @@
+
+.webdev-image {
+  width: 90%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.webdev-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}

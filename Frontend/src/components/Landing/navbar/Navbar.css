@@ -1,52 +1,162 @@
+/* Base navbar styling */
 .custom-navbar {
-    background-color: #fff;
-    border-bottom: 4px solid #000;
-    height: 90px; /* Adjust navbar height */
-    font-family: "Outfit", serif;
-    overflow-x: hidden;
+  background-color: #fff;
+  border-bottom: 4px solid #000;
+  height: 90px;
+  font-family: "Outfit", serif;
+  overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button styling */
+.custom-button {
+  border-radius: 30px;
+  background-color: #000;
+  border-color: #000;
+  padding: 0.7rem 1.9rem;
+  color: #C98C2B;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+  background-color: #C98C2B;
+  color: #000;
+  border-color: #C98C2B;
+}
+
+/* Flex behavior for nav items (desktop) */
+.nav-responsive {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Flag icon styling */
+.flag-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+/* Enquiry Button Parts */
+.enquiry-icon {
+  display: none;
+  vertical-align: middle;
+  font-size: 1.3rem;
+}
+
+.enquiry-text {
+  display: inline;
+}
+
+/* Tablet view: 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .custom-navbar {
+    height: auto;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #000;
   }
-  .custom-button {
-    border-radius: 30px;
-    background-color: #000;
-    border-color: #000;
-    padding: 0.7rem 1.9rem;
-    color: #C98C2B; /* Adjust button height */
-  }
+
   .nav-responsive {
-    display: flex;
-    flex-direction: row; /* Default: Inline items in desktop view */
-    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding-top: 10px;
   }
-  
+
+  .custom-button {
+    padding: 0.6rem 1.6rem;
+    font-size: 15px;
+    width: auto;
+    white-space: nowrap;
+  }
+
   .flag-icon {
-    width: 35px;
-    height: 35px;
-    border-radius: 50px;
+    width: 30px;
+    height: 30px;
   }
- 
-  @media (max-width: 767px) {
-    .custom-navbar {
-      transition: all 0.3s ease-in-out;
-    }
-  
-    .custom-navbar.expanded-navbar {
-      height: auto;
-      padding-bottom: 15px; /* Adds spacing when expanded */
-    }
-    .nav-responsive {
-      flex-direction: column; /* Stack items */
-      align-items: center;
-      gap: 15px;
-    }
-    .custom-navbar .navbar-toggler {
-      border-color: transparent;
-    }
-  
-    .custom-navbar .navbar-toggler-icon {
-      background-color: transparent;
-    }
-  
-    .text-muted {
-      font-size: 12px; /* Adjust the phone number text size for mobile */
-    }
+
+  .text-muted {
+    font-size: 13px;
   }
+
+  .me-md-4 {
+    margin-right: 0 !important;
+  }
+
+  .navbar-toggler {
+    display: none; /* Hide hamburger */
+  }
+
+  .enquiry-icon {
+    display: none;
+  }
+
+  .enquiry-text {
+    display: inline;
+  }
+}
+
+/* Mobile view: max-width 767px */
+@media (max-width: 767px) {
+  .custom-navbar {
+    height: auto;
+    padding-bottom: 15px;
+  }
+
+  .flag-content {
+    display: none;
+  }
+
+  .nav-responsive {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding-top: 10px;
+  }
+
+  .custom-navbar .navbar-toggler {
+    display: none; /* Hide hamburger */
+  }
+
+  .text-muted {
+    font-size: 12px;
+  }
+
+  .custom-button {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .enquiry-icon {
+    display: inline;
+    padding: 6px;
+    font-size: 28px;
+  }
+
+  .enquiry-text {
+    display: none;
+  }
+
+  .me-md-4 {
+    margin-right: 0 !important;
+  }
+
+  .flag-icon {
+    width: 28px;
+    height: 28px;
+  }
+}

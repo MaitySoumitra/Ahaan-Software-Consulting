@@ -1,0 +1,38 @@
+.menu-toggle {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 9999;
+  }
+  
+  .hamburger path {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+  
+  .menu-toggle.open .line1 {
+    transform: translateY(6px) rotate(45deg);
+  }
+  
+  .menu-toggle.open .line2 {
+    opacity: 0;
+  }
+  
+  .menu-toggle.open .line3 {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+  .menu-toggle {
+    display: none;
+  }
+  @media(max-width: 769px) {
+    .menu-toggle {
+      display: flex;
+      justify-content: center;
+      align-items: center ;
+    }
+   
+  }

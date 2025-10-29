@@ -1,0 +1,219 @@
+:root {
+  --bgColorMenu: #1d1d1d;
+  --bgColorItem: #fbb03b;
+  --duration: 0.7s;
+}
+
+.tabs-wrapper {
+  background-color: white;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  margin-top: -100px;
+}
+
+.menu {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  max-width: 1180px;
+  font-size: 1.5em;
+  padding: 0 0.8em;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bgColorMenu);
+  border-radius: 50px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.menu-item {
+  all: unset;
+  flex: 1 1 60px;
+  max-width: 200px;
+  z-index: 100;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55em 0 0.85em;
+  transition: transform var(--duration);
+  text-align: center;
+}
+
+.menu-item:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.menu-item::before {
+  content: "";
+  z-index: -1;
+  width: 4.2em;
+  height: 4.2em;
+  border-radius: 50%;
+  position: absolute;
+  transform: scale(0);
+  background-color: transparent;
+  transition: background-color var(--duration), transform var(--duration);
+}
+
+.menu-item.active {
+  transform: translateY(-0.4em);
+}
+
+.menu-item.active::before {
+  transform: scale(1);
+  background: var(--bgColorItem);
+}
+
+.icon {
+  width: 2.6em;
+  height: 2.6em;
+  stroke: white !important;
+  fill: transparent;
+  stroke-width: 0.5 !important;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 60;
+  stroke-dashoffset: 0;
+  transition: stroke 0.4s ease, stroke-width 0.4s ease;
+}
+
+/* 🔥 Bubble Label */
+.tab-label-bubble {
+  position: absolute;
+  top: -45px;
+  color: #fff; /* Keep text color consistent with your theme */
+  padding: 1.3em 1em;
+  border-radius: 50px;
+  font-size: 0.8em;
+  white-space: nowrap;
+  animation: popup 0.3s ease forwards;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  box-shadow: none; /* Remove shadow */
+  min-width: 70px;
+  text-align: center;
+  background: transparent; 
+  border: 2px solid var(--bgColorItem); 
+  font-family: outfit;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.menu-item.active .tab-label-bubble {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-border {
+  left: 0;
+  bottom: 99%;
+  width: 10.9em;
+  height: 2.4em;
+  position: absolute;
+  clip-path: url(#menu);
+  will-change: transform;
+  background-color: var(--bgColorMenu);
+  transition: transform var(--duration);
+}
+
+.svg-container {
+  width: 0;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.content-container {
+  margin-top: 60px;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media screen and (max-width: 768px) {
+  .menu {
+    font-size: 1em;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 1.3em;
+  }
+
+  .menu-item {
+    max-width: 120px;
+  }
+
+  .menu-border {
+    display: block;
+    width: 9em;
+    height: 2.0em;
+    left: 0;
+    bottom: 99%;
+  }
+
+  .icon {
+    width: 2.2em;
+    height: 2.2em;
+  }
+
+  .tabs-wrapper {
+    padding: 30px 15px;
+    margin-top: -90px;
+  }
+
+  .content-container {
+    margin-top: 40px;
+  }
+
+  .tab-label-bubble {
+    font-size: 0.9em;
+    padding: 0.4em 0.8em;
+    top: 55px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .menu {
+    font-size: 0.7em;
+    padding: 1.2em;
+  }
+
+  .icon {
+    width: 2em;
+    height: 2em;
+  }
+
+  .menu-border {
+    width: 6.5em;
+    height: 1.3em;
+  }
+
+  .menu-item {
+    max-width: 45px;
+  }
+
+  .tab-label-bubble {
+    font-size: 0.7em;
+    padding: 1.5em 0.7em;
+    top: 30px;
+    left: -10px;
+  }
+  .tabs-wrapper {
+    padding: 30px 15px;
+    margin-top: -70px;
+  }
+}

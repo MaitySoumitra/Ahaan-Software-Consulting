@@ -1,5 +1,4 @@
 import React from "react";
-import MediaImage from "../../../../assets/images/banner2/Media.png"
 import { Container, Row, Col, Card } from "react-bootstrap";
 import {
   FaHeadset,
@@ -8,72 +7,30 @@ import {
   FaShoppingCart,
 } from "react-icons/fa";
 import "./TabContent.css";
-import Ecom1 from "../../../../assets/grids-image1.png";
-import Ecom2 from "../../../../assets/grids-image2.png";
-import Ecom3 from "../../../../assets/grids-image3.png";
-import Ecom4 from "../../../../assets/grids-image4.png";
-import Ecom5 from "../../../../assets/grids-image5.png";
 
-const features = [
-  {
-    icon: <FaHeadset className="feature-icon" />,
-    title: "Customer Support",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-  },
-  {
-    icon: <FaChartLine className="feature-icon" />,
-    title: "Scalable Excellence",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-  },
-  {
-    icon: <FaShippingFast className="feature-icon" />,
-    title: "Easy Tracking",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-  },
-  {
-    icon: <FaShoppingCart className="feature-icon" />,
-    title: "Streamlined Checkouts",
-    description:
-      "Our platform provides a systematic order management process and an effective workflow, guaranteeing your business's smooth and efficient functioning.",
-  },
-  {
-    icon: <FaShoppingCart className="feature-icon" />,
-    title: "Streamlined Checkouts",
-    description:
-      "Our platform provides a systematic order management process and an effective workflow, guaranteeing your business's smooth and efficient functioning.",
-  },
-];
 
 const gridcontent = [
   {
-    imgSrc: Ecom1,
+    imgSrc: "https://ahaanmedia.com/asc/Industry/grids-image1.png",
     title: "Content Management System",
     description:
       "Build customized platforms for seamless digital content management. Our tailored CMS solutions empower you to create, distribute, and monetize content effortlessly across all major media channels.",
   },
   {
-    imgSrc: Ecom2,
+    imgSrc: "https://ahaanmedia.com/asc/Industry/grids-image2.png",
     title: "Video Streaming Solutions",
     description:
       "Create an interactive and responsive video streaming platform for seamless on-demand content and OTT services. Deliver a world-class viewing experience with an immersive, engaging platform designed for diverse audiences across all age groups and demographics.",
   },
   {
-    imgSrc: Ecom3,
+    imgSrc: "https://ahaanmedia.com/asc/Industry/grids-image3.png",
     title: "Digital Right Management ",
     description:
       "Protect your intellectual property, guarantee compliance with licensing agreements, and prevent copyright infringements with our cutting-edge DRM solutions. Stay secure with industry-leading protection from our expert team.",
   },
-  // {
-  //   imgSrc: Ecom4,
-  //   title: "Adaptable Scalability",
-  //   description:
-  //     "Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.",
-  // },
+
   {
-    imgSrc: Ecom5,
+    imgSrc: "https://ahaanmedia.com/asc/Industry/grids-image4.png",
     title: "Augmented Reality & Virtual Reality",
     description:
       "Create immersive applications with cutting-edge AR/VR solutions from Ahaan Software Consulting, delivering interactive virtual tours and lifelike experiences. Transform user engagement and revolutionize digital interactions like never before!",
@@ -90,7 +47,7 @@ const Media = () => {
         a digital content creator, our end-to-end solutions are designed to meet
         your unique business needs and drive global success.
       </p>
-      <img src={MediaImage} alt="E-Commerce" className="content-image" />
+      <img src="https://ahaanmedia.com/asc/Industry/Media.png" alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize mt-3">
         Curating The Best Digital Experiences
@@ -102,33 +59,6 @@ const Media = () => {
         comprehensive services and innovative solutions.
       </p>
 
-      {/* <Row className="mt-4">
-        {features.slice(0, 3).map((feature, index) => (
-          <Col md={4} key={index}>
-            <Card className="feature-card">
-              <Card.Body>
-                {feature.icon}
-                <h5 className="fw-bold mt-3">{feature.title}</h5>
-                <p className="text-muted">{feature.description}</p>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row> */}
-
-      {/* <Row className="mt-3">
-        {features.slice(3).map((feature, index) => (
-          <Col md={6} key={index}>
-            <Card className="feature-card horizontal">
-            <Card.Body>
-                {feature.icon}
-                <h5 className="fw-bold mt-3">{feature.title}</h5>
-                <p className="text-muted">{feature.description}</p>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row> */}
 
       <h2 className="fw-bold text-left Revitalize">
         Your Business Needs To Stay Dynamic In A Ecosystem

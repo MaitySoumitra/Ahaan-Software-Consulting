@@ -1,0 +1,275 @@
+/* === BLOG GRID === */
+.blog-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* === CARD STYLES === */
+.blog-card {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-image {
+  width: 100%;
+  height: auto !important;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+/* === TEXT STYLES === */
+.blog-page-title {
+  font-weight: bold;
+  font-size: 22px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.blog-date {
+  color: gray;
+  font-size: 14px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.blog-author {
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Outfit', sans-serif;
+  color: #555;
+  margin-top: 10px;
+}
+
+.blog-content {
+  font-size: 16px;
+  color: #333;
+  font-family: 'Outfit', sans-serif;
+  margin-top: 10px;
+}
+
+/* === REACTIONS === */
+.reaction-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 12px;
+}
+
+.reaction-btn {
+  font-size: 13px;
+  border-radius: 50px;
+  padding: 5px 12px;
+  border: 1px solid #ddd;
+  background-color: #fafafa;
+  color: #000;
+  font-family: 'Outfit', sans-serif;
+  transition: 0.3s ease;
+}
+
+.reaction-btn:hover {
+  background-color: #ededed;
+}
+
+/* === BLOG ACTIONS (BOTTOM) === */
+.blog-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* === READ MORE BUTTON === */
+.read-more-btn {
+  background-color: #000;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  color: #c78a2b;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #c78a2b;
+  color: #000;
+}
+
+/* === SHARE BUTTON (ICON ONLY) === */
+.share-btn-icon-only {
+  background-color: transparent !important;
+  border: none !important;
+  color: #c78a2b !important;
+  font-size: 18px;
+  padding: 8px 10px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.share-btn-icon-only:hover {
+  background-color: #f5f5f5 !important;
+  color: #000 !important;
+}
+
+/* === REMOVE CARET FROM DROPDOWN === */
+.no-caret::after {
+  display: none !important;
+}
+
+/* === SHARE DROPDOWN POSITIONING TO RIGHT === */
+.animated-share-dropdown {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: auto;
+  position: absolute !important;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%) translateX(10px);
+  animation: slideInRight 0.3s ease-out forwards;
+  z-index: 10;
+}
+
+/* === SHARE ICON CONTAINER === */
+.share-icons-container {
+  display: flex;
+ 
+  border-radius: 30px;
+ 
+  padding: 8px 10px;
+  gap: 10px;
+  align-items: center;
+}
+
+/* === EACH ICON BUTTON === */
+.share-icon-btn {
+  background-color: #f1f1f1;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.share-icon-btn:hover {
+  transform: scale(1.15);
+  background-color: #e0e0e0;
+}
+
+.share-icon-btn.facebook {
+  background-color: #3b5998;
+  color: #fff;
+}
+
+.share-icon-btn.linkedin {
+  background-color: #0077b5;
+  color: #fff;
+}
+
+.share-icon-btn.whatsapp {
+  background-color: #25d366;
+  color: #fff;
+}
+
+/* === ANIMATION: SLIDE + FADE === */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%) translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+/* === SEARCH BAR === */
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto 20px;
+  padding: 8px 12px;
+  border: 1px solid #c78a2b;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: 'Outfit', sans-serif;
+  outline: none;
+}
+
+.search-bar:focus {
+  border-color: #000;
+}
+
+/* === PAGE HEADING === */
+.blog-heading {
+  font-weight: 800;
+  font-family: 'Outfit', sans-serif;
+  font-size: 26px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+
+/* === PAGINATION STYLING === */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 0;
+}
+
+.page-item {
+  list-style: none;
+}
+
+.page-link {
+  border: none;
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+  font-family: outfit;
+}
+
+.page-link:hover {
+  background-color: #E3A926;
+  color: #000;
+  
+}
+
+.page-item.active .page-link {
+  background-color: #000;
+  color: #E3A926;
+  font-weight: bold;
+  border: none;
+}
+
+.page-item.disabled .page-link {
+  background-color: #e9e9e9;
+  color: #aaa;
+  pointer-events: none;
+}
+.page-link:focus {
+  outline: none;
+  box-shadow: none;
+}

@@ -1,116 +1,189 @@
-.sdlc-container {
-  margin-top:40px;
-  display: flex;
-  flex-wrap: wrap; /* Allow steps to move to next line on small screens */
-  justify-content: center;
-  align-items: center;
- 
-}
+ .process-section {
+            padding: 60px 20px;
+        }
 
-.sdlc-step-wrapper {
-  display: flex;
-  align-items: center;
-}
+        .process-row {
+            /* Using CSS Grid for modern responsive layout */
+            display: grid;
+            grid-template-columns: repeat(1, 1fr); /* Default: 1 column on small screens */
+            gap: 20px;
+            margin: 0 auto;
+            max-width: 1200px; /* Constrain grid width */
+            cursor: pointer;
+        }
 
-.sdlc-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 20px;
-  text-align: center;
-  
-}
-.arrow-svg{
-  width:40px;
-  height: 30px;
-}
+        /* Responsive Layout Overrides */
+        @media (min-width: 768px) {
+            .process-row {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+            }
+        }
+        @media (min-width: 993px) {
+            .process-row {
+                grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+            }
+        }
 
-.sdlc-step {
-  position: relative;
-  width: 15vw; /* Responsive width */
-  height: 15vw; /* Maintain aspect ratio */
-  max-width: 130px;
-  max-height: 130px;
-  background: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #000;
-  border: 4px solid transparent;
-  margin-bottom: 20px;
-}
+        /* --- Core Animation & Structure Styles --- */
 
-.sdlc-step .step-number {
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
-  background: rgb(214, 213, 213);
-  color: #000;
-  font-size: 1.2rem;
-  font-weight: bold;
-  box-shadow: 0.1em 0.2em 0 #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-family: outfit !important;
-}
-.step-titles{
-  font-family: outfit !important;
-}
-.step-icon {
-  font-size: 1.5rem;
-  color: #000 !important;
-  margin: 0 15px; /* Space the icon evenly */
-}
+        /* The outer container for each step that *triggers* the hover */
+        .we-do-col-div {
+            position: relative;
+            transition: .5s;
+            height: 365px;
+        }
 
-/* Animation */
-.sdlc-step.animate {
-  animation: fadeInUp 0.5s ease-in-out forwards;
-}
+        /* The inner container that *moves* and *changes color* on hover */
+        .webe-inner-div {
+            background-color: white; /* Default state: White */
+            border-radius: 15px;
+            box-shadow: rgba(88, 66, 25, 0.3) 0px 5px 25px; /* Lighter box shadow */
+            padding: 30px 30px;
+            position: relative;
+            height: 100%;
+            transform: translateY(0px);
+            z-index: 4; /* Highest layer for the card body */
+            transition: .5s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            overflow: hidden; /* Necessary to clip the ::before wipe */
+        }
 
-@keyframes fadeInUp {
-  0% {
-      opacity: 0;
-      transform: translateX(-50px) !important;
-  }
-  100% {
-      opacity: 1;
-      transform: translateX(0) !important;
-  }
-}
+        /* **Main Hover Effect: Moves the Inner Card Up** */
+        .we-do-col-div:hover .webe-inner-div {
+            transform: translateY(-30px);
+            color: black; 
+        }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  
+        /* ------------------------------------------------------------------- */
+        /* --- CORE FIX: Wipe Layer Logic (::before of .webe-inner-div) --- */
+        /* ------------------------------------------------------------------- */
+        
+        .webe-inner-div::before {
+            content: ""; 
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            /* Base State (Hover Out): Hidden */
+            transform: scaleY(0); 
+            
+            /* Correct: Anchor to BOTTOM for Top-Down closure */
+            transform-origin: bottom; 
+            
+            /* Transition is only applied to the transform property for smooth wipe out */
+            transition: transform 0.5s ease-in-out; 
+        }
+        
+        /* --- Gradient Application (Always present, but hidden by scaleY(0)) --- */
+        .process-step-1-color .webe-inner-div::before {
+            background: linear-gradient(135deg, #FF7E5F, #FEB47B, #FF6A00, #FF4500, #D32F2F); 
+        }
+        .process-step-2-color .webe-inner-div::before {
+            background: linear-gradient(135deg, #6a82fb, #fc5c7d, #d4a5a5, #ffb8b8);
+        }
+        .process-step-3-color .webe-inner-div::before {
+            background: linear-gradient(135deg, #00c6ff, #0072ff, #0057b8, #003366);
+        }
+        .process-step-4-color .webe-inner-div::before {
+            background: linear-gradient(135deg, #f39c12, #f1c40f, #e67e22, #d35400);
+        }
+        
+        /* --- HOVER EFFECT: Wipe In --- */
+        .we-do-col-div:hover .webe-inner-div::before {
+            /* Hover State (Hover In): Visible */
+            transform: scaleY(1); 
+            
+            /* FIX: Anchor to BOTTOM for Bottom-Up growth */
+            transform-origin: bottom; 
+            
+            /* The transition timing is the same, but the origin changes the direction */
+            transition: transform 0.5s ease-in-out; 
+        }
 
-  .sdlc-step {
-    width: 100px;
-    height: 100px;
-    font-size: 14px;
-  }
-  .step-number{
-    width: 30px !important;
-    height: 30px !important;
-  }
 
- 
-}
+        /* ------------------------------------------------------------------- */
+        /* --- Stacking Layers (::before and ::after of .we-do-col-div) --- */
+        /* ------------------------------------------------------------------- */
 
-@media (max-width: 480px) {
-  .sdlc-step {
-    width: 80px;
-    height: 80px;
-    font-size:10px;
-  }
+        /* --- 2. FIRST Colored Layer (::before of .we-do-col-div) --- */
+        .we-do-col-div::before {
+            content: "";
+            position: absolute;
+            width: 85%;
+            height: 90%;
+            right: 0px;
+            left: 0px;
+            margin: 0 auto;
+            bottom: 0px;
+            background-color: #f2f2f2; /* Light grey base color */
+            box-shadow: none;
+            border-radius: 15px;
+            transform: translateY(0);
+            transition: .5s cubic-bezier(.34,.27,.34,1.44);
+            z-index: 1; /* Middle layer */
+        }
+        .we-do-col-div:hover::before {
+            transform: translateY(-5px); 
+            box-shadow: rgba(0, 0, 0, .15) 0px 5px 20px;
+        }
+        .process-step-1-color:hover::before { background: linear-gradient(135deg, #FF7E5F, #FEB47B, #FF6A00, #FF4500, #D32F2F); } 
+        .process-step-2-color:hover::before { background: linear-gradient(135deg, #6a82fb, #fc5c7d, #d4a5a5, #ffb8b8); } 
+        .process-step-3-color:hover::before { background: linear-gradient(135deg, #00c6ff, #0072ff, #0057b8, #003366); } 
+        .process-step-4-color:hover::before { background: linear-gradient(135deg, #f39c12, #f1c40f, #e67e22, #d35400); } 
 
- 
-}
+        /* --- 3. SECOND Colored Layer (::after of .we-do-col-div) --- */
+        .we-do-col-div::after {
+            content: "";
+            position: absolute;
+            width: 75%;
+            height: 90%;
+            right: 0px;
+            left: 0px;
+            margin: 0 auto;
+            bottom: 0px;
+            background-color: #e5e5e5; /* Slightly darker grey base color */
+            box-shadow: none;
+            border-radius: 15px;
+            transform: translateY(0);
+            transition: .5s cubic-bezier(.34,.27,.34,1.44);
+            z-index: 0; /* Lowest layer */
+        }
+        .we-do-col-div:hover::after {
+            transform: translateY(15px); 
+            box-shadow: rgba(0, 0, 0, .15) 0px 10px 30px; 
+        }
+        .process-step-1-color:hover::after { background: linear-gradient(135deg, #FF7E5F, #FEB47B, #FF6A00, #FF4500, #D32F2F); } 
+        .process-step-2-color:hover::after { background: linear-gradient(135deg, #6a82fb, #fc5c7d, #d4a5a5, #ffb8b8); } 
+        .process-step-3-color:hover::after { background: linear-gradient(135deg, #00c6ff, #0072ff, #0057b8, #003366); } 
+        .process-step-4-color:hover::after { background: linear-gradient(135deg, #f39c12, #f1c40f, #e67e22, #d35400); } 
+
+        /* --- Internal Content Styling & Z-Index Fix --- */
+
+        .icon-container,
+        .step-title,
+        .step-description {
+            /* Fix: Ensure the content sits above the wipe layer (::before) */
+            position: relative; 
+            z-index: 5; 
+        }
+
+        .icon-container { margin-bottom: 15px; margin-top: 15px; }
+        .step-title { font-size: 1.5rem; font-weight: bold; margin-bottom: 10px; }
+        .step-description { font-size: 1rem; color: #555; }
+        
+        /* Text color change on hover */
+        .we-do-col-div:hover .step-title,
+        .we-do-col-div:hover .step-description { color: black; }
+        
+        /* Icon sizes */
+        .icon-container i { font-size: 50px; color: #333; transition: color .5s; }
+        
+        /* Icon color on hover */
+        .we-do-col-div:hover .icon-container i { 
+            color: white; /* Change icon to white when gradient wipes over */
+        }

@@ -1,0 +1,116 @@
+/* Main section spacing */
+.services-section {
+  padding: 60px 20px;
+  background-color: #fdfdfd;
+}
+
+/* Heading styles */
+.services-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #C7892B;
+}
+
+.services-section p {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+/* Card styles */
+.service-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+  padding: 30px;
+  text-align: center;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Icon container */
+.icon-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f7e7ce;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.service-icon {
+  width: 35px !important;
+  height: 35px !important;
+  color: #C7892B;
+}
+
+/* Title and description */
+.service-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0d0d0d;
+  margin-top: 20px;
+}
+
+.service-desc {
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Optional custom grid layout (if used with .services-grid) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Tablet view */
+@media (max-width: 991px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-title {
+    font-size: 1.1rem;
+  }
+
+  .service-desc {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .icon-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .service-icon {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .service-title {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+
+  .service-desc {
+    font-size: 0.85rem;
+  }
+}

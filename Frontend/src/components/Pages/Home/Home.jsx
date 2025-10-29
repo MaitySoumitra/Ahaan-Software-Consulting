@@ -20,8 +20,6 @@ const Home = () => {
       <ImageCarousel/>
       <TestimonialCarousel/>
       <SecondBanner />
-      
-     
     </div>
   );
 };

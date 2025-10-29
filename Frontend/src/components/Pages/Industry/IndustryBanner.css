@@ -1,55 +1,103 @@
 .industry-banner {
-    background-image: url('../../../assets/images/banner2/industry-banner.png');
-    background-size: cover;
-    height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    font-family: "Open Sans", sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 450px;
+  padding: 200px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  }
-  
+.banner-heading {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-family: outfit;
+}
+
+.industry-section {
+  max-width: 1300px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.industry-heading {
+  font-size: 35px;
+  font-weight: 700;
+  color: #CC9231;
+  line-height: 55px;
+  font-family: outfit;
+  text-align: center;
+}
+
+.industry-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #000 !important;
+  font-family: outfit !important;
+  text-align: center;
+}
+
+.text {
+  text-align: justify;
+  width: 90%;
+  margin: auto;
+}
+
+@media (max-width: 991px) {
   .banner-heading {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: transparent;
-    color: #ffffff;
-    font-family: outfit;
+    font-size: 3rem;
   }
 
-  .industry-section {
-    max-width: 1300px;
-    margin: 50px auto;
-  }
-  
   .industry-heading {
-    font-size: 35px;
-    font-weight: 700;
-    color: #CC9231;
-    line-height: 55px;
-    font-family: outfit;
+    font-size: 28px;
+    line-height: 40px;
   }
   
   .industry-text {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #000 !important;
-    font-family: outfit !important;
+    font-size: 14px;
+  }
+}
 
+@media (max-width: 768px) {
+  .industry-banner {
+    height: 300px;
+    padding: 10px;
   }
   
-  @media (max-width: 768px) {
-    .banner-heading {
-      font-size: 2rem;
-    }
-  
-    .banner-subheading {
-      font-size: 1.2rem;
-    }
+  .banner-heading {
+    font-size: 2rem;
   }
-  .text{
-    text-align: justify;
-    width:90%;
+
+  .industry-heading {
+    font-size: 24px;
+    line-height: 35px;
+  }
+  
+  .industry-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .industry-banner {
+    height: 250px;
+    padding: 5px;
+  }
+  
+  .banner-heading {
+    font-size: 1.8rem;
+  }
+
+  .industry-heading {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  .industry-text {
+    font-size: 12px;
+  }
 }

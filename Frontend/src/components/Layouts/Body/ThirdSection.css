@@ -1,8 +1,3 @@
-.our-tech-tab{
-  margin-top: 2.5rem;
-  
-}
-
 .our-tab-tech-icons {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
@@ -13,7 +8,7 @@
   
 
   .tabs-col-tech{
-    height: 280px;
+    /* height: 280px; */
     display: flex;
     flex-direction: column;
   }
@@ -21,10 +16,11 @@
     flex: 0 1 auto;
   }
 .tech-tab-content{
-  flex: 2 2 auto; 
-  padding: 20px;
-  min-height: 350px; 
-  height: auto;
+  flex: 1 !important; 
+  padding: 0px !important;
+  min-height: 50px !important; 
+  /* height: auto; */
+  box-shadow: none ;
 }
   
   
@@ -53,10 +49,10 @@
 
   .nav-item-tab{
     background-color: #eeeeee;
-    margin-bottom: 10px;
-    height: 50px;
+    margin-bottom: 20px;
+    height: 70px;
     border-radius: 5px;
-    line-height: 30px;
+    line-height: 50px;
     letter-spacing: 3px;
   }
   .nav-link-tab{
@@ -65,10 +61,10 @@
     font-family: outfit !important;
   }
   .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: white !important;
+    color:#C7892B !important;
     background-color: #000 !important;
-    height: 50px;
-    line-height: 30px;
+    height: 70px;
+    line-height: 50px;
     letter-spacing: 3px;
 }
   
@@ -81,6 +77,11 @@
     .our-tab-tech-icons {
       gap: 10px; /* Decrease gap to 30px on medium screens */
     }
+    .tabs-col-tech{
+      height: 450px;
+    }
+
+
   }
   @media (max-width: 768px) {
     .our-tab-tech-icons {
@@ -99,6 +100,9 @@
     .tech-name{
       font-size: 12px;
     }
+
+    
+
   }
   
   @media (max-width: 480px) {
@@ -123,3 +127,51 @@
     margin-top: 100px !important;
     text-align: center;
   }
+
+/* Mobile view adjustments */
+@media (max-width: 576px) {
+  .tab-mobile-row {
+    flex-direction: row !important;
+  }
+
+  .mobile-tab-nav {
+    width: 15%;
+    max-width: 15%;
+    
+  }
+
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    height: 45px;
+  }
+  .nav-item-tab{
+    height: 45px;
+    line-height: 30px !important;
+  }
+
+  .tab-content-mobile {
+    width: 85%;
+    max-width: 85%;
+    padding-left: 00px;
+  }
+
+  .nav-link-tab {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    font-size: 14px;
+  }
+
+  .nav-icon {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+
+  .tech-tab-content {
+    font-size: 14px;
+  }
+  .tabs-col-tech{
+    height: 300px;
+  }
+}
+
+  

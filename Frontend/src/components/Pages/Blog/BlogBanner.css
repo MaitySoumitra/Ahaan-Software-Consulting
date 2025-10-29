@@ -1,0 +1,58 @@
+/* Base Blog Banner Styles */
+.Blog-Banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 450px;
+  padding: 200px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+/* Blog Heading Style */
+.banner-heading {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Responsive: Tablets */
+@media (max-width: 991px) {
+  .Blog-Banner {
+    height: 350px;
+    padding: 150px 15px;
+  }
+
+  .banner-heading {
+    font-size: 36px;
+  }
+}
+
+/* Responsive: Small Tablets & Large Phones */
+@media (max-width: 768px) {
+  .Blog-Banner {
+    height: 250px;
+    padding: 120px 10px;
+  }
+
+  .banner-heading {
+    font-size: 28px;
+  }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 480px) {
+  .Blog-Banner {
+    height: 200px;
+    padding: 100px 5px;
+  }
+
+  .banner-heading {
+    font-size: 22px;
+  }
+}

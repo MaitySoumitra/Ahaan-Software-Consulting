@@ -1,10 +1,4 @@
-import React, { useState } from "react";
-import testi1 from '../../../assets/testi1.jpg';
-import testi2 from '../../../assets/testi2.jpg';
-import testi3 from '../../../assets/testi3.webp';
-import testi4 from '../../../assets/testi4.webp';
-import testi5 from '../../../assets/testi5.webp';
-import testi6 from '../../../assets/testi6.jpg';
+import React, { useState, useEffect } from "react";
 import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 import './Testimonials.css'
@@ -12,43 +6,52 @@ const TestimonialCarousel = () => {
     const testimonials = [
         {
           id: 1,
-          quote: "I had a fantastic experience with the development of my website and app. The team was professional, delivered high-quality work, and provided excellent after-sales service. A special thanks to Director Vishal Jaiswal, whose immense knowledge and support made the process smooth and efficient. Highly recommended!",
-          name: "Asish Poonawalla",
-          image: testi1, 
+          quote: "I had a very wonderful exprince with ahaan software they created our clothing brand website heliclothing( mens lcasual wear) Really apriciated their work",
+          name: "Sam Jais",
+          image: "https://ahaanmedia.com/asc/testimonial/1.jpg", 
         },
         {
           id: 2,
-          quote: "Disciplined job and are ethically trustworthy. The team of this company are always available for inquiries and questions, and they provide support, key insight, ideas and direction when possible. I think they have a good team, well organized and efficient with their time. Nice experience with this company that designed my business website.",
-          name: "Janvi Jain",
-          image: testi3, 
-        },
+          quote: "Good designing & development company. Recently, they have designed my website and currently doing marketing for Solar Installation services. Work quality is excellent and they met my expectations. Thanks to your entire team. 👍",
+          name: "Samuel Watson",
+          image: "https://ahaanmedia.com/asc/testimonial/3.jpg", 
+        },      
         {
           id: 3,
-          quote: "Good designing & development company. Recently, they have designed my website and currently doing marketing for Solar Installation services. Work quality is excellent and they met my expectations.",
-          name: "Samuel Watson",
-          image: testi2, 
+          quote: "Disciplined job and are ethically trustworthy. The team of this company are always available for inquiries and questions, and they provide support, key insight, ideas and direction when possible. I think they have a good team, well organized and efficient with their time. Nice experience with this company that designed my business website.",
+          name: "Rosanna Feyerabend",
+          image: "https://ahaanmedia.com/asc/testimonial/2.jpg", 
         },
         {
           id: 4,
-          quote: "I had an excellent experience working with this Ahaan Software Consulting. They delivered a high-quality website and app that exceeded my expectations. Their after-sales service has been outstanding, always prompt and supportive. I highly recommend them for their professionalism and expertise!",
-          name: "Perna Gupta",
-          image: testi5, 
+          quote: "We partnered with this company for both social media branding and website development, and the results have been fantastic. Our business conversions increased by 50% thanks to their effective strategies and high-quality work. The team is knowledgeable, creative, and results-driven. Highly recommended for any business looking to grow!",
+          name: "Aman Jaiswal",
+          image: "https://ahaanmedia.com/asc/testimonial/7.jpg", 
         },
         {
           id: 5,
-          quote: "The team at this development company is truly exceptional. They have a large group of talented developers who are not only friendly and helpful but also offer fresh, innovative ideas throughout the project. The quality of their work is outstanding, and they consistently deliver ahead of schedule.",
-          name: "Ritesh Ganguly",
-          image: testi4, 
+          quote: "These guys did a wonderful job and very quickly, the page was so nice, I already hired them to redo the whole site. will use again and again",
+          name: "Dennis Johnson",
+          image: "https://ahaanmedia.com/asc/testimonial/6.jpg", 
         },
         {
           id: 6,
-          quote: "We partnered with this company for both social media branding and website development, and the results have been fantastic. Our business conversions increased by 50% thanks to their effective strategies and high-quality work. The team is knowledgeable, creative, and results-driven. Highly recommended for any business looking to grow!",
-          name: "Aman Jaiswal",
-          image: testi6, 
+          quote: "All I can say is WOW. This company did exactly what they said they would do and went over the top with ideas to better my Website. THANK YOU!!",
+          name: "Valynn Johnson",
+          image: "https://ahaanmedia.com/asc/testimonial/5.jpg", 
+        },
+        {
+          id: 6,
+          quote: "It was a great experience to work with Vishal, he did the job beyond my expectations, highly recommend. Easy to communicate with and on time , I would actually say before time. Will hire him again!",
+          name: "Dr. Kunal Dey",
+          image: "https://ahaanmedia.com/asc/testimonial/4.jpg", 
         },
       ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+
+
+  
 
   const nextTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
@@ -57,6 +60,15 @@ const TestimonialCarousel = () => {
   const prevTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
   };
+
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  }, 5000); // 5000ms = 5 seconds
+
+  return () => clearInterval(interval); // cleanup on unmount
+}, [testimonials.length]);
+
 
   return (
     <div className="testimonial-section py-5" style={{ backgroundColor: "#f9f9f9" }}>
@@ -70,8 +82,8 @@ const TestimonialCarousel = () => {
                 alt={testimonials[currentIndex].name}
                 className="rounded-circle"
                 style={{
-                  width: "80px",
-                  height: "80px",
+                  width: "100px",
+                  height: "100px",
                   objectFit: "cover",
                   border: "4px solid #ffffff",
                   boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
