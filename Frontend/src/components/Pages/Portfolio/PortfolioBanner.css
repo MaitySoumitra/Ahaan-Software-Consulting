@@ -1,0 +1,217 @@
+.portfolio-banner {
+  background-image: url("https://ahaanmedia.com/asc/All/Portfolio-Background.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  background-blend-mode: overlay;
+  position: relative;
+  overflow: hidden;
+  padding: 30px 0;
+}
+
+.banner-title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: outfit;
+  background: linear-gradient(180deg, #c07f1e 20%, #ffd580 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.banner-title .highlight {
+  background: linear-gradient(180deg, #c07f1e 40%, #ffd580 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.banner-subtext {
+  margin-top: 35px;
+  font-size: 1rem;
+  color: #c9d1e0;
+  max-width: 700px;
+  font-family: outfit;
+}
+
+.explore-btn {
+  margin-top: 35px;
+  font-weight: 600;
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-family: outfit;
+  background: none;
+  border-color: #c07f1e;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #c07f1e;
+  color: #000;
+  border-color: #c07f1e;
+}
+
+.ratings {
+  font-size: 0.95rem;
+  color: #c9d1e0;
+}
+
+.stars {
+  color: #0dcaf0;
+}
+
+.banner-img {
+  max-width: 90%;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* Thinking Bubble */
+.thinking-bubble {
+  position: absolute;
+  background-color: #f1b255;
+  color: #000000;
+  padding: 10px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+  font-family: outfit;
+  font-size: 1rem;
+  animation: floatBubble 3s ease-in-out infinite;
+  white-space: nowrap;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeInOut 2s ease-in-out infinite;
+  transition: top 0.5s ease, right 0.5s ease;
+}
+
+.thinking-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 25px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: #f1b255 transparent transparent transparent;
+}
+
+/* Floating animation */
+@keyframes floatBubble {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Fade In/Out animation for message transition */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-banner {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .banner-title {
+    font-size: 2.5rem;
+  }
+
+  .banner-subtext {
+    font-size: 0.95rem;
+    margin: 20px auto 0;
+    max-width: 90%;
+  }
+
+  .explore-btn {
+    font-size: 0.95rem;
+    padding: 12px 28px;
+  }
+
+  .thinking-bubble {
+    top: 10%;
+    right: 8%;
+    font-size: 1.5rem;
+    padding: 15px 40px;
+  }
+
+  .thinking-bubble::after {
+    left: 15px;
+  }
+
+  .banner-img {
+    max-width: 60%;
+    margin-top: 25px;
+  }
+}
+
+/* Mobile View (≤576px) */
+@media (max-width: 576px) {
+  .banner-title {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .banner-subtext {
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+
+  .explore-btn {
+    font-size: 0.9rem;
+    padding: 10px 22px;
+  }
+
+  .thinking-bubble {
+    top: 8%;
+    right: 6%;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .thinking-bubble::after {
+    left: 10px;
+    bottom: -6px;
+  }
+
+  .ratings {
+    font-size: 0.85rem;
+  }
+
+  .banner-img {
+    max-width: 90%;
+    margin-top: 20px;
+  }
+}
+
+
+@media (max-width: 1367px) {
+  .portfolio-banner {
+    padding-bottom: 50px !important;
+    overflow: visible !important;    
+  }
+
+  .explore-btn {
+    position: relative !important;
+    bottom: 20px !important;        
+    z-index: 999 !important;
+    display: inline-block;
+  }
+}
+

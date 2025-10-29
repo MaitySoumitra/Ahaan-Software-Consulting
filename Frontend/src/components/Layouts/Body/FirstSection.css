@@ -4,9 +4,7 @@
 
 
 .section1-client-label {
-  /* border: 1px solid #e9d7fe;
-  background: #f9f5ff;
-  border-radius: 25px; */
+  
   padding:10px 48px;
   color: #C7892B;
   font-weight: bold;
@@ -51,13 +49,13 @@
 .first-client-image {
   height: 50px;
   object-fit: contain;
-  max-width: 100px;
+  max-width:100%;
 }
 @media screen and (max-width: 1000px) {
   .first-client-image {
     height: 40px;
     object-fit: contain;
-    max-width: 70px;
+   
   }
 }
 
@@ -73,6 +71,10 @@
     font-size: 14px;
     line-height: 20px;
   }
+  .first-client-col{
+    margin: 3px;
+    padding: 5px;
+  }
 }
 
 @media (max-width:450px) {
@@ -81,4 +83,11 @@
     font-size: 10px;
     line-height: 20px;
   }
+  .section1-client-label, .first-section-heading{
+    font-size: 20px !important;
+    margin-bottom: 10px;
+    line-height: normal;
+  }
+  
+  
 }

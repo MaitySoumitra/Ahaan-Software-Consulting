@@ -1,0 +1,31 @@
+/* Hide default cursor */
+/* body,
+* {
+  cursor: none !important;
+} */
+
+/* Cursor styles */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Dot */
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #CC9231;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Ring */
+.cursor-ring {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}

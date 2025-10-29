@@ -1,0 +1,273 @@
+/* Animation for Dot Vibration */
+@keyframes vibrate {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+/* Main Section */
+.counter-section {
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-circle {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+  background: #F0F4F8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.center-text h2 {
+  font-size: 3.5rem !important;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #0052d4 !important;
+}
+
+.center-text p {
+  font-size: 1.1rem !important;
+  color: #000000 !important;
+  
+}
+
+/* Circle Counter Styles */
+.circle {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-counter h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+.circle-counter p {
+  font-size: 0.85rem;
+  color: #000000;
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  font-weight: bold
+}
+
+/* Counter Circle Positions */
+.top-circle {
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.left-circle {
+  bottom: 20px;
+  left: -30px;
+}
+
+.right-circle {
+  bottom: 20px;
+  right: -30px;
+}
+
+/* Background Dots (Animated) */
+.bg-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #00c3ff;
+  animation: vibrate 0.3s infinite;
+}
+
+.dot-1 {
+  top: 10%;
+  left: -30px;
+  background-color: #00C3FF;
+  width: 35px !important;
+  height: 35px !important;
+  animation: vibrate 2.4s infinite;
+  animation-delay: 0s;
+}
+
+.dot-2 {
+  bottom: -20px;
+  left: 40%;
+  background-color: #FF6B81;
+  width: 50px !important;
+  height: 50px !important;
+  animation: vibrate 2.4s infinite;
+  animation-delay: 0.1s;
+}
+
+.dot-3 {
+  top: 30%;
+  right: -25px;
+  background-color: #7F00FF;
+  width: 25px !important;
+  height: 25px !important;
+  animation: vibrate 2.4s infinite;
+  animation-delay: 0.2s;
+}
+
+.dot-4 {
+  bottom: 120px;
+  right: 110px;
+  background-color: #F4BC4D;
+  width: 20px !important;
+  height: 20px !important;
+  animation: vibrate 2.4s infinite;
+  animation-delay: 0.3s;
+}
+
+/* Text Column (Left) */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #C7892B;
+  line-height: 1.3;
+}
+
+.underline {
+  text-decoration: underline;
+  color: #0052d4;
+}
+
+.description {
+  font-size: 1rem;
+  color: #000000;
+  margin-top: 20px;
+  
+}
+
+.content-left {
+  padding-right: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-circle {
+    width: 260px;
+    height: 260px;
+  }
+
+  .circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .circle-counter h2 {
+    font-size: 1.1rem;
+  }
+
+  .circle-counter p {
+    font-size: 0.75rem;
+  }
+
+  .center-text h2 {
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .description {
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  .content-left {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .counter-section {
+    padding: 40px 15px;
+  }
+
+  .main-circle {
+    width: 220px;
+    height: 220px;
+  }
+
+  .circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .circle-counter h2 {
+    font-size: 1rem;
+  }
+
+  .circle-counter p {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .center-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .center-text p {
+    font-size: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .top-circle {
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .left-circle {
+    bottom: 10px;
+    left: -20px;
+  }
+
+  .right-circle {
+    bottom: 10px;
+    right: -20px;
+  }
+
+  .dot-1, .dot-2, .dot-3, .dot-4 {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .dot-1 { left: -20px; }
+  .dot-2 { left: 30%; }
+  .dot-3 { right: -15px; }
+  .dot-4 { right: 80px; bottom: 100px; }
+}

@@ -1,27 +1,17 @@
 import React from 'react';
-import alen from '../../../assets/14.png';
-import hill from '../../../assets/20.png';
-import heli from '../../../assets/12.png';
-import ek from '../../../assets/13.png';
-import lj from '../../../assets/11.png';
-import indoil from '../../../assets/17.png';
-import jn from '../../../assets/18.png';
-import wolf from '../../../assets/15.png';
-import ongc from '../../../assets/16.png';
-import hp from '../../../assets/19.png';
 import './Brands.css';
 
 const images = [
-  { src: alen, alt: 'Alen' },
-  { src: hill, alt: 'Hill' },
-  { src: heli, alt: 'Heli' },
-  { src: ek, alt: 'EK' },
-  { src: jn, alt: 'JN' },
-  { src: lj, alt: 'LJ' },
-  { src: wolf, alt: 'Wolf' },
-  { src: indoil, alt: 'IndOil' },
-  { src: ongc, alt: 'ONGC' },
-  { src: hp, alt: 'HP' },
+  { src: "https://ahaanmedia.com/asc/Landing/14.png", alt: 'Alen' },
+  { src: "https://ahaanmedia.com/asc/Landing/20.png", alt: 'Hill' },
+  { src: "https://ahaanmedia.com/asc/Landing/12.png", alt: 'Heli' },
+  { src: "https://ahaanmedia.com/asc/Landing/13.png", alt: 'EK' },
+  { src: "https://ahaanmedia.com/asc/Landing/11.png", alt: 'JN' },
+  { src: "https://ahaanmedia.com/asc/Landing/17.png", alt: 'LJ' },
+  { src: "https://ahaanmedia.com/asc/Landing/18.png", alt: 'Wolf' },
+  { src: "https://ahaanmedia.com/asc/Landing/15.png", alt: 'IndOil' },
+  { src: "https://ahaanmedia.com/asc/Landing/16.png", alt: 'ONGC' },
+  { src: "https://ahaanmedia.com/asc/Landing/19.png", alt: 'HP' },
 ];
 
 const Brands = () => {
@@ -31,7 +21,6 @@ const Brands = () => {
         <h2 className="brands-heading text-center mb-4">Brands Trusted with Us</h2>
         <div className="marquee-carousel">
           <div className="marquee-container">
-            {/* Duplicate images for smooth infinite scrolling */}
             {[...images, ...images].map((image, index) => (
               <div className="marquee-item" key={index}>
                 <img src={image.src} alt={image.alt} className="marquee-image" />

@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import "react-toastify/dist/ReactToastify.css";
-import modallogo from "../../../assets/favicon/fav.png"
 
 const PopUp = ({ onClose }) => {
   const form = useRef();
@@ -40,7 +39,7 @@ const PopUp = ({ onClose }) => {
           <div className="modal-content">
             <div className="modal-header flex-column align-items-center">
               <img
-                src= {modallogo} 
+                src= "https://ahaanmedia.com/asc/layouts/fav.png" 
                 alt="Company Logo"
                 className="company-logo"
               />

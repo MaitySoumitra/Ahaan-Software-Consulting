@@ -1,8 +1,8 @@
 import React from "react";
-import "./WhatsAppChat.css"; // Import CSS file
+import "./WhatsAppChat.css";
 
 const WhatsAppChat = () => {
-  const phoneNumber = "+918981744661"; // Replace with your WhatsApp number
+  const phoneNumber = "+13214210740";
 
   return (
     <a

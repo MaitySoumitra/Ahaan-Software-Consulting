@@ -1,35 +1,20 @@
 import React from 'react';
-import html from '../../../assets/Tech/html.png';
-import css from '../../../assets/Tech/css.png';
-import js from '../../../assets/Tech/javascript.png';
-import php from '../../../assets/Tech/php.png';
-import wordpress from '../../../assets/Tech/wordpress.png';
-import react from '../../../assets/Tech/react.png';
-import mongodb from '../../../assets/Tech/mongo.png';
-import shopify from '../../../assets/Tech/shopify.png';
-import framer from '../../../assets/Tech/framer.png';
-import webflow from '../../../assets/Tech/webflow.png';
-import oddo from '../../../assets/Tech/oddo.png';
-import node from '../../../assets/Tech/node.png';
-import bootstrap from '../../../assets/Tech/bootstrap.png';
-import figma from '../../../assets/Tech/figma.png';
 import './Tech.css';
 
 const images = [
-  { src: html, alt: 'HTML' },
-  { src: css, alt: 'CSS' },
-  { src: js, alt: 'JavaScript' },
-  { src: bootstrap, alt: 'Bootstrap' },
-  { src: php, alt: 'PHP' },
-  { src: figma, alt: 'Figma' },
-  { src: node, alt: 'Node.js' },
-  { src: react, alt: 'React' },
-  { src: mongodb, alt: 'MongoDB' },
-  { src: oddo, alt: 'Oddo' },
-  { src: shopify, alt: 'Shopify' },
-  { src: webflow, alt: 'Webflow' },
-  { src: framer, alt: 'Framer' },
-  { src: wordpress, alt: 'WordPress' },
+  { src: "https://ahaanmedia.com/asc/Landing/html.jpeg", alt: 'HTML' },
+  { src: "https://ahaanmedia.com/asc/Landing/css.jpeg", alt: 'CSS' },
+  { src: "https://ahaanmedia.com/asc/Landing/javascript.jpeg", alt: 'JavaScript' },
+  { src: "https://ahaanmedia.com/asc/Landing/bootstrap.jpeg", alt: 'Bootstrap' },
+  { src: "https://ahaanmedia.com/asc/Landing/php.jpeg", alt: 'PHP' },
+  { src: "https://ahaanmedia.com/asc/Landing/figma.jpeg", alt: 'Figma' },
+  { src: "https://ahaanmedia.com/asc/Landing/node.jpeg", alt: 'Node.js' },
+  { src: "https://ahaanmedia.com/asc/Landing/react.jpeg", alt: 'React' },
+  { src: "https://ahaanmedia.com/asc/Landing/mongo.jpeg", alt: 'MongoDB' },
+  { src: "https://ahaanmedia.com/asc/Landing/oddo.jpeg", alt: 'Oddo' },
+  { src: "https://ahaanmedia.com/asc/Landing/shopify.jpeg", alt: 'Shopify' },
+  { src: "https://ahaanmedia.com/asc/Landing/webflow.jpeg", alt: 'Webflow' },
+  { src: "https://ahaanmedia.com/asc/Landing/wordpress.jpeg", alt: 'WordPress' },
 ];
 
 const Tech = () => {

@@ -1,0 +1,67 @@
+
+.uiux-gallery-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+
+  .uiux-gallery-container h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+    /* margin-bottom: 40px; */
+    color: #222;
+  }
+  
+
+  .uiux-card {
+    padding: 10px;
+  }
+  
+
+  .uiux-image {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    gap: 10px;
+  }
+  
+  
+  .uiux-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .uiux-link {
+    font-size: 0.95rem;
+    color: #007bff;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  .uiux-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  /* Responsive image height */
+  @media (max-width: 768px) {
+    .uiux-image {
+      height: 180px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .uiux-image {
+      height: 160px;
+    }
+  
+    .uiux-gallery-container h2 {
+      font-size: 1.5rem;
+    }
+  }
+  

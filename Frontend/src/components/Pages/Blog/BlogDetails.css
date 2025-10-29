@@ -1,0 +1,64 @@
+/* Container wrapper */
+.blog-details-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 1rem;
+}
+
+/* Banner image styling */
+.blog-banner-image {
+  width: 100%;
+  height: auto !important;
+  object-fit: cover;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Blog content wrapper */
+.blog-details-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Paragraphs */
+.blog-details-content p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-bottom: 1.2rem;
+  color: #333;
+  font-family: outfit;
+  font-style: normal !important;
+  text-align: justify;
+}
+
+/* Headings */
+.blog-details-content h1,
+.blog-details-content h2,
+.blog-details-content h3 {
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+  font-style: normal !important;
+}
+
+/* Lists */
+.blog-details-content ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.blog-details-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Date and author wrapper */
+.blog-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 0.5rem;
+}

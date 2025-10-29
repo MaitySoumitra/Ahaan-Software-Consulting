@@ -1,47 +1,44 @@
-.footer-main {
-  background-image: url("../../../assets/Footer-Banner.png");
-  background-size: cover;
-  padding: 40px 0 20px 0px;
-  color: #444;
-}
-
+/* Footer Logo */
 .footer-logo {
   width: 150px !important;
   margin-bottom: 10px;
 }
 
+/* Newsletter Text */
 .newsletter-text {
   font-size: 18px;
   margin-bottom: 10px;
   font-family: outfit;
+  color: #000;
+  text-align: left;
 }
 
+/* Newsletter Form */
 .newsletter {
   display: flex;
   gap: 10px;
 }
 
-.newsletter input {
-  flex: 1;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 30px;
-}
 
-.newsletter input::placeholder {
-  color: #444 !important;
-  padding-left: 10px;
-  font-family: outfit;
-}
 
-.newsletter button {
+
+
+.newsletter-button {
   background: #000;
   border: none;
   color: white;
   border-radius: 30px;
   padding: 10px 30px;
+  font-family: outfit;
+  transition: background 0.3s, color 0.3s;
 }
 
+.newsletter button:hover {
+  background-color: #CC9331;
+  color: #000;
+}
+
+/* Footer Headings */
 .footer-heading {
   font-weight: bold;
   margin-bottom: 15px;
@@ -49,81 +46,145 @@
   color: #CC9331;
 }
 
+/* Footer Links */
 .footer-links {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-links li {
   margin-bottom: 8px;
 }
 
-.footer-links a, .contact-info a {
+.footer-links a,
+.contact-info a {
   color: #444;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 12px;
   font-family: outfit;
-  line-height: 30px;
+ 
 }
 
 .footer-links a:hover {
   color: #000;
 }
 
+/* Contact Info */AC
 .contact-info {
-  
   margin-bottom: 8px;
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: 15px;
   font-family: outfit;
-}
-.contact-info a{
-
+  color: #444;
 }
 
-.contact-info .icon {
+.contact-info .footer-icon {
   margin-right: 8px;
   color: #CC9331;
+  background-color: #000;
+  padding: 7px;
+  font-size: 25px;
+  border-radius: 50px;
+}
+.quick-icon{
+  margin-right: 8px;
+  color: #CC9331;
+  background-color: #000;
+  padding: 7px;
+  font-size: 25px;
+  border-radius: 50px;
 }
 
+/* Footer Bottom */
 .footer-bottom {
   border-top: 1px solid #ccc;
   margin-top: 20px;
   padding-top: 10px;
   display: flex;
   justify-content: space-between;
-  
+  align-items: center;
+  flex-wrap: wrap;
 }
-.footer-bottom p{
-  margin:0;
+
+.footer-bottom p {
+  margin: 0;
 }
-.footer-bottom-text{
+
+.footer-bottom-text {
   font-family: outfit;
   color: #000;
+  font-size: 14px;
+  text-align: center;
+  flex: 1;
 }
 
-
+/* Social Icons */
 .footer-social-icons a {
-  margin-right: 10px;
+  margin: 0 8px;
   color: #000;
   font-size: 18px;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
-.quicklink-responsive{
+
+.footer-social-icons a:hover {
+  color: #CC9331;
+}
+
+/* Responsive Quick Links Container */
+.quicklink-responsive {
   display: flex;
- 
   justify-content: center;
+  /* flex-direction: column; */
 }
-.quick-link-for-desktop, .contact-us-heading-for-desktop{
+
+/* Show on Desktop Only */
+.quick-link-for-desktop,
+.contact-us-heading-for-desktop {
   display: block;
 }
 
-/* Basic sidebar styles */
+/* Accordion Buttons (Mobile) */
+.accordion-button,
+.accordion-button-quick-link {
+  background: none;
+  border: none;
+  padding: 10px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.accordion-icon {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon.open {
+  transform: rotate(180deg);
+}
+
+/* Hidden Content (Mobile Accordion) */
+.footer-links,
+.accordion-content {
+  display: none;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.footer-links.open,
+.accordion-content.open {
+  display: block;
+}
+
+/* Mobile Sidebar (if used) */
 .mobile-sidebar {
   position: fixed;
   top: 0;
-  right: -250px; /* Sidebar starts off-screen */
+  right: -250px;
   width: 250px;
   height: 100%;
   background-color: #fff;
@@ -133,10 +194,8 @@
   padding: 20px;
 }
 
-.sidebar-content {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+.mobile-sidebar.open {
+  right: 0;
 }
 
 .nav-links {
@@ -170,7 +229,7 @@ hr {
   border: 0.5px solid #ccc;
 }
 
-/* Button styling */
+/* Sidebar toggle button */
 .asc-header-toggle {
   background: none;
   border: none;
@@ -178,30 +237,22 @@ hr {
   z-index: 2000;
 }
 
-/* Sidebar is visible when .open class is added */
-.mobile-sidebar.open {
-  right: 0; /* Sidebar slides in */
-}
-
-/* Media Query for Mobile */
-@media (max-width: 768px) {
-  .nav-links a, .social-links a {
-    font-size: 18px;
-  }
-}
-
-
-@media (min-width:768px){
-  .quick-link-for-desktop, .contact-us-heading-for-desktop{
+@media (min-width: 768px) {
+  .quick-link-for-desktop,
+  .contact-us-heading-for-desktop {
     display: block;
   }
-  .newsletter{
-    flex-direction: column;
-    align-items: start;
+
+ 
+
+  .newsletter-button {
+    width: auto;
   }
-  .newsletter button {
-    width: auto; 
-     
+  .contact-info a{
+    font-size: 12px;
+  }
+  .contact-info {
+    font-size: 15px;
   }
 }
 
@@ -210,57 +261,70 @@ hr {
     font-size: 16px;
   }
 
-  .footer-links,
-  .accordion-content {
-    padding-left: 20px;
-    padding-top: 10px;
-  }
-  .quick-link-for-desktop, .contact-us-heading-for-desktop{
+  .quick-link-for-desktop,
+  .contact-us-heading-for-desktop {
     display: none;
   }
-  .accordion-icon {
-    transition: transform 0.3s ease;
-  }
-  
-  .accordion-icon.open {
-    transform: rotate(180deg); 
-  }
-  
-  .footer-links,
-  .accordion-content {
-    display: none; 
-  }
-  
-  .footer-links.open,
-  .accordion-content.open {
-    display: block; 
-    
-  }
-  
-  .accordion-button-quick-link:focus {
-    outline: none;
-  }
-  .quicklink-responsive{
-   margin-top: 30px;
+
+  .quicklink-responsive {
+    margin-top: 30px;
     flex-direction: column;
-    
   }
+
   .newsletter {
     flex-direction: column;
     align-items: center;
   }
-  .newsletter button {
-    width: auto; 
-     
+
+  .newsletter-button {
+    width: auto;
   }
-  .footer-bottom p{
+
+  .footer-bottom p {
     font-size: 12px;
   }
-  .footer-logo-input{
-   
-   text-align: center;
-   
+
+  .footer-logo-input {
+    text-align: center;
   }
 }
 
+.phone-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  align-items: center;
+}
 
+.phone-list a {
+  white-space: nowrap;
+}
+
+.phone-list span {
+  margin: 0 3px;
+}
+
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: #E49F33 !important;
+   
+    
+}
+/* 👇 Change border color of fieldset on focus */
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #E49F33 !important;
+  border-width: 2px;
+}
+
+/* 👇 Optional: Change input background when focused */
+
+.MuiOutlinedInput-root {
+  border-radius: 12px; /* For padding inside the container */
+}
+
+/* Most important: target the border outline itself */
+.MuiOutlinedInput-notchedOutline {
+  border-radius: 12px !important;
+}
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #E49F33 !important;
+}

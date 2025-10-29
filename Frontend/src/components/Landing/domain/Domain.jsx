@@ -1,27 +1,17 @@
 import React from 'react';
-import automobile from '../../../assets/4.png';
-import bpo from '../../../assets/5.png';
-import ecom from '../../../assets/6.png';
-import education from '../../../assets/7.png';
-import estate from '../../../assets/9.png';
-import health from '../../../assets/8.png';
-import manufacture from '../../../assets/1.png';
-import people from '../../../assets/10.png';
-import sports from '../../../assets/3.png';
-import travel from '../../../assets/2.png';
 import './Domain.css';
 
 const images = [
-  { src: automobile, alt: 'Automobile', text: 'Automobile' },
-  { src: bpo, alt: 'BPO Sectors', text: 'BPO Sectors' },
-  { src: ecom, alt: 'Ecommerce', text: 'Ecommerce' },
-  { src: education, alt: 'Education', text: 'Education' },
-  { src: health, alt: 'Healthcare', text: 'Healthcare' },
-  { src: estate, alt: 'Real Estate', text: 'Real Estate' },
-  { src: manufacture, alt: 'Manufacture', text: 'Manufacture' },
-  { src: people, alt: 'Public Sector', text: 'Public Sector' },
-  { src: sports, alt: 'Sports', text: 'Sports' },
-  { src: travel, alt: 'Tours & Travels', text: 'Tours & Travels' },
+  { src: "https://ahaanmedia.com/asc/Landing/4.png", alt: 'Automobile', text: 'Automobile' },
+  { src: "https://ahaanmedia.com/asc/Landing/5.png", alt: 'BPO Sectors', text: 'BPO Sectors' },
+  { src: "https://ahaanmedia.com/asc/Landing/6.png", alt: 'Ecommerce', text: 'Ecommerce' },
+  { src: "https://ahaanmedia.com/asc/Landing/7.png", alt: 'Education', text: 'Education' },
+  { src: "https://ahaanmedia.com/asc/Landing/9.png", alt: 'Healthcare', text: 'Healthcare' },
+  { src: "https://ahaanmedia.com/asc/Landing/8.png", alt: 'Real Estate', text: 'Real Estate' },
+  { src: "https://ahaanmedia.com/asc/Landing/1.png", alt: 'Manufacture', text: 'Manufacture' },
+  { src: "https://ahaanmedia.com/asc/Landing/10.png", alt: 'Public Sector', text: 'Public Sector' },
+  { src: "https://ahaanmedia.com/asc/Landing/3.png", alt: 'Sports', text: 'Sports' },
+  { src: "https://ahaanmedia.com/asc/Landing/2.png", alt: 'Tours & Travels', text: 'Tours & Travels' },
 ];
 
 const Domain = () => {

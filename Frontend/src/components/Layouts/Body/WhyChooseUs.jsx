@@ -3,7 +3,6 @@ import { FaChartLine } from "react-icons/fa";
 import { LuChartNoAxesCombined } from "react-icons/lu";
 import { BsBoxSeam, BsMegaphone } from "react-icons/bs";
 import { Si1001Tracklists } from "react-icons/si";
-import Whychoose from "../../../assets/images/logo/Why-choose-us.png";
 import "./WhyChooseUs.css";
 const WhyChooseUs = () => {
   return (
@@ -11,7 +10,7 @@ const WhyChooseUs = () => {
       <label className="section1-client-label">Why Choose Us</label>
       <Row className="d-flex align-items-center">
         <Col lg={7} className="d-flex flex-column">
-          <div className="mt-5">
+          <div className="">
             <h2 className="mt-2 fw-bold first-section-heading">
               What Makes Us Worth Your Time & Trust
             </h2>
@@ -25,7 +24,7 @@ const WhyChooseUs = () => {
           </div>
 
           <Row className="mt-4">
-            <Col md={6} className="mb-3">
+            <Col md={6} className="">
               <Card className="border-0">
                 <Card.Body>
                   <Row className="align-items-center">
@@ -54,7 +53,7 @@ const WhyChooseUs = () => {
               </Card>
             </Col>
 
-            <Col md={6} className="mb-3">
+            <Col md={6} className="">
               <Card className="border-0">
                 <Card.Body>
                   <Row className="align-items-center">
@@ -81,7 +80,7 @@ const WhyChooseUs = () => {
               </Card>
             </Col>
 
-            <Col md={6} className="mb-3">
+            <Col md={6} className="">
               <Card className="border-0">
                 <Card.Body>
                   <Row className="align-items-center">
@@ -108,7 +107,7 @@ const WhyChooseUs = () => {
               </Card>
             </Col>
 
-            <Col md={6} className="mb-3">
+            <Col md={6} className="">
               <Card className="border-0">
                 <Card.Body>
                   <Row className="align-items-center">
@@ -141,7 +140,7 @@ const WhyChooseUs = () => {
         </Col>
         <Col lg={5} className="d-flex justify-content-center">
           <img
-            src={Whychoose}
+            src="https://ahaanmedia.com/asc/whychooseus/Why-choose-us.png"
             alt="Business Team"
             className="img-fluid rounded"
             style={{ maxWidth: "90%", borderRadius: "15px" , boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"

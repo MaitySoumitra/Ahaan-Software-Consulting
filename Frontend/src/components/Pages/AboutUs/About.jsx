@@ -1,17 +1,19 @@
 import React from "react";
 import Banner from "./Banner";
 import Team from "./Team";
-
+import HorizontalTimeline from '../Portfolio/HorizontalTimeline';
+import AboutSection from '../Portfolio/AboutSection';
 import "bootstrap/dist/css/bootstrap.min.css";
-import We from "./We";
+
 function About() {
   return (
-    <div>
+    <>
       <Banner />
-      <We/>
+      <HorizontalTimeline/>
+      <AboutSection/>
       <Team />
 
-    </div>
+    </>
   );
 }
 

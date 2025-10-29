@@ -1,30 +1,185 @@
-.About-Banner {
-    background-image: url('../../../assets/About-Banner.jpg');
-    background-size: cover;
-    height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    font-family: "Open Sans", sans-serif;
+/* Main Banner Heading */
+.banner-heading {
+  font-size: 6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
 
+/* Banner Container */
+.About-Banner {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 450px;
+  padding: 200px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* About Section Background */
+.about-section {
+  background-color: #f8f9fa;
+  padding: 50px 20px;
+}
+
+/* Title Styling */
+.title {
+  font-size: 35px;
+  font-weight: 700;
+  color: #C7892B;
+  font-family: 'Outfit', sans-serif;
+  line-height: 47px;
+}
+
+/* Subtitle Styling */
+.subtitle {
+  font-size: 25px;
+  font-weight: 600;
+  color: #000;
+  font-family: 'Outfit', sans-serif;
+  line-height: 40px;
+}
+
+/* Paragraph Description */
+.description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  font-family: 'Outfit', sans-serif;
+  text-align: left;
+}
+
+/* Mission and Vision Headings */
+.mission-title,
+.vision-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Responsive Images */
+.img-fluid {
+  width: 100%;
+  max-width: 570px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Hide mobile image on desktop */
+.team-discus-mobile {
+  display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  .title {
+    font-size: 28px;
+    line-height: normal;
   }
-  
+
+  .subtitle {
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .mission-title,
+  .vision-title {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .About-Banner {
+    height: 350px;
+    padding: 100px 20px;
+  }
+
   .banner-heading {
-    font-size: 6rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: transparent;
-    color: #ffffff;
+    font-size: 3rem;
   }
-  
-  @media (max-width: 768px) {
-    .banner-heading {
-      font-size: 2rem;
-    }
-  
-    .banner-subheading {
-      font-size: 1.2rem;
-    }
+}
+
+@media (max-width: 767px) {
+  .team-discus-desktop {
+    display: none;
   }
-  
+
+  .team-discus-mobile {
+    display: block;
+  }
+
+  .About-Banner {
+    height: 250px;
+    padding: 80px 15px;
+  }
+
+  .banner-heading {
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .About-Banner {
+    height: 200px;
+    padding: 60px 10px;
+  }
+
+  .banner-heading {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .about-section {
+    padding: 30px 15px;
+  }
+
+  .title {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+
+  .mission-title,
+  .vision-title {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .img-fluid {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .team-discus-mobile {
+    margin-top: 20px;
+  }
+}

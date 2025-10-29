@@ -108,7 +108,8 @@ const CallToAction = () => {
           className="second-banner-contact-button"
           href="/contact"
         >
-          Contact Now
+          {isOnlyMObile? "Contact" : "Contact Now"  }
+          
         </motion.a>
       </Container>
     </motion.div>

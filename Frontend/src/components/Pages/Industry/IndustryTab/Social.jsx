@@ -1,68 +1,30 @@
 import React from "react";
-import SocialImage from "../../../../assets/images/banner2/Social Networking.png"
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { FaHeadset, FaChartLine, FaShippingFast, FaShoppingCart } from "react-icons/fa";
 import "./TabContent.css";
-import Ecom1 from "../../../../../public/Industry/Social Media Platform Development.png";
-import Ecom2 from "../../../../../public/Industry/Content Moderation & Compliance.webp";
-import Ecom3 from "../../../../../public/Industry/User-Engagement.webp";
-import Ecom4 from "../../../../../public/Industry/Data Security & Privacy Protection.jpg";
 
-
-const features = [
-    {
-      icon: <FaHeadset className="feature-icon" />,
-      title: "Customer Support",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    },
-    {
-      icon: <FaChartLine className="feature-icon" />,
-      title: "Scalable Excellence",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    },
-    {
-      icon: <FaShippingFast className="feature-icon" />,
-      title: "Easy Tracking",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
-    },
-    {
-      icon: <FaShoppingCart className="feature-icon" />,
-      title: "Streamlined Checkouts",
-      description: "Our platform provides a systematic order management process and an effective workflow, guaranteeing your business's smooth and efficient functioning.",
-    },
-    {
-        icon: <FaShoppingCart className="feature-icon" />,
-        title: "Streamlined Checkouts",
-        description: "Our platform provides a systematic order management process and an effective workflow, guaranteeing your business's smooth and efficient functioning.",
-      },
-  ];
 
   const gridcontent = [
     {
-      imgSrc: Ecom1,
+      imgSrc: "https://ahaanmedia.com/asc/Industry/SocialMediaPlatformDevelopment.png",
       title: 'Social Media Platform Development',
       description: 'Empower your network with feature-fit, scalable platforms. From real-time messaging and AI-driven content recommendations to seamless multimedia sharing, we build social networking solutions tailored for growth, engagement, and success.'
     },
     {
-      imgSrc: Ecom2,
+      imgSrc: "https://ahaanmedia.com/asc/Industry/ContentModeration&Compliance.webp",
       title: 'Content Moderation & Compliance ',
       description: 'Safeguard your users and maintain a safe digital space with AI-driven moderation, automated policy enforcement, and real-time threat detection—ensuring compliance with global regulations and platform integrity.'
     },
     {
-      imgSrc: Ecom3,
+      imgSrc: "https://ahaanmedia.com/asc/Industry/User-Engagement.webp",
       title: 'User Engagement & Monetization',
       description: 'Improve user retention and revenue with intelligent engagement tools. Our solutions include AI-powered ad targeting, gamification, and subscription-based models to boost user interaction and monetization potential.'
     },
     {
-      imgSrc: Ecom4,
+      imgSrc: "https://ahaanmedia.com/asc/Industry/DataSecurity&PrivacyProtection.jpg",
       title: 'Data Security & Privacy Protection',
       description: 'Establish user trust with enterprise-grade security solutions. We implement end-to-end encryption, blockchain-based identity management, and GDPR-compliant data handling to protect user information.'
     },
-    // {
-    //   imgSrc: Ecom5,
-    //   title: 'Efficient Administration',
-    //   description: 'Ensure an easy and smart integration with your current systems to achieve an efficient and error-free process.'
-    // }
+
   ];
 
 const Social = () => {
@@ -72,7 +34,7 @@ const Social = () => {
       <p className="text-muted">
       Social networking is the Internet, and businesses should adapt to stay ahead. From AI-powered engagement tools to immersive virtual experiences, our social media strategies and solutions empower platforms to create dynamic, personalized, and scalable digital communities. Let’s shape the future of social networking together!
       </p>
-      <img src={SocialImage} alt="E-Commerce" className="content-image" />
+      <img src="https://ahaanmedia.com/asc/Industry/SocialNetworking.png" alt="E-Commerce" className="content-image" />
 
       <h2 className="fw-bold text-left Revitalize mt-3">
       Connect, Curate, And Communicate!   
@@ -80,34 +42,6 @@ const Social = () => {
       <p className="text-left text-muted">
       We help you tap beyond the social media boundaries. Leveraging next-gen technologies including, AI, Blockchain, and the metaverse, we maximize user engagement, streamline content moderation, and guarantee data privacy—creating a thriving and safe digital ecosystem. 
       </p>
-
-      {/* <Row className="mt-4">
-        {features.slice(0, 3).map((feature, index) => (
-          <Col md={4} key={index}>
-            <Card className="feature-card">
-              <Card.Body>
-                {feature.icon}
-                <h5 className="fw-bold mt-3">{feature.title}</h5>
-                <p className="text-muted">{feature.description}</p>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-
-      <Row className="mt-3">
-        {features.slice(3).map((feature, index) => (
-          <Col md={6} key={index}>
-            <Card className="feature-card horizontal">
-            <Card.Body>
-                {feature.icon}
-                <h5 className="fw-bold mt-3">{feature.title}</h5>
-                <p className="text-muted">{feature.description}</p>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row> */}
 
       <h2 className="fw-bold text-left Revitalize mt-3">
       Create More Value With Our Solutions 
@@ -120,7 +54,6 @@ const Social = () => {
           <Col md={6} className={index % 2 === 1 ? 'order-md-1' : ''}>
             <h2 className="grids-heading">{feature.title}</h2>
             <p className="grids-content">{feature.description}</p>
-            {/* <p className="grids-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p> */}
           </Col>
         </Row>
       ))}

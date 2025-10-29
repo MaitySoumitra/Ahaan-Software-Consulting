@@ -1,0 +1,470 @@
+.window-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.window-popup-content {
+  background-color: #fdfaef;
+  padding: 50px;
+  padding-bottom: 20px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: popupAnimation 0.3s ease-in-out;
+  /* width: 50%; */
+  max-width: 50%;
+  /* max-height: 90%; */
+  position: relative;
+  overflow: hidden;
+  background-size: 100% auto;
+  z-index: 1;
+}
+
+/* Overlay Layer */
+.window-popup-content::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top, right, bottom, left: 0 */
+  background: rgba(252, 250, 246, 0.981); /* <-- adjust color & opacity here */
+  z-index: 0;
+  border-radius: 30px;
+}
+
+/* All inner text/content stays above overlay */
+.window-popup-content * {
+  position: relative;
+  z-index: 1;
+  color: #000; /* Make text visible on dark overlay */
+}
+
+/* Optional: Make links inside also more visible */
+.window-popup-content a {
+  color: #ffd700; /* Gold/yellow for good contrast */
+  font-weight: bold;
+}
+
+
+.window-popup-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-image: url("https://ahaanmedia.com/asc/All/Popup-Footer.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100% auto;
+  opacity: 0;
+  animation: fadeFooter 1s ease-in-out forwards;
+  z-index: 0;
+}
+
+@keyframes fadeFooter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+.window-popup-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  z-index: 1;
+  position: relative;
+}
+
+.window-banner-text {
+  color: #000;
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.window-popup-heading {
+  text-transform: uppercase;
+  font-family: "Outfit", sans-serif;
+  color: #000;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 25px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.window-popup-heading .year {
+  color: #e5aa00;
+  font-weight: 800;
+  margin-left: 10px;
+  font-family: outfit;
+}
+
+.window-popup-subheading {
+  color: #000;
+  font-family: "Outfit", sans-serif;
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+}
+.window-popup-subheading-content {
+  color: #e5aa00;
+}
+
+.countdown-heading {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 17px;
+  color: #000;
+  position: relative;
+  z-index: 1;
+  font-family: outfit;
+}
+
+.countdown-timer {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 25px 0;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.countdown-box {
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  min-width: 80px;
+  max-width: 780px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.4), 0 0 20px rgba(255, 193, 7, 0.3),
+    0 0 30px rgba(255, 193, 7, 0.2);
+}
+
+.reel-wrapper {
+  display: flex;
+  gap: 2px;
+  height: 50px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.digit-reel {
+  width: 20px;
+  overflow: hidden;
+  height: 50px;
+  position: relative;
+}
+
+.digit-track {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out;
+}
+
+.digit {
+  height: 50px;
+  line-height: 50px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffc107;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+}
+
+.countdown-label {
+  font-size: 10px;
+  color: #bab9b9;
+  font-family: "Outfit", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.close-button:hover {
+  background-color: darkred;
+}
+
+.megaphone-icon {
+  width: 40px;
+  height: 40px;
+  animation: pulse-megaphone 0.4s infinite ease-in-out;
+}
+
+@keyframes pulse-megaphone {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.megaphone-icon .waves path {
+  stroke: #daa700;
+  stroke-width: 0.5 !important;
+  stroke-dasharray: 10;
+  stroke-dashoffset: 10;
+  animation: wavePulse 1.5s ease-in-out infinite;
+  opacity: 0;
+}
+
+.megaphone-icon .waves path:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.megaphone-icon .waves path:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes wavePulse {
+  0% {
+    stroke-dashoffset: 10;
+    opacity: 0;
+  }
+  40% {
+    stroke-dashoffset: 10;
+    opacity: 1;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 10;
+    opacity: 0;
+  }
+}
+
+@keyframes popupAnimation {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.location-info {
+  margin-top: 20px;
+  font-family: "Outfit", sans-serif;
+  color: #000;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.location-info a {
+  color: #daa700;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.location-info a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .window-popup-content {
+    width: 90%;
+    padding: 30px;
+    padding-bottom: 130px;
+    background-size: cover;
+  }
+
+  .window-popup-heading {
+    font-size: 26px;
+  }
+
+  .digit {
+    font-size: 26px;
+  }
+
+  .countdown-label {
+    font-size: 12px;
+  }
+}
+.date-box-v2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.date-content-v2 {
+  font-size: 18px;
+  font-family: sans-serif;
+  margin: 5px 0;
+  font-family: outfit;
+  font-weight: 600;
+  color: #000;
+}
+
+.gold-bold {
+  color: #e5aa00;
+  font-weight: 700;
+}
+
+.italic-bold {
+  font-weight: 600;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #c48900, transparent);
+  max-width: 60px;
+}
+
+.time-range {
+  font-weight: 600;
+  font-size: 15px;
+  color: #000000;
+}
+.day-range {
+  font-weight: 600;
+  font-size: 13px;
+  color: #000000;
+}
+.business-section {
+  margin-top: 20px;
+  font-family: "Outfit", sans-serif;
+  color: #000;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.business-intro {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.business-services-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  border: 1px solid #e5aa00;
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  max-width: 550px;
+
+  /* Blur Background */
+  background-color: rgba(252, 230, 181, 0.149); /* slightly lighter blur */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  /* Optional for glassy look */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  font-size: 13px;
+}
+
+
+.business-services-box span {
+  white-space: nowrap;
+}
+
+.business-services-box .divider {
+  width: 1px;
+  height: 16px;
+  background-color: #e5aa00;
+}
+
+.business-outro {
+  margin-top: 15px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.popup-bottom-button-wrapper {
+  margin-top: 30px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.popup-cta-button {
+  background-color: #e5aa00;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(229, 170, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.popup-cta-button:hover {
+  background-color: #c48900;
+}
+
+.stand-number {
+  font-size: 14px;
+  font-weight: 400;
+  color: #daa700;
+  text-align: center;
+  background: rgb(25, 25, 25);
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  font-family: outfit;
+  letter-spacing: 2px;
+}
+.Stand{
+  color: #fdfaef;
+}

@@ -1,0 +1,261 @@
+.timeline-container {
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.timeline-container::-webkit-scrollbar {
+  display: none;
+}
+
+.timeline {
+  display: flex;
+  gap: 100px;
+  position: relative;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #ff4b4b, #f9b233, #49b162, #0066d4);
+  z-index: -1;
+}
+
+.timeline-item {
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Circle border wrapper */
+.timeline-image {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.circle-border {
+  width: 90%;
+  height: 90%;
+  border: 2px solid;
+  border-radius: 50%;
+  background: transparent;
+  position: relative;
+}
+
+/* Actual image inside the circle */
+.circle-border img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Animated wave effect */
+.border-wave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  border: 2px solid;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  animation: borderZoom 2s infinite ease-out;
+  pointer-events: none;
+}
+
+@keyframes borderZoom {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* Unique wave colors */
+.wave-1 {
+  border-color: #ff4b4b;
+}
+.wave-2 {
+  border-color: #f9b233;
+}
+.wave-3 {
+  border-color: #58c472;
+}
+.wave-4 {
+  border-color: #0066d4;
+}
+
+/* Unique circle-border colors */
+.timeline-item:nth-child(1) .circle-border {
+  border-color: #ff4b4b;
+}
+.timeline-item:nth-child(2) .circle-border {
+  border-color: #f9b233;
+}
+.timeline-item:nth-child(3) .circle-border {
+  border-color: #58c472;
+}
+.timeline-item:nth-child(4) .circle-border {
+  border-color: #0066d4;
+}
+
+/* Year Styles */
+.year-top h2,
+.year-bottom h2 {
+  font-size: 45px;
+  font-weight: bold;
+  font-family: 'Outfit', sans-serif;
+  color: #000000;
+}
+
+/* Override year colors */
+.timeline-item:nth-child(1) .year-top h2 {
+  color: #ff4b4b;
+}
+.timeline-item:nth-child(2) .year-bottom h2 {
+  color: #f9b233;
+}
+.timeline-item:nth-child(3) .year-top h2 {
+  color: #58c472;
+}
+.timeline-item:nth-child(4) .year-bottom h2 {
+  color: #0066d4;
+}
+
+/* Content Styles */
+.content-top h6,
+.content-bottom h6 {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+}
+
+.content-top p,
+.content-bottom p {
+  font-size: 14px;
+  color: #000000;
+  margin-top: 5px;
+  font-family: 'Outfit', sans-serif;
+}
+
+
+
+
+/* Tablet View (≤ 768px) */
+@media (max-width: 768px) {
+  .timeline {
+    gap: 60px; /* Reduce spacing between items */
+  }
+
+  .timeline-item {
+    min-width: 200px;
+  }
+
+  .timeline-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .circle-border img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .border-wave {
+    width: 40%;
+    height: 40%;
+  }
+
+  .year-top h2,
+  .year-bottom h2 {
+    font-size: 32px;
+  }
+
+  .content-top h6,
+  .content-bottom h6 {
+    font-size: 20px;
+  }
+
+  .content-top p,
+  .content-bottom p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile View (≤ 576px) */
+@media (max-width: 576px) {
+  .timeline {
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline::after {
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ff4b4b, #f9b233, #49b162, #0066d4);
+  }
+
+  .timeline-item {
+    flex-direction: row;
+    min-width: auto;
+    width: 100%;
+    justify-content: start;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  .timeline-image {
+    width: 180px;
+    height: 85px;
+  }
+
+  .circle-border img {
+    width: 60px;
+    height: auto !important;
+  }
+
+  .border-wave {
+    width: 50%;
+    height: 50%;
+  }
+
+  .year-top h2,
+  .year-bottom h2 {
+    font-size: 24px;
+  }
+
+  .content-top h6,
+  .content-bottom h6 {
+    font-size: 18px;
+  }
+
+  .content-top p,
+  .content-bottom p {
+    font-size: 13px;
+  }
+}

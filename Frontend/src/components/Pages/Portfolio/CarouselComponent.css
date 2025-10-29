@@ -1,0 +1,126 @@
+.custom-carousel-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 100px; /* add space for heading */
+  }
+  
+  .carousel-header {
+    text-align: center;
+    margin-bottom: 30px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    background: transparent;
+    z-index: 5;
+  }
+  
+  .carousel-title {
+    font-size: 35px;
+    font-weight: 700;
+    color: #C7892B;
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    line-height: 50px;
+  }
+  
+  .carousel-subtitle {
+    font-size: 1rem;
+    color: #000000;
+    font-family: 'Outfit', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .carousel-track {
+    margin-top: 100px !important;
+    display: flex;
+    gap: 2px;
+    transition: transform 2s ease-in-out; /* Ultra-smooth slow slide */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 25%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: none;
+  }
+  
+  .carousel-img {
+    width: 98%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+  }
+  
+  /* Navigation Controls */
+  .carousel-control {
+    position: absolute;
+    top: 65%;
+    font-size: 22px;
+    background: #000000;
+    color: #a87020;
+    border: none;
+    padding: 4px 16px;
+    z-index: 10;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .carousel-control:hover {
+    background: #000;
+    color: #fff;
+    transform: scale(1.1);
+  }
+  
+  .carousel-control.prev {
+    left: 10px;
+  }
+  
+  .carousel-control.next {
+    right: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .carousel-slide {
+      flex: 0 0 50%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .carousel-slide {
+      flex: 0 0 100%;
+      margin-top: 70px;
+    }
+  
+    .carousel-img {
+      height: auto;
+    }
+  
+    .carousel-title {
+      font-size: 1.5rem;
+    }
+  
+    .carousel-subtitle {
+      font-size: 0.9rem;
+      
+    }
+  }
+  

@@ -1,12 +1,19 @@
 import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { FaHome, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { FaPhoneVolume } from "react-icons/fa6";
 import { toast, ToastContainer } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import TextField from "@mui/material/TextField";
 import "react-toastify/dist/ReactToastify.css";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+} from "react-icons/fa";
 import "./ContactUs.css";
-import ContactBanner from "./ContactBanner";
 import WorldMap from "./WorldMap";
 
 const ContactUs = () => {
@@ -17,6 +24,8 @@ const ContactUs = () => {
     handleSubmit,
     formState: { errors },
     reset,
+    setError,
+    clearErrors,
   } = useForm();
 
   const onSubmit = (data) => {
@@ -27,19 +36,40 @@ const ContactUs = () => {
     emailjs
       .sendForm(serviceID, templateID, form.current, publicKey)
       .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
         toast.success("Message sent successfully!");
         reset();
       })
       .catch((error) => {
-        console.log("FAILED...", error);
         toast.error("Failed to send message. Try again!");
       });
   };
 
+  const handlePhoneInput = (e) => {
+    const value = e.target.value;
+    if (/[^0-9]/.test(value)) {
+      setError("phone", {
+        type: "manual",
+        message: "Put numbers only",
+      });
+    } else {
+      clearErrors("phone");
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (!/[0-9]/.test(e.key)) {
+      e.preventDefault();
+      setError("phone", {
+        type: "manual",
+        message: "Put numbers only",
+      });
+    } else {
+      clearErrors("phone");
+    }
+  };
+
   return (
     <>
-      <ContactBanner />
       <Container className="contact-section">
         <Row className="justify-content-center">
           <Col md={10} lg={11}>
@@ -47,7 +77,9 @@ const ContactUs = () => {
               {/* Left Side */}
               <Col md={4} className="contact-information">
                 <h5 className="contact-text">LET'S TALK</h5>
-                <h2>Speak With Expert Engineers.</h2>
+                <h2 className="contact-heading">
+                  Speak With Expert Engineers.
+                </h2>
 
                 <div className="contact-item">
                   <FaHome className="contact-icon" />
@@ -58,7 +90,7 @@ const ContactUs = () => {
                 </div>
 
                 <div className="contact-item">
-                  <FaPhone className="contact-icon" />
+                  <FaPhoneVolume className="contact-icon" />
                   <div>
                     <strong>Phone:</strong>
                     <p>+13214210740</p>
@@ -70,8 +102,36 @@ const ContactUs = () => {
                   <FaMapMarkerAlt className="contact-icon" />
                   <div>
                     <strong>Address:</strong>
-                    <p>Bengal Eco Intelligent Park, EM Block, Sector V, Kolkata-91</p>
+                    <p>
+                      Bengal Eco Intelligent Park, EM Block, Sector V,
+                      Bidhannagar, Kolkata, West Bengal 700091
+                    </p>
                   </div>
+                </div>
+
+                {/* Social Media Icons */}
+                <div className="contact-social">
+                  <a
+                    href="https://www.linkedin.com/company/ahaansoftware"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/ahaansoftware"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaFacebookF />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/ahaansoftware"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaInstagram />
+                  </a>
                 </div>
               </Col>
 
@@ -80,77 +140,104 @@ const ContactUs = () => {
                 <h6>GET IN TOUCH</h6>
                 <h2>Fill The Form Below</h2>
 
-                <Form ref={form} onSubmit={handleSubmit(onSubmit)}>
+                <form ref={form} onSubmit={handleSubmit(onSubmit)}>
                   <Row>
                     <Col md={6}>
-                      <Form.Group className="mb-3">
-                        <Form.Control
-                          type="text"
-                          placeholder="Name"
-                          {...register("name", { required: "Name is required" })}
-                        />
-                        {errors.name && <p className="error-text">{errors.name.message}</p>}
-                      </Form.Group>
+                      <TextField
+                        label="Name"
+                        variant="outlined"
+                        fullWidth
+                        margin="normal"
+                        className="custom-input"
+                        error={!!errors.name}
+                        helperText={errors.name?.message}
+                        {...register("name", { required: "Name is required" })}
+                      />
                     </Col>
-
                     <Col md={6}>
-                      <Form.Group className="mb-3">
-                        <Form.Control
-                          type="email"
-                          placeholder="E-Mail"
-                          {...register("email", { required: "Email is required" })}
-                        />
-                        {errors.email && <p className="error-text">{errors.email.message}</p>}
-                      </Form.Group>
+                      <TextField
+                        label="Email ID"
+                        type="email"
+                        variant="outlined"
+                        fullWidth
+                        margin="normal"
+                        className="custom-input"
+                        error={!!errors.email}
+                        helperText={errors.email?.message}
+                        {...register("email", {
+                          required: "Email is required",
+                        })}
+                      />
                     </Col>
                   </Row>
 
                   <Row>
                     <Col md={6}>
-                      <Form.Group className="mb-3">
-                        <Form.Control
-                          type="text"
-                          placeholder="Phone Number"
-                          {...register("phone", { required: "Phone number is required" })}
-                        />
-                        {errors.phone && <p className="error-text">{errors.phone.message}</p>}
-                      </Form.Group>
+                      <TextField
+                        label="Phone No."
+                        type="tel"
+                        variant="outlined"
+                        fullWidth
+                        margin="normal"
+                        className="custom-input"
+                        error={!!errors.phone}
+                        helperText={errors.phone?.message}
+                        inputProps={{
+                          pattern: "[0-9]*",
+                          inputMode: "numeric",
+                          onKeyPress: handleKeyPress,
+                        }}
+                        {...register("phone", {
+                          required: "Phone number is required",
+                          pattern: {
+                            value: /^[0-9]{7,15}$/,
+                            message: "Please enter a valid phone number",
+                          },
+                          onChange: handlePhoneInput,
+                        })}
+                      />
                     </Col>
-
                     <Col md={6}>
-                      <Form.Group className="mb-3">
-                        <Form.Control
-                          type="text"
-                          placeholder="Your Website"
-                          {...register("website")}
-                        />
-                      </Form.Group>
+                      <TextField
+                        label="Website"
+                        variant="outlined"
+                        fullWidth
+                        margin="normal"
+                        className="custom-input"
+                        {...register("website")}
+                      />
                     </Col>
                   </Row>
 
-                  <Form.Group className="mb-3">
-                    <Form.Control
-                      as="textarea"
-                      rows={3}
-                      placeholder="Your message Here"
-                      {...register("message", { required: "Message is required" })}
-                    />
-                    {errors.message && <p className="error-text">{errors.message.message}</p>}
-                  </Form.Group>
+                  <TextField
+                    label="Drop Your Message"
+                    variant="outlined"
+                    fullWidth
+                    multiline
+                    rows={4}
+                    margin="normal"
+                    className="custom-input"
+                    error={!!errors.message}
+                    helperText={errors.message?.message}
+                    {...register("message", {
+                      required: "Message is required",
+                    })}
+                  />
 
-                  <Button type="submit" className="submit-btn">
+                  <Button type="submit" className="submit-btn mt-3">
                     Submit Now
                   </Button>
-                </Form>
+                </form>
               </Col>
             </Row>
           </Col>
         </Row>
       </Container>
-      {/* <WorldMap /> */}
 
       {/* Toast Notification Container */}
       <ToastContainer position="top-right" autoClose={3000} />
+
+      <WorldMap />
     </>
   );
 };

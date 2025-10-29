@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import bannerImage from "../../../assets/bannerimg.jpg";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
@@ -39,7 +38,7 @@ const Banner = () => {
   return (
     <section
       className="banner-section"
-      style={{ backgroundImage: `url(${bannerImage})` }}
+      style={{ backgroundImage: `url(https://ahaanmedia.com/asc/Landing/LandingBanner.jpg)` }}
     >
       <Container>
         <Row className="align-items-center">
