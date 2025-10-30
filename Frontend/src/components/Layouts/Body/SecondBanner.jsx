@@ -48,26 +48,39 @@ const CallToAction = () => {
           gap: "20px",
         }}
       >
-        <div className="second-banner-call">
-          <motion.div
-            animate={{ x: [-2, 2, -2] }}
-            transition={{ duration: 0.1, repeat: Infinity }}
-          >
-            <FiPhoneCall
-              className="second-banner-calling-icon"
-              onClick={() => (window.location.href = "tel:+919830371143")}
-            />
-          </motion.div>
-          <div className="second-banner-call-details">
-            <h3>{isMobile ? "" : "Call For More Info"}</h3>
-            <p onClick={() => (window.location.href = "tel:+13214210740")}>
-              {isMobile ? "" : "+13214210740  /"}
-            </p>
-            <p onClick={() => (window.location.href = "tel:+919830371143")}>
-              {isMobile ? "" : +919830371143}
-            </p>
-          </div>
-        </div>
+       <div className="second-banner-call">
+  <motion.div
+    animate={{ x: [-2, 2, -2] }}
+    transition={{ duration: 0.1, repeat: Infinity }}
+  >
+    <FiPhoneCall
+      className="second-banner-calling-icon"
+      onClick={() => (window.location.href = "https://wa.me/919830371143")}
+    />
+  </motion.div>
+  <div className="second-banner-call-details">
+    <h3>{isMobile ? "" : "Call For More Info"}</h3>
+    <p
+      onClick={() => (window.location.href = "https://wa.me/13214210740")}
+      style={{ cursor: "pointer" }}
+    >
+      {isMobile ? "" : "+13214210740 /"}
+    </p>
+    <p
+      onClick={() => (window.location.href = "https://wa.me/919830371143")}
+      style={{ cursor: "pointer" }}
+    >
+      {isMobile ? "" : "+919830371143 /"}
+    </p>
+    <p
+      onClick={() => (window.location.href = "https://wa.me/6590745876")}
+      style={{ cursor: "pointer" }}
+    >
+      {isMobile ? "" : "+6590745876"}
+    </p>
+  </div>
+</div>
+
 
         <motion.p className="second-banner-label" style={{}}>
           {(isOnlyMObile

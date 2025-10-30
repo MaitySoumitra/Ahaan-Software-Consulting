@@ -37,7 +37,7 @@
         .webe-inner-div {
             background-color: white; /* Default state: White */
             border-radius: 15px;
-            box-shadow: rgba(88, 66, 25, 0.3) 0px 5px 25px; /* Lighter box shadow */
+            box-shadow: rgba(88, 66, 25, 0.1) 0px 5px 25px; /* Lighter box shadow */
             padding: 30px 30px;
             position: relative;
             height: 100%;
@@ -131,10 +131,10 @@
             transform: translateY(-5px); 
             box-shadow: rgba(0, 0, 0, .15) 0px 5px 20px;
         }
-        .process-step-1-color:hover::before { background: linear-gradient(135deg, #FF7E5F, #FEB47B, #FF6A00, #FF4500, #D32F2F); } 
-        .process-step-2-color:hover::before { background: linear-gradient(135deg, #6a82fb, #fc5c7d, #d4a5a5, #ffb8b8); } 
-        .process-step-3-color:hover::before { background: linear-gradient(135deg, #00c6ff, #0072ff, #0057b8, #003366); } 
-        .process-step-4-color:hover::before { background: linear-gradient(135deg, #f39c12, #f1c40f, #e67e22, #d35400); } 
+        .process-step-1-color::before { background: linear-gradient(135deg, #FF7E5F, #FEB47B, #FF6A00, #FF4500, #D32F2F); } 
+        .process-step-2-color::before { background: linear-gradient(135deg, #6a82fb, #fc5c7d, #d4a5a5, #ffb8b8); } 
+        .process-step-3-color::before { background: linear-gradient(135deg, #00c6ff, #0072ff, #0057b8, #003366); } 
+        .process-step-4-color::before { background: linear-gradient(135deg, #f39c12, #f1c40f, #e67e22, #d35400); } 
 
         /* --- 3. SECOND Colored Layer (::after of .we-do-col-div) --- */
         .we-do-col-div::after {
@@ -157,10 +157,10 @@
             transform: translateY(15px); 
             box-shadow: rgba(0, 0, 0, .15) 0px 10px 30px; 
         }
-        .process-step-1-color:hover::after { background: linear-gradient(135deg, #FF7E5F, #FEB47B, #FF6A00, #FF4500, #D32F2F); } 
-        .process-step-2-color:hover::after { background: linear-gradient(135deg, #6a82fb, #fc5c7d, #d4a5a5, #ffb8b8); } 
-        .process-step-3-color:hover::after { background: linear-gradient(135deg, #00c6ff, #0072ff, #0057b8, #003366); } 
-        .process-step-4-color:hover::after { background: linear-gradient(135deg, #f39c12, #f1c40f, #e67e22, #d35400); } 
+        .process-step-1-color::after { background: linear-gradient(135deg, #FF7E5F, #FEB47B, #FF6A00, #FF4500, #D32F2F); } 
+        .process-step-2-color::after { background: linear-gradient(135deg, #6a82fb, #fc5c7d, #d4a5a5, #ffb8b8); } 
+        .process-step-3-color::after { background: linear-gradient(135deg, #00c6ff, #0072ff, #0057b8, #003366); } 
+        .process-step-4-color::after { background: linear-gradient(135deg, #f39c12, #f1c40f, #e67e22, #d35400); } 
 
         /* --- Internal Content Styling & Z-Index Fix --- */
 

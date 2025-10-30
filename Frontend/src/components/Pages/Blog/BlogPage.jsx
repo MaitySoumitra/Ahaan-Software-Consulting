@@ -3,7 +3,6 @@ import axios from "axios";
 import { Container, Row, Col, Card, Button, Dropdown } from "react-bootstrap";
 import { TfiSharethis } from "react-icons/tfi";
 import { FaFacebookF, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
 import "./BlogPage.css";
 
 const reactions = [
@@ -55,8 +54,6 @@ const BlogPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const blogsPerPage = 6;
-
-  const navigate = useNavigate();
 
   const fetchAndUpdateBlogs = async () => {
     try {
@@ -159,7 +156,11 @@ const BlogPage = () => {
 
           return (
             <Col md={6} lg={4} key={blog.id} className="mb-4">
-              <Card className="blog-card shadow-sm">
+              <Card
+                className="blog-card shadow-sm"
+                onClick={() => window.open(`/blog/${slug}`, "_blank")}
+                style={{ cursor: "pointer" }}
+              >
                 {blog.image && (
                   <Card.Img
                     variant="top"
@@ -182,7 +183,11 @@ const BlogPage = () => {
 
                   <p className="blog-author">By {blog.author || "Unknown"}</p>
 
-                  <div className="reaction-container">
+                  {/* Reactions */}
+                  <div
+                    className="reaction-container"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     {reactions.map(({ emoji, label }) => (
                       <Button
                         key={label}
@@ -199,11 +204,15 @@ const BlogPage = () => {
                     ))}
                   </div>
 
-                  <div className="blog-actions d-flex justify-content-between align-items-center">
+                  {/* Actions */}
+                  <div
+                    className="blog-actions d-flex justify-content-between align-items-center"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     <Button
                       variant="dark"
                       className="read-more-btn"
-                      onClick={() => navigate(`/blog/${slug}`)}
+                      onClick={() => window.open(`/blog/${slug}`, "_blank")}
                     >
                       Read More
                     </Button>

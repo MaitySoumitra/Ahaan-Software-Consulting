@@ -96,10 +96,9 @@ const Footer = () => {
                   required: "Email is required",
                 })}
               />
-            <div className="d-flex justify-content-center flex-col">
-  <button className="newsletter-button">Submit</button>
-</div>
-
+              <div className="d-flex justify-content-center justify-content-md-start flex-col">
+                <button className="newsletter-button">Submit</button>
+              </div>
             </div>
           </div>
 

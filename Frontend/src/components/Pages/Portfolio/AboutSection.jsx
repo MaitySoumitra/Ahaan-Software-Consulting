@@ -56,7 +56,7 @@ const AboutSection = () => {
 
           
             <div className="about-bottom d-flex align-items-center flex-wrap gap-3">
-              <a href="/about" className="btn btn-primary about-btn">More About Us</a>
+              {/* <a href="/about" className="btn btn-primary about-btn">More About Us</a> */}
               <div className="about-contact d-flex align-items-center">
                 <img src="https://ahaanmedia.com/asc/All/support-person.png" alt="Support" />
                 <div>

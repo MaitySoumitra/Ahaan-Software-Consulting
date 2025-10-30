@@ -8,6 +8,7 @@ import { BiSolidMessageSquareEdit } from "react-icons/bi";
 import { MdHomeRepairService } from "react-icons/md";
 import { PiFactoryFill } from "react-icons/pi";
 import { RiFileList3Fill } from "react-icons/ri";
+import { FaBloggerB } from "react-icons/fa";
 
 import "./MobileSidebar.css";
 
@@ -101,7 +102,7 @@ const MobileSidebar = ({ isOpen, setSidebarOpen, toggleButtonRef }) => {
             className={({ isActive }) => (isActive ? "active" : "")}
             onClick={() => setSidebarOpen(false)}
           >
-            <PiFactoryFill style={{ marginRight: "8px", fontSize: "22px" }} />{" "}
+            <FaBloggerB style={{ marginRight: "8px", fontSize: "22px" }} />{" "}
             Blog
           </NavLink>
         </div>

@@ -38,7 +38,7 @@ const ServicesSection = () => {
     <section className="services-section py-5">
       <Container>
         {/* Heading Section */}
-        <div className="text-center mb-5">
+        <div className="text-center mb-2">
           <h2 className="fw-bold">Our Core Services</h2>
           <p className="text-muted">Delivering excellence through innovation and technology</p>
         </div>

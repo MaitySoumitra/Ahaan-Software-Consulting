@@ -85,18 +85,47 @@ const ContactUs = () => {
                   <FaHome className="contact-icon" />
                   <div>
                     <strong>Email:</strong>
-                    <p>sales@ahaansoftware.com</p>
+                    <p>support@ahaansoftware.com</p>
                   </div>
                 </div>
 
                 <div className="contact-item">
-                  <FaPhoneVolume className="contact-icon" />
-                  <div>
-                    <strong>Phone:</strong>
-                    <p>+13214210740</p>
-                    <p>+919830371143</p>
-                  </div>
-                </div>
+  <FaPhoneVolume className="contact-icon" />
+  <div>
+    <strong>Phone:</strong>
+    <p>
+      <a
+        href="https://wa.me/13214210740"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-link"
+      >
+        +1 321 421 0740
+      </a>
+    </p>
+    <p>
+      <a
+        href="https://wa.me/919830371143"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-link"
+      >
+        +91 98303 71143
+      </a>
+    </p>
+    <p>
+      <a
+        href="https://wa.me/6590745876"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-link"
+      >
+        +65 9074 5876
+      </a>
+    </p>
+  </div>
+</div>
+
 
                 <div className="contact-item">
                   <FaMapMarkerAlt className="contact-icon" />

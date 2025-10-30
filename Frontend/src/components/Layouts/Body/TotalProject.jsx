@@ -1,64 +1,53 @@
-import React, { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import React from "react";
+import { Card, Row, Col, Container } from "react-bootstrap";
+import CountUp from "react-countup";
 import { FaUsers, FaUserTie, FaCheckCircle, FaSmile } from "react-icons/fa";
-import "./TotalProject.css";
-
-const sdlcSteps = [
-  { id: 5, label: "International Awards", color: "#6D28D9", icon: <FaUsers /> },
-  { id: 30, label: "Our Teams", color: "#F59E0B", icon: <FaUserTie /> },
-  { id: 100, label: "Completed Projects", color: "#22C55E", icon: <FaCheckCircle /> },
-  { id: 125, label: "Happy Clients", color: "#3B82F6", icon: <FaSmile /> },
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./TotalProject.css"
+import { FaAward } from "react-icons/fa6";
+const stats = [
+  { value: 5, label: "International Awards", icon: <FaAward />, color: "#1e3a8a" }, // Blue
+  { value: 30, label: "Our Teams", icon: <FaUsers />, color: "#f59e0b" }, // Orange
+  { value: 100 , label: "Completed Projects", icon: <FaCheckCircle />, color: "#10b981" }, // Green
+  { value: 125, label: "Happy Clients", icon: <FaSmile />, color: "#ef4444" }, // Red
 ];
 
-const TotalProject = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % sdlcSteps.length);
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
-
+const CounterCard = ({ value, label, icon, color }) => {
   return (
-    <Container className="my-5">
-      
+    <Card
+      className=" p-3 text-center total-project-card"
+      style={{
+        width: "250px",
+        height: "100px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: "12px",
+        
+      }}
+    >
+      <h4 style={{ color }}>
+        <CountUp start={0} end={value} duration={5} separator="," />
+        <span style={{ marginLeft: "8px", fontSize: "1.5rem" }}>{icon}</span>
+      </h4>
+      <strong className="text-dark">{label}</strong>
+    </Card>
+  );
+};
 
-      <div className="iso-timeline-container">
-        {sdlcSteps.map((step, index) => (
-          <div key={step.id} className="iso-step-wrapper">
-            <div className="iso-icon-top">
-              <div className="iso-icon-line"></div>
-              <div className="iso-icon-circle" style={{ borderColor: step.color }}>
-                <span style={{ fontSize: "1.5rem", color: step.color }}>{step.icon}</span>
-              </div>
-            </div>
-
-            <div
-              className={`iso-block ${index === activeIndex ? "active" : ""}`}
-              style={{ "--block-color": step.color }}
-            >
-              <div className="iso-block-top">
-                <span className="step-number">{`${step.id}`}</span>
-              </div>
-              <div className="iso-block-front"></div>
-              <div className="iso-block-side"></div>
-            </div>
-
-            <div
-              className={`iso-step-square ${index === activeIndex ? "active-square" : ""}`}
-              style={{
-                backgroundColor: index === activeIndex ? step.color : "#f5f5f5",
-                color: index === activeIndex ? "#fff" : "#333",
-              }}
-            >
-              <h5>{step.label}</h5>
-            </div>
-          </div>
+const DashboardStats = () => {
+  return (
+    <Container className="total-project">
+      <Row className="g-2 justify-content-center" xs={2} md={4}>
+        {stats.map((stat, index) => (
+          <Col key={index} className="d-flex justify-content-center ">
+            <CounterCard {...stat} />
+          </Col>
         ))}
-      </div>
+      </Row>
     </Container>
   );
 };
 
-export default TotalProject;
+export default DashboardStats;

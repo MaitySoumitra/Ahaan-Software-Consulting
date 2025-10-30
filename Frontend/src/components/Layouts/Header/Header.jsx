@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-white py-4">
       <div className="container">
-        <a className="navbar-brand d-flex align-items-center" href="/">
+        <a className=" d-flex align-items-center" href="/">
           <img
             src="https://ahaanmedia.com/asc/layouts/asc.png"
             alt="logo"

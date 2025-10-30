@@ -14,24 +14,12 @@ const tabColors = [
   "linear-gradient(135deg, #C07F1E, #E7B45B)",
 ];
 
-const labels = [
-  "ALL",
-  "UI/UX",
-  "WEB DEV",
-  "SOCIAL",
-  "APP",
-  
-];
+const labels = ["ALL", "WEB DEV", "UI/UX", "SOCIAL", "APP"];
 
 const icons = [
-    <svg className="icon" viewBox="0 0 24 24" key="icon4">
+  <svg className="icon" viewBox="0 0 24 24" key="icon4">
     <path d="M4 4h10v10H4V4z" />
     <path d="M10 10h10v10H10V10z" />
-  </svg>,
-  <svg className="icon" viewBox="0 0 24 24" key="icon0">
-    <path d="M5,5h14v14H5V5z" />
-    <path d="M7,15l4-4l4,4" />
-    <path d="M9,7h6v2H9V7z" />
   </svg>,
   <svg className="icon" viewBox="0 0 24 24" key="icon1">
     <path d="M4,5h16v10H4V5z" />
@@ -39,6 +27,12 @@ const icons = [
     <path d="M9,7l-2,3l2,3" />
     <path d="M15,7l2,3l-2,3" />
   </svg>,
+  <svg className="icon" viewBox="0 0 24 24" key="icon0">
+    <path d="M5,5h14v14H5V5z" />
+    <path d="M7,15l4-4l4,4" />
+    <path d="M9,7h6v2H9V7z" />
+  </svg>,
+
   <svg className="icon" viewBox="0 0 24 24" key="icon2">
     <path d="M4,5h16v10H6l-2,2V5z" />
     <path d="M8,8h8v2H8V8z" />
@@ -51,16 +45,14 @@ const icons = [
     <path d="M7,14h3v3H7V14z" />
     <path d="M14,14h3v3h-3V14z" />
   </svg>,
-
 ];
 
 const templates = [
-  <All key="all"/>,
-  <UiUxDesign key="uiux" />,
+  <All key="all" />,
   <WebDevelopment key="webdev" />,
+  <UiUxDesign key="uiux" />,
   <SocialMediaMarketing key="social" />,
   <AppDevelopment key="app" />,
-  
 ];
 
 const AnimatedTabsSection = () => {
@@ -83,7 +75,10 @@ const AnimatedTabsSection = () => {
     const menuRect = menu.getBoundingClientRect();
 
     const left =
-      itemRect.left - menuRect.left + itemRect.width / 2 - border.offsetWidth / 2;
+      itemRect.left -
+      menuRect.left +
+      itemRect.width / 2 -
+      border.offsetWidth / 2;
 
     border.style.transform = `translateX(${left}px)`;
   };
@@ -129,9 +124,7 @@ const AnimatedTabsSection = () => {
         </svg>
       </div>
 
-      <div className="content-container">
-        {templates[activeIndex]}
-      </div>
+      <div className="content-container">{templates[activeIndex]}</div>
     </div>
   );
 };

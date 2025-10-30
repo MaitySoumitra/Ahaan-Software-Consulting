@@ -3,6 +3,11 @@ import { Container, Row } from "react-bootstrap";
 import "./FirstBanner.css";
 const FloatingBalls = () => {
   
+ 
+ 
+ 
+
+ 
   return (
     <div
       className="wave-shape d-flex justify-content-center align-items-center position-relative overflow-hidden bg-dark"

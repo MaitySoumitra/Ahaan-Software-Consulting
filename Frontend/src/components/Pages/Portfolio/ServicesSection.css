@@ -6,16 +6,16 @@
 
 /* Heading styles */
 .services-section h2 {
-  font-size: 2.2rem;
+
   font-weight: 700;
   color: #C7892B;
 }
 
 .services-section p {
-  font-size: 1rem;
+ 
   color: #6c757d;
   margin-top: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 /* Card styles */

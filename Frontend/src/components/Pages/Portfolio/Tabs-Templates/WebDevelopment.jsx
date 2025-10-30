@@ -4,6 +4,7 @@ import "./WebDevelopment.css"; // Custom CSS
 
 const WebDevelopment = () => {
   const imageLinks = [
+    { url: "https://ahaanmedia.com/asc/Landing/Blueprint.png", link: "https://www.blueprintecosys.com/" },
     { url: "https://ahaanmedia.com/asc/Landing/BNP.png", link: "https://www.bnpcoefficient.com/" },
     { url: "https://ahaanmedia.com/asc/Landing/Innovare.png", link: "https://innovare-group.com/" },
     { url: "https://ahaanmedia.com/asc/Landing/C2V.png", link: "https://c2v.ahaanmedia.com/" },

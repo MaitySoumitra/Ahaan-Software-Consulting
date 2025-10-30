@@ -37,7 +37,7 @@ const AppContent = () => {
 
   return (
     <>
-      {showPopup && <WindowPopup onClose={() => setShowPopup(false)} />}
+      {/* {showPopup && <WindowPopup onClose={() => setShowPopup(false)} />} */}
       {/* <CustomCursor /> */}
 
       {/* Show Header and Footer only when not in excluded routes */}

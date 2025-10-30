@@ -8,7 +8,7 @@
 
 .phone-number, .email {
     margin-right: 20px;
-    font-size: 16px;
+    font-size: 14px;
     color: #fff !important;
    
    
@@ -16,7 +16,9 @@
 
 .icon-spacing {
     margin-right: 8px; 
+    color: #eda702;
 }
+
 
 .follow-us {
     margin-right: 15px;
@@ -27,7 +29,7 @@
 
 .social-icon {
     margin-left: 15px;
-    color: #fff;
+    color: #eda702;
     font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -44,6 +46,10 @@
 @media (max-width: 768px) {
     .top-header{
         display:none !important;
+    }
+    span.phone-number{
+        font-size:12px !important;
+
     }
     
     

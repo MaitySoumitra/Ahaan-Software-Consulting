@@ -187,6 +187,18 @@ textarea.form-control::placeholder {
   transform: scale(1.1);
 }
 
+.whatsapp-link {
+  color: #eda702;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.whatsapp-link:hover {
+  text-decoration: none;
+  color: #d29403; /* optional darker shade on hover */
+}
+
+
 
 
 @media (max-width: 991px) {

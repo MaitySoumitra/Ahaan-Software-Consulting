@@ -28,7 +28,6 @@
     color: #C7892B;
     font-family: 'Outfit', sans-serif;
     margin: 0;
-    line-height: 50px;
   }
   
   .carousel-subtitle {
@@ -104,7 +103,7 @@
     }
   }
   
-  @media (max-width: 576px) {
+  @media (max-width: 767px) {
     .carousel-slide {
       flex: 0 0 100%;
       margin-top: 70px;
@@ -119,8 +118,13 @@
     }
   
     .carousel-subtitle {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
+      margin-top: 20px;
       
     }
+    .carousel-track{
+      margin-top: 50px !important;
+    }
+   
   }
   

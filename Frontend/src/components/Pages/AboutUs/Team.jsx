@@ -9,7 +9,7 @@ const teamMembers = [
     "name": "Vishal",
     "position": "CEO & Founder",
     "description": "Vishal Jaiswal is the CEO, Founder, and Managing Director of Ahaan Software Consulting. A visionary leader, he drives strategic growth, innovation, and team excellence. With a focus on delivering impactful software solutions, Vishal leads the company toward continued success in the ever-evolving technology landscape.",
-    "image": "https://ahaanmedia.com/asc/teams/Vishal.png"
+    "image": "https://ahaanmedia.com/asc/teams/Vishal_J.png"
   },
   {
     "name": "Soumya",

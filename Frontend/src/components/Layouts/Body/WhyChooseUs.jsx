@@ -23,10 +23,10 @@ const WhyChooseUs = () => {
             </p>
           </div>
 
-          <Row className="mt-4">
+          <Row className="">
             <Col md={6} className="">
               <Card className="border-0">
-                <Card.Body>
+                <Card.Body className="p-0">
                   <Row className="align-items-center">
                     <Col xs="auto">
                       <LuChartNoAxesCombined
@@ -55,7 +55,7 @@ const WhyChooseUs = () => {
 
             <Col md={6} className="">
               <Card className="border-0">
-                <Card.Body>
+                <Card.Body className="p-0">
                   <Row className="align-items-center">
                     <Col xs="auto">
                       <Si1001Tracklists size={50}
@@ -82,7 +82,7 @@ const WhyChooseUs = () => {
 
             <Col md={6} className="">
               <Card className="border-0">
-                <Card.Body>
+                <Card.Body className="p-0">
                   <Row className="align-items-center">
                     <Col xs="auto">
                       <BsMegaphone size={50}
@@ -109,7 +109,7 @@ const WhyChooseUs = () => {
 
             <Col md={6} className="">
               <Card className="border-0">
-                <Card.Body>
+                <Card.Body className="p-0">
                   <Row className="align-items-center">
                     <Col xs="auto">
                       <BsBoxSeam size={50}
