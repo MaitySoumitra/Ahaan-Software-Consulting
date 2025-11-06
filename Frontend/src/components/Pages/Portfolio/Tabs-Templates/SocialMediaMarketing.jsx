@@ -19,7 +19,7 @@ const SocialMediaMarketing = () => {
     <div className="smm-gallery container py-1">
       {/* Heading Section */}
       <div className="text-center mb-5">
-        <h2 className="fw-bold">Social Media Marketing Designs</h2>
+        <h2 className="fw-bold  portfolio-title">Social Media Marketing Designs</h2>
         <p className="text-muted">A showcase of engaging and creative social media designs</p>
       </div>
 

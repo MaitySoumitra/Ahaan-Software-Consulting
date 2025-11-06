@@ -64,10 +64,11 @@ const Footer = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
-        padding: "50px 0 20px 0",
+        padding: "150px 0 20px 0",
       }}
     >
       <div className="container">
+
         <div className="row">
           {/* Logo & Newsletter */}
           <div className="col-md-4">
@@ -96,8 +97,10 @@ const Footer = () => {
                   required: "Email is required",
                 })}
               />
-              <div className="d-flex justify-content-center justify-content-md-start flex-col">
-                <button className="newsletter-button">Submit</button>
+              <div className="d-flex justify-content-start flex-col">
+                <button className="newsletter-button">
+                  <span>Submit</span>
+                </button>
               </div>
             </div>
           </div>
@@ -124,12 +127,13 @@ const Footer = () => {
               </h5>
               <FaAngleDown
                 className={`accordion-icon ${isQuickLinksOpen ? "open" : ""}`}
-                style={{ marginLeft: "auto" }}
+                style={{ marginLeft: "auto", color: "#fff" }}
               />
             </button>
             <ul
-              className={`footer-links ${isQuickLinksOpen ? "open" : ""
-                } d-md-block`}
+              className={`footer-links ${
+                isQuickLinksOpen ? "open" : ""
+              } d-md-block`}
             >
               <li className="quick-link-for-desktop">
                 <h5 className="footer-heading">QUICK LINKS</h5>
@@ -177,13 +181,14 @@ const Footer = () => {
               </h5>
               <FaAngleDown
                 className={`accordion-icon ${isContactUsOpen ? "open" : ""}`}
-                style={{ marginLeft: "auto" }}
+                style={{ marginLeft: "auto", color: "#fff" }}
               />
             </button>
 
             <div
-              className={`accordion-content ${isContactUsOpen ? "open" : ""
-                } d-md-block`}
+              className={`accordion-content ${
+                isContactUsOpen ? "open" : ""
+              } d-md-block`}
             >
               <h5 className="contact-us-heading-for-desktop footer-heading">
                 CONTACT US
@@ -191,10 +196,12 @@ const Footer = () => {
 
               <ul className="contact-info list-unstyled">
                 <li>
-                  <FaMapMarkerAlt className="footer-icon" /> Bengal Eco
-                  Intelligent Park, EM Block, Sector V, Kolkata-700 091
+                  <FaMapMarkerAlt className="footer-icon" />{" "}
+                  <p className="add">
+                    Bengal Eco Intelligent Park, EM Block, Sector V, Kolkata-700
+                    091
+                  </p>
                 </li>
-
               </ul>
               <ul className="contact-info list-unstyled">
                 <li className="d-flex align-items-center flex-nowrap">
@@ -230,7 +237,6 @@ const Footer = () => {
                 </li>
               </ul>
 
-
               <ul className="contact-info list-unstyled">
                 <li>
                   <FaEnvelope className="footer-icon" />
@@ -245,7 +251,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="footer-bottom mt-4 pt-3 border-top">
-          <p className="footer-bottom-text mb-2 text-center">
+          <p className="footer-bottom-text mb-2 text-center" style={{color:"#fff"}}>
             {isMobile
               ? "© 2025 Ahaan Software Consulting"
               : "© 2025 Ahaan Software, All rights reserved."}

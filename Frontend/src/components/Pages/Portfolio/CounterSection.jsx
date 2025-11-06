@@ -35,7 +35,10 @@ const CounterSection = () => {
       <div className="container">
         <div className="row align-items-center">
           {/* Left Column: Text and Headline */}
-          <div className="col-md-6 text-start content-left mb-5 mb-md-0">
+          <div className="col-md-6 text-start content-left mb-5 mb-md-0 section-header-tech">
+                    <h6 className="subtitle">
+          Achievement <span className="divider"></span>
+        </h6>
             <h2 className="title">
               Over <span className="highlight">100+</span> Projects Completed
             </h2>

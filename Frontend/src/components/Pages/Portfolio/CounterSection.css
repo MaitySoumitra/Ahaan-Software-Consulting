@@ -189,7 +189,7 @@
   }
 
   .title {
-    font-size: 1.8rem;
+    font-size: 1.8rem !important;
     text-align: center;
   }
 
@@ -236,7 +236,7 @@
   }
 
   .title {
-    font-size: 1.2rem;
+    font-size: 2rem !important;
     text-align: center;
   }
 

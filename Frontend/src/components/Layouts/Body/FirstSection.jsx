@@ -13,9 +13,18 @@ const clients = [
 
 const FirstSection = () => {
   return (
-    <Container className="selected-clients">
-      <label className="section1-client-label">Our Clients</label>
-      <div className="d-flex flex-wrap mt-md-4 mt-2">
+    <Container className="selected-clients section-header-tech">
+      <h6 className="subtitle">
+          Trusted Client <span className="divider"></span>
+        </h6>
+      <label className="title">Our Clients</label>
+         <p className="image-carousel-content">
+        We understand, collaborate, and empower! From complex Software
+        Development Service to Seamless Integration, experience how our next-gen
+        IT consulting and software solutions can transform and accelerate your
+        business.
+      </p>
+      <Row className="mt-4">
         {clients.map((client, index) => (
           <Col xs={4} sm={4} md={2} key={index} className="text-center">
             <div className="first-client-col">
@@ -27,13 +36,8 @@ const FirstSection = () => {
             </div>
           </Col>
         ))}
-      </div>
-      <p className="text-muted mx-auto mt-3 section1-content section1-content-p">
-        We understand, collaborate, and empower! From complex Software
-        Development Service to Seamless Integration, experience how our next-gen
-        IT consulting and software solutions can transform and accelerate your
-        business.
-      </p>
+      </Row>
+   
     </Container>
   );
 };

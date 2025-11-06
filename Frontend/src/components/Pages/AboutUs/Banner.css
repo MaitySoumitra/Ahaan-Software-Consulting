@@ -1,40 +1,128 @@
-/* Main Banner Heading */
-.banner-heading {
-  font-size: 6rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #ffffff;
+/* ============================================================= */
+/* ====================== GLOBAL RESET ======================== */
+/* ============================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Banner Container */
-.About-Banner {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 450px;
-  padding: 200px;
-  text-align: center;
+/* ============================================================= */
+/* ====================== BANNER SECTION ====================== */
+/* ============================================================= */
+.about-banner-section {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+  margin-top: -120px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
-/* About Section Background */
-.about-section {
-  background-color: #f8f9fa;
-  padding: 50px 20px;
+/* Dark overlay */
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
-/* Title Styling */
+/* ------------------------------------------------------------- */
+/* ====================== WAVE LAYERS ========================= */
+/* ------------------------------------------------------------- */
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-size: 1000px 120px;
+  background-repeat: repeat-x;
+  pointer-events: none;
+}
+
+/* SVG Wave (inline) */
+.wave {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 120' preserveAspectRatio='none'%3E%3Cpath d='M0,60 C150,20 350,100 500,60 C650,20 850,100 1000,60 L1000,120 L0,120 Z' fill='%23ffffff'/%3E%3C/svg%3E");
+}
+
+.wave.wave1 {
+  animation: wave 30s linear infinite;
+  z-index: 5;
+  opacity: 1;
+  bottom: 0;
+}
+.wave.wave2 {
+  animation: wave2 15s linear infinite;
+  z-index: 4;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+.wave.wave3 {
+  animation: wave 30s linear infinite;
+  z-index: 3;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+.wave.wave4 {
+  animation: wave2 5s linear infinite;
+  z-index: 2;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+
+@keyframes wave {
+  0%   { background-position-x: 0; }
+  100% { background-position-x: 1000px; }
+}
+@keyframes wave2 {
+  0%   { background-position-x: 0; }
+  100% { background-position-x: -1000px; }
+}
+
+/* ------------------------------------------------------------- */
+/* ====================== TEXT CONTENT ======================== */
+/* ------------------------------------------------------------- */
+.banner-heading {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  z-index: 6;
+  font-family: 'Outfit', sans-serif;
+}
+.banner-heading span {
+  -webkit-text-stroke: 2px #fff;
+  text-stroke: 2px #fff;
+}
+
+/* ------------------------------------------------------------- */
+/* ====================== BELOW BANNER ======================== */
+/* ------------------------------------------------------------- */
 .title {
-  font-size: 35px;
+  font-size: 50px !important;
   font-weight: 700;
-  color: #C7892B;
+  background: linear-gradient(40deg, #f9ae00, #3d2f0c, #d49500);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 4s ease-in-out infinite;
   font-family: 'Outfit', sans-serif;
   line-height: 47px;
 }
 
-/* Subtitle Styling */
+@keyframes gradientFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .subtitle {
   font-size: 25px;
   font-weight: 600;
@@ -43,7 +131,6 @@
   line-height: 40px;
 }
 
-/* Paragraph Description */
 .description {
   font-size: 16px;
   color: #555;
@@ -52,7 +139,6 @@
   text-align: left;
 }
 
-/* Mission and Vision Headings */
 .mission-title,
 .vision-title {
   font-size: 1.25rem;
@@ -61,7 +147,6 @@
   font-family: 'Outfit', sans-serif;
 }
 
-/* Responsive Images */
 .img-fluid {
   width: 100%;
   max-width: 570px;
@@ -69,117 +154,148 @@
   border-radius: 10px;
 }
 
-/* Hide mobile image on desktop */
 .team-discus-mobile {
   display: none;
 }
 
-/* Responsive Styles */
+/* ------------------------------------------------------------- */
+/* ====================== RESPONSIVE ========================== */
+/* ------------------------------------------------------------- */
 @media (max-width: 991px) {
-  .title {
-    font-size: 28px;
-    line-height: normal;
-  }
-
-  .subtitle {
-    font-size: 20px;
-    line-height: normal;
-  }
-
-  .description {
-    font-size: 14px;
-  }
-
-  .mission-title,
-  .vision-title {
-    font-size: 18px;
-    margin: 0;
-  }
-
-  .About-Banner {
-    height: 350px;
-    padding: 100px 20px;
-  }
-
-  .banner-heading {
-    font-size: 3rem;
-  }
+  .about-banner-section { height: 350px; }
+  .banner-heading { font-size: 3rem; }
+  .title { font-size: 28px; line-height: normal; }
+  .subtitle { font-size: 20px; line-height: normal; }
+  .description { font-size: 14px; }
+  .mission-title, .vision-title { font-size: 18px; }
 }
 
 @media (max-width: 767px) {
-  .team-discus-desktop {
-    display: none;
-  }
+  .team-discus-desktop { display: none; }
+  .team-discus-mobile { display: block; }
+  .about-banner-section { height: 250px; }
+  .banner-heading { font-size: 2rem; }
+  .title { font-size: 24px; }
+  .subtitle { font-size: 18px; }
+  .description { font-size: 12px; }
+}
 
-  .team-discus-mobile {
-    display: block;
-  }
+@media (max-width: 576px) {
+  .about-banner-section { height: 200px; }
+  .banner-heading { font-size: 1.75rem; line-height: 1.2; }
+  .banner-heading span { -webkit-text-stroke: 1px #fff; }
+  .title { font-size: 22px; line-height: 1.3; }
+  .subtitle { font-size: 20px; line-height: 1.3; text-align: center; }
+  .description { font-size: 12.5px; line-height: 1.5; }
+  .mission-title, .vision-title { font-size: 20px; text-align: center; }
+  .img-fluid { max-width: 100%; border-radius: 8px; }
+  .team-discus-mobile { margin-top: 20px; }
+  .wave { height: 80px; background-size: 800px 80px; }
+}
 
-  .About-Banner {
-    height: 250px;
-    padding: 80px 15px;
-  }
 
-  .banner-heading {
-    font-size: 2rem;
-  }
 
-  .title {
-    font-size: 24px;
-  }
 
-  .subtitle {
-    font-size: 18px;
-  }
+/* Subtitle with Animated Divider */
+.section-header {
+  margin-bottom: 1rem;
+}
 
-  .description {
-    font-size: 12px;
+.section-header .subtitle {
+  font-size: 1.3rem;
+  color: #000;
+  font-weight: 700;
+  font-family: "Outfit", sans-serif;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.section-header .divider {
+  display: inline-block;
+  width: 0;
+  height: 3px;
+  background: #ffbf00;
+  margin-left: 10px;
+  vertical-align: middle;
+  animation: expandLine 1.5s ease-in-out infinite alternate;
+}
+
+/* .section-header .divider::before,
+.section-header .divider::after {
+  display: inline-block;
+  width: 0;
+  height: 3px;
+  background: #ffbf00;
+  margin-left: 10px;
+  vertical-align: middle;
+  animation: expandLine 1.5s ease-in-out infinite alternate;
+} */
+
+/* .section-header .divider::after {
+  animation-delay: 0.8s;
+} */
+
+@keyframes expandLine {
+  0% {
+    width: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 50px;
+    opacity: 1;
+  }
+}
+
+/* Title Styling */
+.section-header .title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  font-family: "Outfit", sans-serif;
+}
+
+/* Optional small subtext under title */
+.subtext {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .about-banner-section {
+    height: 70vh;
+  }
+  .wave {
+    height: 120px;
+    background-size: 900px 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-banner-section {
+    height: 60vh;
+  }
+  .wave {
+    height: 100px;
+    background-size: 800px 100px;
   }
 }
 
 @media (max-width: 576px) {
-  .About-Banner {
-    height: 200px;
-    padding: 60px 10px;
+  .about-banner-section {
+    height: 50vh;
   }
-
   .banner-heading {
-    font-size: 1.75rem;
+    font-size: clamp(1.5rem, 7vw, 2.5rem);
     line-height: 1.2;
   }
-
-  .about-section {
-    padding: 30px 15px;
+  .banner-heading span {
+    -webkit-text-stroke: 1px #fff;
   }
-
-  .title {
-    font-size: 22px;
-    line-height: 1.3;
-  }
-
-  .subtitle {
-    font-size: 20px;
-    line-height: 1.3;
-    text-align: center;
-  }
-
-  .description {
-    font-size: 12.5px;
-    line-height: 1.5;
-  }
-
-  .mission-title,
-  .vision-title {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .img-fluid {
-    max-width: 100%;
-    border-radius: 8px;
-  }
-
-  .team-discus-mobile {
-    margin-top: 20px;
+  .wave {
+    height: 80px;
+    background-size: 700px 80px;
   }
 }

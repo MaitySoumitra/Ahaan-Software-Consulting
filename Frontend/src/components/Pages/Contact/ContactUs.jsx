@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa";
 import "./ContactUs.css";
 import WorldMap from "./WorldMap";
+import ContactBanner from "./ContactBanner";
 
 const ContactUs = () => {
   const form = useRef();
@@ -70,6 +71,7 @@ const ContactUs = () => {
 
   return (
     <>
+      <ContactBanner />
       <Container className="contact-section">
         <Row className="justify-content-center">
           <Col md={10} lg={11}>
@@ -90,42 +92,41 @@ const ContactUs = () => {
                 </div>
 
                 <div className="contact-item">
-  <FaPhoneVolume className="contact-icon" />
-  <div>
-    <strong>Phone:</strong>
-    <p>
-      <a
-        href="https://wa.me/13214210740"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="whatsapp-link"
-      >
-        +1 321 421 0740
-      </a>
-    </p>
-    <p>
-      <a
-        href="https://wa.me/919830371143"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="whatsapp-link"
-      >
-        +91 98303 71143
-      </a>
-    </p>
-    <p>
-      <a
-        href="https://wa.me/6590745876"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="whatsapp-link"
-      >
-        +65 9074 5876
-      </a>
-    </p>
-  </div>
-</div>
-
+                  <FaPhoneVolume className="contact-icon" />
+                  <div>
+                    <strong>Phone:</strong>
+                    <p>
+                      <a
+                        href="https://wa.me/13214210740"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="whatsapp-link"
+                      >
+                        +1 321 421 0740
+                      </a>
+                    </p>
+                    <p>
+                      <a
+                        href="https://wa.me/919830371143"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="whatsapp-link"
+                      >
+                        +91 98303 71143
+                      </a>
+                    </p>
+                    <p>
+                      <a
+                        href="https://wa.me/6590745876"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="whatsapp-link"
+                      >
+                        +65 9074 5876
+                      </a>
+                    </p>
+                  </div>
+                </div>
 
                 <div className="contact-item">
                   <FaMapMarkerAlt className="contact-icon" />

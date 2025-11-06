@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import './BlogDetails.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import BlogBanner from './BlogBanner';
 
 const BlogDetails = () => {
   const { slug } = useParams();
@@ -50,6 +51,8 @@ const BlogDetails = () => {
   const pageUrl = `${window.location.origin}/blog/${slug}`;
 
   return (
+    <>
+    <BlogBanner/>
     <div className="container py-5 blog-details-container">
       {/* Open Graph Meta Tags */}
       <Helmet>
@@ -90,6 +93,7 @@ const BlogDetails = () => {
         dangerouslySetInnerHTML={{ __html: blog.content }}
       />
     </div>
+    </>
   );
 };
 

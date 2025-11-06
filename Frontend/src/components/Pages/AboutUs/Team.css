@@ -1,88 +1,100 @@
-/* Team Card */
-.team-card {
-  height: 300px;
-  position: relative;
-  min-width: 300px;
-  box-shadow: 0 4px 10px #C7892B;
-  transition: transform 0.3s ease;
-  border-radius: 10px;
+/* ========================= */
+/* TEAM CAROUSEL & CARD AREA */
+/* ========================= */
+
+.team-carousel-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  font-family: 'Outfit', sans-serif;
 }
 
-.text-primary-team {
-  color: #C7892B !important;
-  font-family: outfit;
-  font-size: 35px !important;
-  line-height: 50px;
-  text-align: center;
+.team-carousel-section .title {
+  color: #000;
+  font-size: 35px;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+  margin-bottom: 10px;
 }
 
-.team-text {
-  font-family: outfit;
-  text-align: center;
-  color: black;
+.team-carousel-section p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
 }
 
-.member-name {
-  font-size: 18px;
-}
+/* Carousel Card */
+.team-carousel-card {
+  background: #ffffff;
+  border-radius: 15px;
 
-.text-muted-position {
-  text-align: left;
-}
-
-.fw-bold {
-  font-family: outfit;
-}
-
-.team-member {
-  position: relative;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  margin: 5px;
-}
-
-.team-member:hover {
-  transform: translateY(-5px);
-}
-
-.team-background-img {
-  border-radius: 0 !important;
-}
-
-.team-img {
-  position: relative;
-  height: 200px;
-}
-
-.team-img img {
-  position: absolute;
-  top: 50px;
-  left: 30px;
-  max-width: 100px;
-  max-height: 100px;
-  border-radius: 50%;
-  border: 2px solid #C7892B !important;
-}
-
-.team-social-icons {
-  color: #C7892B;
-  font-size: 1rem !important;
-  background-color: #ffffff;
-  border: 3px solid #C7892B;
-}
-
-.linkedin-icon {
-  color: #0077b5;
-  font-size: 30px;
+  transition: all 0.3s ease-in-out;
+  padding: 25px 15px;
   cursor: pointer;
 }
 
+.team-carousel-card:hover {
+  transform: translateY(-15px);
+  
+}
+
+.team-carousel-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 25px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.team-carousel-card:hover .team-carousel-img {
+  transform: scale(1.05);
+}
+
+.team-carousel-card h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.team-carousel-card p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 0;
+}
+
+/* Swiper Pagination/Scrollbar Hidden */
+.swiper-pagination,
+.swiper-scrollbar {
+  display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-carousel-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-carousel-card {
+    padding: 20px;
+  }
+
+  .team-carousel-card h5 {
+    font-size: 16px;
+  }
+
+  .team-carousel-card p {
+    font-size: 14px;
+  }
+}
+
 /* ======================= */
-/* Bootstrap Modal Fixes   */
+/* KEEPING YOUR MODAL AS IS */
 /* ======================= */
+
 .modal.show .modal-dialog {
   display: flex !important;
   align-items: center;
@@ -170,12 +182,21 @@
   opacity: 0.8;
 }
 
-
+/* ======================= */
+/* RESPONSIVE MODAL FIXES  */
+/* ======================= */
 
 @media (max-width: 576px) {
-  .container.py-5.team-sections{
+  .team-carousel-section {
+    padding-top: 15rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .container.py-5.team-sections {
     padding-top: 20rem !important;
   }
+
   .modal-body {
     padding: 10px 10px;
   }
@@ -183,8 +204,8 @@
   .modal-body img {
     width: 90px !important;
     height: 90px !important;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   .modal-title {
@@ -206,6 +227,7 @@
     font-size: 16px;
     padding: 10px;
   }
+
   .modal-dialog {
     width: 95% !important;
     max-width: 95% !important;

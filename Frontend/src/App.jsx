@@ -43,7 +43,7 @@ const AppContent = () => {
       {/* Show Header and Footer only when not in excluded routes */}
       {!hideHeaderFooterRoutes.includes(location.pathname) && (
         <>
-          <TopHeader />
+          {/* <TopHeader /> */}
           <Header />
         </>
       )}

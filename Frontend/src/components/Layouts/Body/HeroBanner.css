@@ -1,0 +1,386 @@
+/* ===========================
+   HERO BANNER CONTAINER
+   =========================== */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 110vh;
+  background: radial-gradient(circle at center, #061033 0%, #03020a 85%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin-top: -200px;
+}
+
+/* ===========================
+   CANVAS (STARS + NETWORK)
+   =========================== */
+.stars,
+.network {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.stars {
+  z-index: 0;
+}
+
+.network {
+  z-index: 4;
+  top: 80px;
+}
+
+/* ===========================
+   EARTH WRAPPER
+   =========================== */
+.earth-wrapper {
+  position: absolute;
+  bottom: -800px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1400px;
+  height: 1500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ===========================
+   MAIN GLOBE
+   =========================== */
+.earth {
+  width: 1400px;
+  height: 1500px;
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(
+    circle at 50% 20%,
+    #6bbfff 0%,
+    #4da9ff 25%,
+    #357dff 45%,
+    #1e3a8a 70%,
+    #0f1a3d 90%,
+    #000000 100%
+  );
+  box-shadow:
+    inset 0 -120px 200px rgba(0, 0, 0, 0.9),
+    inset 0 80px 140px rgba(255, 255, 255, 0.15),
+    0 0 300px 100px rgba(80, 150, 255, 0.3),
+    0 0 500px 80px rgba(100, 180, 255, 0.15);
+  z-index: 2;
+  opacity: 0.98;
+}
+
+/* ===========================
+   TOP LIGHT REFLECTION
+   =========================== */
+.earth-top-light {
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 10%,
+    rgba(200, 240, 255, 0.9) 0%,
+    rgba(140, 200, 255, 0.6) 30%,
+    rgba(100, 180, 255, 0.3) 50%,
+    transparent 70%
+  );
+  filter: blur(90px);
+  z-index: 4;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* ===========================
+   REFLECTION ARC (WATER LIGHT)
+   =========================== */
+.earth-reflection-arc {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%) rotate(-50deg);
+  width: 600px;
+  height: 180px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.1) 80%,
+    transparent 100%
+  );
+  filter: blur(30px);
+  border-radius: 50%;
+  z-index: 6;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* ===========================
+   DARK BOTTOM SHADOW
+   =========================== */
+.earth::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 90%;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at 50% 20%,
+    transparent 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0.8) 70%,
+    #000 100%
+  );
+  filter: blur(80px);
+  z-index: 5;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+/* ===========================
+   GLOW AURA
+   =========================== */
+.earth-glow {
+  position: absolute;
+  bottom: -400px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1600px;
+  height: 1200px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(80, 160, 255, 0.35) 0%,
+    rgba(60, 120, 255, 0.2) 50%,
+    transparent 80%
+  );
+  filter: blur(140px);
+  opacity: 0.7;
+  z-index: 1;
+  animation: glowPulse 10s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  0% {
+    opacity: 0.65;
+    filter: blur(130px);
+  }
+  100% {
+    opacity: 0.75;
+    filter: blur(150px);
+  }
+}
+
+/* ===========================
+   RESPONSIVE STYLING
+   =========================== */
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .earth-wrapper {
+    width: 1000px;
+    height: 1000px;
+    bottom: -500px;
+  }
+  .earth {
+    width: 900px;
+    height: 900px;
+  }
+  .earth-top-light {
+    width: 650px;
+    height: 480px;
+  }
+  .earth-reflection-arc {
+    width: 450px;
+    height: 140px;
+    top: 18%;
+  }
+  .earth-glow {
+    width: 1200px;
+    height: 900px;
+    bottom: -350px;
+  }
+}
+
+/* Mobiles (max-width: 768px) */
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 100vh;
+    margin-top: -150px;
+  }
+
+  .earth-wrapper {
+    width: 1000px;
+    height: 1000px;
+    bottom: -300px;
+  }
+
+  .earth {
+    width: 1000px;
+    height: 1000px;
+    box-shadow:
+      inset 0 -80px 120px rgba(0, 0, 0, 0.9),
+      inset 0 50px 100px rgba(255, 255, 255, 0.15),
+      0 0 150px 60px rgba(80, 150, 255, 0.3),
+      0 0 250px 40px rgba(100, 180, 255, 0.15);
+  }
+
+  .earth-top-light {
+    width: 400px;
+    height: 300px;
+    filter: blur(60px);
+  }
+
+  .earth-reflection-arc {
+    width: 280px;
+    height: 100px;
+  }
+
+  .earth-glow {
+    width: 800px;
+    height: 600px;
+    bottom: -250px;
+  }
+}
+
+/* Small Mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+  .hero-banner {
+    height: 100vh;
+    margin-top: -120px;
+  }
+
+  .earth-wrapper {
+    width: 700px;
+    height: 700px;
+    bottom: -200px;
+  }
+
+  .earth {
+    width: 700px;
+    height: 700px;
+  }
+
+  .earth-top-light {
+    width: 320px;
+    height: 240px;
+  }
+
+  .earth-reflection-arc {
+    width: 220px;
+    height: 80px;
+    top: 20%;
+  }
+
+  .earth-glow {
+    width: 600px;
+    height: 400px;
+    bottom: -200px;
+  }
+}
+
+/* Extra Small (foldables etc) */
+@media (max-width: 360px) {
+  .earth-wrapper {
+    width: 600px;
+    height: 600px;
+    bottom: -180px;
+  }
+
+  .earth-top-light {
+    width: 260px;
+    height: 200px;
+  }
+
+  .earth-glow {
+    width: 500px;
+    height: 350px;
+    bottom: -180px;
+  }
+}
+
+
+
+
+/* * {
+  margin: 0;
+  padding: 0;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+section .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
+  background-size: 1000px 100px
+}
+section .wave.wave1 {
+  animation: wave 30s linear infinite;
+  z-index: 1000;
+  opacity: 1;
+  animation-delay: 0s;
+  bottom: 0;
+}
+section .wave.wave2 {
+  animation: wave2 15s linear infinite;
+  z-index: 999;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+section .wave.wave3 {
+  animation: wave 30s linear infinite;
+  z-index: 998;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+section .wave.wave4 {
+  animation: wave2 5s linear infinite;
+  z-index: 997;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+@keyframes wave{
+  0%{
+    background-position-x: 0px; 
+  }
+  100%{
+    background-position-x: 1000px; 
+  }
+}
+@keyframes wave2{
+  0%{
+    background-position-x: 0px; 
+  }
+  100%{
+    background-position-x: -1000px; 
+  }
+} */
+ 

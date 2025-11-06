@@ -1,103 +1,180 @@
-.industry-banner {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 450px;
-  padding: 200px;
-  text-align: center;
+/* ============================================================= */
+/* ====================== GLOBAL RESET ======================== */
+/* ============================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================================= */
+/* ====================== BANNER SECTION ====================== */
+/* ============================================================= */
+.industry-banner-section {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  margin-top: -120px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.banner-heading {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #ffffff;
-  font-family: outfit;
+/* Dark overlay */
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
+/* ------------------------------------------------------------- */
+/* ====================== WAVE LAYERS ========================= */
+/* ------------------------------------------------------------- */
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-size: 1000px 120px;
+  background-repeat: repeat-x;
+  pointer-events: none;
+}
+
+/* SVG Wave (inline data URL) */
+.wave {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 120' preserveAspectRatio='none'%3E%3Cpath d='M0,60 C150,20 350,100 500,60 C650,20 850,100 1000,60 L1000,120 L0,120 Z' fill='%23ffffff'/%3E%3C/svg%3E");
+}
+
+/* Wave layers */
+.wave.wave1 {
+  animation: wave 30s linear infinite;
+  z-index: 5;
+  opacity: 1;
+  bottom: 0;
+}
+.wave.wave2 {
+  animation: wave2 15s linear infinite;
+  z-index: 4;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 10px;
+}
+.wave.wave3 {
+  animation: wave 30s linear infinite;
+  z-index: 3;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 15px;
+}
+.wave.wave4 {
+  animation: wave2 5s linear infinite;
+  z-index: 2;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 20px;
+}
+
+/* Animations */
+@keyframes wave {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 1000px; }
+}
+@keyframes wave2 {
+  0% { background-position-x: 0; }
+  100% { background-position-x: -1000px; }
+}
+
+/* ------------------------------------------------------------- */
+/* ====================== TEXT CONTENT ======================== */
+/* ------------------------------------------------------------- */
+.industry-banner-content {
+  position: relative;
+  z-index: 6;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.industry-banner-heading {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.banner-heading span {
+  -webkit-text-stroke: 2px #fff;
+  text-stroke: 2px #fff;
+}
+
+/* ------------------------------------------------------------- */
+/* ====================== BELOW BANNER ======================== */
+/* ------------------------------------------------------------- */
 .industry-section {
   max-width: 1300px;
   margin: 50px auto;
   padding: 20px;
 }
-
 .industry-heading {
-  font-size: 35px;
   font-weight: 700;
-  color: #CC9231;
-  line-height: 55px;
-  font-family: outfit;
-  text-align: center;
+  font-size: 43px;
+  background: linear-gradient(90deg, #000000, #cfa74a, #000000);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 4s ease-in-out infinite;
+  font-family: "Outfit", sans-serif;
+  line-height: 1.3;
+  margin-bottom: 30px;
+  text-align: left;
+  text-shadow: 0 0 8px rgba(207, 167, 74, 0.3);
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .industry-text {
   font-size: 16px;
   line-height: 1.6;
   color: #000 !important;
-  font-family: outfit !important;
-  text-align: center;
+  font-family: "Outfit", sans-serif !important;
 }
 
-.text {
-  text-align: justify;
-  width: 90%;
-  margin: auto;
+/* ------------------------------------------------------------- */
+/* ====================== RESPONSIVE ========================== */
+/* ------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .industry-banner-section { height: 600px; }
+  .industry-banner-heading { font-size: 4.5rem; }
 }
 
 @media (max-width: 991px) {
-  .banner-heading {
-    font-size: 3rem;
-  }
-
-  .industry-heading {
-    font-size: 28px;
-    line-height: 40px;
-  }
-  
-  .industry-text {
-    font-size: 14px;
-  }
+  .industry-banner-section { height: 500px; }
+  .industry-banner-heading { font-size: 3.5rem; }
+  .industry-heading { font-size: 30px; line-height: 40px; }
+  .industry-text { font-size: 15px; }
 }
 
 @media (max-width: 768px) {
-  .industry-banner {
-    height: 300px;
-    padding: 10px;
-  }
-  
-  .banner-heading {
-    font-size: 2rem;
-  }
-
-  .industry-heading {
-    font-size: 24px;
-    line-height: 35px;
-  }
-  
-  .industry-text {
-    font-size: 14px;
-  }
+  .industry-banner-section { height: 380px; }
+  .industry-banner-heading { font-size: 50px; line-height: 1.2; }
+  .wave { height: 90px; background-size: 800px 90px; }
+  .industry-heading { font-size: 25px; line-height: 35px; }
 }
 
 @media (max-width: 576px) {
-  .industry-banner {
-    height: 250px;
-    padding: 5px;
-  }
-  
-  .banner-heading {
-    font-size: 1.8rem;
-  }
-
-  .industry-heading {
-    font-size: 20px;
-    line-height: 30px;
-  }
-  
-  .industry-text {
-    font-size: 12px;
-  }
+  .industry-banner-section { height: 320px; }
+  .industry-banner-heading { font-size: 2rem; }
+  .banner-heading span { -webkit-text-stroke: 1px #fff; }
+  .wave { height: 70px; background-size: 700px 70px; }
+  .industry-heading { font-size: 20px; line-height: 30px; }
+  .industry-text { font-size: 13px; }
 }

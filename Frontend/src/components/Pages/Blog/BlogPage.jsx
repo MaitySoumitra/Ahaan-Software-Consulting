@@ -147,7 +147,7 @@ const BlogPage = () => {
 
   return (
     <Container>
-      <Row className="mb-4 p-3">
+      <Row className="mb-2 p-3 align-items-stretch mt-5">
         {paginatedBlogs.map((blog) => {
           const slug = createSlug(blog.title);
           const blogUrl = `${window.location.origin}/blog/${slug}`;

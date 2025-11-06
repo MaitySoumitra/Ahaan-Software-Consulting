@@ -13,7 +13,7 @@ import Manufacturing from "./Manufacturing";
 import Media from "./Media";
 
 const TabSection = () => {
-  const [activeTab, setActiveTab] = useState("Tax Management");
+  const [activeTab, setActiveTab] = useState("E-Commerce");
 
   const tabs = [
     "E-Commerce",

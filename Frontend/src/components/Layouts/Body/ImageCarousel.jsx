@@ -25,12 +25,15 @@ const ImageCarousel = () => {
   };
 
   return (
-    <div className="container py-5">
-      <h2 className="text-center mb-4 gallery-heading">
+    <div className="container py-5 section-header-tech">
+      <h6 className="subtitle">
+          Business Show Event <span className="divider"></span>
+        </h6>
+      <h2 className="text-center mb-4 gallery-heading title">
         The Asia Business Show Singapore 2024
       </h2>
 
-      <p className="text-muted mx-auto mt-3 section1-content section1-content-p">
+      <p className="image-carousel-content"  >
         Driven to be future-ready, and push beyond the building blocks of
         technology, digital, and marketing, Ahaan Software Consulting proudly
         participated in The Asia Business Show 2024 in Singapore—the powerhouse

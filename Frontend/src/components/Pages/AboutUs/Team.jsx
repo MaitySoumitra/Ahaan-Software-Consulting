@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Modal } from "react-bootstrap";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/autoplay";
 import "./Team.css";
-import { FaLinkedinIn } from "react-icons/fa6";
-import { Modal, Button } from "react-bootstrap";
 
 const teamMembers = [
   {
@@ -55,96 +57,72 @@ const teamMembers = [
     "image": "https://ahaanmedia.com/asc/teams/Sugam.png"
   }
 ];
-
 const MeetOurTeam = () => {
   const [show, setShow] = useState(false);
   const [selectedMember, setSelectedMember] = useState(null);
 
-  const handleClose = () => setShow(false);
   const handleShow = (member) => {
     setSelectedMember(member);
     setShow(true);
   };
 
+  const handleClose = () => setShow(false);
+
   return (
-    <div className="container py-5 team-sections">
+    <div className="container py-5 team-carousel-section section-header-tech">
+      <h6 className="subtitle">
+          Teams <span className="divider"></span>
+        </h6>
       <h2 className="text-center title">Meet Our Team</h2>
-      <p className="text-center text-muted mb-4 description">
-        Our talented team is here to bring your vision to life!
+         <p className="image-carousel-content"  >
+        Driven to be future-ready, and push beyond the building blocks of
+        technology, digital, and marketing, Ahaan Software Consulting proudly
+        participated in The Asia Business Show 2024 in Singapore—the powerhouse
+        of innovation and enterprise!
       </p>
-      <div className="row">
-        {teamMembers.map((member, index) => (
-          <div key={index} className="col-lg-4 col-md-6 col-12 mb-4">
+
+      {/* Swiper Carousel */}
+      <Swiper
+        modules={[Autoplay]}
+        spaceBetween={30}
+        slidesPerView={5}
+        slidesPerGroup={1}
+        loop={true}
+        speed={1000}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        breakpoints={{
+          0: { slidesPerView: 2 },
+          576: { slidesPerView: 3 },
+          992: { slidesPerView: 4 },
+          1200: { slidesPerView: 5 },
+        }}
+      >
+        {teamMembers.map((member, idx) => (
+          <SwiperSlide key={idx}>
             <div
-              className="team-card position-relative overflow-hidden cursor-pointer"
+              className="team-carousel-card text-center"
               onClick={() => handleShow(member)}
-              style={{ cursor: "pointer" }}
             >
-              <div
-                className="team-bg position-absolute top-0 start-0 w-100"
-                style={{ height: "150px" }}
-              >
-                <img
-                  src="https://ahaanmedia.com/asc/All/ascbackground.png"
-                  alt="Background"
-                  className="img-fluid w-100 team-background-img"
-                  style={{
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "0",
-                  }}
-                />
-              </div>
-
-              <div className="team-img position-relative text-center">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="rounded-circle border border-white"
-                  style={{
-                    width: "100px",
-                    height: "100px",
-                    objectFit: "cover",
-                    marginTop: "60px",
-                  }}
-                />
-              </div>
-
-              <div className="card-body pt-3 d-flex justify-content-between align-items-center">
-                <div style={{ position: "relative", left: "30px" }}>
-                  <h5 className="card-title fw-bold">{member.name}</h5>
-                  <p className="card-text text-muted">{member.position}</p>
-                </div>
-                <div
-                  className="team-social-icons"
-                  style={{
-                    position: "relative",
-                    right: "30px",
-                    backgroundColor: "black",
-                    borderRadius: "50%",
-                    padding: "4px",
-                    display: "inline-block",
-                  }}
-                >
-                  <FaLinkedinIn
-                    style={{
-                      color: "#C7892B",
-                      fontSize: "23px",
-                    }}
-                  />
-                </div>
-              </div>
+              <img
+                src={member.image}
+                alt={member.name}
+                className="team-carousel-img"
+              />
+              <h5 className="mt-3">{member.name}</h5>
+              <p className="text-muted">{member.position}</p>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
 
       {/* Modal */}
       <Modal className="about-modal" show={show} onHide={handleClose} centered>
         {selectedMember && (
           <>
-            <Modal.Header closeButton>
-            </Modal.Header>
+            <Modal.Header closeButton></Modal.Header>
             <Modal.Body className="text-center">
               <img
                 src={selectedMember.image}

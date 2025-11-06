@@ -132,7 +132,7 @@ textarea.form-control::placeholder {
 .custom-input .MuiOutlinedInput-root {
   border-radius: 12px;
   font-size: 15px;
-  background-color: #fff;
+  background-color: #ffffff00;
   transition: border-color 0.3s ease;
 }
 
@@ -150,7 +150,7 @@ textarea.form-control::placeholder {
 /* Style the input label */
 .custom-input .MuiInputLabel-root {
   font-size: 14px;
-  color: #000000;
+  color: #686868;
   font-family: outfit;
 }
 

@@ -142,7 +142,7 @@ const UiUxDesign = () => {
     <div className="uiux-gallery-container container py-1">
       {/* Heading Section */}
       <div className="text-center mb-5">
-        <h2 className="fw-bold">UI/UX Design Portfolio</h2>
+        <h2 className="fw-bold  portfolio-title">UI/UX Design Portfolio</h2>
         <p className="text-muted">Browse through our creative UI/UX layout designs</p>
       </div>
 

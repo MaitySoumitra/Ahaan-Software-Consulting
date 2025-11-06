@@ -1,10 +1,197 @@
-.total-project{
-    margin-top: 50px;
-   
-    
+.process-section {
+  padding: 60px 20px;
+  font-family: "Outfit", sans-serif;
+  
 }
-.total-project-card{
-    box-shadow: 0.3em 0.3em 0 #000;
-    border: 1px solid #000;
-   
+ 
+.process-row {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+ 
+@media (min-width: 768px) {
+  .process-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1024px) {
+  .process-section{
+    margin-top: 60px;
+  }
+}
+ 
+@media (min-width: 993px) {
+  .process-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+ 
+/* --- Card Wrapper --- */
+.we-do-col-div {
+  position: relative;
+  height: 180px;
+  overflow: visible;
+  transition: 0.4s;
+}
+ 
+/* --- Base Card --- */
+.webe-inner-div {
+  position: relative;
+  border-radius: 20px;
+  padding: 50px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 15px 40px;
+  overflow: hidden;
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  transform: translateY(-20px);
+}
+ 
+/* --- Gradient Backgrounds --- */
+.process-step-1-color .webe-inner-div {
+  background: linear-gradient(135deg, #62f55d, #00b7ff, #ff9100);
+}
+ 
+.process-step-2-color .webe-inner-div {
+  background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+}
+ 
+.process-step-3-color .webe-inner-div {
+  background: linear-gradient(135deg, #00c6ff, #0072ff, #0057b8);
+}
+ 
+.process-step-4-color .webe-inner-div {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+ 
+/* --- Stacked Layer Effect (::before, ::after) --- */
+.we-do-col-div::before {
+  width: 85%;
+}
+ 
+.we-do-col-div::after {
+  width: 75%;
+}
+ 
+.we-do-col-div::before {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 100%;
+  right: 0px;
+  left: 0px;
+  margin: 0 auto;
+  bottom: 0px;
+  background-color: #f2f2f2;
+  /* Light grey base color */
+  box-shadow: none;
+  border-radius: 15px;
+  transform: translateY(0);
+  transition: .5s cubic-bezier(.34, .27, .34, 1.44);
+  z-index: 1;
+  /* Middle layer */
+  transform: translateY(-5px);
+}
+ 
+.we-do-col-div::after {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 90%;
+  right: 0px;
+  left: 0px;
+  margin: 0 auto;
+  bottom: 0px;
+  background-color: #e5e5e5;
+  /* Slightly darker grey base color */
+  box-shadow: none;
+  border-radius: 15px;
+  transform: translateY(0);
+  transition: .5s cubic-bezier(.34, .27, .34, 1.44);
+  z-index: 0;
+  /* Lowest layer */
+  transform: translateY(5px);
+}
+ 
+.we-do-col-div::before {
+ 
+  opacity: 0.9;
+}
+ 
+.we-do-col-div::after {
+ 
+  opacity: 0.7;
+}
+ 
+.process-step-1-color::before,
+.process-step-1-color::after {
+  background: linear-gradient(135deg, #62f55d, #00b7ff, #ff9100);
+}
+ 
+.process-step-2-color::before,
+.process-step-2-color::after {
+  background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+}
+ 
+.process-step-3-color::before,
+.process-step-3-color::after {
+  background: linear-gradient(135deg, #00c6ff, #0072ff, #0057b8);
+}
+ 
+.process-step-4-color::before,
+.process-step-4-color::after {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+ 
+/* --- Floating Icon --- */
+.total-icons {
+  position: absolute;
+  top: -35px;
+  left: -15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 8px 25px;
+  z-index: 10;
+  color: #fff;
+  font-size: 22px;
+}
+ 
+.process-step-1-color .total-icons {
+  background: linear-gradient(135deg, #62f55d, #00b7ff);
+}
+ 
+.process-step-2-color .total-icons {
+  background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+}
+ 
+.process-step-3-color .total-icons {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+ 
+.process-step-4-color .total-icons {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+ 
+/* --- Text Content --- */
+.step-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+ 
+.step-value {
+  font-size: 2.8rem;
+  font-weight: 800;
 }

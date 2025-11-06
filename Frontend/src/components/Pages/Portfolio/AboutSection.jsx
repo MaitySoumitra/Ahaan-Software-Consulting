@@ -36,11 +36,12 @@ const AboutSection = () => {
           </div>
 
 
-          <div className="col-lg-6">
+          <div className="col-lg-6 section-header-tech">
+            <h6 className="subtitle">
+          24/7 Support <span className="divider"></span>
+        </h6>
             <h2 className="about-title">
-              Highly Tailored
-              Technology, Develop
-              & Support Services.
+              Highly Tailored Technology, Develop & Support Services.
             </h2>
             <p className="about-description">
               Accelerate innovation with world-class tech teams. We’ll match

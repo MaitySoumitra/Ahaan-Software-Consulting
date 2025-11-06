@@ -84,13 +84,33 @@
 }
 
 .about-title {
-  font-weight: bold;
-  font-size: 40px;
-  color: #000000;
+  font-weight: 700;
+  font-size: 45px;
+  background: linear-gradient(90deg, #cfa74a, #000000, #cfa74a );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 4s ease-in-out infinite;
   margin-bottom: 40px;
   line-height: 1.3;
-  font-family: outfit;
+  font-family: 'Outfit', sans-serif;
+  text-align: left;
+  text-shadow: 0 0 8px rgba(207, 167, 74, 0.3);
 }
+
+/* Reuse the same animation */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 .about-description {
   color: #000000;

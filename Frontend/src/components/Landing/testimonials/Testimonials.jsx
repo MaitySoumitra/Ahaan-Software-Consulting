@@ -1,11 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "./Testimonials.css";
-
+ 
 const Testimonials = () => {
   const [index, setIndex] = useState(0);
   const [visibleCards, setVisibleCards] = useState(3);
-
+ 
   const testimonials = [
     {
       name: "Sam Jais",
@@ -64,7 +64,7 @@ const Testimonials = () => {
       image: "https://ahaanmedia.com/asc/testimonial/4.jpg",
     },
   ];
-
+ 
   // Set visible cards based on screen width
   useEffect(() => {
     const updateVisibleCards = () => {
@@ -73,12 +73,12 @@ const Testimonials = () => {
       else if (width >= 768) setVisibleCards(2);
       else setVisibleCards(1);
     };
-
+ 
     updateVisibleCards();
     window.addEventListener("resize", updateVisibleCards);
     return () => window.removeEventListener("resize", updateVisibleCards);
   }, []);
-
+ 
   // Scroll left/right
   const scroll = (dir) => {
     const maxIndex = testimonials.length - visibleCards;
@@ -87,9 +87,19 @@ const Testimonials = () => {
     if (newIndex > maxIndex) newIndex = maxIndex;
     setIndex(newIndex);
   };
-
+ 
   return (
-    <div className="container">
+    <div className="container section-header-tech">
+      <h6 className="subtitle">
+          Testimonials <span className="divider"></span>
+        </h6>
+        <h2 className="text-center mb-4 title">What Our Clients Say</h2>
+         <p className="image-carousel-content"  >
+        Driven to be future-ready, and push beyond the building blocks of
+        technology, digital, and marketing, Ahaan Software Consulting proudly
+        participated in The Asia Business Show 2024 in Singapore—the powerhouse
+        of innovation and enterprise!
+      </p>
       <div className="testimonial-slider">
         <div className="testimonial-wrapper">
           <button
@@ -98,7 +108,7 @@ const Testimonials = () => {
           >
             <FaChevronLeft />
           </button>
-
+ 
           <div
             className="testimonial-track"
             style={{
@@ -123,7 +133,7 @@ const Testimonials = () => {
                 <div className="testimonial-content">
                   <h3 style={{ color: t.color }}>{t.name}</h3>
                   <p className="review">{t.review}</p>
-                  <div className="stars">
+                  <div className="testimonial-stars">
                     {Array(5)
                       .fill(0)
                       .map((_, j) => (
@@ -145,7 +155,7 @@ const Testimonials = () => {
               </div>
             ))}
           </div>
-
+ 
           <button
             className={`testimonial-arrow-btn right ${
               index >= testimonials.length - visibleCards ? "disabled" : ""
@@ -159,5 +169,7 @@ const Testimonials = () => {
     </div>
   );
 };
-
+ 
 export default Testimonials;
+ 
+ 

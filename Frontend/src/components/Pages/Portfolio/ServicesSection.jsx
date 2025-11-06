@@ -1,10 +1,8 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
 import "./ServicesSection.css";
 import { RiFileCodeLine } from "react-icons/ri";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
-import { MdSupportAgent } from "react-icons/md";
-import { MdOutlineDesignServices } from "react-icons/md";
+import { MdSupportAgent, MdOutlineDesignServices } from "react-icons/md";
 
 const services = [
   {
@@ -16,7 +14,7 @@ const services = [
   {
     title: "Web Development",
     description:
-      "We build responsive, secure, and user-friendly websites tailored to your brand, enhancing online presence and driving business success.",
+      "We build responsive, secure, and highly user-friendly websites tailored to your brand, enhancing online presence and driving sustainable business success.",
     icon: <HiOutlineDesktopComputer />,
   },
   {
@@ -35,35 +33,43 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="services-section py-5">
-      <Container>
-        {/* Heading Section */}
-        <div className="text-center mb-2">
-          <h2 className="fw-bold">Our Core Services</h2>
-          <p className="text-muted">Delivering excellence through innovation and technology</p>
-        </div>
+    <section className="container portfolio-services-section">
+      <div className="section-header">
+        {/* 👇 Added subtitle with divider */}
+        <h6 className="subtitle">
+          What We Do <span className="divider"></span>
+        </h6>
 
-        {/* Service Cards */}
-        <Row className="g-4">
-          {services.map((service, index) => (
-            <Col key={index} lg={3} md={6} sm={12}>
-              <Card className="service-card h-100">
-                <div className="icon-container mx-auto">
-                  <div className="service-icon">{service.icon}</div>
-                </div>
-                <Card.Body className="text-center">
-                  <Card.Title className="service-title">
-                    {service.title}
-                  </Card.Title>
-                  <Card.Text className="service-desc">
-                    {service.description}
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+        <h2 className="title">Our Core Services</h2>
+        <p className="image-carousel-content">
+          We are driven by a passion to deliver excellence through continuous
+          innovation and cutting-edge technology — creating intelligent,
+          scalable, and future-ready solutions that empower businesses,
+          transform industries, and inspire progress across the digital
+          landscape.
+        </p>
+      </div>
+
+      <div className="services-grid">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className={`portfolio-service-card portfolio-service-card-${
+              index + 1
+            }`}
+          >
+            <div className="service-inner">
+              <div className="icon-container">
+                <div className="portfolio-service-icon">{service.icon}</div>
+              </div>
+              <h3 className="service-title">{service.title}</h3>
+              <p className="service-desc">{service.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <hr style={{border:"none"}}/>
+      <hr style={{border:"none"}}/>
     </section>
   );
 };

@@ -7,13 +7,17 @@
 
 /* === CARD STYLES === */
 .blog-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   border: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(80, 80, 80, 0.079) 0px 10px 20px, rgba(97, 97, 97, 0.123) 0px 4px 4px !important;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
   background-color: #fff;
 }
+
 
 .blog-card:hover {
   transform: translateY(-5px);
@@ -29,7 +33,7 @@
 /* === TEXT STYLES === */
 .blog-page-title {
   font-weight: bold;
-  font-size: 22px;
+  font-size: 18px;
   font-family: 'Outfit', sans-serif;
 }
 
@@ -232,8 +236,11 @@
 .pagination {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* মোবাইল/ট্যাবলেটে লাইন ব্রেক নেবে */
   gap: 6px;
   padding: 10px 0;
+  margin: 0;
 }
 
 .page-item {
@@ -248,13 +255,13 @@
   padding: 8px 14px;
   border-radius: 6px;
   transition: all 0.2s ease-in-out;
-  font-family: outfit;
+  font-family: 'Outfit', sans-serif;
+  white-space: nowrap; /* Prev/Next ভাঙবে না */
 }
 
 .page-link:hover {
   background-color: #E3A926;
   color: #000;
-  
 }
 
 .page-item.active .page-link {
@@ -269,7 +276,36 @@
   color: #aaa;
   pointer-events: none;
 }
+
 .page-link:focus {
   outline: none;
   box-shadow: none;
 }
+
+/* === RESPONSIVE STYLING === */
+
+/* 🟡 Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+  .pagination {
+    gap: 5px;
+  }
+
+  .page-link {
+    padding: 7px 12px;
+    font-size: 14px;
+  }
+}
+
+/* 🟢 Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+  .pagination {
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  .page-link {
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+}
+

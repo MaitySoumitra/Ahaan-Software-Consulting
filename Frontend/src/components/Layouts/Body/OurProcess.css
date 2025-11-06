@@ -1,189 +1,351 @@
- .process-section {
-            padding: 60px 20px;
-        }
-
-        .process-row {
-            /* Using CSS Grid for modern responsive layout */
-            display: grid;
-            grid-template-columns: repeat(1, 1fr); /* Default: 1 column on small screens */
-            gap: 20px;
-            margin: 0 auto;
-            max-width: 1200px; /* Constrain grid width */
-            cursor: pointer;
-        }
-
-        /* Responsive Layout Overrides */
-        @media (min-width: 768px) {
-            .process-row {
-                grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
-            }
-        }
-        @media (min-width: 993px) {
-            .process-row {
-                grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
-            }
-        }
-
-        /* --- Core Animation & Structure Styles --- */
-
-        /* The outer container for each step that *triggers* the hover */
-        .we-do-col-div {
-            position: relative;
-            transition: .5s;
-            height: 365px;
-        }
-
-        /* The inner container that *moves* and *changes color* on hover */
-        .webe-inner-div {
-            background-color: white; /* Default state: White */
-            border-radius: 15px;
-            box-shadow: rgba(88, 66, 25, 0.1) 0px 5px 25px; /* Lighter box shadow */
-            padding: 30px 30px;
-            position: relative;
-            height: 100%;
-            transform: translateY(0px);
-            z-index: 4; /* Highest layer for the card body */
-            transition: .5s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            overflow: hidden; /* Necessary to clip the ::before wipe */
-        }
-
-        /* **Main Hover Effect: Moves the Inner Card Up** */
-        .we-do-col-div:hover .webe-inner-div {
-            transform: translateY(-30px);
-            color: black; 
-        }
-
-        /* ------------------------------------------------------------------- */
-        /* --- CORE FIX: Wipe Layer Logic (::before of .webe-inner-div) --- */
-        /* ------------------------------------------------------------------- */
-        
-        .webe-inner-div::before {
-            content: ""; 
-            position: absolute;
-            top: 0; 
-            left: 0;
-            width: 100%;
-            height: 100%;
-            
-            /* Base State (Hover Out): Hidden */
-            transform: scaleY(0); 
-            
-            /* Correct: Anchor to BOTTOM for Top-Down closure */
-            transform-origin: bottom; 
-            
-            /* Transition is only applied to the transform property for smooth wipe out */
-            transition: transform 0.5s ease-in-out; 
-        }
-        
-        /* --- Gradient Application (Always present, but hidden by scaleY(0)) --- */
-        .process-step-1-color .webe-inner-div::before {
-            background: linear-gradient(135deg, #FF7E5F, #FEB47B, #FF6A00, #FF4500, #D32F2F); 
-        }
-        .process-step-2-color .webe-inner-div::before {
-            background: linear-gradient(135deg, #6a82fb, #fc5c7d, #d4a5a5, #ffb8b8);
-        }
-        .process-step-3-color .webe-inner-div::before {
-            background: linear-gradient(135deg, #00c6ff, #0072ff, #0057b8, #003366);
-        }
-        .process-step-4-color .webe-inner-div::before {
-            background: linear-gradient(135deg, #f39c12, #f1c40f, #e67e22, #d35400);
-        }
-        
-        /* --- HOVER EFFECT: Wipe In --- */
-        .we-do-col-div:hover .webe-inner-div::before {
-            /* Hover State (Hover In): Visible */
-            transform: scaleY(1); 
-            
-            /* FIX: Anchor to BOTTOM for Bottom-Up growth */
-            transform-origin: bottom; 
-            
-            /* The transition timing is the same, but the origin changes the direction */
-            transition: transform 0.5s ease-in-out; 
-        }
-
-
-        /* ------------------------------------------------------------------- */
-        /* --- Stacking Layers (::before and ::after of .we-do-col-div) --- */
-        /* ------------------------------------------------------------------- */
-
-        /* --- 2. FIRST Colored Layer (::before of .we-do-col-div) --- */
-        .we-do-col-div::before {
-            content: "";
-            position: absolute;
-            width: 85%;
-            height: 90%;
-            right: 0px;
-            left: 0px;
-            margin: 0 auto;
-            bottom: 0px;
-            background-color: #f2f2f2; /* Light grey base color */
-            box-shadow: none;
-            border-radius: 15px;
-            transform: translateY(0);
-            transition: .5s cubic-bezier(.34,.27,.34,1.44);
-            z-index: 1; /* Middle layer */
-        }
-        .we-do-col-div:hover::before {
-            transform: translateY(-5px); 
-            box-shadow: rgba(0, 0, 0, .15) 0px 5px 20px;
-        }
-        .process-step-1-color::before { background: linear-gradient(135deg, #FF7E5F, #FEB47B, #FF6A00, #FF4500, #D32F2F); } 
-        .process-step-2-color::before { background: linear-gradient(135deg, #6a82fb, #fc5c7d, #d4a5a5, #ffb8b8); } 
-        .process-step-3-color::before { background: linear-gradient(135deg, #00c6ff, #0072ff, #0057b8, #003366); } 
-        .process-step-4-color::before { background: linear-gradient(135deg, #f39c12, #f1c40f, #e67e22, #d35400); } 
-
-        /* --- 3. SECOND Colored Layer (::after of .we-do-col-div) --- */
-        .we-do-col-div::after {
-            content: "";
-            position: absolute;
-            width: 75%;
-            height: 90%;
-            right: 0px;
-            left: 0px;
-            margin: 0 auto;
-            bottom: 0px;
-            background-color: #e5e5e5; /* Slightly darker grey base color */
-            box-shadow: none;
-            border-radius: 15px;
-            transform: translateY(0);
-            transition: .5s cubic-bezier(.34,.27,.34,1.44);
-            z-index: 0; /* Lowest layer */
-        }
-        .we-do-col-div:hover::after {
-            transform: translateY(15px); 
-            box-shadow: rgba(0, 0, 0, .15) 0px 10px 30px; 
-        }
-        .process-step-1-color::after { background: linear-gradient(135deg, #FF7E5F, #FEB47B, #FF6A00, #FF4500, #D32F2F); } 
-        .process-step-2-color::after { background: linear-gradient(135deg, #6a82fb, #fc5c7d, #d4a5a5, #ffb8b8); } 
-        .process-step-3-color::after { background: linear-gradient(135deg, #00c6ff, #0072ff, #0057b8, #003366); } 
-        .process-step-4-color::after { background: linear-gradient(135deg, #f39c12, #f1c40f, #e67e22, #d35400); } 
-
-        /* --- Internal Content Styling & Z-Index Fix --- */
-
-        .icon-container,
-        .step-title,
-        .step-description {
-            /* Fix: Ensure the content sits above the wipe layer (::before) */
-            position: relative; 
-            z-index: 5; 
-        }
-
-        .icon-container { margin-bottom: 15px; margin-top: 15px; }
-        .step-title { font-size: 1.5rem; font-weight: bold; margin-bottom: 10px; }
-        .step-description { font-size: 1rem; color: #555; }
-        
-        /* Text color change on hover */
-        .we-do-col-div:hover .step-title,
-        .we-do-col-div:hover .step-description { color: black; }
-        
-        /* Icon sizes */
-        .icon-container i { font-size: 50px; color: #333; transition: color .5s; }
-        
-        /* Icon color on hover */
-        .we-do-col-div:hover .icon-container i { 
-            color: white; /* Change icon to white when gradient wipes over */
-        }
+.process-section-wrapper {
+    position: relative;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    font-family: outfit;
+}
+ 
+.process-header-wrapper {
+    z-index: 500;
+    padding-top: 20px;
+}
+ 
+.process-vertical-line {
+    height: 100%;
+    margin-top: 50px;
+    width: 1px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    border: 1px dashed #b1b1b1;
+}
+ 
+.process-step-section:nth-child(2) {
+    margin-top: 30px;
+}
+ 
+.process-step-section {
+    position: relative;
+    z-index: 1;
+}
+ 
+.process-step-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+ 
+.process-step-left {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    -webkit-box-ordinal-group: 1;
+    -ms-flex-order: 0;
+}
+ 
+.process-step-box {
+    border: 1px dashed red;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+    max-width: 400px;
+    margin-left: auto;
+    position: relative;
+}
+ 
+.process-step-content {
+    background-color: white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, .16);
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+ 
+.process-step-content h3 {
+    font-weight: 600;
+    font-size: 25px;
+    color: #000;
+    font-family: outfit;
+}
+ 
+.process-step-content p {
+    font-size: 12px;
+    color: #797979;
+    font-family: outfit;
+}
+ 
+.process-step-box::after {
+    content: "";
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: -10px;
+    top: 46%;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+ 
+.process-step-number-col {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+}
+ 
+.process-step-number {
+    height: 60px;
+    width: 60px;
+    background-color: #eae8fc;
+    border: 1px solid green;
+    font-weight: 500;
+    font-size: 40px;
+    color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+ 
+.process-step-right {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    max-width: 50%;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+}
+ 
+.process-step-right-aligned .process-step-box {
+    margin-left: 0;
+    margin-right: auto;
+}
+ 
+.process-step-box {
+    border: 1px solid red;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+    max-width: 400px;
+    min-width: auto;
+    margin-left: auto;
+    position: relative;
+}
+ 
+.process-step-right-aligned .process-step-box::before {
+    left: -1px;
+    border-radius: 10px 100px 100px 10px;
+}
+ 
+.process-step-box::before {
+    content: "";
+    height: 101%;
+    width: 60%;
+    border-radius: 100px 10px 10px 100px;
+    right: -1px;
+    top: -1px;
+    position: absolute;
+    z-index: 1;
+}
+ 
+.process-step-right-aligned .process-step-box::after {
+    left: -10px;
+}
+ 
+/* 🔴 Step 1 */
+.process-step-1 .process-step-box {
+  border-color: #ff6b6b;
+}
+.process-step-1 .process-step-box::before {
+  background-color: #ff6b6b;
+}
+.process-step-1 .process-step-number {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+.process-step-1 .process-step-box::after {
+  background-color: #ff6b6b;
+}
+ 
+/* 🟠 Step 2 */
+.process-step-2 .process-step-box {
+  border-color: #ffa500;
+}
+.process-step-2 .process-step-box::before {
+  background-color: #ffa500;
+}
+.process-step-2 .process-step-number {
+  border-color: #ffa500;
+  color: #ffa500;
+}
+.process-step-2 .process-step-box::after {
+  background-color: #ffa500;
+}
+ 
+/* 🟡 Step 3 */
+/* .process-step-3 .process-step-box {
+  border-color: #ffd700;
+}
+.process-step-3 .process-step-box::before {
+  background-color: #ffd700;
+}
+.process-step-3 .process-step-number {
+  border-color: #ffd700;
+  color: #ffd700;
+}
+.process-step-3 .process-step-box::after {
+  background-color: #ffd700;
+} */
+ 
+/* 🟢 Step 4 */
+.process-step-4 .process-step-box {
+  border-color: #4caf50;
+}
+.process-step-4 .process-step-box::before {
+  background-color: #4caf50;
+}
+.process-step-4 .process-step-number {
+  border-color: #4caf50;
+  color: #4caf50;
+}
+.process-step-4 .process-step-box::after {
+  background-color: #4caf50;
+}
+ 
+/* 🔵 Step 5 */
+.process-step-3 .process-step-box {
+  border-color: #00bfff;
+}
+.process-step-3 .process-step-box::before {
+  background-color: #00bfff;
+}
+.process-step-3 .process-step-number {
+  border-color: #00bfff;
+  color: #00bfff;
+}
+.process-step-3 .process-step-box::after {
+  background-color: #00bfff;
+}
+ 
+/* 🟣 Step 6 */
+.process-step-6 .process-step-box {
+  border-color: #8a2be2;
+}
+.process-step-6 .process-step-box::before {
+  background-color: #8a2be2;
+}
+.process-step-6 .process-step-number {
+  border-color: #8a2be2;
+  color: #8a2be2;
+}
+.process-step-6 .process-step-box::after {
+  background-color: #8a2be2;
+}
+ 
+/* 💗 Step 7 */
+.process-step-7 .process-step-box {
+  border-color: #ff1493;
+}
+.process-step-7 .process-step-box::before {
+  background-color: #ff1493;
+}
+.process-step-7 .process-step-number {
+  border-color: #ff1493;
+  color: #ff1493;
+}
+.process-step-7 .process-step-box::after {
+  background-color: #ff1493;
+}
+/* 📱 Responsive layout for 991px and below (until 768px) */
+@media (max-width: 767px) {
+  .process-steps-wrapper {
+    position: relative;
+  }
+ 
+  .process-vertical-line {
+    left: 20px; /* keep the line fixed at 20px */
+    right: auto;
+    margin: 0;
+  }
+ 
+  .process-step-row {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 40px; /* vertical gap between steps */
+  }
+ 
+  .process-step-left,
+  .process-step-right {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+ 
+  .process-step-number-col {
+    position: absolute;
+    left: 0;  /* place number circle exactly on the vertical line */
+    top: 50%; /* vertically center relative to step row */
+    transform: translateY(-50%);
+    order: 0; /* keep order normal */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* remove bottom margin */
+    z-index: 10; /* above the vertical line */
+  }
+ 
+  .process-step-number {
+    margin: 0;
+    height: 45px;
+    width: 45px;
+    font-size: 25px;
+  }
+ 
+  .process-step-box {
+    width: calc(100% - 80px);
+    margin-left: 70px; /* give enough left margin to clear the number */
+    margin-right: 0;
+   
+  }
+ 
+  /* Right aligned steps */
+  .process-step-right-aligned .process-step-box {
+    margin-left: 70px;
+    margin-right: 0;
+  }
+ 
+  /* Arrow adjustments for left side */
+  .process-step-box::after {
+    right: auto;
+    left: -10px;
+    transform: rotate(45deg);
+  }
+ 
+  .process-step-box::before {
+    right: auto;
+    left: -1px;
+    border-radius: 10px 100px 100px 10px;
+  }
+}

@@ -1,98 +1,156 @@
-.second-banner-req-call{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background: radial-gradient(circle at center, #CD912A, #000000, #000000);
-    max-height: 200px;
-    width: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    color: #fff;
-    padding: 20px;
-    overflow: hidden;
-  }
-  .second-banner-call {
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      gap: 10px;
-      justify-content: center,
-  }
-  
-  .second-banner-call-details{
-      display: flex;
-      flex-direction: column; 
-      justify-content: center; 
-      align-items: center; 
-      text-align: center; 
-      height: 100%;
-      font-family: outfit;
-  }
-  .second-banner-call-details h3{
-      font-size: 18px;
-  }
-  .second-banner-call-details p{
-      display: inline-block;
-      
-      font-size: 14px;
-      font-weight: 400;
-      cursor: pointer;
-      margin:0;
-  }
-  .second-banner-calling-icon{
-      font-size: 35px;
-      color: #fff;
-  }
+.second-banner-req-call {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #a5a876, #000000); /* Light grey gradient */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 40px 0;
+  margin: auto;
+  width: 80%;
+  border-radius: 20px;
+  top: 120px;
+  z-index: 4;
+}
 
-  .second-banner-label{
-    font-size: 32px;
-    margin: 10px 0;
-    letter-spacing: 2px;
-    font-family: outfit;
-  }
-.second-banner-contact-button{
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #CD912A;
-    font-weight:600;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.1s ease;
-    text-decoration: none;
-    font-family: outfit;
+.second-banner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 1200px;
+  border-radius: 10px ;
+  
+}
+
+.second-banner-call-details {
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
 }
 
 
-  @media (max-width:768px) {
-      .second-banner-call{
-          flex-direction: column;
-      }
-      .second-banner-calling-icon{
-          font-size: 25px;
-      }  
-      .second-banner-label{
-        font-size: 18px;
-       
-      }
-      .second-banner-call{
-        
-        transform: translate(-20%, 23%);
-          }
-      
-  }
-  @media (max-width:500px){
-    .second-banner-label{
-        font-size: 16px;
-       
-      }
-      .second-banner-contact-button{
-        padding: 5px 12px;
-        font-size: 12px;
+.second-banner-call-details h3 {
+  
+  margin-bottom: 15px;
+}
 
-      }
-      
-      
+.second-banner-phone-numbers {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.second-banner-phone-numbers p {
+  cursor: pointer;
+  margin: 0;
+  padding: 5px 10px;
+  border-right: 1px solid #ccc;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.second-banner-phone-numbers p:last-child {
+  border-right: none; /* Remove divider from last number */
+}
+
+/* Add drop shadow effect with mirror for the button */
+.second-banner-contact-button {
+  padding: 12px 24px;
+  background-color: #CD912A;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  transition: background-color 0.3s ease;
+  position: relative;
+ 
+}
+
+.second-banner-contact-button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.15);
+  transform: scaleY(-1); /* Mirror effect for the shadow */
+  transform-origin: top;
+}
+
+.second-banner-contact-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.second-banner-contact-button:active {
+  scale: 0.95;
+}
+
+.second-banner-contact-button:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+@media (max-width: 767px) and (min-width: 501px) {
+  .second-banner-container {
+    width: 90%; /* Adjust for mobile devices */
   }
+  .second-banner-container{
+  margin:0px;
+ }
+
+  
+
+  .second-banner-phone-numbers p {
+    font-size: 14px;
+  }
+   .whychooseus-label{
+  font-size: 26px;
+ }
+}
+
+@media (max-width: 500px) {
+  .second-banner-contact-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  .second-banner-req-call{
+    width: 90%;
+    padding: 15px 0px;
+    top: 80px;
+  }
+  .second-banner-phone-numbers p{
+    font-size: 11px;
+    flex-direction: row;
+    padding:2px 6px;
+  }
+ 
+
+  .second-banner-phone-numbers {
+   
+    gap: 0; /* Remove the gap when stacking vertically on mobile */
+  }
+
+  
+   .whychooseus-label{
+  font-size: 18px;
+ }
+}
+
+@media (max-width: 1023px) and (min-width: 768px){
+ .whychooseus-label{
+  font-size: 36px;
+ }
+ .second-banner-container{
+  margin:0px;
+ }
+}

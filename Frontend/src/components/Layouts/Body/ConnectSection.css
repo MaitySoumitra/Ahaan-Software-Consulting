@@ -1,0 +1,68 @@
+.connect-section {
+  background: #181818;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #b0b3ff;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  color: #fff;
+  font-weight: 500;
+}
+
+.form-group .form-control,
+.form-group .form-select {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-radius: 0;
+  color: #fff;
+  padding-left: 0;
+}
+
+.form-group .form-control:focus,
+.form-group .form-select:focus {
+  box-shadow: none;
+  border-bottom: 1px solid #ffbf00;
+  color: #fff;
+  background: transparent;
+}
+
+.error-text {
+  color: #ffbf00;
+  font-size: 0.85rem;
+}
+
+.connect-submit-btn {
+  max-width: 30%;
+  background-color: #c59402 !important;
+  border: 1px solid #c59402 !important;
+  color: #000000 !important;
+  padding: 10px 25px !important;
+  border-radius: 50px !important;
+  transition: 0.3s;
+}
+
+.connect-submit-btn:hover {
+  background-color: #ffbf00 !important;
+  border-color: #ffbf00 !important;
+  color: #000000 !important;
+}
+
+.illustration img {
+  filter: brightness(0) invert(1);
+}

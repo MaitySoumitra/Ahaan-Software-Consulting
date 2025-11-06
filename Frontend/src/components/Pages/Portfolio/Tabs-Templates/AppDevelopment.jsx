@@ -15,7 +15,7 @@ const AppDevelopment = () => {
     <div className="appdev-gallery container py-1">
       {/* Heading Section */}
       <div className="text-center mb-5">
-        <h2 className="fw-bold">App Development Designs</h2>
+        <h2 className="fw-bold  portfolio-title">App Development Designs</h2>
         <p className="text-muted">Clean and modern designs for mobile and web applications</p>
       </div>
 

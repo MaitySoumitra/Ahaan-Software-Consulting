@@ -10,7 +10,7 @@ const All = () => {
   return (
     <div className="uiux-gallery-container container py-1">
       <div className="text-center mb-5">
-        <h2 className="fw-bold all-heading">All Portfolio</h2>
+        <h2 className="fw-bold all-heading portfolio-title ">All Portfolio</h2>
         <p className="text-muted all-text">
           Browse through our comprehensive design solutions across UI/UX, Web
           Development, Social Media Marketing, and App Development.

@@ -86,3 +86,43 @@
     font-family: outfit !important;
     font-size: 16px;
   }
+
+  /* === Responsive Styling === */
+
+/* Tablet View (max-width: 992px) */
+@media (max-width: 992px) {
+  .ecommerce-section h2,
+  .grids-heading {
+    font-size: 24px !important;
+    line-height: 36px;
+  }
+
+  .grids-content,
+  .ecommerce-section p {
+    font-size: 15px !important;
+  }
+
+  .feature-card {
+    padding: 15px;
+  }
+}
+
+/* Mobile View (max-width: 576px) */
+@media (max-width: 576px) {
+  .ecommerce-section h2,
+  .grids-heading {
+    font-size: 20px !important;
+    line-height: 30px;
+    text-align: center; /* চাইলে mobile এ center করতে পারো */
+  }
+
+  .grids-content,
+  .ecommerce-section p {
+    font-size: 14px !important;
+    text-align: center; /* চাইলে paragraph ও center করতে পারো */
+  }
+
+  .feature-card {
+    padding: 12px;
+  }
+}

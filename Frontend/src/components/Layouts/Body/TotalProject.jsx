@@ -1,53 +1,58 @@
 import React from "react";
-import { Card, Row, Col, Container } from "react-bootstrap";
-import CountUp from "react-countup";
-import { FaUsers, FaUserTie, FaCheckCircle, FaSmile } from "react-icons/fa";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./TotalProject.css"
+import "./TotalProject.css";
+import { FaUsers, FaCheckCircle, FaSmile } from "react-icons/fa";
 import { FaAward } from "react-icons/fa6";
+ 
 const stats = [
-  { value: 5, label: "International Awards", icon: <FaAward />, color: "#1e3a8a" }, // Blue
-  { value: 30, label: "Our Teams", icon: <FaUsers />, color: "#f59e0b" }, // Orange
-  { value: 100 , label: "Completed Projects", icon: <FaCheckCircle />, color: "#10b981" }, // Green
-  { value: 125, label: "Happy Clients", icon: <FaSmile />, color: "#ef4444" }, // Red
+  {
+    value: 5,
+    label: "International Awards",
+    icon: <FaAward />,
+    colorClass: "process-step-1-color",
+  },
+  {
+    value: 30,
+    label: "Our Teams",
+    icon: <FaUsers />,
+    colorClass: "process-step-2-color",
+  },
+  {
+    value: 100,
+    label: "Completed Projects",
+    icon: <FaCheckCircle />,
+    colorClass: "process-step-3-color",
+  },
+  {
+    value: 125,
+    label: "Happy Clients",
+    icon: <FaSmile />,
+    colorClass: "process-step-4-color",
+  },
 ];
-
-const CounterCard = ({ value, label, icon, color }) => {
+ 
+const TotalProject = () => {
   return (
-    <Card
-      className=" p-3 text-center total-project-card"
-      style={{
-        width: "250px",
-        height: "100px",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        borderRadius: "12px",
-        
-      }}
-    >
-      <h4 style={{ color }}>
-        <CountUp start={0} end={value} duration={5} separator="," />
-        <span style={{ marginLeft: "8px", fontSize: "1.5rem" }}>{icon}</span>
-      </h4>
-      <strong className="text-dark">{label}</strong>
-    </Card>
-  );
-};
-
-const DashboardStats = () => {
-  return (
-    <Container className="total-project">
-      <Row className="g-2 justify-content-center" xs={2} md={4}>
+    <section className="process-section">
+      <div className="process-row">
         {stats.map((stat, index) => (
-          <Col key={index} className="d-flex justify-content-center ">
-            <CounterCard {...stat} />
-          </Col>
+          <div key={index} className={`we-do-col-div ${stat.colorClass}`}>
+            {/* Floating Icon */}
+            <div className="total-icons">{stat.icon}</div>
+ 
+            <div className="webe-inner-div">
+              {/* Label */}
+              <div className="step-title always-visible">{stat.label}</div>
+ 
+              {/* Value */}
+              <div className="step-content">
+                <div className="step-value">{stat.value}</div>
+              </div>
+            </div>
+          </div>
         ))}
-      </Row>
-    </Container>
+      </div>
+    </section>
   );
 };
-
-export default DashboardStats;
+ 
+export default TotalProject;

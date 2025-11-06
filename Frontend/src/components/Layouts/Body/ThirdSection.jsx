@@ -10,7 +10,6 @@ import {
 import { Nav, Tab, Row, Col, Container } from "react-bootstrap";
 import "./ThirdSection.css";
 
-// Import tab template components
 import Frontend from "./templates/Frontend";
 import UIUX from "./templates/Uiux";
 import Backend from "./templates/Backend";
@@ -33,18 +32,28 @@ const TabBar = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return (
+  return ( 
     <Container>
-      <div className="mt-5">
-        <label className="section1-client-label">Our Technology Use</label>
+      <div className="mt-5 section-header-tech">
+        {/* 👇 Divider above heading */}
+        <h6 className="subtitle">
+          Technology Use <span className="divider"></span>
+        </h6>
+
+        <label className="title">Our Technology Use</label>
+
+        <p className="image-carousel-content">
+          The success of our services depends on a perfectly laid-out process
+          from the beginning to the end. And, we put YOU at the centre of
+          everything we do, turning our promises into reality! We specialize in
+          transforming business operations through the power of human and tech
+          collaboration.
+        </p>
       </div>
+
       <Tab.Container activeKey={activeKey} onSelect={(k) => setActiveKey(k)}>
         <Row className="our-tech-tab flex-column flex-sm-row flex-xs-row tab-mobile-row">
-          <Col
-            xs={4}
-            sm={3}
-            className="tabs-col-tech p-0 mobile-tab-nav"
-          >
+          <Col xs={4} sm={3} className="tabs-col-tech p-0 mobile-tab-nav">
             <Nav
               variant="pills"
               className="flex-column tech-col-navbar justify-content-start"
@@ -88,29 +97,31 @@ const TabBar = () => {
             </Nav>
           </Col>
 
-          <Col
-            xs={8}
-            sm={9}
-            className="tabs-col-tech tab-content-mobile"
-          >
+          <Col xs={8} sm={9} className="tabs-col-tech tab-content-mobile">
             <Tab.Content className="tech-tab-content">
-              <Tab.Pane eventKey="frontend"><Frontend /></Tab.Pane>
-              <Tab.Pane eventKey="uiux"><UIUX /></Tab.Pane>
-              <Tab.Pane eventKey="backend"><Backend /></Tab.Pane>
-              <Tab.Pane eventKey="cms"><CMS /></Tab.Pane>
-              <Tab.Pane eventKey="devops"><DevOps /></Tab.Pane>
-              <Tab.Pane eventKey="testing"><Testing /></Tab.Pane>
+              <Tab.Pane eventKey="frontend">
+                <Frontend />
+              </Tab.Pane>
+              <Tab.Pane eventKey="uiux">
+                <UIUX />
+              </Tab.Pane>
+              <Tab.Pane eventKey="backend">
+                <Backend />
+              </Tab.Pane>
+              <Tab.Pane eventKey="cms">
+                <CMS />
+              </Tab.Pane>
+              <Tab.Pane eventKey="devops">
+                <DevOps />
+              </Tab.Pane>
+              <Tab.Pane eventKey="testing">
+                <Testing />
+              </Tab.Pane>
             </Tab.Content>
           </Col>
         </Row>
       </Tab.Container>
-
-      <p className="text-muted mx-auto mt-3 section1-content section1-content-p-tab">
-        The success of our services depends on a perfectly laid-out process from
-        the beginning to the end. And, we put YOU at the centre of everything we
-        do, turning our promises into reality! We specialize in transforming
-        business operations through the power of human and tech collaboration.
-      </p>
+      <hr style={{border:"none"}}/>
     </Container>
   );
 };

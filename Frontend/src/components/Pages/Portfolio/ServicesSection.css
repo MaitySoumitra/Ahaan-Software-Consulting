@@ -1,116 +1,253 @@
-/* Main section spacing */
-.services-section {
-  padding: 60px 20px;
-  background-color: #fdfdfd;
+/* ---------- Global Section ---------- */
+.portfolio-services-section {
+  background: #fff;
+  
 }
-
-/* Heading styles */
-.services-section h2 {
-
-  font-weight: 700;
-  color: #C7892B;
-}
-
-.services-section p {
  
-  color: #6c757d;
-  margin-top: 10px;
-  margin-bottom: 20px;
+.section-header {
+  margin-bottom: 50px;
 }
-
-/* Card styles */
-.service-card {
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
-  padding: 30px;
-  text-align: center;
-  height: 100%;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-}
-
-/* Icon container */
-.icon-container {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #f7e7ce;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-}
-
-.service-icon {
-  width: 35px !important;
-  height: 35px !important;
-  color: #C7892B;
-}
-
-/* Title and description */
-.service-title {
-  font-size: 1.2rem;
+ 
+.section-header h2 {
+  font-size: 2.2rem;
   font-weight: 700;
-  color: #0d0d0d;
-  margin-top: 20px;
+  color: #222;
+  margin-bottom: 10px;
 }
-
-.service-desc {
-  font-size: 0.95rem;
-  color: #6c757d;
-  margin-top: 10px;
-  line-height: 1.5;
+ 
+.section-header p {
+  color: #000000;
+  font-size: 18px;
 }
-
-/* Optional custom grid layout (if used with .services-grid) */
+ 
+/* ---------- Responsive Grid ---------- */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 per row by default */
+  gap: 20px;
+  align-items: stretch;
 }
-
-/* Tablet view */
-@media (max-width: 991px) {
+ 
+/* ---------- Card Core Styles ---------- */
+.portfolio-service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background: white;
+  cursor: pointer;
+  overflow: visible;
+  transition: transform 0.5s ease;
+}
+ 
+.service-inner {
+  flex: 1;
+  position: relative;
+  border-radius: 15px;
+  padding: 40px 25px;
+  background: white;
+  z-index: 4;
+  text-align: center;
+  transition: transform 0.5s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(88, 66, 25, 0.2) 0px 5px 25px;
+}
+ 
+ 
+/* Hover lift */
+.portfolio-service-card:hover .service-inner {
+  transform: translateY(-20px);
+}
+ 
+/* ---------- Gradient Overlay ---------- */
+.service-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  border-radius: 15px;
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+}
+ 
+/* Gradients per card */
+.portfolio-service-card-1 .service-inner::before {
+  background: linear-gradient(135deg, #2f3f61, #3c5a39, #06a161,#690e80 );
+}
+ 
+.portfolio-service-card-2 .service-inner::before {
+  background: linear-gradient(135deg, #6a82fb, #fc5c7d, #d4a5a5, #ffb8b8);
+}
+ 
+.portfolio-service-card-3 .service-inner::before {
+  background: linear-gradient(135deg, #00c6ff, #0072ff, #0057b8, #003366);
+}
+ 
+.portfolio-service-card-4 .service-inner::before {
+  background: linear-gradient(135deg, #f39c12, #f1c40f, #e67e22, #d35400);
+}
+ 
+/* Reveal gradient on hover */
+.portfolio-service-card:hover .service-inner::before {
+  transform: scaleY(1);
+}
+ 
+.portfolio-service-card::before {
+  width: 88%;
+}
+ 
+.portfolio-service-card::after {
+  width: 78%;
+}
+ 
+/* ---------- Stacked Layer Effect ---------- */
+.portfolio-service-card::before,
+.portfolio-service-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+ 
+  height: 90%;
+  border-radius: 15px;
+  transition: 0.5s cubic-bezier(0.34, 0.27, 0.34, 1.44);
+}
+ 
+.portfolio-service-card::before {
+  bottom: 0;
+  z-index: 1;
+  transform: translateY(-5px);
+}
+ 
+.portfolio-service-card::after {
+  bottom: 0;
+  z-index: 0;
+  transform: translateY();
+}
+ 
+/* Hover depth effect */
+.portfolio-service-card:hover::before {
+  transform: translateY();
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 8px 25px;
+}
+ 
+.portfolio-service-card:hover::after {
+  transform: translateY(10px);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px;
+}
+ 
+/* Gradient for background layers */
+.portfolio-service-card-1::before,
+.portfolio-service-card-1::after {
+  background: linear-gradient(135deg, #2f3f61, #3c5a39, #06a161,#690e80);
+}
+ 
+.portfolio-service-card-2::before,
+.portfolio-service-card-2::after {
+  background: linear-gradient(135deg, #6a82fb, #fc5c7d, #d4a5a5, #ffb8b8);
+}
+ 
+.portfolio-service-card-3::before,
+.portfolio-service-card-3::after {
+  background: linear-gradient(135deg, #00c6ff, #0072ff, #0057b8, #003366);
+}
+ 
+.portfolio-service-card-4::before,
+.portfolio-service-card-4::after {
+  background: linear-gradient(135deg, #f39c12, #f1c40f, #e67e22, #d35400);
+}
+ 
+/* ---------- Icon + Text ---------- */
+.icon-container,
+.service-title,
+.service-desc {
+  position: relative;
+  z-index: 5;
+}
+ 
+.portfolio-service-icon svg {
+  font-size: 50px;
+  color: #f0af23;
+  padding: 10px;
+  transition: color 0.5s;
+  margin-bottom: 20px;
+  background: #000000;
+  border-radius: 50%;
+}
+ 
+.portfolio-service-card:hover .portfolio-service-icon svg {
+  color: white;
+}
+ 
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+ 
+.service-desc {
+  font-size: 0.95rem;
+  color: #555;
+  transition: color 0.3s;
+  line-height: 1.5;
+}
+ 
+.portfolio-service-card:hover .service-title,
+.portfolio-service-card:hover .service-desc {
+  color: white;
+}
+ 
+ 
+@media (max-width: 1024px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .service-title {
-    font-size: 1.1rem;
-  }
-
-  .service-desc {
-    font-size: 0.9rem;
+    gap: 30px
   }
 }
-
-/* Mobile view */
-@media (max-width: 576px) {
+ 
+/* 1 per row for mobile */
+@media (max-width: 768px) {
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 30px
   }
+}
+ 
 
-  .icon-container {
-    width: 60px;
-    height: 60px;
+/* Subtitle divider animation */
+.section-header .subtitle {
+  font-size: 20px;
+  color: #000000;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  
+}
+
+.section-header .divider {
+  display: inline-block;
+  width: 0;
+  height: 3px;
+  background: #ffbf00;
+  margin-left: 10px;
+  vertical-align: middle;
+  animation: expandLine 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes expandLine {
+  0% {
+    width: 0;
+    opacity: 0.5;
   }
-
-  .service-icon {
-    width: 28px !important;
-    height: 28px !important;
-  }
-
-  .service-title {
-    font-size: 1rem;
-    margin-top: 15px;
-  }
-
-  .service-desc {
-    font-size: 0.85rem;
+  100% {
+    width: 50px;
+    opacity: 1;
   }
 }

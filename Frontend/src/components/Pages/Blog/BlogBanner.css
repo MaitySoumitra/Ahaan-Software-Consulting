@@ -1,58 +1,142 @@
-/* Base Blog Banner Styles */
-.Blog-Banner {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 450px;
-  padding: 200px 15px;
+/* ============================================================= */
+/* ====================== GLOBAL RESET ======================== */
+/* ============================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================================= */
+/* ====================== BLOG BANNER SECTION ================= */
+/* ============================================================= */
+.blog-banner-section {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+  margin-top: -120px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-bottom: 100px;
 }
 
-/* Blog Heading Style */
+/* Dark overlay */
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* ------------------------------------------------------------- */
+/* ====================== WAVE LAYERS ========================= */
+/* ------------------------------------------------------------- */
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* বড় ওয়েভ – সব ডিভাইসে ভারসাম্য থাকবে */
+  background-size: 1000px 150px;
+  background-repeat: repeat-x;
+  pointer-events: none;
+}
+
+/* SVG Wave */
+.wave {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 150' preserveAspectRatio='none'%3E%3Cpath d='M0,75 C150,25 350,125 500,75 C650,25 850,125 1000,75 L1000,150 L0,150 Z' fill='%23ffffff'/%3E%3C/svg%3E");
+}
+
+/* Wave layers animation */
+.wave.wave1 {
+  animation: wave 30s linear infinite;
+  z-index: 5;
+  opacity: 1;
+  bottom: 0;
+}
+.wave.wave2 {
+  animation: wave2 15s linear infinite;
+  z-index: 4;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 15px;
+}
+.wave.wave3 {
+  animation: wave 30s linear infinite;
+  z-index: 3;
+  opacity: 0.2;
+  animation-delay: -2s;
+  bottom: 25px;
+}
+.wave.wave4 {
+  animation: wave2 5s linear infinite;
+  z-index: 2;
+  opacity: 0.7;
+  animation-delay: -5s;
+  bottom: 35px;
+}
+
+/* Keyframes */
+@keyframes wave {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 1000px; }
+}
+@keyframes wave2 {
+  0% { background-position-x: 0; }
+  100% { background-position-x: -1000px; }
+}
+
+/* ------------------------------------------------------------- */
+/* ====================== TEXT CONTENT ======================== */
+/* ------------------------------------------------------------- */
+.banner-content {
+  position: relative;
+  z-index: 6;
+  padding: 0 20px;
+}
+
 .banner-heading {
   font-size: 50px;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #ffffff;
-  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  line-height: 1.2;
 }
 
-/* Responsive: Tablets */
+.banner-heading span {
+  -webkit-text-stroke: 2px #fff;
+  text-stroke: 2px #fff;
+}
+
+/* ------------------------------------------------------------- */
+/* ====================== RESPONSIVE ========================== */
+/* ------------------------------------------------------------- */
+@media (max-width: 1200px) {
+  .blog-banner-section { height: 550px; }
+  .banner-heading { font-size: 42px; }
+}
+
 @media (max-width: 991px) {
-  .Blog-Banner {
-    height: 350px;
-    padding: 150px 15px;
-  }
-
-  .banner-heading {
-    font-size: 36px;
-  }
+  .blog-banner-section { height: 420px; }
+  .banner-heading { font-size: 34px; }
 }
 
-/* Responsive: Small Tablets & Large Phones */
 @media (max-width: 768px) {
-  .Blog-Banner {
-    height: 250px;
-    padding: 120px 10px;
-  }
-
-  .banner-heading {
-    font-size: 28px;
-  }
+  .blog-banner-section { height: 400px; }
+  .banner-heading { font-size: 50px !important; line-height: 1.3; }
+  .wave { height: 120px; background-size: 800px 120px; }
 }
 
-/* Responsive: Mobile */
-@media (max-width: 480px) {
-  .Blog-Banner {
-    height: 200px;
-    padding: 100px 5px;
-  }
+@media (max-width: 576px) {
+  .blog-banner-section { height: 320px; }
+  .banner-heading { font-size: 32px !important; }
+  .banner-heading span { -webkit-text-stroke: 1px #fff; }
+  .wave { height: 100px; background-size: 700px 100px; }
+}
 
-  .banner-heading {
-    font-size: 22px;
-  }
+@media (max-width: 400px) {
+  .blog-banner-section { height: 400px; }
+  .banner-heading { font-size: 20px; }
 }

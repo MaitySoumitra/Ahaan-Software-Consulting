@@ -26,7 +26,7 @@ const WebDevelopment = () => {
     <div className="webdev-gallery container py-1">
       {/* Heading */}
       <div className="text-center mb-5">
-        <h2 className="fw-bold">Web Development Projects</h2>
+        <h2 className="fw-bold  portfolio-title">Web Development Projects</h2>
         <p className="text-muted">Explore our recent website projects</p>
       </div>
 
